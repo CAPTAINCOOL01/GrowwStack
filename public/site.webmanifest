@@ -1,0 +1,17 @@
+{
+  "name": "GrowwStack",
+  "short_name": "GrowwStack",
+  "description": "Growth systems for promising brands.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#eaf1f4",
+  "theme_color": "#07111d",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
