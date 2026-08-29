@@ -2237,6 +2237,14 @@ a {
   border-top: 1px solid var(--gs-line);
 }
 
+.gs-application {
+  padding-bottom: clamp(40px, 4.5vw, 72px);
+}
+
+.gs-application + .gs-quick-contact {
+  padding-top: clamp(40px, 4.5vw, 72px);
+}
+
 .gs-quick-contact__shell {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
@@ -2582,6 +2590,7 @@ a {
   font-size: 0.8rem;
 }
 
+@media (max-width: 860px) {
   .gs-nav__links {
     display: grid;
     gap: 0;

@@ -6,3 +6,9 @@ dist
 .env
 .env.local
 .env.*.local
+
+# MCP deploy scratch artifacts
+.deploy-args.json
+.deploy-args-pretty.json
+.deploy-manifest.txt
+.deploy-payload.json
