@@ -1,0 +1,76 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:1200px; height:630px; }
+  body {
+    background:#07111d; color:#eaf1f4;
+    font-family:'IBM Plex Sans',system-ui,sans-serif;
+    position:relative; overflow:hidden;
+  }
+  .grid {
+    position:absolute; inset:0;
+    background-image:linear-gradient(rgba(234,241,244,.055) 1px,transparent 1px),
+                     linear-gradient(90deg,rgba(234,241,244,.055) 1px,transparent 1px);
+    background-size:60px 60px;
+  }
+  .orb {
+    position:absolute; width:760px; height:760px; right:-260px; top:-300px; border-radius:50%;
+    background:radial-gradient(circle at 35% 35%,rgba(47,92,255,.42),rgba(47,92,255,0) 62%);
+  }
+  .rule { position:absolute; left:0; right:0; top:0; height:5px;
+    background:linear-gradient(90deg,#2f5cff 0 62%,#ff6b35 62% 100%); }
+  .wrap { position:relative; height:100%; padding:64px 72px; display:flex; flex-direction:column; }
+
+  .brand { display:flex; align-items:center; gap:14px; }
+  .mark { display:flex; align-items:flex-end; gap:4px; }
+  .mark i { display:block; width:8px; background:#2f5cff; border-radius:1px; }
+  .mark i:nth-child(1){ height:16px; }
+  .mark i:nth-child(2){ height:26px; }
+  .mark i:nth-child(3){ height:36px; background:#ff6b35; }
+  .word { font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:34px;
+          letter-spacing:.055em; text-transform:uppercase; }
+  .desc { font-family:'IBM Plex Mono',monospace; font-size:12.5px; letter-spacing:.24em;
+          text-transform:uppercase; color:#9fb0bd; padding-left:14px; margin-left:4px;
+          border-left:1px solid rgba(234,241,244,.22); }
+
+  h1 { font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:88px; line-height:.98;
+       letter-spacing:-.005em; margin-top:auto; max-width:19ch; }
+  h1 em { font-style:normal; color:#7f9dff; }
+
+  .sub { margin-top:22px; font-size:21px; line-height:1.45; color:#b9c7d2; max-width:60ch; font-weight:400; }
+
+  .proof { margin-top:auto; padding-top:30px; border-top:1px solid rgba(234,241,244,.16);
+           display:flex; align-items:flex-end; justify-content:space-between; }
+  .stats { display:flex; gap:52px; }
+  .stat .v { font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:40px; line-height:1; }
+  .stat .v.accent { color:#ff6b35; }
+  .stat .l { font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:.17em;
+             text-transform:uppercase; color:#9fb0bd; margin-top:9px; }
+  .url { font-family:'IBM Plex Mono',monospace; font-size:17px; letter-spacing:.1em; color:#eaf1f4; }
+</style></head>
+<body>
+  <div class="grid"></div><div class="orb"></div><div class="rule"></div>
+  <div class="wrap">
+    <div class="brand">
+      <span class="mark"><i></i><i></i><i></i></span>
+      <span class="word">GrowwStack</span>
+      <span class="desc">Growth systems</span>
+    </div>
+
+    <h1>Growth systems for <em>promising brands.</em></h1>
+    <p class="sub">Technology, acquisition, conversion, sales, automation and intelligence &mdash; built and operated as one accountable system.</p>
+
+    <div class="proof">
+      <div class="stats">
+        <div class="stat"><div class="v accent">&#8377;1.5 Cr</div><div class="l">Generated in 3 months</div></div>
+        <div class="stat"><div class="v">3</div><div class="l">Active brands</div></div>
+        <div class="stat"><div class="v">&#8377;0</div><div class="l">Upfront agency fee</div></div>
+      </div>
+      <div class="url">growwstack.in</div>
+    </div>
+  </div>
+</body></html>
