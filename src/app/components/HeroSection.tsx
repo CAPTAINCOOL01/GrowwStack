@@ -11,7 +11,7 @@ const growthLayers = [
 
 const proofPoints = [
   { value: "3", label: "Active brands" },
-  { value: "₹93L", label: "Generated in 3 months" },
+  { value: "₹1.5 Cr", label: "Generated in 3 months" },
   { value: "3", label: "Industries" },
   { value: "₹0", label: "Upfront agency fee" },
 ];

@@ -33,7 +33,7 @@ const founderProof = [
     detail: "Product, engineering, operations, and growth",
   },
   {
-    value: "₹93L",
+    value: "₹1.5 Cr",
     label: "Partner revenue",
     detail: "Across three brands within three months",
   },
@@ -226,12 +226,12 @@ export function PartnershipsSection() {
         >
           <div className="gs-partnerships__result-mark">
             <p className="gs-partnerships__result-label">Combined result</p>
-            <p className="gs-partnerships__result-value">₹93L</p>
+            <p className="gs-partnerships__result-value">₹1.5 Cr</p>
           </div>
           <div className="gs-partnerships__result-copy">
             <p>
               Across these three active partner brands, GrowwStack helped
-              generate approximately ₹93 lakh in revenue within its first three
+              generate approximately ₹1.5 crore in revenue within its first three
               months of operations.
             </p>
             <span>Three brands · Three industries · One operating window</span>

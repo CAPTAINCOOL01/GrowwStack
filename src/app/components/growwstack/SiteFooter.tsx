@@ -1,4 +1,10 @@
+import { CONTACT_PHONE, CONTACT_PHONE_DISPLAY } from "../../../lib/config";
+
 export function SiteFooter() {
+  const whatsappHref = `https://wa.me/${CONTACT_PHONE}?text=${encodeURIComponent(
+    "Hi GrowwStack, I'd like to talk.",
+  )}`;
+
   return (
     <footer className="gs-footer">
       <div className="gs-container gs-footer__statement">
@@ -23,6 +29,10 @@ export function SiteFooter() {
         </a>
         <p>Founder-led growth systems for selected brands.</p>
         <div className="gs-footer__links">
+          <a href={`tel:+${CONTACT_PHONE}`}>{CONTACT_PHONE_DISPLAY}</a>
+          <a href={whatsappHref} target="_blank" rel="noopener noreferrer">
+            WhatsApp
+          </a>
           <a href="mailto:ceo-office@growwstack.in">ceo-office@growwstack.in</a>
           <a href="#home">Back to top ↑</a>
         </div>

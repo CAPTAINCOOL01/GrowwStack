@@ -3,3 +3,6 @@ dist
 .npmrc
 
 .vercel
+.env
+.env.local
+.env.*.local

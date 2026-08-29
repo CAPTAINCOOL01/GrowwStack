@@ -1,0 +1,185 @@
+import { useState, type FormEvent } from "react";
+import { CONTACT_PHONE, CONTACT_PHONE_DISPLAY } from "../../../lib/config";
+import { sbInsert } from "../../../lib/supabase";
+
+type Status = "idle" | "sending" | "sent" | "error";
+
+const initial = { name: "", email: "", phone: "", company: "", message: "" };
+
+function whatsappLink(body: string) {
+  const encoded = encodeURIComponent(body || "Hi GrowwStack, I'd like to talk.");
+  return `https://wa.me/${CONTACT_PHONE}?text=${encoded}`;
+}
+
+export function QuickContactSection() {
+  const [values, setValues] = useState(initial);
+  const [status, setStatus] = useState<Status>("idle");
+  const [error, setError] = useState<string | null>(null);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    setValues((v) => ({ ...v, [e.target.name]: e.target.value }));
+  };
+
+  const submit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus("sending");
+    setError(null);
+    try {
+      await sbInsert("gs_leads", {
+        name: values.name.trim(),
+        email: values.email.trim() || null,
+        phone: values.phone.trim() || null,
+        company: values.company.trim() || null,
+        message: values.message.trim() || null,
+        source: "quick_contact",
+        page_path: window.location.pathname,
+        referrer: document.referrer || null,
+        user_agent: navigator.userAgent,
+      });
+      setStatus("sent");
+      setValues(initial);
+    } catch (err) {
+      setStatus("error");
+      setError(err instanceof Error ? err.message : "Something went wrong");
+    }
+  };
+
+  const waBody =
+    `Hi GrowwStack, I'm ${values.name || "[name]"} from ${values.company || "[company]"}.` +
+    (values.message ? ` ${values.message}` : "");
+
+  return (
+    <section
+      id="contact"
+      className="gs-section gs-quick-contact"
+      aria-labelledby="quick-contact-title"
+    >
+      <div className="gs-shell gs-quick-contact__shell">
+        <header className="gs-quick-contact__intro">
+          <p className="gs-eyebrow">Quick contact</p>
+          <h2 id="quick-contact-title" className="gs-quick-contact__title">
+            Not ready for the full application? Send us a short note.
+          </h2>
+          <p className="gs-quick-contact__lede">
+            Two lines are enough. We reply from the founder's desk within one working day.
+          </p>
+          <ul className="gs-quick-contact__channels" aria-label="Direct channels">
+            <li>
+              <span className="gs-quick-contact__channel-label">Phone</span>
+              <a href={`tel:+${CONTACT_PHONE}`}>{CONTACT_PHONE_DISPLAY}</a>
+            </li>
+            <li>
+              <span className="gs-quick-contact__channel-label">Email</span>
+              <a href="mailto:ceo-office@growwstack.in">ceo-office@growwstack.in</a>
+            </li>
+            <li>
+              <span className="gs-quick-contact__channel-label">WhatsApp</span>
+              <a
+                href={whatsappLink(waBody)}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Chat with the founder
+              </a>
+            </li>
+          </ul>
+        </header>
+
+        <form className="gs-quick-contact__form" onSubmit={submit} noValidate>
+          <div className="gs-quick-contact__grid">
+            <label className="gs-field">
+              <span className="gs-field__label">Your name *</span>
+              <input
+                className="gs-field__input"
+                name="name"
+                value={values.name}
+                onChange={handleChange}
+                required
+                autoComplete="name"
+              />
+            </label>
+            <label className="gs-field">
+              <span className="gs-field__label">Company</span>
+              <input
+                className="gs-field__input"
+                name="company"
+                value={values.company}
+                onChange={handleChange}
+                autoComplete="organization"
+              />
+            </label>
+            <label className="gs-field">
+              <span className="gs-field__label">Email</span>
+              <input
+                className="gs-field__input"
+                name="email"
+                type="email"
+                value={values.email}
+                onChange={handleChange}
+                autoComplete="email"
+              />
+            </label>
+            <label className="gs-field">
+              <span className="gs-field__label">Phone / WhatsApp</span>
+              <input
+                className="gs-field__input"
+                name="phone"
+                type="tel"
+                value={values.phone}
+                onChange={handleChange}
+                autoComplete="tel"
+              />
+            </label>
+            <label className="gs-field gs-field--wide">
+              <span className="gs-field__label">What can we help with?</span>
+              <textarea
+                className="gs-field__textarea"
+                name="message"
+                rows={3}
+                value={values.message}
+                onChange={handleChange}
+                placeholder="One or two lines about your business and the outcome you want."
+              />
+            </label>
+          </div>
+
+          <p className="gs-quick-contact__hint">
+            At least one of email or phone helps us respond. All fields other than name are optional.
+          </p>
+
+          <div className="gs-quick-contact__actions">
+            <button
+              className="gs-button gs-button--primary"
+              type="submit"
+              disabled={status === "sending" || !values.name.trim()}
+            >
+              {status === "sending" ? "Sending…" : "Send message"}
+            </button>
+            <a
+              className="gs-button gs-button--signal"
+              href={whatsappLink(waBody)}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Continue on WhatsApp
+              <span aria-hidden="true"> ↗</span>
+            </a>
+          </div>
+
+          {status === "sent" && (
+            <p className="gs-quick-contact__status gs-quick-contact__status--ok" role="status">
+              Thank you. We have your note and will reply within one working day.
+            </p>
+          )}
+          {status === "error" && (
+            <p className="gs-quick-contact__status gs-quick-contact__status--err" role="alert">
+              We couldn't submit that. {error ?? ""} You can reach us directly on WhatsApp or email above.
+            </p>
+          )}
+        </form>
+      </div>
+    </section>
+  );
+}

@@ -45,7 +45,7 @@ const growthLayers = [
 
 const results = [
   {
-    value: "₹93L",
+    value: "₹1.5 Cr",
     label: "Revenue generated",
     description: "Across three active partner brands within the first three months.",
   },

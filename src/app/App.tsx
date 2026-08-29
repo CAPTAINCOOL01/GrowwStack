@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { HeroSection } from "./components/HeroSection";
 import { FounderSection, PartnershipsSection } from "./components/growwstack/FounderAndPartnerships";
 import { GrowthStackSection, ResultsSection } from "./components/growwstack/GrowthAndResults";
@@ -6,10 +7,17 @@ import {
   PartnerFitSection,
   PartnershipProcessSection,
 } from "./components/growwstack/ProcessAndApplication";
+import { QuickContactSection } from "./components/growwstack/QuickContactSection";
 import { SiteFooter } from "./components/growwstack/SiteFooter";
 import { SiteNav } from "./components/growwstack/SiteNav";
+import { WhatsAppFab } from "./components/growwstack/WhatsAppFab";
+import { trackPageView } from "../lib/tracking";
 
 export default function App() {
+  useEffect(() => {
+    trackPageView();
+  }, []);
+
   return (
     <div className="gs-site">
       <a className="gs-skip-link" href="#main-content">
@@ -25,8 +33,10 @@ export default function App() {
         <PartnershipProcessSection />
         <PartnerFitSection />
         <ApplicationSection />
+        <QuickContactSection />
       </main>
       <SiteFooter />
+      <WhatsAppFab />
     </div>
   );
 }
