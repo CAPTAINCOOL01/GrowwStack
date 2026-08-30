@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useState, type FormEvent } from "react";
-import { ADMIN_PASSWORD } from "../../lib/config";
-import { sbSelect } from "../../lib/supabase";
+import { adminFetch, clearToken, readToken } from "../../lib/adminApi";
 
 type Lead = {
   id: string;
@@ -29,8 +28,6 @@ type Visitor = {
   utm_medium: string | null;
   utm_campaign: string | null;
 };
-
-const AUTH_KEY = "gs_admin_ok";
 
 function formatDate(iso: string): string {
   const d = new Date(iso);
@@ -73,44 +70,17 @@ function downloadCsv(filename: string, rows: Array<Record<string, unknown>>) {
   URL.revokeObjectURL(url);
 }
 
-function useAuth() {
-  const [ok, setOk] = useState<boolean>(() => {
-    try {
-      return sessionStorage.getItem(AUTH_KEY) === "1";
-    } catch {
-      return false;
-    }
-  });
-  const authenticate = (password: string): boolean => {
-    if (password === ADMIN_PASSWORD) {
-      try {
-        sessionStorage.setItem(AUTH_KEY, "1");
-      } catch {
-        /* ignore */
-      }
-      setOk(true);
-      return true;
-    }
-    return false;
-  };
-  const logout = () => {
-    try {
-      sessionStorage.removeItem(AUTH_KEY);
-    } catch {
-      /* ignore */
-    }
-    setOk(false);
-  };
-  return { ok, authenticate, logout };
-}
-
-function LoginGate({ onSubmit }: { onSubmit: (pw: string) => boolean }) {
+function LoginGate({ onSubmit }: { onSubmit: (pw: string) => Promise<boolean> }) {
   const [pw, setPw] = useState("");
   const [err, setErr] = useState<string | null>(null);
+  const [busy, setBusy] = useState(false);
 
-  const handle = (e: FormEvent<HTMLFormElement>) => {
+  const handle = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const ok = onSubmit(pw);
+    setBusy(true);
+    setErr(null);
+    const ok = await onSubmit(pw);
+    setBusy(false);
     if (!ok) setErr("Incorrect password.");
   };
 
@@ -132,8 +102,8 @@ function LoginGate({ onSubmit }: { onSubmit: (pw: string) => boolean }) {
           />
         </label>
         {err && <p className="gs-admin__error">{err}</p>}
-        <button className="gs-button gs-button--primary" type="submit">
-          Enter
+        <button className="gs-button gs-button--primary" type="submit" disabled={busy}>
+          {busy ? "Checking…" : "Enter"}
         </button>
       </form>
     </div>
@@ -143,33 +113,50 @@ function LoginGate({ onSubmit }: { onSubmit: (pw: string) => boolean }) {
 type Tab = "leads" | "visitors";
 
 export function AdminDashboard() {
-  const { ok, authenticate, logout } = useAuth();
+  const [ok, setOk] = useState(false);
   const [tab, setTab] = useState<Tab>("leads");
   const [leads, setLeads] = useState<Lead[]>([]);
   const [visitors, setVisitors] = useState<Visitor[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const load = async () => {
+  // The server decides: a 200 means authenticated and the data is in the reply.
+  const load = async (credential: { password: string } | { token: string }) => {
     setLoading(true);
     setError(null);
     try {
-      const [l, v] = await Promise.all([
-        sbSelect<Lead>("gs_leads"),
-        sbSelect<Visitor>("gs_visitors"),
-      ]);
-      setLeads(l);
-      setVisitors(v);
+      const data = await adminFetch<Lead, Visitor>(credential);
+      setLeads(data.leads);
+      setVisitors(data.visitors);
+      setOk(true);
+      return true;
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to load data");
+      return false;
     } finally {
       setLoading(false);
     }
   };
 
+  const authenticate = async (password: string) => load({ password });
+
+  const refresh = () => {
+    const token = readToken();
+    void load(token ? { token } : { password: "" });
+  };
+
+  const logout = () => {
+    clearToken();
+    setLeads([]);
+    setVisitors([]);
+    setOk(false);
+  };
+
+  // Resume an existing session on reload without re-prompting.
   useEffect(() => {
-    if (ok) void load();
-  }, [ok]);
+    const token = readToken();
+    if (token) void load({ token });
+  }, []);
 
   const stats = useMemo(() => {
     const now = Date.now();
@@ -205,7 +192,7 @@ export function AdminDashboard() {
           <button
             className="gs-button gs-button--secondary"
             type="button"
-            onClick={load}
+            onClick={refresh}
             disabled={loading}
           >
             {loading ? "Refreshing…" : "Refresh"}

@@ -1,7 +1,7 @@
 export const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL ?? "";
 export const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY ?? "";
-export const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD ?? "growwstack@2026";
-
+// ADMIN_PASSWORD deliberately absent: admin auth is verified server-side in
+// api/admin.ts so the password is never bundled into the client.
 // Empty unless a real measurement ID is configured, so analytics never ships by accident.
 export const GA_ID = (import.meta.env.VITE_GA_ID ?? "").trim();
 
