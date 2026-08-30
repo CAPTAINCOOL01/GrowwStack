@@ -61,8 +61,18 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
   const supabaseUrl = process.env.SUPABASE_URL ?? process.env.VITE_SUPABASE_URL;
 
-  if (!adminPassword || !serviceKey || !supabaseUrl) {
-    return res.status(500).json({ error: "Admin endpoint is not configured." });
+  // Name what is missing (never values) — otherwise a misconfigured deploy is
+  // indistinguishable from a working one that rejects every password.
+  const missing = [
+    !adminPassword && "ADMIN_PASSWORD",
+    !serviceKey && "SUPABASE_SERVICE_ROLE_KEY",
+    !supabaseUrl && "SUPABASE_URL",
+  ].filter(Boolean);
+
+  if (missing.length) {
+    return res
+      .status(500)
+      .json({ error: `Admin endpoint is not configured. Missing: ${missing.join(", ")}` });
   }
 
   const body = (typeof req.body === "string" ? JSON.parse(req.body || "{}") : req.body) ?? {};

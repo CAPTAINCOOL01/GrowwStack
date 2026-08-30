@@ -8,11 +8,11 @@
   "rewrites": [
     {
       "source": "/growwstack/admin",
-      "destination": "/index.html"
+      "destination": "/"
     },
     {
       "source": "/growwstack/admin/:path*",
-      "destination": "/index.html"
+      "destination": "/"
     }
   ],
   "headers": [
