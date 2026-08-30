@@ -12,9 +12,12 @@ import { SiteFooter } from "./components/growwstack/SiteFooter";
 import { SiteNav } from "./components/growwstack/SiteNav";
 import { WhatsAppFab } from "./components/growwstack/WhatsAppFab";
 import { trackPageView } from "../lib/tracking";
+import { initAnalytics } from "../lib/analytics";
+import { ConsentBanner } from "./components/growwstack/ConsentBanner";
 
 export default function App() {
   useEffect(() => {
+    initAnalytics();
     trackPageView();
   }, []);
 
@@ -37,6 +40,7 @@ export default function App() {
       </main>
       <SiteFooter />
       <WhatsAppFab />
+      <ConsentBanner />
     </div>
   );
 }

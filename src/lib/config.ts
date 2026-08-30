@@ -2,6 +2,9 @@ export const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL ?? "";
 export const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY ?? "";
 export const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD ?? "growwstack@2026";
 
+// Empty unless a real measurement ID is configured, so analytics never ships by accident.
+export const GA_ID = (import.meta.env.VITE_GA_ID ?? "").trim();
+
 const FALLBACK_PHONE = "917017138349";
 
 // wa.me and tel: links need the full country-coded number. The env var has been
