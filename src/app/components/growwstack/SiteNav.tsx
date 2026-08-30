@@ -5,6 +5,7 @@ const navItems = [
   { label: "Founder", href: "#founder" },
   { label: "Partnerships", href: "#partnerships" },
   { label: "Results", href: "#results" },
+  { label: "Websites", href: "#build" },
 ];
 
 export function SiteNav() {

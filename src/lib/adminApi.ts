@@ -1,6 +1,11 @@
 const TOKEN_KEY = "gs_admin_token";
 
-export type AdminPayload<L, V> = { token: string | null; leads: L[]; visitors: V[] };
+export type AdminPayload<L, V, O> = {
+  token: string | null;
+  leads: L[];
+  visitors: V[];
+  orders: O[];
+};
 
 export function readToken(): string | null {
   try {
@@ -31,9 +36,9 @@ export function clearToken(): void {
  * sees a short-lived signed token — never the admin password, never a Supabase
  * credential that can read leads.
  */
-export async function adminFetch<L, V>(
+export async function adminFetch<L, V, O>(
   credential: { password: string } | { token: string },
-): Promise<AdminPayload<L, V>> {
+): Promise<AdminPayload<L, V, O>> {
   const res = await fetch("/api/admin", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -46,7 +51,7 @@ export async function adminFetch<L, V>(
     throw new Error(body?.error ?? `Request failed (${res.status})`);
   }
 
-  const data = (await res.json()) as AdminPayload<L, V>;
+  const data = (await res.json()) as AdminPayload<L, V, O>;
   if (data.token) storeToken(data.token);
   return data;
 }

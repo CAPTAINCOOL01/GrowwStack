@@ -15,6 +15,22 @@ type Lead = {
   user_agent: string | null;
 };
 
+type Order = {
+  id: string;
+  created_at: string;
+  name: string;
+  email: string | null;
+  phone: string | null;
+  company: string | null;
+  business_type: string | null;
+  current_website: string | null;
+  project_type: string | null;
+  primary_goal: string | null;
+  timeline: string | null;
+  message: string | null;
+  source: string | null;
+};
+
 type Visitor = {
   id: string;
   created_at: string;
@@ -110,13 +126,14 @@ function LoginGate({ onSubmit }: { onSubmit: (pw: string) => Promise<boolean> })
   );
 }
 
-type Tab = "leads" | "visitors";
+type Tab = "leads" | "orders" | "visitors";
 
 export function AdminDashboard() {
   const [ok, setOk] = useState(false);
   const [tab, setTab] = useState<Tab>("leads");
   const [leads, setLeads] = useState<Lead[]>([]);
   const [visitors, setVisitors] = useState<Visitor[]>([]);
+  const [orders, setOrders] = useState<Order[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -125,9 +142,10 @@ export function AdminDashboard() {
     setLoading(true);
     setError(null);
     try {
-      const data = await adminFetch<Lead, Visitor>(credential);
+      const data = await adminFetch<Lead, Visitor, Order>(credential);
       setLeads(data.leads);
       setVisitors(data.visitors);
+      setOrders(data.orders ?? []);
       setOk(true);
       return true;
     } catch (err) {
@@ -149,6 +167,7 @@ export function AdminDashboard() {
     clearToken();
     setLeads([]);
     setVisitors([]);
+    setOrders([]);
     setOk(false);
   };
 
@@ -170,14 +189,19 @@ export function AdminDashboard() {
     const uniqueSessions = new Set(
       visitors.map((v) => v.session_id).filter(Boolean),
     ).size;
+    const orders24 = orders.filter(
+      (o) => now - new Date(o.created_at).getTime() < day,
+    ).length;
     return {
+      totalOrders: orders.length,
+      orders24,
       totalLeads: leads.length,
       leads24,
       totalVisits: visitors.length,
       visits24,
       uniqueSessions,
     };
-  }, [leads, visitors]);
+  }, [leads, visitors, orders]);
 
   if (!ok) return <LoginGate onSubmit={authenticate} />;
 
@@ -210,6 +234,7 @@ export function AdminDashboard() {
       <section className="gs-admin__stats" aria-label="Snapshot">
         <StatCard label="Leads (total)" value={stats.totalLeads} />
         <StatCard label="Leads (24h)" value={stats.leads24} />
+        <StatCard label="Build requests" value={stats.totalOrders} />
         <StatCard label="Page views (total)" value={stats.totalVisits} />
         <StatCard label="Page views (24h)" value={stats.visits24} />
         <StatCard label="Unique sessions" value={stats.uniqueSessions} />
@@ -222,6 +247,13 @@ export function AdminDashboard() {
           onClick={() => setTab("leads")}
         >
           Leads ({leads.length})
+        </button>
+        <button
+          className={`gs-admin__tab${tab === "orders" ? " gs-admin__tab--active" : ""}`}
+          type="button"
+          onClick={() => setTab("orders")}
+        >
+          Build requests ({orders.length})
         </button>
         <button
           className={`gs-admin__tab${tab === "visitors" ? " gs-admin__tab--active" : ""}`}
@@ -237,7 +269,9 @@ export function AdminDashboard() {
           onClick={() =>
             tab === "leads"
               ? downloadCsv("growwstack-leads.csv", leads)
-              : downloadCsv("growwstack-visitors.csv", visitors)
+              : tab === "orders"
+                ? downloadCsv("growwstack-website-orders.csv", orders)
+                : downloadCsv("growwstack-visitors.csv", visitors)
           }
         >
           Export CSV
@@ -248,15 +282,17 @@ export function AdminDashboard() {
 
       {tab === "leads" ? (
         <LeadsTable leads={leads} />
+      ) : tab === "orders" ? (
+        <OrdersTable orders={orders} />
       ) : (
         <VisitorsTable visitors={visitors} />
       )}
 
       <footer className="gs-admin__foot">
         <p>
-          Reads use the public anon key. Anyone who guesses this URL and password
-          can see this data. Rotate the password from your Vercel env vars if
-          exposed.
+          Reads run server-side in /api/admin with the service-role key. The
+          browser never holds a credential that can read this data. Rotate
+          ADMIN_PASSWORD from your Vercel env vars if it is ever exposed.
         </p>
       </footer>
     </div>
@@ -268,6 +304,81 @@ function StatCard({ label, value }: { label: string; value: number }) {
     <div className="gs-admin__stat">
       <p className="gs-admin__stat-value">{value}</p>
       <p className="gs-admin__stat-label">{label}</p>
+    </div>
+  );
+}
+
+function OrdersTable({ orders }: { orders: Order[] }) {
+  if (!orders.length) {
+    return (
+      <p className="gs-admin__empty">
+        No build requests yet. They will appear here as soon as someone submits the website form.
+      </p>
+    );
+  }
+
+  return (
+    <div className="gs-admin__table-wrap">
+      <table className="gs-admin__table">
+        <thead>
+          <tr>
+            <th>Received</th>
+            <th>Name</th>
+            <th>Business</th>
+            <th>Contact</th>
+            <th>Needs</th>
+            <th>Goal</th>
+            <th>Timeline</th>
+            <th>Current site</th>
+            <th>Notes</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {orders.map((o) => {
+            const wa = whatsappHref(o.phone, o.name);
+            return (
+              <tr key={o.id}>
+                <td>{formatDate(o.created_at)}</td>
+                <td>{o.name}</td>
+                <td>
+                  {o.company ?? "—"}
+                  {o.business_type && (
+                    <div className="gs-admin__muted">{o.business_type}</div>
+                  )}
+                </td>
+                <td>
+                  {o.email && (
+                    <div>
+                      <a href={`mailto:${o.email}`}>{o.email}</a>
+                    </div>
+                  )}
+                  {o.phone && (
+                    <div>
+                      <a href={`tel:${o.phone}`}>{o.phone}</a>
+                    </div>
+                  )}
+                  {!o.email && !o.phone && "—"}
+                </td>
+                <td>{o.project_type ?? "—"}</td>
+                <td>{o.primary_goal ?? "—"}</td>
+                <td>{o.timeline ?? "—"}</td>
+                <td>
+                  {o.current_website ? (
+                    <a href={o.current_website} target="_blank" rel="noopener noreferrer">
+                      Visit
+                    </a>
+                  ) : (
+                    "None"
+                  )}
+                </td>
+                <td>{o.message ?? "—"}</td>
+                <td>{wa && <a href={wa} target="_blank" rel="noopener noreferrer">WhatsApp</a>}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
     </div>
   );
 }

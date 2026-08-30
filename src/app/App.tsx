@@ -8,6 +8,7 @@ import {
   PartnershipProcessSection,
 } from "./components/growwstack/ProcessAndApplication";
 import { QuickContactSection } from "./components/growwstack/QuickContactSection";
+import { WebsiteBuildSection } from "./components/growwstack/WebsiteBuildSection";
 import { SiteFooter } from "./components/growwstack/SiteFooter";
 import { SiteNav } from "./components/growwstack/SiteNav";
 import { WhatsAppFab } from "./components/growwstack/WhatsAppFab";
@@ -35,6 +36,7 @@ export default function App() {
         <ResultsSection />
         <PartnershipProcessSection />
         <PartnerFitSection />
+        <WebsiteBuildSection />
         <ApplicationSection />
         <QuickContactSection />
       </main>
