@@ -1,0 +1,91 @@
+{
+  "slug": "technical-seo-checklist-new-website",
+  "category": "SEO",
+  "publishedAt": "2026-08-31",
+  "readingTime": "7 min read",
+  "metaTitle": "Technical SEO Checklist for a New Website",
+  "metaDescription": "The technical work that has to be right before content can rank — indexing, rendering, canonicals, structured data — in the order it actually matters.",
+  "title": "Technical SEO checklist for a new website",
+  "excerpt": "Technical SEO does not make a site rank. It removes the reasons a site cannot. Here is the order that matters.",
+  "intro": [
+    "Technical SEO does not make a website rank. Content and links do that. What technical work does is remove the reasons a site cannot rank, which is a different and more boring job.",
+    "It is also finite. Unlike content, this is a list you can genuinely finish. Here it is, in the order that matters — because fixing item eight before item one is wasted effort."
+  ],
+  "sections": [
+    {
+      "heading": "1. Confirm the site can be indexed",
+      "paragraphs": [
+        "Everything else is irrelevant if pages are not in the index. Two things block this more often than any other cause.",
+        "First, a stray noindex tag left over from staging. It is startlingly common for a site to launch still telling search engines to ignore it. Second, a robots.txt that disallows more than intended.",
+        "Verify in Search Console rather than assuming. The Pages report shows what is indexed and, more usefully, why things are not."
+      ],
+      "list": [
+        "No unintended noindex on production pages",
+        "robots.txt allows what should be crawled",
+        "Domain verified in Search Console",
+        "XML sitemap submitted and reporting success"
+      ],
+      "listType": "bullet"
+    },
+    {
+      "heading": "2. Check what the crawler actually receives",
+      "paragraphs": [
+        "View source — not the browser inspector, which shows the page after JavaScript has run. Look for your headline and body copy as literal text.",
+        "If the source is essentially an empty div, your content depends entirely on the crawler executing JavaScript. Google usually manages this, on a delay. AI crawlers frequently do not.",
+        "This single check catches more real problems than any other on this list, and almost nobody performs it."
+      ]
+    },
+    {
+      "heading": "3. One canonical version of the site",
+      "paragraphs": [
+        "A site can be reachable at http and https, with and without www, with and without a trailing slash. To a search engine those can look like separate sites competing with each other.",
+        "Pick one, redirect everything else to it permanently, and set a self-referencing canonical tag on every page. This is unglamorous and takes twenty minutes."
+      ]
+    },
+    {
+      "heading": "4. Unique titles and descriptions",
+      "paragraphs": [
+        "Every page needs its own title and meta description. Duplicates across pages are a strong signal that the pages are interchangeable.",
+        "This is a specific and frequent failure in single-page applications, where every route can end up serving the same static tags from one HTML file. If you are running an SPA, verify that each route genuinely serves distinct metadata in its initial response rather than setting it with JavaScript afterwards."
+      ]
+    },
+    {
+      "heading": "5. Sensible heading structure",
+      "paragraphs": [
+        "One H1 per page, describing what the page is about. H2s for main sections, H3s beneath them. Do not skip levels to get a font size you like.",
+        "This matters for accessibility as much as for search, and increasingly for extraction — assistants use heading structure to work out which passage answers which question."
+      ]
+    },
+    {
+      "heading": "6. Structured data where it applies",
+      "paragraphs": [
+        "Add Organization markup identifying the business, and Article or BlogPosting on content pages. Use BreadcrumbList where you have a hierarchy.",
+        "Only mark up things genuinely present on the page. Marking up reviews you do not display or questions you do not answer risks a manual action, and the upside was never large.",
+        "Validate with the Rich Results Test before assuming it works. Malformed JSON-LD fails silently."
+      ]
+    },
+    {
+      "heading": "7. Performance on a real device",
+      "paragraphs": [
+        "Test on a mid-range Android phone on mobile data. Not on your laptop, and not only in Lighthouse.",
+        "Chase the large wins — oversized images, render-blocking resources, oversized JavaScript bundles — and stop when the page feels fast. Perfect scores are not a commercial objective."
+      ]
+    },
+    {
+      "heading": "8. Internal links",
+      "paragraphs": [
+        "A page with no links pointing at it is nearly invisible, regardless of quality. Crawlers find pages by following links, and a page reachable only from the sitemap gets treated as marginal.",
+        "Every page you care about should be reachable from at least one other page, ideally with link text that describes what it is about. Publishing a page and linking to it from nowhere is the most common way good content goes unread."
+      ]
+    },
+    {
+      "heading": "What is not on this list",
+      "paragraphs": [
+        "Keyword density, meta keywords, and most of what SEO tools flag as issues. Tools generate long lists because long lists justify subscriptions, not because every item matters.",
+        "If the eight items above are done, the technical work is essentially complete. Everything after that is content and links, which is where the actual competition happens — and where the effort should go."
+      ]
+    }
+  ],
+  "takeaway": "Technical SEO is a finite list, and most of it is done in a day. Confirm indexing, check what the crawler receives, canonicalise, give every page unique metadata, and link pages to each other. Then stop and write.",
+  "related": ["why-your-website-gets-no-traffic", "structured-data-for-business-websites"]
+}

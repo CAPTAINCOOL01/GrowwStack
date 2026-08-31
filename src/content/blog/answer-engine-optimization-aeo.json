@@ -1,0 +1,77 @@
+{
+  "slug": "answer-engine-optimization-aeo",
+  "category": "AEO",
+  "publishedAt": "2026-08-31",
+  "readingTime": "6 min read",
+  "metaTitle": "Answer Engine Optimization (AEO): Winning the Zero-Click Result",
+  "metaDescription": "More searches end without a click. AEO is about being the answer shown rather than a link below it — and about making that worth something commercially.",
+  "title": "Answer Engine Optimization: winning the zero-click result",
+  "excerpt": "A large share of searches now end without anyone visiting a website. That is a problem and an opportunity, depending on how you treat it.",
+  "intro": [
+    "A significant and growing share of searches end without a click. The user asks, the engine answers on the results page, and nobody visits a website.",
+    "Answer Engine Optimization is about being the source of that answer. It is closely related to GEO but not identical: AEO is largely about featured snippets, knowledge panels and voice results within conventional search, where the mechanics are better understood."
+  ],
+  "sections": [
+    {
+      "heading": "Why bother with a result nobody clicks",
+      "paragraphs": [
+        "The obvious objection is that a zero-click answer produces no traffic, so why optimise for it.",
+        "Two reasons. First, brand attribution: answers frequently name their source, and being repeatedly named as the authority on a question compounds even without the visit. Second, the questions worth winning are the ones where the answer alone is not enough — a definition can be answered in a sentence, but a decision cannot.",
+        "The mistake is targeting purely informational questions and then complaining about the lack of traffic. Target questions where the answer leads naturally to needing help."
+      ]
+    },
+    {
+      "heading": "Answer the question in the first two sentences",
+      "paragraphs": [
+        "Snippet extraction favours a direct answer placed immediately after a heading that matches the question.",
+        "Most business writing does the opposite. It sets context, establishes credibility, and arrives at the answer in paragraph four. That structure loses the snippet to a competitor who simply said the thing.",
+        "State the answer plainly, then earn the reader's attention with the explanation underneath. This is better writing regardless of search."
+      ]
+    },
+    {
+      "heading": "Match the question's actual phrasing",
+      "paragraphs": [
+        "People ask questions in natural language, particularly by voice. \"How much should a website cost\" is a query. \"Web Development Pricing Structures\" is a heading nobody searches.",
+        "Use headings that mirror the question as it is spoken. Then answer it directly underneath. The gap between how businesses phrase headings and how customers phrase questions is one of the largest and cheapest wins available on most sites."
+      ],
+      "list": [
+        "Write headings as questions where a question is what people ask",
+        "Use the vocabulary of the buyer, not the industry",
+        "Cover the follow-up question immediately after the first"
+      ],
+      "listType": "bullet"
+    },
+    {
+      "heading": "Format for the answer type",
+      "paragraphs": [
+        "Different questions produce different snippet formats, and matching the format improves your odds considerably.",
+        "A \"how to\" question tends to produce a numbered list. A \"what is\" question produces a paragraph. A \"best\" or comparison question often produces a table. Writing a wall of prose for a question that wants a list gives the engine nothing convenient to extract."
+      ]
+    },
+    {
+      "heading": "Structured data for the questions you answer",
+      "paragraphs": [
+        "FAQ and HowTo markup make the question-and-answer relationship explicit rather than inferred. Support for rich display of these has fluctuated over the years, so treat them as clarity rather than as a guaranteed visual result.",
+        "The important part is honesty: mark up questions you genuinely answer on the page. Marking up questions you do not answer is the kind of thing that gets manual actions, and it is not worth the risk."
+      ]
+    },
+    {
+      "heading": "Choose questions with commercial gravity",
+      "paragraphs": [
+        "This is the part most AEO advice skips. Winning the answer to \"what is a CRM\" produces nothing. The answer is complete, the reader leaves satisfied, and there is no next step.",
+        "Winning \"why is my website not generating leads\" is different. The answer is genuinely useful, and it also reveals a problem the reader now knows they have. That is a question worth being the authority on.",
+        "Pick questions where being right in public makes the reader want the person who was right."
+      ]
+    },
+    {
+      "heading": "How AEO and GEO differ in practice",
+      "paragraphs": [
+        "Both reward direct answers and clear structure. The difference is mostly scope and measurability.",
+        "AEO concerns conventional search surfaces where you can see results and measure impressions in Search Console. GEO concerns assistant answers, where measurement is manual and the mechanisms are less understood.",
+        "The practical consequence is that the same content work serves both. Write to answer questions precisely, structure it so the answer is extractable, and you are optimising for both surfaces without doing the work twice."
+      ]
+    }
+  ],
+  "takeaway": "AEO is answering the question directly, in the format the question implies, using the words people actually say. Choose questions where being the authority creates demand rather than satisfying it completely.",
+  "related": ["generative-engine-optimization-geo", "why-your-website-gets-no-traffic"]
+}

@@ -1,0 +1,73 @@
+{
+  "slug": "structured-data-for-business-websites",
+  "category": "SEO",
+  "publishedAt": "2026-08-31",
+  "readingTime": "6 min read",
+  "metaTitle": "Structured Data for Business Websites: What to Add and What to Skip",
+  "metaDescription": "Schema markup explains what your pages mean rather than what they say. Which types are worth adding, which are a liability, and how to validate them.",
+  "title": "Structured data: what to add and what to skip",
+  "excerpt": "Schema markup tells search engines what your content means. Most guides tell you to add everything. Most of it is not worth adding.",
+  "intro": [
+    "Structured data is a block of JSON in your page that describes what the page means: this is an organisation, this is an article, this person wrote it, these pages sit above it in a hierarchy.",
+    "Search engines read it to disambiguate rather than to rank. It is not a ranking factor in any direct sense, and it will not rescue weak content. What it does is remove uncertainty about what you are — which matters more as answer engines become the surface people actually use."
+  ],
+  "sections": [
+    {
+      "heading": "What it does and does not do",
+      "paragraphs": [
+        "It does not improve rankings directly. Nobody outranks a better page by adding markup.",
+        "It does make you eligible for rich results, clarify entity relationships, and give assistants a reliable statement of what your business is and who wrote a given page.",
+        "Treat it as removing ambiguity rather than gaining advantage. That framing keeps expectations honest and stops you over-investing."
+      ]
+    },
+    {
+      "heading": "The types actually worth adding",
+      "paragraphs": [
+        "For most business websites, a small set covers nearly all the value:"
+      ],
+      "list": [
+        "Organization — name, URL, logo, contact, founder. Add once, sitewide.",
+        "WebSite — ties pages to one property and names the publisher.",
+        "Article or BlogPosting — on every content page, with author and date.",
+        "BreadcrumbList — wherever pages sit in a hierarchy.",
+        "Service — where you want specific offerings understood as distinct things.",
+        "LocalBusiness — only if you genuinely serve customers at a physical address."
+      ],
+      "listType": "bullet"
+    },
+    {
+      "heading": "What to skip, and what is a liability",
+      "paragraphs": [
+        "AggregateRating is the one to be careful with. Marking up ratings you did not genuinely collect, or that are not displayed on the page, is a policy violation and a common cause of manual actions. The star ratings are tempting and not worth it.",
+        "FAQ markup is worth adding only where you genuinely answer those questions on the page. Rich display for it has been reduced over time, so treat it as clarity rather than a guaranteed visual result.",
+        "The general rule: mark up what is actually on the page. Structured data describing content that does not exist is the fastest route to a penalty, and the upside was always small."
+      ]
+    },
+    {
+      "heading": "Use one connected graph",
+      "paragraphs": [
+        "Rather than scattering separate blocks across the page, use a single @graph with @id references linking the nodes: the article references its author, the author references the organisation, the organisation is defined once.",
+        "This is easier to maintain and gives a cleaner picture of how the entities relate. Duplicated, disconnected blocks describing the same organisation slightly differently on each page produce exactly the ambiguity you were trying to remove.",
+        "One consequence worth noting: every @id you reference should resolve to a node that exists somewhere in the graph. Dangling references are a silent, common mistake."
+      ]
+    },
+    {
+      "heading": "Validate, because it fails quietly",
+      "paragraphs": [
+        "Malformed JSON-LD does not produce an error anywhere a person will see. It is simply ignored, and you continue believing it works.",
+        "Run pages through the Rich Results Test and the Schema.org validator after any change. They catch different things — the former tells you what Google will act on, the latter whether the markup is technically valid.",
+        "Check again after redesigns. Structured data is the first thing to break during a rebuild and the last thing anyone notices."
+      ]
+    },
+    {
+      "heading": "Why this is getting more important",
+      "paragraphs": [
+        "As answers are increasingly assembled by models rather than presented as links, being unambiguous about what you are matters more.",
+        "A model deciding whether to cite you benefits from an explicit statement of who published a claim, when, and what organisation stands behind it. Structured data provides that in a form that requires no inference.",
+        "It is a small amount of work with a long shelf life. Add it once, keep it accurate, validate after changes."
+      ]
+    }
+  ],
+  "takeaway": "Add Organization, WebSite, Article and BreadcrumbList, connect them in one graph with resolving @id references, and validate after every change. Skip AggregateRating unless the reviews are real and shown on the page.",
+  "related": ["generative-engine-optimization-geo", "technical-seo-checklist-new-website"]
+}

@@ -1,0 +1,86 @@
+{
+  "slug": "website-lead-generation-system",
+  "category": "Systems",
+  "publishedAt": "2026-08-31",
+  "readingTime": "7 min read",
+  "metaTitle": "How to Turn a Website Into a Lead Generation System",
+  "metaDescription": "Most websites collect enquiries and lose them. The difference between a brochure and a lead machine is what happens in the minutes after the form is submitted.",
+  "title": "How to turn a website into a lead generation system",
+  "excerpt": "The form is the easy part. Everything that decides whether an enquiry becomes revenue happens after it is submitted.",
+  "intro": [
+    "Almost every business website has a contact form. Very few have a lead generation system, and the distinction is not cosmetic.",
+    "A form collects information. A system makes sure that information reaches the right person fast enough to matter, gets followed up whether or not anyone remembers, and is measurable back to the channel that produced it. Most sites do the first and none of the rest."
+  ],
+  "sections": [
+    {
+      "heading": "Speed is the entire game",
+      "paragraphs": [
+        "The strongest predictor of whether an enquiry converts is how quickly you respond. A buyer filling out a form is rarely filling out only yours. They are in an active buying moment, and that moment closes.",
+        "Most businesses lose on this without realising, because nothing tells them a lead arrived. The enquiry sits in an inbox or a dashboard until somebody happens to look. By Thursday it is cold, and the deal went to whoever answered on Tuesday.",
+        "Instant notification is the cheapest, highest-return improvement available to most websites. Not a daily digest — an alert, on the phone of the person who can respond."
+      ]
+    },
+    {
+      "heading": "Capture more than a name and an email",
+      "paragraphs": [
+        "A form asking only for name, email and message produces enquiries you cannot prioritise. Every lead looks identical until you have spent time on a call discovering that half of them were never a fit.",
+        "The right questions do two jobs at once: they tell you who is worth calling first, and they make the caller arrive informed. Asking what the business does, what the site should achieve, and what the timeline is costs the visitor fifteen seconds and saves you an entire discovery call.",
+        "There is a real tension here. Every additional field reduces completion. The resolution is to ask only questions whose answers change what you do next — not questions that merely satisfy curiosity."
+      ]
+    },
+    {
+      "heading": "Record where every lead came from",
+      "paragraphs": [
+        "If you cannot say which channel produced a lead, you cannot decide where to spend. You are left guessing, and guessing gets expensive as spend grows.",
+        "This requires capturing campaign parameters at the moment of submission and storing them alongside the lead. It is not difficult, but it must be built in — it cannot be reconstructed later.",
+        "The useful version connects all the way through: this channel produced this lead, which became this customer, worth this much. Most businesses can report traffic by channel. Very few can report revenue by channel, which is the only version that changes decisions."
+      ],
+      "list": [
+        "Store utm_source, utm_medium and utm_campaign with every submission",
+        "Record the landing page and referrer",
+        "Keep the lead's identifier so it can be matched to a closed deal later"
+      ],
+      "listType": "bullet"
+    },
+    {
+      "heading": "Follow up by process, not by memory",
+      "paragraphs": [
+        "Most leads are not lost at first contact. They are lost at the third, because nobody made it.",
+        "A buyer who does not reply to the first message is usually not uninterested — they are busy. The businesses that convert them are the ones where follow-up happens on a defined schedule regardless of who is in the office that week.",
+        "This is a systems problem, not a discipline problem. Relying on people to remember produces inconsistent results no matter how conscientious they are. Relying on a CRM with scheduled follow-up produces consistent results from the same people."
+      ]
+    },
+    {
+      "heading": "Meet buyers where they actually reply",
+      "paragraphs": [
+        "In India, a WhatsApp message is answered far more reliably than an email. A system that routes enquiries into email because that is conventional is choosing the channel with the lower response rate.",
+        "The practical version is to offer both, and to make the fast channel obvious. Someone who wants to type a message can. Someone who would rather send a WhatsApp gets a button that opens a conversation with the context already filled in.",
+        "This is not a small optimisation. Channel choice frequently makes more difference to reply rates than anything you do to the form itself."
+      ]
+    },
+    {
+      "heading": "Close the loop back to the site",
+      "paragraphs": [
+        "Once leads are tracked to outcomes, the website stops being a fixed asset and becomes something you improve deliberately.",
+        "You learn which pages produce enquiries that close, not merely enquiries. You learn which traffic sources deliver buyers rather than browsers. You learn which questions on the form predict a good fit.",
+        "That feedback loop is what separates a website that gets incrementally better every quarter from one that gets redesigned every three years because nobody can tell whether it works."
+      ]
+    },
+    {
+      "heading": "The order to build it in",
+      "paragraphs": [
+        "Do not attempt all of this at once. The sequence matters, because each step makes the next one worth doing:"
+      ],
+      "list": [
+        "Instant notification when a lead arrives — the highest return for the least work",
+        "Qualifying questions on the form so leads can be prioritised",
+        "Source capture stored with every submission",
+        "A CRM holding every enquiry, with scheduled follow-up",
+        "Outcome tracking, so channels can be judged on revenue rather than volume"
+      ],
+      "listType": "number"
+    }
+  ],
+  "takeaway": "The form is the easy part. A lead generation system is defined by what happens in the minutes and weeks after submission — notification, qualification, attribution and follow-up that runs as a process rather than a habit.",
+  "related": ["crm-and-follow-up-systems", "website-builder-vs-custom-code"]
+}

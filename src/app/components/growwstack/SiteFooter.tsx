@@ -29,6 +29,7 @@ export function SiteFooter() {
         </a>
         <p>Founder-led growth systems for selected brands.</p>
         <div className="gs-footer__links">
+          <a href="/blog">Blog</a>
           <a href={`tel:+${CONTACT_PHONE}`}>{CONTACT_PHONE_DISPLAY}</a>
           <a href={whatsappHref} target="_blank" rel="noopener noreferrer">
             WhatsApp

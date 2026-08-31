@@ -6,6 +6,7 @@ const navItems = [
   { label: "Partnerships", href: "#partnerships" },
   { label: "Results", href: "#results" },
   { label: "Websites", href: "#build" },
+  { label: "Blog", href: "/blog" },
 ];
 
 export function SiteNav() {

@@ -1,0 +1,70 @@
+{
+  "slug": "core-web-vitals-explained",
+  "category": "Performance",
+  "publishedAt": "2026-08-31",
+  "readingTime": "6 min read",
+  "metaTitle": "Core Web Vitals Explained: Why Speed Decides More Than Rankings",
+  "metaDescription": "What LCP, INP and CLS actually measure, why they matter on Indian mobile connections, and the fixes that produce most of the improvement.",
+  "title": "Core Web Vitals, and why speed decides more than rankings",
+  "excerpt": "Speed is a modest ranking factor and a huge behavioural one. Most visitors who leave a slow page never appear in any report.",
+  "intro": [
+    "Core Web Vitals are Google's attempt to measure how a page feels to use, rather than how fast a server responds.",
+    "They are a ranking factor, though a modest one — content and links matter more. The larger effect is behavioural: people abandon slow pages, and abandonment is invisible in most reports because those visitors never reach anything you measure."
+  ],
+  "sections": [
+    {
+      "heading": "The three metrics, plainly",
+      "paragraphs": [
+        "Each measures a different kind of frustration."
+      ],
+      "list": [
+        "LCP — how long until the main content appears. Aim under 2.5 seconds.",
+        "INP — how quickly the page responds when you interact with it. Aim under 200 milliseconds.",
+        "CLS — how much the layout jumps around while loading. Aim under 0.1."
+      ],
+      "listType": "bullet"
+    },
+    {
+      "heading": "Why this matters more in India",
+      "paragraphs": [
+        "Performance advice is often written for fast devices on good connections, where poor scores are barely noticeable.",
+        "A large share of Indian buyers browse on mid-range Android phones over mobile data. A page that takes 1.2 seconds on a developer's laptop can take five or six seconds in that context. That is not a slightly worse experience; it is a different one, and many people simply leave.",
+        "Test on a real mid-range phone on mobile data, not on your laptop on office wifi. The gap is routinely larger than people expect."
+      ]
+    },
+    {
+      "heading": "What usually causes bad LCP",
+      "paragraphs": [
+        "Almost always one of three things: an oversized hero image, a font that blocks rendering, or a large JavaScript bundle that must execute before anything appears.",
+        "Images are the easiest win. Serving a 3000-pixel-wide photograph to a 400-pixel-wide phone screen is common and entirely avoidable with modern formats and correctly sized variants.",
+        "JavaScript is the harder one. If your page cannot render until a large bundle has downloaded and executed, LCP is bounded by that, and no amount of image optimisation fixes it."
+      ]
+    },
+    {
+      "heading": "CLS is the cheapest to fix",
+      "paragraphs": [
+        "Layout shift is almost always caused by elements that arrive without reserved space: images without dimensions, fonts that swap and change text size, or banners injected above existing content.",
+        "The fixes are mundane — set explicit width and height on images, reserve space for anything that loads late, and avoid inserting elements above content that is already visible.",
+        "It is also the metric users notice most viscerally, because it makes them tap the wrong thing."
+      ]
+    },
+    {
+      "heading": "Measure with field data, not lab scores",
+      "paragraphs": [
+        "A single Lighthouse run on your machine tells you very little. It reflects your device, your connection and one moment.",
+        "Search Console's Core Web Vitals report uses field data from real visitors on real devices. That is the number that matters, and it frequently disagrees with the lab score in an unflattering direction.",
+        "Use lab tools to diagnose and iterate quickly. Use field data to decide whether the problem is real."
+      ]
+    },
+    {
+      "heading": "A sense of proportion",
+      "paragraphs": [
+        "Performance work has diminishing returns, and it is possible to spend months chasing scores that change nothing commercially.",
+        "Going from genuinely slow to reasonably fast is worth real money. Going from good to excellent is mostly worth pride. If your pages load quickly on a mid-range phone, the next hour is better spent on content than on shaving another hundred milliseconds.",
+        "The exception is if you are competing for a query where everyone's content is equally good. Then technical quality decides it, and the margins matter."
+      ]
+    }
+  ],
+  "takeaway": "LCP, INP and CLS measure how a page feels rather than how fast it responds. Fix images and layout shift first, test on a mid-range phone on mobile data, and stop once the page feels fast — the next gain is in content.",
+  "related": ["technical-seo-checklist-new-website", "why-template-websites-dont-rank"]
+}

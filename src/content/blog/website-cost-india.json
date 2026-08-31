@@ -1,0 +1,87 @@
+{
+  "slug": "website-cost-india",
+  "category": "Pricing",
+  "publishedAt": "2026-08-31",
+  "readingTime": "7 min read",
+  "metaTitle": "What Should a Website Cost in India? An Honest Breakdown",
+  "metaDescription": "Website quotes in India range from a few thousand rupees to several lakh for work that sounds identical. Here is what actually drives the difference.",
+  "title": "What should a website cost in India?",
+  "excerpt": "Quotes range from ₹5,000 to ₹5,00,000 for work described in the same words. The difference is real, and it is knowable.",
+  "intro": [
+    "Ask three suppliers to quote for a business website in India and you may get ₹8,000, ₹80,000 and ₹8,00,000. All three will describe the work in similar language.",
+    "The spread is not arbitrary, and the expensive quote is not automatically the honest one. What follows is what actually drives cost, so you can tell which quote matches what you need."
+  ],
+  "sections": [
+    {
+      "heading": "What the cheapest tier really is",
+      "paragraphs": [
+        "At the bottom of the market you are buying a template installation. Someone picks a theme, replaces the placeholder text with yours, swaps the images, and hands it over.",
+        "This is a legitimate product at a legitimate price, and for some businesses it is the correct purchase. What you are not buying is any thought about what the site should say, who it is for, or what it should cause to happen.",
+        "The failure mode is not that the site looks bad. It usually looks fine. The failure mode is that it produces nothing, and nobody involved ever intended it to."
+      ]
+    },
+    {
+      "heading": "What actually drives cost upward",
+      "paragraphs": [
+        "Five things account for most of the variation between a low quote and a high one:"
+      ],
+      "list": [
+        "Number of distinct pages and page types — each real template is design and build work",
+        "Whether content is written for you or supplied by you, which is often the largest hidden cost",
+        "Integrations: CRM, payments, WhatsApp, inventory, booking, each with real edge cases",
+        "Whether anyone is doing SEO, analytics and conversion work rather than only building",
+        "Ongoing operation — a site that is improved monthly is a service, not a purchase"
+      ],
+      "listType": "bullet"
+    },
+    {
+      "heading": "Content is the cost nobody quotes",
+      "paragraphs": [
+        "A large share of website projects stall not in development but at content. The build is finished and waiting on copy that nobody has time to write.",
+        "When a quote is silent on content, it almost always means you are supplying it. That is fine if you have someone who can write, and a serious problem if you do not, because the project will sit unfinished for months.",
+        "Ask explicitly. \"Who writes the words?\" separates quotes that look comparable more effectively than almost any other question."
+      ]
+    },
+    {
+      "heading": "Ongoing costs are not optional",
+      "paragraphs": [
+        "Domain and hosting are small and predictable. The real ongoing cost is whether anyone is responsible for the site after launch.",
+        "A website that is never touched again decays. Content goes stale, competitors publish more, technical debt accumulates, and performance drifts. The site that produced enquiries in year one produces fewer in year two for no visible reason.",
+        "Budget for someone owning it, or accept that the asset depreciates."
+      ]
+    },
+    {
+      "heading": "How to compare quotes that look identical",
+      "paragraphs": [
+        "Most quotes are written to be hard to compare. These questions make them comparable:"
+      ],
+      "list": [
+        "How many distinct page designs, and how many pages in total?",
+        "Who writes the content, and is it included in this price?",
+        "Is the site server-rendered, and what is the expected mobile load time?",
+        "What happens to an enquiry after the form is submitted?",
+        "What is included after launch, for how long, and at what cost?",
+        "Do I own the code and the domain outright?"
+      ],
+      "listType": "number"
+    },
+    {
+      "heading": "The question behind the question",
+      "paragraphs": [
+        "Asking what a website should cost is usually a proxy for a harder question: what is a website worth to this business.",
+        "If the site is a credibility asset — somewhere to point people who already found you — spending heavily is poor allocation. A modest template site does that job.",
+        "If the site is supposed to be a channel, generating enquiries at a measurable cost, then it is not a purchase at all. It is an investment judged on return, and the right amount to spend is whatever produces a return you can measure."
+      ]
+    },
+    {
+      "heading": "Why we do not quote upfront",
+      "paragraphs": [
+        "We build without an upfront agency fee and are paid from the growth the work produces. That is not generosity — it is a filter in both directions.",
+        "It means we only take on businesses where we believe the work will generate enough to pay for itself, and it means the client is not gambling capital on a promise. If we are wrong about the growth, we carry that.",
+        "It also constrains us to a small number of engagements at a time, which is why we say no more often than yes."
+      ]
+    }
+  ],
+  "takeaway": "Cost tracks scope, content ownership, integrations and whether anyone operates the site after launch. Decide first whether the site is a credibility asset or a revenue channel — the honest budget follows from that answer.",
+  "related": ["website-builder-vs-custom-code", "website-lead-generation-system"]
+}

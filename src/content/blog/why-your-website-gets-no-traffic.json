@@ -1,0 +1,86 @@
+{
+  "slug": "why-your-website-gets-no-traffic",
+  "category": "Traffic",
+  "publishedAt": "2026-08-31",
+  "readingTime": "7 min read",
+  "metaTitle": "Why Your Website Gets No Traffic (And What Actually Fixes It)",
+  "metaDescription": "Most business websites get almost no visitors. The reasons are specific and fixable. Here is what actually causes the silence, in the order it usually matters.",
+  "title": "Why your website gets no traffic",
+  "excerpt": "A site can be finished, live and completely invisible. The causes are specific, and they are almost never the ones people assume.",
+  "intro": [
+    "A website can be finished, live, and completely invisible. The business owner refreshes the analytics, sees single digits, and concludes that SEO is a scam or that they need to spend on ads.",
+    "Usually neither is true. A site with no traffic almost always has a specific, identifiable reason — and in our experience the reason is rarely the one the owner suspects."
+  ],
+  "sections": [
+    {
+      "heading": "Nobody told Google the site exists",
+      "paragraphs": [
+        "Search engines do not automatically discover new websites. They find pages by following links from pages they already know about, or by reading a sitemap you submit.",
+        "A brand-new domain with no inbound links and no submitted sitemap can sit unindexed for months. The site is live. It is simply not in the index, and a page that is not in the index cannot rank for anything."
+      ],
+      "list": [
+        "Verify the domain in Google Search Console",
+        "Submit an XML sitemap listing every page you want indexed",
+        "Check Search Console's Pages report for what Google has actually crawled"
+      ],
+      "listType": "bullet"
+    },
+    {
+      "heading": "The site is one page",
+      "paragraphs": [
+        "A single-page website can rank for roughly one cluster of closely related queries. That is the ceiling, and no amount of optimisation raises it.",
+        "Search demand is not one question. Somebody looking for a dentist searches differently from somebody comparing dental implant costs, who searches differently again from somebody looking for an emergency appointment. Each of those is a different page, or it is traffic you do not get.",
+        "This is the single most common cause of a well-built site producing nothing. The design is fine. The copy is fine. There is simply nowhere near enough of it."
+      ]
+    },
+    {
+      "heading": "The pages target words nobody types",
+      "paragraphs": [
+        "Businesses describe themselves in their own vocabulary. Customers search in theirs, and the two frequently do not overlap.",
+        "A page headed \"Integrated Thermal Management Solutions\" targets a phrase almost nobody searches. The people who need that product are typing something closer to \"cold storage refrigeration supplier\". Both describe the same business. Only one gets found.",
+        "The fix is not to write badly. It is to lead with the language buyers use and let the precise terminology follow."
+      ]
+    },
+    {
+      "heading": "The content answers nothing",
+      "paragraphs": [
+        "Most business websites are brochures. They describe the company, list services, and invite contact. Every competitor's site says approximately the same thing in approximately the same words.",
+        "Search engines rank pages that answer questions. If your site contains no answers — only claims — there is nothing for a search engine to match a query against. The page is not competing badly; it is not competing at all.",
+        "This is why a genuinely useful article often outranks a polished homepage. The article answers something. The homepage asserts something."
+      ]
+    },
+    {
+      "heading": "The site is too slow to compete",
+      "paragraphs": [
+        "Page speed is a ranking factor, but the larger effect is behavioural. Visitors leave slow pages, and search engines observe that they left.",
+        "Template platforms and heavy page builders often ship several hundred kilobytes of JavaScript to render what is essentially text and images. On a mid-range Android phone on Indian mobile data, that is the difference between a page that appears instantly and one that takes four seconds.",
+        "Most visitors will not wait four seconds, and the ones who leave take your rankings down with them."
+      ]
+    },
+    {
+      "heading": "The content is invisible to crawlers",
+      "paragraphs": [
+        "Some site builders render everything through JavaScript. A person sees the page fine. A crawler fetching the raw HTML may see an empty container.",
+        "Search engines can execute JavaScript, but they do it on a delay and not always completely. Content that exists only after JavaScript runs is indexed less reliably and less often than content present in the initial response.",
+        "You can check this yourself: view the page source, not the inspector. If your headline and body copy are not in there as text, crawlers are working harder than they should to find them."
+      ]
+    },
+    {
+      "heading": "The order in which to fix things",
+      "paragraphs": [
+        "These causes are not equally weighted, and fixing them out of order wastes effort. Indexing problems make everything else irrelevant — there is no point optimising a page that is not in the index.",
+        "Work through them in this sequence:"
+      ],
+      "list": [
+        "Confirm the site is indexed at all, via Search Console",
+        "Ensure content is present in the raw HTML, not only after JavaScript runs",
+        "Fix load speed, particularly on mobile",
+        "Build pages that target the language buyers actually use",
+        "Publish content that answers real questions rather than describing the company"
+      ],
+      "listType": "number"
+    }
+  ],
+  "takeaway": "A site with no traffic is not a mystery. It is usually unindexed, too small, too slow, or answering nothing. Diagnose in that order, because fixing step four before step one produces nothing at all.",
+  "related": ["website-builder-vs-custom-code", "technical-seo-checklist-new-website"]
+}

@@ -1,0 +1,77 @@
+{
+  "slug": "website-builder-vs-custom-code",
+  "category": "Build",
+  "publishedAt": "2026-08-31",
+  "readingTime": "8 min read",
+  "metaTitle": "Website Builder vs Custom-Coded Website: An Honest Comparison",
+  "metaDescription": "When a website builder is the right choice, when custom code earns its cost, and the specific limits that decide it. A comparison that admits builders often win.",
+  "title": "Website builder vs custom-coded website",
+  "excerpt": "Builders are genuinely good now. The question is not which is better, but which limits you will hit — and when.",
+  "intro": [
+    "Website builders have become genuinely good. Anyone claiming otherwise is selling something.",
+    "For a large share of businesses, a builder is the correct decision, and paying for custom development would be waste. The honest question is not which approach is better in the abstract. It is which constraints you will run into, and how much they will cost you when you do."
+  ],
+  "sections": [
+    {
+      "heading": "What builders genuinely do well",
+      "paragraphs": [
+        "A modern builder gets a competent site live in days, at low cost, with hosting, SSL and backups handled. Non-technical staff can update content without waiting on a developer. For a business that needs a credible presence and a contact form, that is often the whole requirement.",
+        "If your site's job is to prove you exist, look professional, and let people phone you, a builder does that job. Custom development would give you a nicer version of something you already had."
+      ]
+    },
+    {
+      "heading": "The first limit: page weight",
+      "paragraphs": [
+        "Builders are general-purpose tools. They ship the code required to support every feature their editor offers, whether your page uses those features or not.",
+        "The result is that a simple page frequently carries several hundred kilobytes of JavaScript to render what is fundamentally text, images and a form. Custom-built pages ship only what the page uses.",
+        "On desktop broadband the difference is invisible. On a mid-range Android phone on mobile data — which is how a large share of Indian buyers browse — it decides whether the page appears immediately or after several seconds. Visitors do not wait, and search engines observe them leaving."
+      ]
+    },
+    {
+      "heading": "The second limit: how HTML reaches the crawler",
+      "paragraphs": [
+        "Search engines index the HTML they receive. Content assembled by JavaScript after the page loads is indexed less reliably and less quickly than content present in the first response.",
+        "Some builders render server-side and are fine. Others rely heavily on client-side rendering. It is worth checking which yours does — view source rather than the inspector, and look for your actual headline text.",
+        "This matters more every year, not less. AI answer engines crawl aggressively and are considerably less patient about executing JavaScript than Google is."
+      ]
+    },
+    {
+      "heading": "The third limit: systems, not pages",
+      "paragraphs": [
+        "This is the limit that actually costs money, and it is rarely discussed in builder comparisons.",
+        "A builder gives you a form. What it does not give you is what happens next: the enquiry routed to a CRM, tagged by source, triggering a follow-up sequence, tracked to whether it became revenue, with the attribution to prove which channel produced it.",
+        "That gap is where most website value leaks. Businesses obsess over the design of the page and pay no attention to the twenty minutes after someone fills the form — which is the window where the deal is actually won or lost.",
+        "A form that emails an inbox is not a lead system. It is a way of finding out about leads eventually."
+      ]
+    },
+    {
+      "heading": "The fourth limit: you cannot fix what you cannot reach",
+      "paragraphs": [
+        "When a builder site has a performance problem, your options are constrained by what the platform exposes. You can remove features and compress images. You cannot change how the platform renders, what it loads, or in what order.",
+        "With custom code, every one of those is a decision you control. That is the real difference, and it only matters once you have a problem worth solving. Before then, the control is theoretical and the cost is not."
+      ]
+    },
+    {
+      "heading": "An honest decision rule",
+      "paragraphs": [
+        "Use a builder when your site's job is presence: proving you exist, looking credible, letting people contact you. That is a legitimate and common requirement, and a builder serves it well at a fraction of the cost.",
+        "Move to custom when the site has a commercial job — when it is supposed to generate qualified enquiries at a measurable cost, feed a sales process, and be improved based on data. At that point the constraints stop being theoretical, and the cost of not being able to fix things exceeds the cost of building properly."
+      ],
+      "list": [
+        "Builder: presence, credibility, low cost, fast to launch",
+        "Custom: performance you control, systems behind the form, measurement you can act on",
+        "The switch point: when the site is expected to produce revenue rather than represent you"
+      ],
+      "listType": "bullet"
+    },
+    {
+      "heading": "What this looks like in practice",
+      "paragraphs": [
+        "Across the partnerships we operate, the pattern is consistent. The website is rarely the bottleneck on its own — the bottleneck is that nothing connects. Traffic arrives with no measurement, enquiries land with no follow-up, and nobody can say which activity produced revenue.",
+        "In one e-commerce partnership, rebuilding the storefront and connecting checkout, customer conversations and order operations as one system contributed over ₹35 lakh within 45 days. The site mattered. What mattered more was that it stopped being a dead end."
+      ]
+    }
+  ],
+  "takeaway": "Builders are the right answer more often than agencies admit. They stop being the right answer when your website is supposed to generate revenue rather than represent you — because that job depends on systems a builder does not provide.",
+  "related": ["why-template-websites-dont-rank", "website-lead-generation-system"]
+}

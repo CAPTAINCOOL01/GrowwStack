@@ -1,0 +1,72 @@
+{
+  "slug": "why-template-websites-dont-rank",
+  "category": "SEO",
+  "publishedAt": "2026-08-31",
+  "readingTime": "6 min read",
+  "metaTitle": "Why Template Websites Struggle to Rank (And When They Don't)",
+  "metaDescription": "Templates are not penalised for being templates. The ranking problem comes from what template sites usually contain and how they are usually built.",
+  "title": "Why template websites struggle to rank",
+  "excerpt": "There is no penalty for using a template. The problem is what template sites almost always have in common.",
+  "intro": [
+    "Let us dispose of the myth first: search engines do not penalise a site for using a template. There is no ranking factor for how the HTML was produced.",
+    "Template sites nonetheless underperform in aggregate, and consistently enough that it is worth explaining why. The causes are real, but they are not the ones usually given."
+  ],
+  "sections": [
+    {
+      "heading": "The content is interchangeable",
+      "paragraphs": [
+        "A template does not just supply a layout. It supplies a structure of thought — a hero, three benefit tiles, a testimonial strip, a call to action — and businesses fill it in rather than deciding what their site should say.",
+        "The result is thousands of sites making the same claims in the same order in near-identical language. Nothing in them is distinguishing, so there is nothing for a search engine to rank one above another.",
+        "This is the primary cause, and it is a content problem wearing a technical costume. The template did not cause it. The template made it easy not to think."
+      ]
+    },
+    {
+      "heading": "There are not enough pages",
+      "paragraphs": [
+        "Template sites tend to be five pages: home, about, services, maybe a gallery, contact. That structure can compete for a handful of queries at most.",
+        "Search demand is fragmented across dozens of specific questions. Each question that matters to your business is a page you either have or do not. Five pages means most of that demand is simply not addressed.",
+        "Nothing about a template prevents adding pages. Very few businesses do, because the template does not suggest it and nothing prompts it."
+      ]
+    },
+    {
+      "heading": "Everything loads whether it is used or not",
+      "paragraphs": [
+        "Templates support every feature their marketplace advertises. The sliders, animations, popups and icon libraries load regardless of whether your page uses them.",
+        "That weight shows up as slow loading, particularly on mobile connections. Visitors leave, and search engines observe the leaving. It is a genuine ranking disadvantage, though a smaller one than the content problem.",
+        "You can mitigate this within a template. You cannot eliminate it, because you do not control what the platform loads."
+      ]
+    },
+    {
+      "heading": "The same layout for different intents",
+      "paragraphs": [
+        "A page meant to rank for a comparison question needs a comparison structure. A page meant to answer a how-to question needs steps. A page meant to convert needs an argument and a form.",
+        "Templates give you one arrangement, and every page gets it whether or not it fits the query. The pages that happen to suit the template do fine. The rest are structurally wrong for what they are trying to rank for.",
+        "This is why template sites often have one page that performs and several that do nothing. The one that works is the one whose intent matched the layout by accident."
+      ]
+    },
+    {
+      "heading": "When templates rank perfectly well",
+      "paragraphs": [
+        "Plenty of template sites rank, and it is worth being honest about when.",
+        "A template site with genuinely useful content, enough pages to cover its market's questions, reasonable load times and real inbound links will outrank a beautifully engineered custom site that says nothing. Content and links decide most outcomes. Technical quality decides ties.",
+        "If you are choosing where to spend limited money, more good pages on a template will usually beat fewer pages built better."
+      ],
+      "list": [
+        "Content that says something specific beats a faster site that says nothing",
+        "Enough pages to cover real questions beats five perfect ones",
+        "Technical build quality decides close contests, not distant ones"
+      ],
+      "listType": "bullet"
+    },
+    {
+      "heading": "What custom building actually buys you",
+      "paragraphs": [
+        "Not rankings, directly. What it buys is the ability to fix things.",
+        "When a template site has a speed problem, you can compress images and remove a plugin. When a custom site has a speed problem, every decision about what loads and in what order is yours to change.",
+        "That control is worth paying for once you have a site producing enough value that small improvements are worth chasing. Before that point, it is an expensive option on a problem you do not yet have."
+      ]
+    }
+  ],
+  "takeaway": "Templates do not cause ranking problems. Interchangeable content, too few pages and unnecessary weight cause ranking problems, and templates make all three easy. A template site with something to say will beat a custom site without.",
+  "related": ["website-builder-vs-custom-code", "why-your-website-gets-no-traffic"]
+}

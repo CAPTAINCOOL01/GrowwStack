@@ -1,0 +1,86 @@
+{
+  "slug": "generative-engine-optimization-geo",
+  "category": "GEO",
+  "publishedAt": "2026-08-31",
+  "readingTime": "8 min read",
+  "metaTitle": "Generative Engine Optimization (GEO): Getting Cited by AI Answers",
+  "metaDescription": "AI assistants answer questions directly and cite a handful of sources. GEO is the practice of being one of them. What it shares with SEO, and where it differs.",
+  "title": "Generative Engine Optimization: getting cited by AI",
+  "excerpt": "Search increasingly ends in an answer rather than a list of links. Being the source that answer is built from is a different discipline.",
+  "intro": [
+    "A growing share of questions never reach a list of blue links. Someone asks an assistant, receives a synthesised answer, and acts on it. A few sources get cited. Everyone else is invisible, regardless of where they rank.",
+    "Generative Engine Optimization is the practice of being among those cited sources. It overlaps heavily with good SEO, but the differences are real and they are worth understanding before the field gets crowded."
+  ],
+  "sections": [
+    {
+      "heading": "What actually changes",
+      "paragraphs": [
+        "Traditional search rewards pages that are the best overall result for a query. Generative engines do something different: they assemble an answer from fragments of several sources, then cite the ones they used.",
+        "This shifts the unit of competition. You are no longer trying to own a page-one position. You are trying to own a specific, extractable claim that a model will reach for when composing an answer.",
+        "A page can rank fifth and be cited constantly, because it states one thing more clearly than anyone else. A page can rank first and never be cited, because everything useful in it is buried in narrative."
+      ]
+    },
+    {
+      "heading": "Make claims extractable",
+      "paragraphs": [
+        "Models pull passages that stand on their own. A sentence that answers a question completely, without needing the paragraph before it, is far more likely to be quoted than the same information spread across three paragraphs of build-up.",
+        "This runs against a lot of conventional content advice, which favours narrative flow and saving the point for the end. For GEO, state the answer first and explain afterwards.",
+        "A practical test: take any sentence from your page in isolation. Does it still mean something? If almost none of them do, the page is hard to cite."
+      ]
+    },
+    {
+      "heading": "Structure is doing more work than it used to",
+      "paragraphs": [
+        "Headings that ask real questions, lists that enumerate discrete items, and tables that pair values with labels are all easier to extract than continuous prose.",
+        "This is not about gaming a parser. Clearly structured content is genuinely easier to read for humans too. The convenient thing about GEO is that most of what helps a model also helps a person skimming on a phone."
+      ],
+      "list": [
+        "Use headings that match how the question is actually asked",
+        "Answer immediately under the heading, before elaborating",
+        "Prefer lists and tables for anything enumerable",
+        "Keep each section self-contained enough to quote"
+      ],
+      "listType": "bullet"
+    },
+    {
+      "heading": "Specificity beats fluency",
+      "paragraphs": [
+        "Generic content is worthless to a generative engine, because the model can already produce it. There is nothing to cite you for.",
+        "What gets cited is information the model cannot generate on its own: concrete figures, dated observations, named methods, specific outcomes. A sentence like \"rebuilding the storefront and connecting checkout, conversations and order operations contributed over ₹35 lakh within 45 days\" is citable. \"We deliver exceptional results\" is not.",
+        "This is the single largest practical difference between content that gets cited and content that does not, and it is why thin AI-generated filler performs badly here. It contains nothing a model did not already know."
+      ]
+    },
+    {
+      "heading": "Crawlability matters more, not less",
+      "paragraphs": [
+        "AI crawlers are generally less patient about executing JavaScript than Google's crawler. Content that only exists after client-side rendering may simply not be seen.",
+        "If you want to be cited, your substance needs to be in the HTML that comes back from the first request. This is worth checking directly rather than assuming.",
+        "It is also worth deciding deliberately whether to allow AI crawlers in robots.txt. Blocking them protects content from training use, but it also guarantees you are never cited. For most businesses that trade on being found, the citation is worth more than the protection."
+      ]
+    },
+    {
+      "heading": "Structured data helps disambiguate",
+      "paragraphs": [
+        "Schema markup does not directly make a model cite you. What it does is remove ambiguity about what your page is, who published it, and what the entities in it are.",
+        "For an organisation with a name that could refer to several things, explicit structured data connecting the business, its services and its author is a meaningful clarity gain. It costs little and compounds with everything else."
+      ]
+    },
+    {
+      "heading": "How to tell whether it is working",
+      "paragraphs": [
+        "GEO is harder to measure than SEO. There is no equivalent of Search Console reporting citations, and referral traffic from assistants is inconsistently attributed.",
+        "The practical approach is direct: ask the assistants the questions your buyers ask, and see who gets cited. Repeat monthly. It is manual and unscientific, but it is real feedback, and it is more than most competitors are doing.",
+        "Watch for referrals from assistant domains in your analytics as well. Volumes are small today. The trend is what matters."
+      ]
+    },
+    {
+      "heading": "The honest caveat",
+      "paragraphs": [
+        "GEO is young, and anyone claiming a proven playbook is overstating. The mechanisms are not documented the way search ranking factors have been studied for two decades.",
+        "What can be said with reasonable confidence is that clear structure, specific verifiable claims and server-rendered content help — and that these are the same things that make content genuinely good. The downside risk of investing in them is close to zero, which is not true of most emerging-channel advice."
+      ]
+    }
+  ],
+  "takeaway": "GEO rewards content that is specific, structured and extractable. State answers plainly, publish facts a model cannot invent, and make sure it is all in the HTML — then check monthly whether the assistants cite you.",
+  "related": ["answer-engine-optimization-aeo", "structured-data-for-business-websites"]
+}
