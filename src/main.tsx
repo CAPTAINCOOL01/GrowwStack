@@ -7,7 +7,7 @@ import "./styles/index.css";
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
     <Routes>
-      <Route path="/growwstack/admin" element={<AdminDashboard />} />
+      <Route path="/admin" element={<AdminDashboard />} />
       <Route path="*" element={<App />} />
     </Routes>
   </BrowserRouter>,

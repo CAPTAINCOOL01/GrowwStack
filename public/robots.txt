@@ -3,6 +3,7 @@
 
 User-agent: *
 Allow: /
+Disallow: /admin
 
 # AI / LLM crawlers — explicitly allowed so generative-answer engines can cite the site.
 User-agent: GPTBot

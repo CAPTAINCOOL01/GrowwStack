@@ -51,7 +51,7 @@ Server-only (used by `api/admin.ts`, never sent to the browser):
 
 ## Admin dashboard
 
-`/growwstack/admin`, gated by `ADMIN_PASSWORD`.
+`/admin`, gated by `ADMIN_PASSWORD`.
 
 Reads go through `api/admin.ts`, which verifies the password server-side and
 queries with the service-role key. The browser only ever receives a

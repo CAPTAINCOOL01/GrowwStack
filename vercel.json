@@ -7,11 +7,11 @@
   "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/growwstack/admin",
+      "source": "/admin",
       "destination": "/"
     },
     {
-      "source": "/growwstack/admin/:path*",
+      "source": "/admin/:path*",
       "destination": "/"
     }
   ],
@@ -79,6 +79,18 @@
           "value": "public, max-age=3600"
         }
       ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/growwstack/admin",
+      "destination": "/admin",
+      "permanent": true
+    },
+    {
+      "source": "/growwstack/admin/:path*",
+      "destination": "/admin",
+      "permanent": true
     }
   ]
 }

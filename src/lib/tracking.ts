@@ -24,7 +24,7 @@ function pickParam(params: URLSearchParams, key: string): string | null {
 
 export function trackPageView(): void {
   if (typeof window === "undefined") return;
-  if (window.location.pathname.startsWith("/growwstack/admin")) return;
+  if (window.location.pathname.startsWith("/admin")) return;
 
   try {
     const last = Number(localStorage.getItem(LAST_PING_KEY) ?? "0");
