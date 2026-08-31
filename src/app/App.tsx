@@ -14,10 +14,12 @@ import { SiteNav } from "./components/growwstack/SiteNav";
 import { WhatsAppFab } from "./components/growwstack/WhatsAppFab";
 import { trackPageView } from "../lib/tracking";
 import { initAnalytics } from "../lib/analytics";
+import { syncOptOutFromUrl } from "../lib/optOut";
 import { ConsentBanner } from "./components/growwstack/ConsentBanner";
 
 export default function App() {
   useEffect(() => {
+    syncOptOutFromUrl();
     initAnalytics();
     trackPageView();
   }, []);

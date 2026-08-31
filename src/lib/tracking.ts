@@ -1,4 +1,5 @@
 import { sbInsert } from "./supabase";
+import { isOptedOut } from "./optOut";
 
 const SESSION_KEY = "gs_session_id";
 const LAST_PING_KEY = "gs_last_ping";
@@ -25,6 +26,7 @@ function pickParam(params: URLSearchParams, key: string): string | null {
 export function trackPageView(): void {
   if (typeof window === "undefined") return;
   if (window.location.pathname.startsWith("/admin")) return;
+  if (isOptedOut()) return;
 
   try {
     const last = Number(localStorage.getItem(LAST_PING_KEY) ?? "0");

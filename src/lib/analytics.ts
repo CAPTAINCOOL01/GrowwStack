@@ -1,4 +1,5 @@
 import { GA_ID } from "./config";
+import { isOptedOut } from "./optOut";
 
 const CONSENT_KEY = "gs_consent";
 
@@ -57,6 +58,7 @@ function ensureGtag(): (...args: unknown[]) => void {
  */
 export function initAnalytics(): void {
   if (typeof window === "undefined" || !GA_ID) return;
+  if (isOptedOut()) return;
   if (document.getElementById("ga-src")) return;
 
   const gtag = ensureGtag();
