@@ -1,0 +1,92 @@
+[
+  {
+    "slug": "ecommerce-sports-equipment",
+    "sector": "Sports equipment",
+    "mandate": "End-to-end e-commerce growth",
+    "title": "E-commerce growth for a sports equipment brand",
+    "metaTitle": "E-commerce Growth Case Study — Sports Equipment Brand | GrowwStack",
+    "metaDescription": "How GrowwStack built an end-to-end e-commerce operating layer for a sports equipment brand, contributing over ₹35 lakh in revenue within 45 days.",
+    "headline": "An operating layer across discovery, checkout and follow-up.",
+    "summary": "A sports equipment brand with product-market fit but a storefront that leaked revenue at every step. We rebuilt the path from product discovery through checkout, customer conversation, fulfilment and the reporting behind each decision.",
+    "headlineMetric": { "value": "₹35L+", "label": "Revenue within 45 days" },
+    "problem": [
+      "Traffic arrived but converted inconsistently, with no reliable view of where it dropped off.",
+      "Customer conversations lived in personal inboxes and phones rather than a system anyone could pick up.",
+      "Order operations, payments and support were handled reactively, so growth added workload instead of margin."
+    ],
+    "systems": [
+      "Website optimisation and product positioning",
+      "SEO, analytics, and conversion funnels",
+      "WhatsApp sales and CRM workflows",
+      "Payments, order operations, and customer support"
+    ],
+    "approach": [
+      "Fixed the storefront first — positioning, product presentation and the checkout path — so existing traffic converted better before any spend went into acquiring more.",
+      "Instrumented the funnel with analytics so every later decision was based on where visitors actually dropped, not assumptions.",
+      "Moved buyer conversations into WhatsApp workflows connected to a CRM, so follow-ups happened on time and nothing depended on someone remembering.",
+      "Connected payments, order operations and support so fulfilment held up as volume grew."
+    ],
+    "outcome": "The partnership contributed more than ₹35 lakh in e-commerce revenue within 45 days, and forms part of the ₹1.5 crore generated across three partner brands in three months.",
+    "relatedNote": "This engagement runs on the same terms as every GrowwStack partnership: no upfront agency fee, with the work judged on commercial movement."
+  },
+  {
+    "slug": "healthcare-clinic-growth",
+    "sector": "Healthcare and clinics",
+    "mandate": "Patient acquisition and clinic growth",
+    "title": "Patient acquisition systems for a healthcare practice",
+    "metaTitle": "Healthcare Marketing Case Study — Clinic Patient Acquisition | GrowwStack",
+    "metaDescription": "How GrowwStack built a connected patient acquisition system for a healthcare practice, turning digital discovery into booked appointments and measurable growth.",
+    "headline": "Turning digital discovery into booked appointments.",
+    "summary": "Clinics rarely have a demand problem so much as a follow-through problem. We built a connected system that carries a patient from first search to a booked appointment, then makes sure the follow-up actually happens.",
+    "headlineMetric": { "value": "3", "label": "Industries operated across" },
+    "problem": [
+      "Enquiries arrived across calls, messages and forms with no single place they were recorded.",
+      "Follow-up depended on whoever happened to be at the front desk that day.",
+      "There was no way to tell which channels produced booked appointments rather than just enquiries."
+    ],
+    "systems": [
+      "Website development and lead generation",
+      "CRM and appointment tracking",
+      "Customer follow-ups and sales processes",
+      "Digital visibility"
+    ],
+    "approach": [
+      "Built the site around the decision a patient is actually making, so the path to booking is short and obvious.",
+      "Routed every enquiry — whatever channel it arrived through — into one CRM with appointment tracking attached.",
+      "Defined follow-up sequences so a missed call becomes a scheduled callback rather than a lost patient.",
+      "Improved digital visibility so the practice is found at the moment someone is searching for care."
+    ],
+    "outcome": "The practice now works from a single view of enquiries and appointments, with follow-up running as a defined process rather than an individual's memory. It is one of the three partnerships behind ₹1.5 crore generated in three months.",
+    "relatedNote": "Healthcare work is handled with the discretion the sector requires. Patient data stays inside the clinic's own systems."
+  },
+  {
+    "slug": "deep-tech-b2b-expansion",
+    "sector": "Refrigeration and deep technology",
+    "mandate": "Technical business expansion",
+    "title": "B2B expansion for a deep technology manufacturer",
+    "metaTitle": "Deep Tech B2B Case Study — Technical Business Expansion | GrowwStack",
+    "metaDescription": "How GrowwStack turned complex refrigeration and deep-technology products into qualified commercial conversations through clear positioning and B2B systems.",
+    "headline": "Complex products, translated into commercial conversations.",
+    "summary": "Deep technology companies lose deals to explanation, not engineering. We built the positioning and B2B infrastructure that turns a genuinely difficult product into a conversation a buyer can act on.",
+    "headlineMetric": { "value": "₹0", "label": "Upfront agency fee" },
+    "problem": [
+      "The engineering was strong, but the public explanation of it assumed the reader already understood the field.",
+      "Buying decisions involve several people, and nothing on the site spoke to the non-technical ones.",
+      "Lead generation depended on the founder's network rather than a repeatable process."
+    ],
+    "systems": [
+      "Brand positioning and technical websites",
+      "B2B lead generation",
+      "Product communication",
+      "Sales and business-development systems"
+    ],
+    "approach": [
+      "Rewrote the product story so the commercial value is legible before the technical detail arrives, without diluting the engineering.",
+      "Built a technical website that serves both the specialist evaluating specifications and the manager approving the spend.",
+      "Set up B2B lead generation so qualified enquiries arrive through a process rather than through personal contacts.",
+      "Connected sales and business-development systems so long, multi-touch deal cycles are tracked rather than remembered."
+    ],
+    "outcome": "Technical capability is now expressed in terms a commercial buyer can evaluate, supported by systems built for long B2B cycles. This is one of three active partnerships behind ₹1.5 crore in three months.",
+    "relatedNote": "Founder experience spans Ecozen Solutions and Dover Corporation in refrigeration, thermal systems and product development."
+  }
+]

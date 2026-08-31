@@ -44,6 +44,12 @@ const founderProof = [
   },
 ] as const;
 
+const caseStudySlugs: Record<string, string> = {
+  "Healthcare & clinics": "healthcare-clinic-growth",
+  "Sports equipment": "ecommerce-sports-equipment",
+  "Refrigeration & deep tech": "deep-tech-b2b-expansion",
+};
+
 const activePartnerships = [
   {
     sector: "Healthcare & clinics",
@@ -212,9 +218,13 @@ export function PartnershipsSection() {
 
               <footer className="gs-partnerships__case-footer">
                 <span className="gs-partnerships__status">Active partnership</span>
-                <span className="gs-partnerships__privacy">
-                  Identity withheld
-                </span>
+                <a
+                  className="gs-partnerships__case-link"
+                  href={`/case-studies/${caseStudySlugs[partnership.sector]}`}
+                >
+                  Read the case study
+                  <span aria-hidden="true"> →</span>
+                </a>
               </footer>
             </article>
           ))}
