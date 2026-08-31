@@ -210,7 +210,7 @@ export function AdminDashboard() {
       <header className="gs-admin__topbar">
         <div>
           <h1 className="gs-admin__title">GrowwStack admin</h1>
-          <p className="gs-admin__subtitle">Live leads and visitor telemetry.</p>
+          <p className="gs-admin__subtitle">Leads, build requests and visitor telemetry.</p>
         </div>
         <div className="gs-admin__topbar-actions">
           <button
@@ -416,7 +416,17 @@ function LeadsTable({ leads }: { leads: Lead[] }) {
                   {!l.email && !l.phone && "—"}
                 </td>
                 <td className="gs-admin__cell-message">{l.message ?? "—"}</td>
-                <td>{l.source ?? "—"}</td>
+                <td>
+                  {l.source ? (
+                    <span
+                      className={`gs-admin__badge${l.source === "website_build" ? " gs-admin__badge--build" : ""}`}
+                    >
+                      {l.source.replace(/_/g, " ")}
+                    </span>
+                  ) : (
+                    <span className="gs-admin__badge gs-admin__badge--quiet">unknown</span>
+                  )}
+                </td>
                 <td>
                   {wa ? (
                     <a
