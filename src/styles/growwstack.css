@@ -3634,3 +3634,100 @@ body[data-consent-open="true"] .gs-wa-fab {
     display: none;
   }
 }
+
+/* Highlighted "Free build" nav entry */
+.gs-nav__link--free {
+  position: relative;
+  display: inline-flex !important;
+  align-items: center;
+  gap: 7px;
+  color: var(--gs-signal) !important;
+  font-weight: 700;
+}
+
+.gs-nav__link--free:hover {
+  color: #ff8a5c !important;
+}
+
+.gs-nav__free-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gs-signal);
+  box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.7);
+  animation: gs-free-pulse 2.4s ease-out infinite;
+}
+
+@keyframes gs-free-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.65); }
+  70% { box-shadow: 0 0 0 7px rgba(255, 107, 53, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 107, 53, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gs-nav__free-dot { animation: none; }
+}
+
+/* Bolder hero primary button */
+.gs-button--hero {
+  padding: 18px 30px;
+  font-size: 0.94rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  box-shadow: 0 14px 34px rgba(255, 107, 53, 0.34);
+  transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms ease;
+}
+
+.gs-button--hero:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 46px rgba(255, 107, 53, 0.46);
+  filter: brightness(1.05);
+}
+
+/* Secondary hero CTA into the free-build offer */
+.gs-hero__free-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px 12px 12px;
+  border: 1px dashed rgba(255, 107, 53, 0.5);
+  border-radius: 999px;
+  background: rgba(255, 107, 53, 0.08);
+  color: var(--gs-paper);
+  text-decoration: none;
+  font-size: 0.86rem;
+  line-height: 1.2;
+  transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.gs-hero__free-cta:hover {
+  background: rgba(255, 107, 53, 0.16);
+  border-color: var(--gs-signal);
+  transform: translateY(-1px);
+}
+
+.gs-hero__free-tag {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--gs-signal);
+  color: #2a0d00;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.gs-hero__free-text {
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .gs-hero__free-cta {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .gs-hero__free-text {
+    font-size: 0.82rem;
+  }
+}

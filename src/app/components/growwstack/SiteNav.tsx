@@ -7,6 +7,7 @@ const navItems = [
   { label: "Results", href: "#results" },
   { label: "Websites", href: "#build" },
   { label: "Blog", href: "/blog" },
+  { label: "Free build", href: "#offer", highlight: true },
 ];
 
 export function SiteNav() {
@@ -62,7 +63,13 @@ export function SiteNav() {
         <nav className="gs-nav__menu" id="primary-navigation" aria-label="Primary navigation">
           <div className="gs-nav__links">
             {navItems.map((item) => (
-              <a key={item.href} href={item.href} onClick={() => setMenuOpen(false)}>
+              <a
+                key={item.href}
+                href={item.href}
+                className={item.highlight ? "gs-nav__link--free" : undefined}
+                onClick={() => setMenuOpen(false)}
+              >
+                {item.highlight && <span className="gs-nav__free-dot" aria-hidden="true" />}
                 {item.label}
               </a>
             ))}

@@ -51,9 +51,16 @@ export function HeroSection() {
           </p>
 
           <div className="gs-hero__actions">
-            <a className="gs-button gs-button--signal" href="#apply">
+            <a className="gs-button gs-button--signal gs-button--hero" href="#apply">
               Apply for a growth partnership
               <span aria-hidden="true">↗</span>
+            </a>
+            <a className="gs-hero__free-cta" href="#offer">
+              <span className="gs-hero__free-tag">Free</span>
+              <span className="gs-hero__free-text">
+                Good product? We build it at no cost.
+              </span>
+              <span aria-hidden="true">→</span>
             </a>
             <a className="gs-text-link gs-text-link--light" href="#partnerships">
               Explore active partnerships
