@@ -1,5 +1,10 @@
 import { useState, type FormEvent } from "react";
-import { CONTACT_PHONE, CONTACT_PHONE_DISPLAY } from "../../../lib/config";
+import {
+  CALENDLY_CALL,
+  CALENDLY_MEET,
+  CONTACT_PHONE,
+  CONTACT_PHONE_DISPLAY,
+} from "../../../lib/config";
 import { sbInsert } from "../../../lib/supabase";
 
 type Status = "idle" | "sending" | "sent" | "error";
@@ -82,6 +87,18 @@ export function QuickContactSection() {
                 rel="noopener noreferrer"
               >
                 Chat with the founder
+              </a>
+            </li>
+            <li>
+              <span className="gs-quick-contact__channel-label">Call</span>
+              <a href={CALENDLY_CALL} target="_blank" rel="noopener noreferrer">
+                Book a 15-minute call
+              </a>
+            </li>
+            <li>
+              <span className="gs-quick-contact__channel-label">Video</span>
+              <a href={CALENDLY_MEET} target="_blank" rel="noopener noreferrer">
+                Book a 15-minute video meet
               </a>
             </li>
           </ul>

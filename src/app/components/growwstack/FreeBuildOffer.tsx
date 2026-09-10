@@ -1,4 +1,4 @@
-import { CONTACT_PHONE } from "../../../lib/config";
+import { CALENDLY_CALL, CONTACT_PHONE } from "../../../lib/config";
 
 const comparison = [
   { label: "To start", usual: "Full fee upfront", ours: "₹0" },
@@ -55,6 +55,14 @@ export function FreeBuildOffer() {
           <a className="gs-button gs-button--signal" href="#build">
             See if you qualify
             <span aria-hidden="true"> ↗</span>
+          </a>
+          <a
+            className="gs-button gs-button--ghost"
+            href={CALENDLY_CALL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Book a 15-minute call
           </a>
           <a
             className="gs-button gs-button--ghost"

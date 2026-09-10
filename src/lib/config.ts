@@ -18,3 +18,11 @@ function normalisePhone(raw: string | undefined): string {
 
 export const CONTACT_PHONE = normalisePhone(import.meta.env.VITE_CONTACT_PHONE);
 export const CONTACT_PHONE_DISPLAY = "+91 70171 38349";
+
+// Booking links. Plain anchors rather than the Calendly embed widget: the embed
+// would need script-src, frame-src and connect-src opened up for Calendly, and
+// would load a third-party script on every page view.
+export const CALENDLY_CALL =
+  "https://calendly.com/ceo-office-growwstack/15-minute-connect";
+export const CALENDLY_MEET =
+  "https://calendly.com/ceo-office-growwstack/15-minute-meet-connect";
