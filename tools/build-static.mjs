@@ -16,6 +16,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { analyticsSnippet } from "./analytics-snippet.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const dist = path.join(root, "dist");
@@ -49,6 +50,8 @@ function findCss() {
   return `/assets/${file}`;
 }
 
+const ANALYTICS = analyticsSnippet();
+
 const VERIFY =
   '<meta name="google-site-verification" content="hNmg2XkeP3fmFhpV0CLhl85GMDJYZSv4h6Fct36obAM" />';
 
@@ -81,6 +84,7 @@ function shell({ url, metaTitle, metaDescription, css, ld, body, type = "website
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="${css}" />
+    ${ANALYTICS}
 
 ${ld.map((b) => `    <script type="application/ld+json">${JSON.stringify(b)}</script>`).join("\n")}
   </head>
