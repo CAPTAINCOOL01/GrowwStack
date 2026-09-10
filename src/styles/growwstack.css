@@ -3401,3 +3401,126 @@ body[data-consent-open="true"] .gs-wa-fab {
   font-weight: 600;
   color: var(--gs-cobalt);
 }
+
+/* Free build offer — full-bleed statement band */
+.gs-offer {
+  position: relative;
+  overflow: hidden;
+  background: var(--gs-ink-deep);
+  color: var(--gs-paper);
+  padding: clamp(64px, 8vw, 120px) 0;
+}
+
+.gs-offer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(760px 420px at 14% 0%, rgba(47, 92, 255, 0.26), transparent 62%),
+    radial-gradient(620px 380px at 92% 100%, rgba(255, 107, 53, 0.18), transparent 60%);
+  pointer-events: none;
+}
+
+.gs-offer::after {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--gs-cobalt) 0 58%, var(--gs-signal) 58% 100%);
+}
+
+.gs-offer__inner {
+  position: relative;
+}
+
+.gs-offer__title {
+  margin: 14px 0 0;
+  max-width: 16ch;
+  font-family: var(--font-display);
+  font-size: clamp(3.1rem, 7.2vw, 7rem);
+  font-weight: 600;
+  line-height: 0.86;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--gs-white);
+}
+
+.gs-offer__title span {
+  display: block;
+  color: var(--gs-signal);
+}
+
+.gs-offer__lede {
+  margin-top: 26px;
+  max-width: 58ch;
+  font-size: clamp(1rem, 1.4vw, 1.16rem);
+  line-height: 1.6;
+  color: var(--gs-mist);
+}
+
+.gs-offer__criteria {
+  list-style: none;
+  padding: 0;
+  margin: 32px 0 0;
+  display: grid;
+  gap: 10px;
+  max-width: 62ch;
+}
+
+.gs-offer__criteria li {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  gap: 12px;
+  align-items: start;
+  padding: 12px 0;
+  border-top: 1px solid var(--gs-line-dark);
+  line-height: 1.5;
+  color: var(--gs-paper);
+}
+
+.gs-offer__criteria li:last-child {
+  border-bottom: 1px solid var(--gs-line-dark);
+}
+
+.gs-offer__criteria li span {
+  color: var(--gs-signal);
+  font-weight: 700;
+}
+
+.gs-offer__terms {
+  margin-top: 26px;
+  max-width: 60ch;
+  padding-left: 16px;
+  border-left: 2px solid var(--gs-line-dark);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--gs-mist);
+}
+
+.gs-offer__actions {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Scoped, so no new global button variant is introduced. */
+.gs-offer .gs-button--ghost {
+  background: transparent;
+  border: 1px solid rgba(234, 241, 244, 0.34);
+  color: var(--gs-paper);
+  transition: background 160ms ease, border-color 160ms ease;
+}
+
+.gs-offer .gs-button--ghost:hover {
+  background: rgba(234, 241, 244, 0.1);
+  border-color: var(--gs-paper);
+  color: var(--gs-white);
+}
+
+@media (max-width: 600px) {
+  .gs-offer__actions .gs-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
