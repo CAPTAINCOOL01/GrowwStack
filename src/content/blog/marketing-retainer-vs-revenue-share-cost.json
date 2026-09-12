@@ -1,0 +1,85 @@
+{
+  "slug": "marketing-retainer-vs-revenue-share-cost",
+  "category": "Pricing",
+  "publishedAt": "2026-09-12",
+  "readingTime": "8 min read",
+  "metaTitle": "Retainer vs Revenue Share: What Each Costs You Over Twelve Months",
+  "metaDescription": "Work both structures out against your own revenue and margin. Revenue share is not always cheaper — here is the crossover point and how to find yours.",
+  "title": "Retainer vs revenue share: what each actually costs over a year",
+  "excerpt": "Revenue share is not automatically cheaper. Work it out against your own numbers, including the case where it costs you considerably more.",
+  "intro": [
+    "The choice between paying a monthly fee and paying a share of growth is usually presented as a values question. It is an arithmetic question, and the answer depends entirely on your numbers.",
+    "We work on revenue share, so treat the conclusion with appropriate suspicion. What follows is the calculation itself, including the case where a retainer wins clearly — because it frequently does."
+  ],
+  "sections": [
+    {
+      "heading": "Why we will not quote you market rates",
+      "paragraphs": [
+        "You will find articles claiming an Indian agency retainer runs at some specific band per month. Those numbers are usually invented, or drawn from a sample too small and too self-selected to mean anything.",
+        "What you can do instead is work the structures out against your own inputs. You need three numbers you already have: your current monthly revenue, your gross margin, and whatever a supplier has actually quoted you."
+      ]
+    },
+    {
+      "heading": "The retainer calculation",
+      "paragraphs": [
+        "A retainer costs the fee, twelve times, whatever happens. The useful question is not whether you can afford it, but how much incremental gross profit it must produce to break even.",
+        "The arithmetic: annual fee divided by gross margin gives you the additional annual revenue required just to cover it. At 50% margin, a retainer needs twice its own value in new revenue before you are level. At 20% margin, it needs five times.",
+        "Run that number before signing anything. Founders routinely agree to a fee without calculating the revenue it must generate simply to justify itself, and at thin margins that figure is often larger than the business realistically grows in a year."
+      ],
+      "list": [
+        "Annual cost = monthly fee x 12, regardless of outcome",
+        "Break-even revenue = annual cost / gross margin",
+        "At 50% margin a fee needs 2x its value in new revenue to break even",
+        "At 20% margin it needs 5x",
+        "Downside case: growth is zero and you have paid the full annual cost"
+      ],
+      "listType": "bullet"
+    },
+    {
+      "heading": "The revenue-share calculation",
+      "paragraphs": [
+        "Revenue share costs nothing when nothing happens, and scales with growth. That is the appeal and also the thing people fail to model.",
+        "The arithmetic: the share applies to incremental revenue above an agreed baseline. If growth is zero, the cost is zero. If growth is large, the cost is large — and this is where it can exceed a retainer substantially.",
+        "The honest way to model it is to run three cases: no growth, modest growth, and the growth you are actually hoping for. Apply the share to each. The third case is where revenue share stops looking cheap, and you should look at that number before agreeing to the structure rather than after."
+      ]
+    },
+    {
+      "heading": "Where the crossover is",
+      "paragraphs": [
+        "There is a point where the two structures cost the same, and beyond it revenue share costs more. Finding yours takes a minute.",
+        "Divide the annual retainer by the revenue-share percentage. That gives the amount of incremental annual revenue at which the two are equal. Below it, revenue share is cheaper. Above it, the retainer is cheaper.",
+        "Being explicit about this: if the work succeeds dramatically, you will pay us more than you would have paid a fixed fee. That is the trade. You are exchanging a larger payment in the good case for no payment in the bad one."
+      ]
+    },
+    {
+      "heading": "What the arithmetic leaves out",
+      "paragraphs": [
+        "Three things that do not appear in either calculation but frequently decide which is better."
+      ],
+      "list": [
+        "Cash timing. A retainer takes money before results arrive, which matters enormously to a business with tight working capital. Revenue share is paid out of money that has already come in",
+        "Incentive. Under a retainer the supplier is paid for activity; under revenue share, only for outcomes. This changes what gets worked on, particularly in month seven when the novelty is gone",
+        "Selection. A supplier taking revenue share is betting on your business, so they refuse more work. If they will take anyone, the model is not doing what it claims"
+      ],
+      "listType": "bullet"
+    },
+    {
+      "heading": "When a retainer is genuinely the better choice",
+      "paragraphs": [
+        "Choose the fixed fee when predictability is worth more to you than alignment. That is a legitimate and common position.",
+        "Specifically: if you need to budget precisely, if your margins are thin enough that any share hurts, if you expect strong growth and would rather cap the cost, if you want a defined deliverable rather than an ongoing commercial relationship, or if you are unwilling to give a supplier visibility of revenue — take the retainer.",
+        "That last one is not a minor point. Revenue share requires the supplier to see your numbers. Some founders are not comfortable with that, and it is a perfectly reasonable boundary rather than something to be talked out of."
+      ]
+    },
+    {
+      "heading": "The question to ask either way",
+      "paragraphs": [
+        "Whichever structure you choose, ask what the supplier's incentive is in month seven, when the work is no longer new and the easy wins are gone.",
+        "Under a retainer the answer has to be professionalism, which is real but unsupported by the commercial structure. Under revenue share it is that they only earn if the number keeps moving.",
+        "Neither is automatically correct. Knowing which one you are buying is what matters. We set out the mechanics of how we structure the share — baseline, attribution, term and exit — in [how a revenue-share partnership actually works](/blog/performance-based-marketing-agency-india)."
+      ]
+    }
+  ],
+  "takeaway": "Divide the annual retainer by the revenue-share percentage to find your crossover point. Below it revenue share is cheaper; above it the retainer wins. If the work succeeds dramatically, revenue share costs you more — that is the trade for paying nothing when it does not.",
+  "related": ["website-cost-india", "performance-based-marketing-agency-india"]
+}

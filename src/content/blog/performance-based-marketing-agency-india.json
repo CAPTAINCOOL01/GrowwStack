@@ -1,0 +1,94 @@
+{
+  "slug": "performance-based-marketing-agency-india",
+  "category": "Model",
+  "publishedAt": "2026-09-12",
+  "readingTime": "9 min read",
+  "metaTitle": "Performance-Based Marketing in India: How Revenue Share Actually Works",
+  "metaDescription": "What counts as attributable growth, how the baseline is set, who audits the numbers, and when a revenue-share partnership is the wrong choice. The mechanics, in full.",
+  "title": "How a revenue-share marketing partnership actually works",
+  "excerpt": "Plenty of Indian agencies call themselves performance-based while billing a monthly fee. Here are the mechanics that decide whether the label means anything.",
+  "intro": [
+    "A large number of Indian agencies describe themselves as performance-based. Most of them still invoice a retainer on the first of the month regardless of what happened in the previous one.",
+    "The label is close to meaningless on its own. What matters is the mechanics underneath it: what counts as growth, who measures it, what the baseline is, and what happens when the two of you disagree. This is how we structure it, including the parts that are uncomfortable to publish."
+  ],
+  "sections": [
+    {
+      "heading": "The baseline is agreed before any work starts",
+      "paragraphs": [
+        "This is the part that decides whether the model is honest. If the baseline is set after work begins, or never written down, the supplier can claim credit for whatever the business was going to do anyway.",
+        "We take the trailing three months of revenue before the engagement and write it down. Growth means revenue above that line. If the business was already growing month on month before we arrived, that trend belongs in the baseline too — charging a share of growth that was already happening is the oldest trick in this model.",
+        "Seasonality gets handled explicitly. A sweets business in the month before Diwali is not evidence that anything we did worked. Where a business has a clear seasonal shape, the baseline is set against the equivalent period, not the preceding one."
+      ]
+    },
+    {
+      "heading": "What counts as attributable, and what does not",
+      "paragraphs": [
+        "The honest position is that attribution is never perfect and anyone claiming otherwise is selling something. What you can do is agree the rules in advance rather than argue about them later.",
+        "Our default is that revenue through channels we build and operate is attributable. Revenue that arrives through channels we never touched is not."
+      ],
+      "list": [
+        "Attributable: orders through the site we built, enquiries from search or campaigns we run, deals closed through follow-up systems we put in place",
+        "Not attributable: walk-ins, the founder's existing network, a distributor deal signed independently, revenue from a product line we were never asked to work on",
+        "Disputed by default: a customer who found you through our work and then bought offline months later. Decide the treatment before it happens, not after"
+      ],
+      "listType": "bullet"
+    },
+    {
+      "heading": "Who audits the numbers",
+      "paragraphs": [
+        "The supplier should never be the only party holding the measurement. If the people being paid on growth are also the only people who can see it, the arrangement is asking for trouble regardless of anyone's intentions.",
+        "The workable version is that the numbers come from systems the business owns — its own payment gateway, its own accounting, its own CRM — and we read from them rather than reporting our own figures back. Analytics we install is for improving decisions, not for calculating invoices.",
+        "If a business is not comfortable giving that visibility, this model is genuinely not for them, and that is a reasonable position rather than a failed sales conversation."
+      ]
+    },
+    {
+      "heading": "What a sane share looks like",
+      "paragraphs": [
+        "We do not publish a single number because the honest answer depends on margin. A share of growth that is comfortable for a business running 60% gross margin is ruinous for one running 12%.",
+        "The test we apply is simple: after our share, the incremental revenue must still be clearly worth having to the business owner. If our cut turns growth into something that barely moves their profit, the structure is wrong and we should be charging differently or not working together.",
+        "Be suspicious of any share quoted before anyone has asked what your margin is. It means the number was decided without reference to whether you can afford it."
+      ]
+    },
+    {
+      "heading": "Term length and what happens at the end",
+      "paragraphs": [
+        "Open-ended revenue share is where this model turns predatory. Work done in month two should not still be earning the supplier a share in year four.",
+        "A defined term with a defined tail is the fair structure: a working period, then a limited window during which the share continues on the growth already generated, then it ends. Both numbers should be in writing before the first line of code.",
+        "Ownership should be unambiguous and should not be used as leverage. The business owns its domain, its site, its data and its customer relationships throughout. A supplier holding your domain hostage at renewal is not a partner."
+      ]
+    },
+    {
+      "heading": "What happens when it does not work",
+      "paragraphs": [
+        "Sometimes the work does not produce growth. In a retainer model the agency has already been paid and the conversation is about renewal. Here, we simply do not earn.",
+        "That sounds like pure upside for the client, and mostly it is, but it has a consequence worth naming: it makes us extremely selective, and it means we will end an engagement we no longer believe in rather than continue collecting nothing while occupying the slot.",
+        "It also means we say no often. A business with no product-market fit, no margin to share, or no capacity to serve additional demand cannot be helped by this model, and taking it on would waste months of both sides' time."
+      ]
+    },
+    {
+      "heading": "When this model is wrong for you",
+      "paragraphs": [
+        "Being direct about this is more useful than another paragraph of persuasion:"
+      ],
+      "list": [
+        "You want predictable, budgetable cost — a retainer is genuinely better for you",
+        "Your margins are thin enough that any share of growth hurts",
+        "You cannot or will not share revenue data with a supplier",
+        "You are pre-revenue and looking for someone to validate the idea",
+        "You need a specific deliverable, not an ongoing commercial outcome — hire someone for the project",
+        "You cannot service two or three times your current demand if it arrives"
+      ],
+      "listType": "bullet"
+    },
+    {
+      "heading": "Where we have run this",
+      "paragraphs": [
+        "We operate three active partnerships — a healthcare practice, a sports-equipment e-commerce brand, and a refrigeration and deep-technology manufacturer. Across those three, roughly ₹1.5 crore in revenue was generated within the first three months of operations.",
+        "That is three businesses over three months, not a portfolio of hundreds, and it is worth reading it that way. The [e-commerce partnership](/case-studies/ecommerce-sports-equipment) contributed over ₹35 lakh within 45 days, which is the clearest single illustration of how the model pays for itself when it works.",
+        "We publish those numbers because the alternative — claiming an average return across clients we will not name — is exactly the unfalsifiable marketing this post is arguing against."
+      ]
+    }
+  ],
+  "takeaway": "Performance-based only means something if the baseline is written down first, attribution rules are agreed in advance, the numbers come from systems you own, the share is set against your margin, and the term ends. Ask any supplier using the label to answer those five things in writing. See [how we structure it](/#offer).",
+  "related": ["website-cost-india", "marketing-retainer-vs-revenue-share-cost"]
+}

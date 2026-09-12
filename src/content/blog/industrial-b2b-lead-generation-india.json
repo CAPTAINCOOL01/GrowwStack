@@ -1,0 +1,88 @@
+{
+  "slug": "industrial-b2b-lead-generation-india",
+  "category": "B2B",
+  "publishedAt": "2026-09-12",
+  "readingTime": "9 min read",
+  "metaTitle": "Lead Generation for Industrial and Deep-Tech B2B Companies in India",
+  "metaDescription": "Industrial B2B sites fail for reasons consumer marketing advice never addresses. The buyer is a specifying engineer, and lead counts actively mislead.",
+  "title": "Lead generation for industrial and deep-tech B2B in India",
+  "excerpt": "Your buyer is an engineer writing a specification. Most marketing advice is written for a consumer making an impulse decision, and it makes industrial sites worse.",
+  "intro": [
+    "Almost all marketing advice assumes a consumer making a relatively fast decision alone. Industrial and deep-technology B2B breaks every one of those assumptions, and applying consumer tactics to it produces websites that are worse at their job than the PDF catalogue they replaced.",
+    "The buyer is frequently an engineer writing a specification. The cycle runs for months. Several people must agree. And the metric everyone reports — lead count — is close to useless."
+  ],
+  "sections": [
+    {
+      "heading": "Marketing usually removes the thing the buyer needs",
+      "paragraphs": [
+        "The single most common failure we see on industrial sites is that a marketing exercise stripped out the technical specificity in the name of clarity.",
+        "The engineer evaluating your product needs operating ranges, tolerances, materials of construction, power draw, duty cycle, compliance standards and dimensional data. What they get instead is \"innovative solutions engineered for reliability\", which is indistinguishable from every competitor and useless for specification.",
+        "If a specifying engineer cannot extract the numbers from your website, they will find a competitor whose numbers are accessible, or they will use the competitor's spec to write the tender — which quietly excludes you before anyone has spoken to you."
+      ]
+    },
+    {
+      "heading": "Write for two readers on the same page",
+      "paragraphs": [
+        "There are at least two people in every industrial purchase and they need different things. Most sites serve one and lose the other.",
+        "The specifying engineer needs technical depth and will not be put off by it. The approver — a plant head, a purchase manager, a finance director — needs the commercial case: what it costs to run, what it saves, how long it lasts, who else uses it.",
+        "The structure that works is commercial value first and legible in one paragraph, then technical depth immediately below it, on the same page. Not two separate pages, because the engineer is frequently the person who forwards the link to the approver."
+      ]
+    },
+    {
+      "heading": "Lead count is the wrong metric and it misleads badly",
+      "paragraphs": [
+        "In a business with a six-month cycle, this quarter's lead count tells you almost nothing about this quarter, and optimising for it actively damages the pipeline.",
+        "Loosening a form to increase enquiries produces more unqualified enquiries, which consumes the technical sales time that should be spent on the serious ones. In industrial B2B, fewer and better is genuinely superior, and a supplier who measures success by enquiry volume is optimising against you.",
+        "The things worth tracking instead: how many enquiries reached a technical discussion, how many produced a quotation, how many quotations converted, and how long each stage took. Those are slower to accumulate and they are the only ones that describe reality."
+      ]
+    },
+    {
+      "heading": "What actually generates industrial enquiries",
+      "paragraphs": [
+        "Very little of this looks like conventional digital marketing."
+      ],
+      "list": [
+        "Specification pages for each product with real numbers, as HTML rather than only a downloadable PDF",
+        "Application pages describing the problem the buyer has, not the product you sell — engineers search by problem",
+        "Named installations and capacities, where the customer permits it",
+        "Certifications as readable pages, so they can be found and verified",
+        "Comparison content against the alternative technology, not against named competitors",
+        "A technical contact who responds within a working day, and says so on the page"
+      ],
+      "listType": "bullet"
+    },
+    {
+      "heading": "Why PDF-only catalogues quietly cost you",
+      "paragraphs": [
+        "A great deal of Indian industrial content lives inside PDFs. Search engines index PDFs unevenly, they are unpleasant on a phone, and their contents are largely invisible to the AI answer layers an increasing number of technical buyers now consult first.",
+        "The fix is not to delete the PDF. Engineers genuinely want something to attach to an internal email. The fix is to publish the same specification as a proper web page and offer the PDF alongside it.",
+        "This is one of the few places in industrial marketing where a modest technical change produces a disproportionate result, because so few competitors have done it."
+      ]
+    },
+    {
+      "heading": "The enquiry form is usually wrong",
+      "paragraphs": [
+        "Industrial enquiry forms tend to be either a bare contact box that produces unusable enquiries, or a twenty-field interrogation that a busy engineer abandons.",
+        "The useful middle asks only what changes your response: the application, the approximate scale or capacity, the timeline, and how to reach them. Four or five fields, all of which genuinely alter what you send back.",
+        "Then respond like a technical business rather than a marketing one. An engineer who asks a specific question and receives a brochure has learned that you are not worth another email."
+      ]
+    },
+    {
+      "heading": "The long cycle is an advantage if you record it",
+      "paragraphs": [
+        "A six-month cycle means an enquiry in March is a decision in September, and the deals lost in between are usually lost to silence rather than to a competitor's product.",
+        "This is entirely a systems problem. Nobody can hold a six-month, multi-contact conversation in their head across dozens of open opportunities, and in practice the ones that go quiet are the ones that get forgotten.",
+        "A CRM holding every enquiry with a dated next action is worth more in industrial B2B than in almost any other sector, precisely because the cycle exceeds human memory. We cover the mechanics in [what happens after someone fills your form](/blog/crm-and-follow-up-systems)."
+      ]
+    },
+    {
+      "heading": "What this looked like in practice",
+      "paragraphs": [
+        "In our [refrigeration and deep-technology partnership](/case-studies/deep-tech-b2b-expansion), the engineering was strong and the public explanation of it assumed the reader already understood the field. The work was positioning and infrastructure: rewriting the product story so commercial value is legible before the technical detail arrives without diluting the engineering, building a site serving both the specifying engineer and the approving manager, and putting B2B lead generation and business-development tracking behind it.",
+        "It is one of three partnerships behind roughly ₹1.5 crore generated in three months. Our founder's background is in this sector — product development and thermal systems work at Ecozen Solutions and refrigeration at Dover Corporation — which is why we take this category at all."
+      ]
+    }
+  ],
+  "takeaway": "Publish the specifications as web pages, write for the engineer and the approver on the same page, ask four fields rather than twenty, and track stage progression rather than lead count. In a six-month cycle, the deals you lose are lost to silence, so the CRM matters more than the campaign.",
+  "related": ["structured-data-for-business-websites", "website-lead-generation-system"]
+}

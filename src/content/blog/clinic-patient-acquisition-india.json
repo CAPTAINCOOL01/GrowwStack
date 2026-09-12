@@ -1,0 +1,104 @@
+{
+  "slug": "clinic-patient-acquisition-india",
+  "category": "Healthcare",
+  "publishedAt": "2026-09-12",
+  "readingTime": "9 min read",
+  "metaTitle": "How Indian Clinics Actually Get Patients Online: The Booking Path",
+  "metaDescription": "Most clinics do not have a discovery problem, they have a booking problem. Trace one patient from search to confirmed appointment and the real leak becomes obvious.",
+  "title": "How Indian clinics actually get patients online",
+  "excerpt": "Most clinic marketing advice sells visibility. In practice the patient is usually lost after the click, at the front desk.",
+  "intro": [
+    "Almost every agency pitch to a clinic is about being found: rank higher, run ads, post more. Some of that matters.",
+    "But when we trace an actual patient from the moment they search to the moment they sit in the chair, the loss is rarely at discovery. It is almost always after the click — an unanswered call, a WhatsApp message read at 8pm, an appointment nobody confirmed. Fixing visibility first means paying to send more people into the same leak."
+  ],
+  "sections": [
+    {
+      "heading": "Follow one patient, in order",
+      "paragraphs": [
+        "Someone develops a toothache on a Tuesday afternoon. Here is the actual sequence, and every point at which a clinic loses them."
+      ],
+      "list": [
+        "They search on a phone, usually with a location word attached",
+        "They look at the map results first, not the website links",
+        "They spend about two seconds on each listing: is it open, how far, does it look real",
+        "They tap call. It is 2pm and reception is with a patient",
+        "It rings out. They do not leave a voicemail. They go back and tap the next clinic",
+        "Or they send a WhatsApp message, which is read at 8pm when the clinic closes",
+        "If they do reach someone, an appointment is agreed verbally and never confirmed in writing",
+        "On the day, roughly a fifth to a third of unconfirmed appointments simply do not turn up"
+      ],
+      "listType": "number"
+    },
+    {
+      "heading": "Steps four and five are where the money goes",
+      "paragraphs": [
+        "A missed call during consulting hours is not a small operational annoyance. It is a patient who has already decided to book, handed to whoever answers next.",
+        "Clinics systematically under-count this because the missed calls leave no trace anyone reviews. The phone shows them and nobody looks. Meanwhile the same clinic will spend on ads to generate more calls that will also go unanswered.",
+        "The cheapest intervention in clinic marketing is not SEO. It is making sure a ringing phone at 2pm results in a callback within the hour, and that somebody owns that."
+      ]
+    },
+    {
+      "heading": "Why the map listing beats the website",
+      "paragraphs": [
+        "For local health searches on a phone, most people never reach a website. They decide from the map results: proximity, whether it says open now, how many reviews, whether the photos look like a real place.",
+        "This has an uncomfortable implication for clinics that have just paid for a website redesign. The redesign may not touch the surface where the decision is actually made.",
+        "It does not mean the website is pointless. It means the website's job is narrower than people assume: confirm legitimacy, answer the two or three questions that decide the booking, and make booking possible in one tap."
+      ]
+    },
+    {
+      "heading": "What a clinic website actually needs to answer",
+      "paragraphs": [
+        "Most clinic sites are brochures organised around the practice. The patient is not researching the practice; they are resolving a worry. The pages that matter answer the worry."
+      ],
+      "list": [
+        "What will this cost, at least as a range. Silence here loses more patients than a high number",
+        "Does it hurt, and what does the procedure actually involve",
+        "How soon can I be seen, stated in days rather than 'contact us'",
+        "Who is the doctor, with real credentials and a real photograph",
+        "Where exactly, with parking and the nearest landmark, not just an address",
+        "Can I book without phoning — for a large group of patients this is the difference between booking and not"
+      ],
+      "listType": "bullet"
+    },
+    {
+      "heading": "WhatsApp is the booking channel, not a support channel",
+      "paragraphs": [
+        "In India, a WhatsApp message gets answered far more reliably than an email, and many patients would rather message than call — particularly for anything they find embarrassing.",
+        "Treating WhatsApp as an afterthought while pushing everyone to a phone number is choosing the channel with the lower completion rate. The clinics that convert best make messaging a first-class option and staff it during consulting hours.",
+        "The follow-up matters as much as the first reply. A confirmation the day before, with the time, the doctor's name and the address, measurably reduces no-shows — and no-shows are pure lost capacity that no amount of marketing recovers."
+      ]
+    },
+    {
+      "heading": "The compliance boundary agencies ignore",
+      "paragraphs": [
+        "Indian medical advertising is constrained, and a lot of generic marketing advice quietly ignores it. Guaranteeing outcomes, publishing before-and-after imagery for certain procedures, and soliciting testimonials are areas where medical councils and the relevant advertising codes impose real limits.",
+        "This is not a reason to do nothing. It is a reason to build the growth around things that are unambiguously permitted — clear information, accessible booking, accurate credentials, responsive follow-up — rather than around claims that could put the practice at risk.",
+        "If a supplier proposes patient testimonials or outcome guarantees without raising the compliance question themselves, that tells you something about how carefully they work."
+      ]
+    },
+    {
+      "heading": "The order we would fix things in",
+      "paragraphs": [
+        "For most clinics, this sequence produces more bookings per rupee than starting with visibility:"
+      ],
+      "list": [
+        "Make sure every enquiry, on any channel, reaches one place someone owns",
+        "Answer or call back within the hour during working hours",
+        "Confirm every appointment in writing the day before",
+        "Fix the map listing — hours, category, photos, booking link",
+        "Make the website answer cost, pain, and availability plainly",
+        "Only then spend on being found by more people"
+      ],
+      "listType": "number"
+    },
+    {
+      "heading": "How this looked in practice",
+      "paragraphs": [
+        "In our [healthcare partnership](/case-studies/healthcare-clinic-growth), the work was a connected system rather than a campaign: a site built around the booking decision, every enquiry routed into one CRM with appointment tracking, and follow-up running as a defined process rather than depending on whoever was at the desk.",
+        "It is one of three partnerships behind roughly ₹1.5 crore generated in three months. We are deliberately not naming the practice, and we would not publish patient outcomes or testimonials for it."
+      ]
+    }
+  ],
+  "takeaway": "Clinics usually lose patients after the click, not before it. Fix the unanswered call, the unconfirmed appointment and the map listing before paying to be found by more people — and keep the whole thing inside what medical advertising rules actually permit.",
+  "related": ["crm-and-follow-up-systems", "website-lead-generation-system"]
+}

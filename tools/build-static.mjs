@@ -43,6 +43,18 @@ const esc = (s) =>
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
 
+/**
+ * Escape first, then re-introduce links from a [text](/path) token. Escaping
+ * happens before linkifying so author text can never inject markup; only
+ * same-site paths and growwstack.in URLs are allowed through.
+ */
+function inline(text) {
+  return esc(text).replace(
+    /\[([^\]]+)\]\((\/[^)\s]*|https:\/\/growwstack\.in[^)\s]*)\)/g,
+    (_m, label, href) => `<a href="${href}">${label}</a>`,
+  );
+}
+
 function findCss() {
   const assets = path.join(dist, "assets");
   const file = fs.readdirSync(assets).find((f) => f.endsWith(".css"));
@@ -124,13 +136,13 @@ function postBody(post) {
 
   const sections = post.sections
     .map((s) => {
-      const paras = (s.paragraphs || []).map((p) => `              <p>${esc(p)}</p>`).join("\n");
+      const paras = (s.paragraphs || []).map((p) => `              <p>${inline(p)}</p>`).join("\n");
       let list = "";
       if (s.list && s.list.length) {
         const tag = s.listType === "number" ? "ol" : "ul";
         const cls = s.listType === "number" ? "gs-post__steps" : "gs-post__list";
         list = `\n              <${tag} class="${cls}">\n${s.list
-          .map((i) => `                <li>${esc(i)}</li>`)
+          .map((i) => `                <li>${inline(i)}</li>`)
           .join("\n")}\n              </${tag}>`;
       }
       return `            <section class="gs-post__section">
@@ -169,13 +181,13 @@ ${related
             ${byline}
             <h1 class="gs-case__title gs-post__title">${esc(post.title)}</h1>
 
-${(post.intro || []).map((p) => `            <p class="gs-post__intro">${esc(p)}</p>`).join("\n")}
+${(post.intro || []).map((p) => `            <p class="gs-post__intro">${inline(p)}</p>`).join("\n")}
 
 ${sections}
 
             <aside class="gs-post__takeaway">
               <p class="gs-post__takeaway-label">In short</p>
-              <p>${esc(post.takeaway)}</p>
+              <p>${inline(post.takeaway)}</p>
             </aside>
 
             <section class="gs-case__cta">
@@ -278,7 +290,7 @@ ${cards}
 
 function studyBody(study) {
   const list = (items, cls) =>
-    items.map((i) => `                <li>${esc(i)}</li>`).join("\n");
+    items.map((i) => `                <li>${inline(i)}</li>`).join("\n");
 
   return `        <article class="gs-section gs-case__body">
           <div class="gs-shell">

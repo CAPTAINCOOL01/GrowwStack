@@ -1,0 +1,90 @@
+{
+  "slug": "google-business-profile-clinic-india",
+  "category": "Healthcare",
+  "publishedAt": "2026-09-12",
+  "readingTime": "7 min read",
+  "metaTitle": "Google Business Profile for Indian Clinics: The Settings That Matter",
+  "metaDescription": "The specific settings that decide whether a clinic appears in map results — primary category, consulting hours, booking link, photos and reviews.",
+  "title": "Google Business Profile for Indian clinics: the settings that change bookings",
+  "excerpt": "For local health searches most patients never reach your website. They decide from the map listing, and a handful of settings decide whether you are in it.",
+  "intro": [
+    "For a patient searching on a phone, the map results are usually where the decision happens. Many never reach a clinic website at all.",
+    "This is the least glamorous work in clinic marketing and reliably one of the highest-return. It is free, it takes an afternoon, and most clinics have several of these wrong."
+  ],
+  "sections": [
+    {
+      "heading": "The primary category silently caps everything",
+      "paragraphs": [
+        "This is the setting clinics get wrong most often, and it is close to invisible when it is wrong.",
+        "Your primary category is the strongest signal for which searches you can appear in. A clinic listed under a broad category when it is really a specialist practice — or the reverse — competes in the wrong set of results entirely, and no amount of other optimisation compensates.",
+        "Pick the most specific category that genuinely describes the main service, then add secondary categories for the rest. Being specific narrows the searches you appear in, and that is the point: appearing for the wrong search produces calls that waste everyone's time."
+      ]
+    },
+    {
+      "heading": "Hours should be consulting hours, not building hours",
+      "paragraphs": [
+        "A great many clinic listings show the hours the premises are open rather than the hours a patient can actually be seen.",
+        "This matters because \"open now\" filtering is heavily used on health searches. If the listing says open and nobody can see a patient, you receive a call you cannot serve and the patient goes elsewhere with a slightly worse impression of you.",
+        "Set the hours to when a doctor is genuinely consulting. Use special hours for festivals and holidays — in India this is the single most-neglected part of the listing, and appearing open on a day you are closed is worse than showing closed."
+      ]
+    },
+    {
+      "heading": "The booking link is the highest-value field",
+      "paragraphs": [
+        "A listing that offers only a phone number forces every patient through a call that may not be answered. Adding a booking or appointment link gives the substantial group of patients who would rather not phone a way to convert.",
+        "Point it at something that works on a phone in one or two taps. A link to a homepage, or to a booking page that demands account creation, wastes the setting entirely.",
+        "If you have no booking system, a WhatsApp link is a legitimate interim answer and better than nothing, provided somebody actually watches it during consulting hours."
+      ]
+    },
+    {
+      "heading": "Photos: which types actually matter",
+      "paragraphs": [
+        "Photographs on a clinic listing do a specific job. A patient is deciding whether this is a real, clean, findable place run by actual people.",
+        "The ones that earn their place, roughly in order:"
+      ],
+      "list": [
+        "The exterior, from the street, showing the signage a patient will look for",
+        "The entrance, particularly if the clinic is inside a larger building or upstairs",
+        "Reception and the waiting area, as they actually look",
+        "The doctor, real and recognisable",
+        "Treatment areas, within whatever your professional guidelines permit",
+        "Parking, or the nearest landmark, if finding the place is genuinely hard"
+      ],
+      "listType": "bullet"
+    },
+    {
+      "heading": "What not to photograph",
+      "paragraphs": [
+        "Stock imagery is obvious and it actively damages trust — a patient who recognises a stock photo now wonders what else is not real.",
+        "Avoid anything showing identifiable patients without explicit written consent, and be careful with clinical or procedural imagery. Indian medical advertising rules constrain certain before-and-after and outcome-suggestive content, and the boundary is not something to guess at.",
+        "When in doubt, photograph the place and the people who work there rather than the procedures."
+      ]
+    },
+    {
+      "heading": "Reviews, handled within the rules",
+      "paragraphs": [
+        "Reviews influence map ranking and they influence the two-second decision. They are also the area where clinics most easily stray outside professional guidelines.",
+        "You can ask satisfied patients to leave a review. You cannot incentivise reviews, write them yourself, or solicit testimonials in ways your medical council restricts. The line differs by speciality and it is worth checking rather than assuming.",
+        "Reply to every review, particularly the negative ones, and reply without discussing any clinical detail. A calm, non-defensive reply that moves the conversation offline is read by every future patient and does more good than the review did harm.",
+        "A listing with a spread of genuine reviews outperforms one with a small number of uniformly perfect ones. Most people have learned to read the latter as purchased."
+      ]
+    },
+    {
+      "heading": "The maintenance nobody does",
+      "paragraphs": [
+        "A profile set up once and never touched degrades. Information goes stale, competitors update theirs, and suggested edits from the public can silently change your details.",
+        "Check it monthly. Confirm the hours, look for edits you did not make, answer new questions in the Q&A section — you are allowed to post your own frequently asked questions there, and almost nobody does — and add a photo occasionally.",
+        "Fifteen minutes a month is the entire commitment, and it is more valuable than most of what clinics pay for."
+      ]
+    },
+    {
+      "heading": "Where this sits in the order of work",
+      "paragraphs": [
+        "Fixing the listing is worth doing before spending anything on being found more widely, but after making sure an enquiry that arrives is actually handled.",
+        "There is no point being more visible if the phone rings out at 2pm. We set out the full sequence in [how Indian clinics actually get patients online](/blog/clinic-patient-acquisition-india), and the systems work behind our own [healthcare partnership](/case-studies/healthcare-clinic-growth)."
+      ]
+    }
+  ],
+  "takeaway": "Set the most specific primary category, make hours reflect consulting times, add a booking link that works in two taps on a phone, use real photographs, and check the listing monthly. It is free, it takes an afternoon, and for local health searches it is where the decision is made.",
+  "related": ["clinic-patient-acquisition-india", "structured-data-for-business-websites"]
+}

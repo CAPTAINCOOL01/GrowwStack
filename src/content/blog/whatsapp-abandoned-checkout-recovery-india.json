@@ -1,0 +1,86 @@
+{
+  "slug": "whatsapp-abandoned-checkout-recovery-india",
+  "category": "E-commerce",
+  "publishedAt": "2026-09-12",
+  "readingTime": "8 min read",
+  "metaTitle": "WhatsApp Abandoned-Checkout Recovery for Indian Stores: What to Send",
+  "metaDescription": "The message sequence and timing, including the COD confirmation step that reduces return-to-origin losses and why the first message must not offer a discount.",
+  "title": "WhatsApp abandoned-checkout recovery: what to send, and when",
+  "excerpt": "A customer who abandoned a cart is closer to buying than anyone you will pay to acquire tomorrow. Here is the sequence, including the discount mistake almost everyone makes.",
+  "intro": [
+    "Someone who filled a cart and stopped is the warmest audience a store has. They chose the product, entered details, and something interrupted them.",
+    "In India, WhatsApp reaches these people far more reliably than email. The sequence below is what to send and when — including the message most stores get wrong, and the COD step almost nobody publishes."
+  ],
+  "sections": [
+    {
+      "heading": "The first message must not offer a discount",
+      "paragraphs": [
+        "This is the single most common and most expensive mistake in cart recovery.",
+        "If your first message contains a discount code, you teach customers that abandoning a cart produces a price cut. A meaningful number learn it deliberately, and you begin paying a discount on orders that would have completed at full price.",
+        "The first message should assume the interruption was practical rather than about price — because usually it was. A phone call, a crying child, a train arriving. Remind them the cart is there, make returning one tap, and stop."
+      ]
+    },
+    {
+      "heading": "The sequence and the timing",
+      "paragraphs": [
+        "Three messages is the useful maximum. Beyond that you are training people to block your number, which costs you the channel permanently."
+      ],
+      "list": [
+        "About 30 to 60 minutes after abandonment: a short reminder with the product name and a direct link back to the filled cart. No discount, no urgency language",
+        "About 24 hours later: address the likely objection instead of the price — delivery time, return policy, size or fit, whether COD is available. Different objection per category",
+        "About 72 hours later, optional: this is where an incentive belongs if you use one at all, and it should be framed as time-limited so it does not become the expected price",
+        "Then stop. No fourth message"
+      ],
+      "listType": "number"
+    },
+    {
+      "heading": "The COD confirmation message, which is the real money",
+      "paragraphs": [
+        "This is a separate sequence from cart recovery and it is frequently worth more.",
+        "Cash on delivery brings orders from first-time buyers who will not prepay a brand they do not know. It also brings return-to-origin losses — parcels shipped, refused or undeliverable, and returned at your cost with nothing to show for it.",
+        "A confirmation message sent shortly after a COD order is placed, asking the customer to confirm the order and the address, reduces that. It catches wrong addresses before dispatch, it catches accidental and impulse orders while cancelling is still cheap, and it creates a moment of commitment.",
+        "Keep it factual: the order, the items, the amount payable on delivery, the address, and two clear options to confirm or cancel. Make cancelling genuinely easy — a cancelled order costs far less than a refused delivery."
+      ]
+    },
+    {
+      "heading": "What each message should actually contain",
+      "paragraphs": [
+        "Short, specific, and obviously from a real business. The things that make the difference:"
+      ],
+      "list": [
+        "The actual product name, not \"your cart\" — it must be recognisable at a glance in a notification",
+        "A link that returns to the filled cart, not the homepage",
+        "The amount, so there is no surprise on arrival",
+        "A real business name in the message",
+        "One clear action, not three",
+        "A way to reply to a human, because some will, and that reply is a sale"
+      ],
+      "listType": "bullet"
+    },
+    {
+      "heading": "Opt-in is not optional",
+      "paragraphs": [
+        "WhatsApp Business messaging operates under policies that require the customer to have opted in to hear from you, and India's data protection framework has tightened expectations around consent generally.",
+        "Practically: collect the opt-in at checkout, make it clear rather than buried, keep a record of when it was given, and honour opt-outs immediately and permanently.",
+        "Ignoring this risks your number being reported and restricted, which removes the channel entirely. The short-term gain from messaging people who did not agree is never worth losing the ability to message anyone."
+      ]
+    },
+    {
+      "heading": "When to stop sending",
+      "paragraphs": [
+        "Stop after three messages. Stop immediately if they reply asking you to. Stop if they complete the purchase — nothing damages a brand faster than a recovery message arriving after payment.",
+        "That last one sounds obvious and is one of the most common failures we see, because the recovery sequence and the order system are not connected. If the two do not talk to each other, you will eventually send a discount to someone who has already paid full price."
+      ]
+    },
+    {
+      "heading": "Where this fits",
+      "paragraphs": [
+        "Cart recovery is a repair, not a growth strategy. If a large share of carts are abandoned, the checkout itself is usually the problem and recovery is treating the symptom.",
+        "Run the diagnostic in [traffic but no sales](/blog/d2c-store-traffic-no-sales) first. If checkout is fine and people still abandon at a normal rate, recovery is worth building.",
+        "In our [sports-equipment partnership](/case-studies/ecommerce-sports-equipment), WhatsApp sales and CRM workflows were one part of a system spanning product discovery, checkout, customer conversations and order operations. That partnership contributed over ₹35 lakh within 45 days — from the system as a whole rather than from any single message sequence."
+      ]
+    }
+  ],
+  "takeaway": "Three messages maximum: a plain reminder within the hour, an objection-handler at 24 hours, an optional incentive at 72. Never lead with a discount. Add a COD confirmation message separately — it catches wrong addresses and impulse orders before you pay to ship them.",
+  "related": ["crm-and-follow-up-systems", "d2c-store-traffic-no-sales"]
+}

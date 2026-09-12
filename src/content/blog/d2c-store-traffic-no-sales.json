@@ -1,0 +1,77 @@
+{
+  "slug": "d2c-store-traffic-no-sales",
+  "category": "E-commerce",
+  "publishedAt": "2026-09-12",
+  "readingTime": "9 min read",
+  "metaTitle": "Traffic But No Sales: Diagnose an Indian D2C Store in One Afternoon",
+  "metaDescription": "A step-by-step diagnostic you can run yourself, in order, with a stop condition at each stage. Most stores fail at step two or three and never get to the rest.",
+  "title": "Traffic but no sales: diagnose your store in an afternoon",
+  "excerpt": "Run these six checks in order. Stop at the first one that fails, fix it, and start again — most stores never need to reach step four.",
+  "intro": [
+    "A store getting visitors and almost no orders is one of the most common situations in Indian D2C, and one of the most misdiagnosed. The usual response is to spend more on traffic, which makes the problem more expensive rather than smaller.",
+    "This is a diagnostic you can run yourself this afternoon. Do it in order. Each step has a stop condition — if it fails, fix that before looking at anything below it, because everything below depends on it."
+  ],
+  "sections": [
+    {
+      "heading": "Step 1 — Is the traffic real, and is it yours?",
+      "paragraphs": [
+        "Before anything else, establish whether the visitors are plausible buyers. Open your analytics and look at three things: where they come from, what device they use, and how long they stay.",
+        "Warning signs that the traffic is not a buying audience: sessions lasting a few seconds in bulk, a large share from countries you do not ship to, or a spike with no campaign behind it. Bot and low-quality paid traffic is common and it makes every downstream number meaningless.",
+        "STOP CONDITION: if most sessions are under about ten seconds, or from places you cannot serve, your problem is traffic quality. Nothing on the site will fix that."
+      ]
+    },
+    {
+      "heading": "Step 2 — Does the product page answer the one objection?",
+      "paragraphs": [
+        "Every product has a single dominant reason people hesitate. For apparel it is fit. For supplements it is whether it is genuine. For electronics it is warranty and service. For anything above a few thousand rupees it is whether the seller is real.",
+        "Open your best-selling product page on a phone and find the answer to that objection without scrolling past the fold twice. If you cannot, neither can your customer.",
+        "Most Indian D2C product pages lead with lifestyle photography and brand language, and bury the size chart, the material, the warranty terms and the return policy. Those are not details — for a first-time buyer they are the decision.",
+        "STOP CONDITION: if the dominant objection is not visibly answered on a phone, fix that before anything else. It is the highest-leverage change available on most stores."
+      ]
+    },
+    {
+      "heading": "Step 3 — Complete a purchase on a mid-range phone, on mobile data",
+      "paragraphs": [
+        "Not your phone. A mid-range Android, on 4G, off your office wifi. Buy something. Pay real money.",
+        "This single exercise finds more revenue-blocking defects than any audit. The things it routinely surfaces: a checkout that takes six seconds to load, a coupon field that pushes the pay button off screen, an OTP flow that loses the cart on return, a payment method that silently fails, a shipping charge revealed only at the final step.",
+        "That last one matters more in India than most founders assume. Unexpected delivery cost at the final step is one of the most reliable ways to lose a cart that was otherwise ready to convert.",
+        "STOP CONDITION: if you hit any friction at all, stop the diagnostic. You have found the problem. Every visitor is hitting it too."
+      ]
+    },
+    {
+      "heading": "Step 4 — What happens to an abandoned cart?",
+      "paragraphs": [
+        "Abandon a cart deliberately and wait. For most stores the honest answer is that nothing happens at all.",
+        "A cart that is abandoned and never followed up is a customer who was closer to buying than any visitor you will pay to acquire tomorrow. Recovering even a modest share of them is usually cheaper than any new traffic.",
+        "The mechanics matter — the first message should not lead with a discount, because it trains people to abandon. We cover the sequence in [WhatsApp abandoned-checkout recovery](/blog/whatsapp-abandoned-checkout-recovery-india).",
+        "STOP CONDITION: if nothing happens, that is a fix worth doing before buying more traffic."
+      ]
+    },
+    {
+      "heading": "Step 5 — Are you accepting the payment methods people use?",
+      "paragraphs": [
+        "In India this is not a detail. UPI is how an enormous share of online payment happens, and cash on delivery still carries a meaningful portion of first-time orders in many categories.",
+        "If COD is switched off, a segment of first-time buyers who do not trust a new brand with prepayment simply will not order. That is a legitimate trade — COD brings return-to-origin losses — but it should be a deliberate decision, not an accident of setup.",
+        "Check that UPI works end to end on a real device, that the intent flow returns to your site correctly, and that failed payments are retried rather than dropped."
+      ]
+    },
+    {
+      "heading": "Step 6 — Does the store look like it belongs to a real business?",
+      "paragraphs": [
+        "Only reach this step if everything above passed. Trust is real, but it is a smaller factor than the mechanical failures above, and it is where founders instinctively start.",
+        "The things that actually move it: a working phone number someone answers, a real address, a return policy written in plain language rather than legal boilerplate, genuine reviews including some that are not five stars, and a visible human behind the brand.",
+        "Uniformly perfect reviews reduce trust rather than build it. Most buyers have learned to read them as purchased."
+      ]
+    },
+    {
+      "heading": "The pattern across stores we have worked on",
+      "paragraphs": [
+        "In our [sports-equipment partnership](/case-studies/ecommerce-sports-equipment), the brand had genuine product-market fit and a storefront that leaked at several of these steps simultaneously. The work was sequenced exactly this way: fix the conversion path first so existing traffic performed better, instrument the funnel, then move customer conversations into WhatsApp workflows connected to a CRM, then connect payments and order operations so fulfilment held as volume grew.",
+        "That partnership contributed over ₹35 lakh in revenue within 45 days, and forms part of roughly ₹1.5 crore generated across three partner brands in three months.",
+        "The sequence is the point. Fixing the storefront before spending on acquisition meant the traffic that already existed started converting, which funded everything after it."
+      ]
+    }
+  ],
+  "takeaway": "Work down the list and stop at the first failure. Traffic quality, then the product page objection, then a real purchase on a mid-range phone on mobile data. Most stores with traffic and no sales fail at step two or three, and never needed more traffic at all.",
+  "related": ["website-lead-generation-system", "core-web-vitals-explained"]
+}

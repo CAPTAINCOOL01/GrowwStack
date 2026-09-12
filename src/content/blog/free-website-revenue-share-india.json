@@ -1,0 +1,94 @@
+{
+  "slug": "free-website-revenue-share-india",
+  "category": "Model",
+  "publishedAt": "2026-09-12",
+  "readingTime": "8 min read",
+  "metaTitle": "We Build Websites Free for Good Products. Here Is the Catch, in Full.",
+  "metaDescription": "A free custom website in exchange for a share of the growth it produces. What qualifies, what we take, who owns what, and the businesses we turn down.",
+  "title": "We build websites free for good products. Here is the catch.",
+  "excerpt": "Free is the word that makes people suspicious, and they are usually right to be. So here is the entire arrangement, including who we say no to.",
+  "intro": [
+    "We build the website at no cost, and we are paid from a share of the growth it produces. If it produces nothing, we are paid nothing.",
+    "That sentence does the same thing every \"free\" offer does — it makes a reasonable person wonder where the money actually comes from. So this page is the whole arrangement, including the qualification bar and the kinds of business we turn down."
+  ],
+  "sections": [
+    {
+      "heading": "Why we would do this at all",
+      "paragraphs": [
+        "A website built and then handed over is a low-value product. It is worth whatever someone will pay for the build, once, and its performance afterwards is not the builder's problem.",
+        "A website we operate and earn from is a different asset. It gives us a reason to keep improving it for years, and it gives you a supplier whose income depends on the thing actually working. That alignment is the entire commercial logic.",
+        "It also forces us to be selective, which is the part that makes the model sustainable. We can only afford to build free for businesses where we genuinely believe growth will follow."
+      ]
+    },
+    {
+      "heading": "What \"good product\" means in practice",
+      "paragraphs": [
+        "This is the vague phrase in the offer, so here is the operational version. We are looking for evidence that demand already exists and that the business can carry it."
+      ],
+      "list": [
+        "People already pay for this. Existing paying customers, even a handful, beat any amount of projection",
+        "The margin survives a share. If gross margin is thin, growth does not create enough room for both of us",
+        "You can deliver more. If double the orders would break fulfilment, we would be manufacturing a problem",
+        "The founder is reachable. We need decisions within a day, not a fortnight",
+        "The numbers are visible to us. Revenue-share work is impossible when nobody can see the revenue"
+      ],
+      "listType": "bullet"
+    },
+    {
+      "heading": "What we take",
+      "paragraphs": [
+        "A share of measurable growth above an agreed baseline, for a defined term, written down before anything begins. The baseline is your trailing revenue — we do not get paid for business you were already doing.",
+        "We do not publish one universal percentage, because an honest number depends on your margin. A share that is comfortable at 60% gross margin is punishing at 12%. Anyone quoting you a rate before asking about margin has decided the number without checking whether you can afford it.",
+        "The test we hold ourselves to: after our share, the incremental revenue must still be obviously worth having. If it is not, the structure is wrong."
+      ]
+    },
+    {
+      "heading": "Who owns what",
+      "paragraphs": [
+        "You own the domain, the website, the code, the content, the customer data and every account throughout — including during the engagement, not just at the end.",
+        "We will not hold your domain, your hosting or your analytics as leverage. If you want to end the arrangement, you leave with a working website and everything attached to it.",
+        "This matters more than it sounds. A meaningful share of the horror stories in this industry are not about bad work; they are about a supplier controlling assets the business assumed it owned."
+      ]
+    },
+    {
+      "heading": "What happens if you walk in month two",
+      "paragraphs": [
+        "You keep the site. We absorb the cost of having built it.",
+        "That is a real risk we carry, and it is priced into how carefully we choose. It is also why the qualification questions above are not a formality — they are us deciding whether to take that risk.",
+        "If you walk after growth has been generated, the agreed tail applies to the growth already produced, for the defined window, and then it ends. There is no open-ended claim on your business."
+      ]
+    },
+    {
+      "heading": "The businesses we say no to",
+      "paragraphs": [
+        "We turn down more of these than we accept. The common reasons, stated plainly so you can rule yourself out without a call:"
+      ],
+      "list": [
+        "Pre-revenue or pre-product. There is no growth to share and the risk is entirely ours",
+        "A business whose problem is the product, not its distribution. We cannot market past that, and pretending otherwise wastes months",
+        "Margins too thin to support a share without hurting",
+        "Anyone unwilling to share revenue figures with a supplier being paid on revenue",
+        "Businesses where the founder wants to hand the whole thing over. We work alongside operators, not instead of them",
+        "Anything where honest growth would be constrained by regulation we would have to work around"
+      ],
+      "listType": "bullet"
+    },
+    {
+      "heading": "The website is not the product",
+      "paragraphs": [
+        "This is the part most people miss about the offer. A free website on its own would not generate enough growth to pay for itself, so if the website were all we built, this model would not work for either of us.",
+        "What actually produces revenue is the system around it: how traffic arrives, what happens to an enquiry in the first ten minutes, whether follow-up runs as a process or depends on someone remembering, and whether anyone can tell which channel produced a paying customer.",
+        "In one [e-commerce partnership](/case-studies/ecommerce-sports-equipment), rebuilding the storefront and connecting checkout, customer conversations and order operations as one system contributed over ₹35 lakh within 45 days. The storefront mattered. What mattered more was that it stopped being a dead end."
+      ]
+    },
+    {
+      "heading": "How to find out quickly whether you qualify",
+      "paragraphs": [
+        "The fastest route is to tell us what the business does, roughly what it earns now, and what you think is blocking it. If it is not a fit we will say so directly rather than running you through a process.",
+        "We take a limited number of these at a time, which is a constraint on us rather than a sales tactic — each one is an ongoing operating commitment, not a delivery."
+      ]
+    }
+  ],
+  "takeaway": "We build free and take a share of measurable growth above an agreed baseline, for a defined term, with you owning everything throughout. It works when there is existing demand, margin to share and capacity to deliver — and we turn down everything else. [Tell us about the business](/#build) and we will say honestly whether it fits.",
+  "related": ["website-cost-india", "website-builder-vs-custom-code"]
+}

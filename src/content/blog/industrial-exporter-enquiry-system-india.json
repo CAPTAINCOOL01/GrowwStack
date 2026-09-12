@@ -1,0 +1,89 @@
+{
+  "slug": "industrial-exporter-enquiry-system-india",
+  "category": "B2B",
+  "publishedAt": "2026-09-12",
+  "readingTime": "8 min read",
+  "metaTitle": "Getting Export Enquiries for an Indian Manufacturer",
+  "metaDescription": "A buyer who cannot visit your factory needs specific trust artefacts before enquiring. Certifications as pages, named installations, stated capacity and a response commitment.",
+  "title": "Getting export and out-of-state enquiries for an Indian manufacturer",
+  "excerpt": "A buyer three time zones away cannot visit your factory. Everything they need in order to risk an enquiry has to exist on your website.",
+  "intro": [
+    "Selling to a buyer in the next state is mostly relationships and references. Selling to one who cannot visit the factory is a different problem: every reason to trust you has to be visible before they contact you.",
+    "Most Indian manufacturer websites are built for buyers who already know the company. This is what has to change for the ones who do not."
+  ],
+  "sections": [
+    {
+      "heading": "The buyer's actual question",
+      "paragraphs": [
+        "An overseas or out-of-state buyer evaluating an unfamiliar Indian supplier is not primarily asking whether your product is good. They are asking whether engaging with you is a risk worth taking.",
+        "Underneath that: will this company still exist in eighteen months, can it hold the specification consistently across a production run, will it communicate when something goes wrong, and is it big enough to matter to but not so big that my order is insignificant.",
+        "Almost nothing on a typical manufacturer website addresses any of these. The site describes products. The buyer is assessing the company."
+      ]
+    },
+    {
+      "heading": "Certifications as pages, not PDFs",
+      "paragraphs": [
+        "Certifications are the fastest trust signal available, and most manufacturers bury them in a downloadable PDF or a row of logos with no detail.",
+        "Give each meaningful certification a page: what it covers, the certifying body, the scope, and the validity period. This is findable in search, readable on a phone, and verifiable by a buyer doing diligence — none of which is true of a logo.",
+        "It also matters increasingly for AI answer surfaces, which a growing number of technical buyers consult before shortlisting. Content inside a PDF is substantially less likely to be read and cited than the same content as a page."
+      ]
+    },
+    {
+      "heading": "Named installations, where you are permitted",
+      "paragraphs": [
+        "One named customer does more for an unfamiliar buyer than any number of claims about quality.",
+        "Many manufacturers cannot name customers, and that constraint is real. The workable middle is a described installation without the name: the sector, the scale, the specification, the year, the challenge. \"A dairy processing facility in Maharashtra, 12 tonne capacity, commissioned 2024\" is credible in a way \"trusted by leading brands\" is not.",
+        "Never publish a customer name without written permission. For a business selling on reliability, being caught overclaiming a relationship is not recoverable."
+      ]
+    },
+    {
+      "heading": "State capacity as a number",
+      "paragraphs": [
+        "A buyer placing a significant order needs to know you can fulfil it, and \"large manufacturing facility\" tells them nothing.",
+        "Publish the numbers: plant area, monthly or annual production capacity in units, number of production lines, workforce size, and current lead times. These are the figures that let a buyer decide whether to enquire at all.",
+        "Lead time is the one most often omitted and most often asked. Publishing it filters out buyers whose timeline you cannot meet, which saves both sides a conversation."
+      ]
+    },
+    {
+      "heading": "Structure products by specification, not by marketing name",
+      "paragraphs": [
+        "Internal product names mean nothing to someone who has not bought from you. Buyers search by what the thing does and by the numbers that define it.",
+        "Organise around the specification — capacity range, material, temperature range, power rating, standard complied with — and let the product name follow. Then each specification range becomes a page a buyer can actually find.",
+        "This is also how export enquiries arrive through search rather than through directories. A buyer searching for a specific capacity in a specific material finds a page about exactly that, or they find a competitor's."
+      ]
+    },
+    {
+      "heading": "Commit to a response time, and meet it",
+      "paragraphs": [
+        "For an overseas buyer, the first reply is the entire basis for judging whether you will communicate well over a six-month project.",
+        "State the commitment on the page — one working day is a reasonable and achievable promise — and then meet it. A published commitment you miss is worse than none at all.",
+        "Time zones matter here. A buyer in Europe or North America sending an enquiry at the end of their day should not wait two of your working days for an acknowledgement. Even a holding reply that names when a technical answer will arrive is enough to keep the conversation alive."
+      ]
+    },
+    {
+      "heading": "Make the enquiry form export-aware",
+      "paragraphs": [
+        "A domestic enquiry form asks for city and phone. An export buyer needs to tell you different things, and a form that cannot accept them signals you do not do this often."
+      ],
+      "list": [
+        "Country and destination port",
+        "Required specification or the standard to be complied with",
+        "Approximate order quantity and whether it is one-off or recurring",
+        "Target timeline",
+        "Whether they need documentation support for import",
+        "An international phone field that actually accepts their number"
+      ],
+      "listType": "bullet"
+    },
+    {
+      "heading": "The systems behind the enquiry",
+      "paragraphs": [
+        "Export cycles are long, multi-contact and easy to lose to silence. An enquiry in March may be an order in October, across a dozen emails, two sample shipments and a video call.",
+        "Nobody holds that in their head across several live opportunities, which is why the deals that go quiet are usually the ones that were forgotten rather than lost to a competitor. The mechanics are in [lead generation for industrial and deep-tech B2B](/blog/industrial-b2b-lead-generation-india).",
+        "In our [refrigeration and deep-technology partnership](/case-studies/deep-tech-b2b-expansion), the work was exactly this: positioning the technical capability so a commercial buyer could evaluate it, then putting B2B lead generation and business-development tracking behind it so long cycles were tracked rather than remembered."
+      ]
+    }
+  ],
+  "takeaway": "Publish certifications as pages, describe real installations even if you cannot name the customer, state capacity and lead time as numbers, organise products by specification, and commit to a response time you actually meet. A buyer who cannot visit your factory needs all of it before they will risk an enquiry.",
+  "related": ["industrial-b2b-lead-generation-india", "technical-seo-checklist-new-website"]
+}
