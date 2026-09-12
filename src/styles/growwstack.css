@@ -3740,3 +3740,32 @@ body[data-consent-open="true"] .gs-wa-fab {
     grid-template-columns: 1fr;
   }
 }
+
+/* Both shared buttons are dark ink, which is the same colour as the dark CTA
+   panel used on every blog post and case study — the primary had no visible
+   shape at all and the secondary was nearly unreadable. Scope light variants to
+   that panel rather than changing the global buttons. */
+.gs-case__cta .gs-button--primary {
+  background: var(--gs-signal);
+  border-color: var(--gs-signal);
+  color: #2a0d00;
+  font-weight: 700;
+}
+
+.gs-case__cta .gs-button--primary:hover {
+  background: #ff8459;
+  border-color: #ff8459;
+  color: #2a0d00;
+}
+
+.gs-case__cta .gs-button--secondary {
+  border-color: rgba(234, 241, 244, 0.38);
+  color: var(--gs-paper);
+  background: transparent;
+}
+
+.gs-case__cta .gs-button--secondary:hover {
+  border-color: var(--gs-paper);
+  background: rgba(234, 241, 244, 0.1);
+  color: var(--gs-white);
+}
