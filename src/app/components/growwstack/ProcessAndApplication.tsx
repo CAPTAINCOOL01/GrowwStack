@@ -4,6 +4,7 @@ import {
   type ChangeEvent,
   type FormEvent,
 } from "react";
+import { sbInsert } from "../../../lib/supabase";
 
 const partnershipStages = [
   {
@@ -222,7 +223,8 @@ export function ApplicationSection() {
   const [application, setApplication] =
     useState<ApplicationData>(initialApplication);
   const [uploads, setUploads] = useState<File[]>([]);
-  const [preparedMailto, setPreparedMailto] = useState("");
+  const [status, setStatus] = useState("idle");
+  const [errorMsg, setErrorMsg] = useState(null);
   const formRef = useRef<HTMLFormElement>(null);
   const stepHeadingRef = useRef<HTMLHeadingElement>(null);
 
@@ -255,7 +257,7 @@ export function ApplicationSection() {
     focusStepHeading();
   };
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     if (!isFinalStep) {
@@ -265,53 +267,55 @@ export function ApplicationSection() {
 
     if (!formRef.current?.reportValidity()) return;
 
-    const subject = `GrowwStack partnership application — ${application.companyName}`;
-    const selectedFiles = uploads.length
-      ? uploads.map((file) => file.name).join(", ")
-      : "None selected";
-    const body = [
-      "GROWWSTACK PARTNERSHIP APPLICATION",
-      "",
-      "COMPANY",
-      `Founder: ${application.founderName}`,
-      `Company: ${application.companyName}`,
-      `Contact: ${application.email} | ${application.phone}`,
-      `Website: ${application.website || "Not provided"}`,
-      `LinkedIn: ${application.linkedIn || "Not provided"}`,
-      `Profile: ${application.industry} | ${application.location} | ${application.yearsInBusiness} years in business`,
-      "",
-      "BUSINESS",
-      `What we sell: ${compactForEmail(application.offer)}`,
-      `Differentiation: ${compactForEmail(application.differentiation)}`,
-      `Ideal customer: ${compactForEmail(application.idealCustomer)}`,
-      `Commercials: ${application.monthlyRevenueRange} monthly | Last 3 months: ${application.recentRevenue} | AOV: ${application.averageOrderValue} | Gross margin: ${application.grossMargin}%`,
-      `Bestsellers: ${compactForEmail(application.bestSellers)}`,
-      "",
-      "CURRENT GROWTH SYSTEM",
-      `Platform / CRM: ${application.platform} | ${application.crm}`,
-      `Monthly traffic / leads / conversion: ${application.monthlyTraffic} / ${application.monthlyLeads} / ${application.conversionRate}%`,
-      `Sales team: ${application.salesTeamSize}`,
-      `Marketing: ${compactForEmail(application.marketingChannels)}`,
-      `Fulfilment: ${compactForEmail(application.fulfilment)}`,
-      "",
-      "OPPORTUNITY",
-      `Primary blocker: ${compactForEmail(application.scalingBlocker)}`,
-      `Six-month success: ${compactForEmail(application.sixMonthSuccess)}`,
-      `Support needed: ${compactForEmail(application.supportAreas)}`,
-      `Why GrowwStack: ${compactForEmail(application.partnershipReason)}`,
-      `Can support 2–3x demand: ${application.demandCapacity}`,
-      `Comfortable sharing data: ${application.dataSharing}`,
-      "",
-      `Files selected: ${selectedFiles}`,
-      "Attachment note: this draft cannot include local files automatically. Please attach the selected documents manually before sending.",
-    ].join("\n");
+    setStatus("sending");
+    setErrorMsg(null);
 
-    const mailto = `mailto:ceo-office@growwstack.in?subject=${encodeURIComponent(
-      subject,
-    )}&body=${encodeURIComponent(body)}`;
-
-    setPreparedMailto(mailto);
-    window.location.href = mailto;
+    try {
+      await sbInsert("gs_applications", {
+        founder_name: application.founderName.trim(),
+        company_name: application.companyName.trim() || null,
+        email: application.email.trim() || null,
+        phone: application.phone.trim() || null,
+        website: application.website.trim() || null,
+        linkedin: application.linkedIn.trim() || null,
+        industry: application.industry || null,
+        location: application.location.trim() || null,
+        years_in_business: application.yearsInBusiness || null,
+        offer: application.offer.trim() || null,
+        differentiation: application.differentiation.trim() || null,
+        ideal_customer: application.idealCustomer.trim() || null,
+        monthly_revenue_range: application.monthlyRevenueRange || null,
+        recent_revenue: application.recentRevenue.trim() || null,
+        average_order_value: application.averageOrderValue.trim() || null,
+        gross_margin: application.grossMargin.trim() || null,
+        best_sellers: application.bestSellers.trim() || null,
+        platform: application.platform.trim() || null,
+        crm: application.crm.trim() || null,
+        monthly_traffic: application.monthlyTraffic.trim() || null,
+        monthly_leads: application.monthlyLeads.trim() || null,
+        conversion_rate: application.conversionRate.trim() || null,
+        sales_team_size: application.salesTeamSize.trim() || null,
+        marketing_channels: application.marketingChannels.trim() || null,
+        fulfilment: application.fulfilment.trim() || null,
+        scaling_blocker: application.scalingBlocker.trim() || null,
+        six_month_success: application.sixMonthSuccess.trim() || null,
+        support_areas: application.supportAreas.trim() || null,
+        partnership_reason: application.partnershipReason.trim() || null,
+        demand_capacity: application.demandCapacity || null,
+        data_sharing: application.dataSharing || null,
+        file_names: uploads.length ? uploads.map((f) => f.name).join(", ") : null,
+        source: "partnership_application",
+        page_path: window.location.pathname,
+        referrer: document.referrer || null,
+        user_agent: navigator.userAgent,
+      });
+      setStatus("sent");
+    } catch (err) {
+      setStatus("error");
+      setErrorMsg(
+        err instanceof Error ? err.message : "Something went wrong. Please try again.",
+      );
+    }
   };
 
   return (
@@ -831,14 +835,12 @@ export function ApplicationSection() {
                     className="gs-application-form__notice"
                     role="note"
                   >
-                    <strong>This site does not send your application to a server.</strong>
+                    <strong>Your application goes straight to the founder.</strong>
                     <span>
-                      Selecting “Prepare application email” opens your email app
-                      with a draft addressed to ceo-office@growwstack.in. For
-                      privacy and browser security, selected uploads cannot be
-                      added automatically; attach them manually before sending.
-                    </span>
-                  </div>
+                      We read every one and reply within one working day. Any
+                      documents you selected cannot be uploaded here for browser
+                      security reasons &mdash; we will ask for them if we need them.
+                    </span>                  </div>
                 </fieldset>
               )}
 
@@ -861,19 +863,33 @@ export function ApplicationSection() {
                     Continue
                   </button>
                 ) : (
-                  <button className="gs-button gs-button--primary" type="submit">
-                    Prepare application email
+                  <button
+                    className="gs-button gs-button--primary"
+                    type="submit"
+                    disabled={status === "sending" || status === "sent"}
+                  >
+                    {status === "sending"
+                      ? "Sending…"
+                      : status === "sent"
+                        ? "Application sent"
+                        : "Submit application"}
                   </button>
                 )}
               </div>
 
-              {preparedMailto && (
+              {status === "sent" && (
                 <p className="gs-application-form__status" role="status">
-                  Your email app should have opened with the draft. If it did not,
-                  <a href={preparedMailto}> open the application email again</a>.
-                  Remember to attach any selected files before sending.
+                  Application received. We read every one and will reply from the
+                  founder&rsquo;s desk within one working day.
                 </p>
               )}
+              {status === "error" && (
+                <p className="gs-application-form__status" role="alert">
+                  {errorMsg} You can also email{" "}
+                  <a href="mailto:ceo-office@growwstack.in">ceo-office@growwstack.in</a>.
+                </p>
+              )}
+
             </form>
           </div>
         </div>

@@ -95,12 +95,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
-    const [leads, visitors, orders] = await Promise.all([
+    const [leads, visitors, orders, applications] = await Promise.all([
       readTable(supabaseUrl, serviceKey, "gs_leads", 1000),
       readTable(supabaseUrl, serviceKey, "gs_visitors", 1000),
       readTable(supabaseUrl, serviceKey, "gs_website_orders", 1000),
+      readTable(supabaseUrl, serviceKey, "gs_applications", 1000),
     ]);
-    return res.status(200).json({ token: issued, leads, visitors, orders });
+    return res.status(200).json({ token: issued, leads, visitors, orders, applications });
   } catch (err) {
     return res.status(502).json({ error: err instanceof Error ? err.message : "Upstream read failed" });
   }

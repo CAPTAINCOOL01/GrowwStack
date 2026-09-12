@@ -3731,3 +3731,12 @@ body[data-consent-open="true"] .gs-wa-fab {
     font-size: 0.82rem;
   }
 }
+
+
+/* The application form was the only form on the site with no mobile layout:
+   a hard two-column grid gave each field ~150px on a phone. gs-form-grid single column */
+@media (max-width: 700px) {
+  .gs-form-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -15,6 +15,21 @@ type Lead = {
   user_agent: string | null;
 };
 
+type Application = {
+  id: string;
+  created_at: string;
+  founder_name: string;
+  company_name: string | null;
+  email: string | null;
+  phone: string | null;
+  website: string | null;
+  industry: string | null;
+  location: string | null;
+  monthly_revenue_range: string | null;
+  scaling_blocker: string | null;
+  partnership_reason: string | null;
+};
+
 type Order = {
   id: string;
   created_at: string;
@@ -126,7 +141,7 @@ function LoginGate({ onSubmit }: { onSubmit: (pw: string) => Promise<boolean> })
   );
 }
 
-type Tab = "leads" | "orders" | "visitors";
+type Tab = "leads" | "applications" | "orders" | "visitors";
 
 export function AdminDashboard() {
   const [ok, setOk] = useState(false);
@@ -134,6 +149,7 @@ export function AdminDashboard() {
   const [leads, setLeads] = useState<Lead[]>([]);
   const [visitors, setVisitors] = useState<Visitor[]>([]);
   const [orders, setOrders] = useState<Order[]>([]);
+  const [applications, setApplications] = useState<Application[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -142,10 +158,11 @@ export function AdminDashboard() {
     setLoading(true);
     setError(null);
     try {
-      const data = await adminFetch<Lead, Visitor, Order>(credential);
+      const data = await adminFetch<Lead, Visitor, Order, Application>(credential);
       setLeads(data.leads);
       setVisitors(data.visitors);
       setOrders(data.orders ?? []);
+      setApplications(data.applications ?? []);
       setOk(true);
       return true;
     } catch (err) {
@@ -168,6 +185,7 @@ export function AdminDashboard() {
     setLeads([]);
     setVisitors([]);
     setOrders([]);
+    setApplications([]);
     setOk(false);
   };
 
@@ -193,6 +211,7 @@ export function AdminDashboard() {
       (o) => now - new Date(o.created_at).getTime() < day,
     ).length;
     return {
+      totalApplications: applications.length,
       totalOrders: orders.length,
       orders24,
       totalLeads: leads.length,
@@ -201,7 +220,7 @@ export function AdminDashboard() {
       visits24,
       uniqueSessions,
     };
-  }, [leads, visitors, orders]);
+  }, [leads, visitors, orders, applications]);
 
   if (!ok) return <LoginGate onSubmit={authenticate} />;
 
@@ -234,6 +253,7 @@ export function AdminDashboard() {
       <section className="gs-admin__stats" aria-label="Snapshot">
         <StatCard label="Leads (total)" value={stats.totalLeads} />
         <StatCard label="Leads (24h)" value={stats.leads24} />
+        <StatCard label="Applications" value={stats.totalApplications} />
         <StatCard label="Build requests" value={stats.totalOrders} />
         <StatCard label="Page views (total)" value={stats.totalVisits} />
         <StatCard label="Page views (24h)" value={stats.visits24} />
@@ -247,6 +267,13 @@ export function AdminDashboard() {
           onClick={() => setTab("leads")}
         >
           Leads ({leads.length})
+        </button>
+        <button
+          className={`gs-admin__tab${tab === "applications" ? " gs-admin__tab--active" : ""}`}
+          type="button"
+          onClick={() => setTab("applications")}
+        >
+          Applications ({applications.length})
         </button>
         <button
           className={`gs-admin__tab${tab === "orders" ? " gs-admin__tab--active" : ""}`}
@@ -269,7 +296,9 @@ export function AdminDashboard() {
           onClick={() =>
             tab === "leads"
               ? downloadCsv("growwstack-leads.csv", leads)
-              : tab === "orders"
+              : tab === "applications"
+                ? downloadCsv("growwstack-applications.csv", applications)
+                : tab === "orders"
                 ? downloadCsv("growwstack-website-orders.csv", orders)
                 : downloadCsv("growwstack-visitors.csv", visitors)
           }
@@ -282,6 +311,8 @@ export function AdminDashboard() {
 
       {tab === "leads" ? (
         <LeadsTable leads={leads} />
+      ) : tab === "applications" ? (
+        <ApplicationsTable applications={applications} />
       ) : tab === "orders" ? (
         <OrdersTable orders={orders} />
       ) : (
@@ -373,6 +404,63 @@ function OrdersTable({ orders }: { orders: Order[] }) {
                   )}
                 </td>
                 <td>{o.message ?? "—"}</td>
+                <td>{wa && <a href={wa} target="_blank" rel="noopener noreferrer">WhatsApp</a>}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function ApplicationsTable({ applications }: { applications: Application[] }) {
+  if (!applications.length) {
+    return (
+      <p className="gs-admin__empty">
+        No partnership applications yet. They will appear here as soon as someone submits the form.
+      </p>
+    );
+  }
+
+  return (
+    <div className="gs-admin__table-wrap">
+      <table className="gs-admin__table">
+        <thead>
+          <tr>
+            <th>Received</th>
+            <th>Founder</th>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Industry</th>
+            <th>Revenue</th>
+            <th>Biggest blocker</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {applications.map((a) => {
+            const wa = whatsappHref(a.phone, a.founder_name);
+            return (
+              <tr key={a.id}>
+                <td>{formatDate(a.created_at)}</td>
+                <td>{a.founder_name}</td>
+                <td>
+                  {a.company_name ?? "—"}
+                  {a.website && (
+                    <div className="gs-admin__muted">
+                      <a href={a.website} target="_blank" rel="noopener noreferrer">site</a>
+                    </div>
+                  )}
+                </td>
+                <td>
+                  {a.email && <div><a href={`mailto:${a.email}`}>{a.email}</a></div>}
+                  {a.phone && <div><a href={`tel:${a.phone}`}>{a.phone}</a></div>}
+                  {!a.email && !a.phone && "—"}
+                </td>
+                <td>{a.industry ?? "—"}</td>
+                <td>{a.monthly_revenue_range ?? "—"}</td>
+                <td className="gs-admin__cell-message">{a.scaling_blocker ?? "—"}</td>
                 <td>{wa && <a href={wa} target="_blank" rel="noopener noreferrer">WhatsApp</a>}</td>
               </tr>
             );
