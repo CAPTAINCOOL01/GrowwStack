@@ -3837,6 +3837,69 @@ body[data-consent-open="true"] .gs-wa-fab {
 }
 
 /* ---- Phone ---- */
+/* ---- 2. Primary navigation ----------------------------------------------
+   Scoped to the same 860px breakpoint that swaps in the hamburger. The
+   dropdown panel was a grid, but .gs-nav__links inside it stayed a single
+   flex ROW 447px wide: it overflowed the panel, and while the panel was
+   closed its contents still sat over the hero headline.                    */
+@media (max-width: 860px) {
+  .gs-nav__menu {
+    max-height: 0;
+    overflow: hidden;
+    /* A closed panel must not be tappable, focusable, or able to leak its
+       (still laid-out) children over the hero. */
+    visibility: hidden;
+    overscroll-behavior: contain;
+    background: #07111d;
+  }
+
+  .gs-nav[data-open="true"] .gs-nav__menu {
+    max-height: min(78vh, 560px);
+    overflow-y: auto;
+    visibility: visible;
+    -webkit-overflow-scrolling: touch;
+    box-shadow: 0 24px 40px rgba(0, 0, 0, 0.45);
+  }
+
+  .gs-nav__menu,
+  .gs-nav__links {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .gs-nav__links a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding: 13px 2px;
+    border-bottom: 1px solid rgba(234, 241, 244, 0.09);
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+  }
+
+  /* The animated underline becomes a full-width bar in a stacked menu. */
+  .gs-nav__links a::after {
+    display: none;
+  }
+
+  /* .gs-button--dark is near-black, which is invisible against the panel. */
+  .gs-nav__menu > .gs-button {
+    width: 100%;
+    margin-top: 18px;
+    justify-content: center;
+    padding-block: 15px;
+    font-size: 0.78rem;
+    background: var(--gs-signal);
+    border-color: var(--gs-signal);
+    color: #10202e;
+  }
+}
+
 @media (max-width: 760px) {
   .gs-partnerships__grid,
   .gs-process,
@@ -3944,5 +4007,342 @@ body[data-consent-open="true"] .gs-wa-fab {
   .gs-container {
     padding-left: 15px;
     padding-right: 15px;
+  }
+}
+
+/* ==========================================================================
+   MOBILE PASS 2 — overlap, overflow and legibility fixes
+   --------------------------------------------------------------------------
+   The first mobile pass stacked the top-level page grids, but several nested
+   grids kept desktop track definitions with hard pixel minimums that are wider
+   than a phone. Because html/body carry `overflow-x: hidden`, those tracks did
+   not produce a scrollbar — they silently painted on top of each other or ran
+   off the right edge, which is what read as "overlapping and not clear".
+
+   Everything below is scoped to phone widths only; desktop is untouched.
+   ========================================================================== */
+
+/* ---- 1. Section headers: stop the title painting over its own lede -------
+   .gs-section__header / .gs-results__heading place the title in column 1 and
+   the lede in column 2 via explicit grid-column/grid-row. The earlier
+   single-column override changed the track list but left those placements, so
+   the lede stayed pinned to an implicit column 2 on the SAME row as the title.
+   Both then overflowed their zero-width tracks and overlapped.
+   Resetting the placements is what actually stacks them.                    */
+@media (max-width: 1000px) {
+  .gs-section__header > *,
+  .gs-results__heading > * {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    align-self: start;
+    max-width: 100%;
+  }
+
+  .gs-section__header,
+  .gs-results__heading {
+    align-items: start;
+    grid-template-rows: auto;
+  }
+
+  .gs-section__header > .gs-section__lede,
+  .gs-section__header > p:last-child,
+  .gs-results__heading > p:last-child {
+    margin: 0;
+    max-width: 60ch;
+  }
+}
+
+@media (max-width: 760px) {
+  /* ---- 3. "The growth journey" blueprint -------------------------------
+     grid-template-columns was `140px minmax(0,1fr) 160px` — the two vertical
+     writing-mode rails alone claimed 300px of a 390px screen, leaving ~28px
+     for the content column. Each row then needed a further 308px of its own
+     tracks, so titles ran off-screen and every description rendered past the
+     right edge, completely invisible. The rails are decorative labels; on a
+     phone they are dropped and each layer becomes a simple stacked block.  */
+  .gs-stack__blueprint {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .gs-stack__endpoint {
+    display: none;
+  }
+
+  .gs-stack__layer {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 6px;
+    min-height: 0;
+    padding: 20px 18px;
+    align-items: start;
+  }
+
+  .gs-stack__number {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+  }
+
+  .gs-stack__identity {
+    min-width: 0;
+  }
+
+  .gs-stack__identity h3 {
+    font-size: clamp(1.35rem, 6.4vw, 1.9rem);
+    line-height: 1.05;
+    overflow-wrap: anywhere;
+  }
+
+  .gs-stack__description {
+    max-width: 100%;
+    font-size: 0.92rem;
+  }
+
+  /* The decorative vertical hairline sat under the content at this width. */
+  .gs-stack::after {
+    display: none;
+  }
+
+  /* The connector dot tethered each layer to the rail that is now hidden; it
+     was overhanging the card's right edge by 6px and sitting on the title. */
+  .gs-stack__connector {
+    display: none;
+  }
+
+  /* ---- 4. Hero "L1–L6" stack figure ------------------------------------
+     The staggered margin-left pyramid plus a third `auto` track pushed the
+     MEASURE / CLOSE / FOUNDATION labels past the card's right edge.        */
+  .gs-stack-layer {
+    width: 100% !important;
+    margin-left: 0 !important;
+    grid-template-columns: 30px minmax(0, 1fr);
+    gap: 4px 10px;
+    padding: 11px 12px;
+  }
+
+  .gs-stack-layer__name {
+    grid-column: 2;
+    font-size: 1rem;
+  }
+
+  /* Give the detail label its own row instead of a squeezed third column. */
+  .gs-stack-layer__detail {
+    grid-column: 2;
+    font-size: 0.62rem;
+  }
+
+  .gs-stack-layer:hover {
+    transform: none !important;
+  }
+
+  .gs-stack-figure__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 18px 16px 14px;
+  }
+
+  .gs-stack-figure__header strong {
+    font-size: 1.45rem;
+  }
+
+  .gs-stack-figure figcaption {
+    flex-direction: column;
+    gap: 6px;
+    padding: 14px 16px;
+  }
+
+  .gs-stack-figure figcaption span {
+    text-align: left;
+  }
+
+  .gs-stack-layers {
+    padding: 14px 12px;
+  }
+
+  /* ---- 5. Remaining nested grids with pixel minimums wider than a phone -- */
+  .gs-partnerships__result,          /* was minmax(220px,.36fr) 1fr = 501px */
+  .gs-founder__experience-item,      /* was minmax(210px,.75fr) 1fr         */
+  .gs-process__note,                 /* was 190px minmax(0,680px)           */
+  .gs-review-flow,
+  .gs-offer__inner,
+  .gs-build__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .gs-partnerships__result-copy,
+  .gs-partnerships__result-mark {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .gs-partnerships__result-copy p,
+  .gs-partnerships__result-copy span {
+    max-width: 100%;
+  }
+
+  .gs-process__note {
+    justify-content: start;
+    gap: 12px;
+  }
+
+  .gs-founder__experience-item {
+    gap: 6px;
+  }
+
+  /* ---- 6. Footer -------------------------------------------------------
+     The link column was right-aligned (align-items: flex-end), so the longest
+     entries — the email address and "Back to top" — hung off the right edge. */
+  .gs-footer__links {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .gs-footer__links a {
+    padding-block: 4px;
+  }
+
+  .gs-footer__base {
+    gap: 22px;
+    text-align: left;
+    /* Clear the floating WhatsApp button so it never covers a footer link. */
+    padding-bottom: 84px;
+  }
+
+  .gs-footer__base p {
+    text-align: left;
+  }
+
+  .gs-footer__statement {
+    padding-block: clamp(56px, 12vw, 96px);
+  }
+
+  .gs-footer__statement blockquote {
+    /* clamp floor was 3.2rem (51px) — "GROWWSTACK" alone overran the screen. */
+    font-size: clamp(1.85rem, 8.4vw, 2.9rem);
+    line-height: 1.02;
+    margin-bottom: 32px;
+    overflow-wrap: break-word;
+  }
+
+  .gs-footer__statement .gs-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* ---- 7. Legibility: raise the sub-12px label text ---------------------
+     Roughly 140 elements rendered between 8.6px and 11.5px. These are the
+     mono eyebrow/label styles; below ~12px they are the main reason the page
+     reads as "not clear" on a phone.                                       */
+  .gs-brand__descriptor,
+  .gs-stack-figure__status,
+  .gs-stack-figure__header > div > span,
+  .gs-stack-figure figcaption,
+  .gs-founder__domain,
+  .gs-founder__role,
+  .gs-founder__experience-title,
+  .gs-founder__proof-label,
+  .gs-partnerships__sector,
+  .gs-partnerships__scope-title,
+  .gs-partnerships__privacy,
+  .gs-partnerships__result-label,
+  .gs-partnerships__result-copy span,
+  .gs-stack__action,
+  .gs-results__qualifier,
+  .gs-process__number,
+  .gs-process__note-label,
+  .gs-review-flow__label,
+  .gs-application-progress__summary,
+  .gs-application-progress__step,
+  .gs-field__label,
+  .gs-field__hint,
+  .gs-application-form__notice,
+  .gs-application-form__status,
+  .gs-offer__compare-head span,
+  .gs-fit-grid__marker,
+  .gs-footer__base,
+  .gs-partnerships__status,
+  .gs-proof-strip__item span,
+  .gs-stack-layer__code,
+  .gs-eyebrow,
+  .gs-button--small {
+    font-size: 0.76rem;
+    letter-spacing: 0.045em;
+  }
+
+  .gs-field__hint,
+  .gs-partnerships__privacy,
+  .gs-stack-layer__detail {
+    font-size: 0.72rem;
+  }
+
+  /* Long uppercase mono strings need room to break rather than overflow. */
+  .gs-eyebrow,
+  .gs-process__note-label,
+  .gs-partnerships__result-label {
+    overflow-wrap: break-word;
+  }
+
+  /* ---- 8. Floating WhatsApp button -------------------------------------
+     It sat over body copy and over the hero CTA's arrow. Smaller, tucked
+     further into the corner, and sections that end in a CTA get bottom room. */
+  .gs-wa-fab {
+    right: 12px;
+    bottom: 12px;
+    padding: 11px;
+  }
+
+  .gs-wa-fab svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* ---- 9. Hero ---------------------------------------------------------- */
+  .gs-hero__orb {
+    width: min(66vw, 300px);
+    height: min(66vw, 300px);
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .gs-hero__layout > *,
+  .gs-founder__layout > * {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  /* ---- 10. Global guards ----------------------------------------------- */
+  .gs-section__title,
+  .gs-section-heading h2,
+  .gs-case__title,
+  .gs-offer__title,
+  .gs-build__title {
+    overflow-wrap: break-word;
+    max-width: 100%;
+  }
+
+  /* Any grid that still declares a pixel minimum wider than the screen. */
+  .gs-shell > *,
+  .gs-container > * {
+    min-width: 0;
+  }
+}
+
+/* ---- 11. Small phone ---------------------------------------------------- */
+@media (max-width: 430px) {
+  .gs-stack__identity h3 {
+    font-size: clamp(1.25rem, 6.8vw, 1.6rem);
+  }
+
+  .gs-footer__statement blockquote {
+    font-size: clamp(1.7rem, 8.6vw, 2.4rem);
+  }
+
+  .gs-stack-layer {
+    grid-template-columns: 26px minmax(0, 1fr);
+    padding: 10px;
+  }
+
+  .gs-stack-layer__name {
+    font-size: 0.94rem;
   }
 }
