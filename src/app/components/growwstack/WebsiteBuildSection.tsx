@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { CONTACT_PHONE } from "../../../lib/config";
 import { sbInsert } from "../../../lib/supabase";
+import { trackEvent } from "../../../lib/events";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -78,6 +79,7 @@ export function WebsiteBuildSection() {
         user_agent: navigator.userAgent,
       });
       setStatus("sent");
+      trackEvent("form_submit", "website_build");
       setValues(initial);
     } catch (err) {
       setStatus("error");

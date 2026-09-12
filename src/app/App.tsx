@@ -16,12 +16,14 @@ import { WhatsAppFab } from "./components/growwstack/WhatsAppFab";
 import { trackPageView } from "../lib/tracking";
 import { initAnalytics } from "../lib/analytics";
 import { syncOptOutFromUrl } from "../lib/optOut";
+import { initEventTracking } from "../lib/events";
 import { ConsentBanner } from "./components/growwstack/ConsentBanner";
 
 export default function App() {
   useEffect(() => {
     syncOptOutFromUrl();
     initAnalytics();
+    initEventTracking();
     trackPageView();
   }, []);
 

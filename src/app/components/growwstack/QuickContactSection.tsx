@@ -6,6 +6,7 @@ import {
   CONTACT_PHONE_DISPLAY,
 } from "../../../lib/config";
 import { sbInsert } from "../../../lib/supabase";
+import { trackEvent } from "../../../lib/events";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -44,6 +45,7 @@ export function QuickContactSection() {
         user_agent: navigator.userAgent,
       });
       setStatus("sent");
+      trackEvent("form_submit", "quick_contact");
       setValues(initial);
     } catch (err) {
       setStatus("error");

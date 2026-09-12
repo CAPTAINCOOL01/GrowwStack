@@ -5,6 +5,7 @@ import {
   type FormEvent,
 } from "react";
 import { sbInsert } from "../../../lib/supabase";
+import { trackEvent } from "../../../lib/events";
 
 const partnershipStages = [
   {
@@ -52,9 +53,9 @@ const partnerCriteria = [
 
 const applicationSteps = [
   { number: "01", label: "Company" },
-  { number: "02", label: "Business" },
-  { number: "03", label: "Growth system" },
-  { number: "04", label: "Opportunity" },
+  { number: "02", label: "Business", optional: true },
+  { number: "03", label: "Growth system", optional: true },
+  { number: "04", label: "Opportunity", optional: true },
 ];
 
 type ApplicationData = {
@@ -226,6 +227,7 @@ export function ApplicationSection() {
   const [status, setStatus] = useState("idle");
   const [errorMsg, setErrorMsg] = useState(null);
   const formRef = useRef<HTMLFormElement>(null);
+  const submitIntentRef = useRef(false);
   const stepHeadingRef = useRef<HTMLHeadingElement>(null);
 
   const activeStep = applicationSteps[currentStep];
@@ -260,10 +262,12 @@ export function ApplicationSection() {
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    if (!isFinalStep) {
+    // Enter inside a field advances the step; only an explicit submit press sends.
+    if (!isFinalStep && !submitIntentRef.current) {
       continueApplication();
       return;
     }
+    submitIntentRef.current = false;
 
     if (!formRef.current?.reportValidity()) return;
 
@@ -310,6 +314,7 @@ export function ApplicationSection() {
         user_agent: navigator.userAgent,
       });
       setStatus("sent");
+      trackEvent("form_submit", "partnership_application");
     } catch (err) {
       setStatus("error");
       setErrorMsg(
@@ -484,7 +489,6 @@ export function ApplicationSection() {
                         "Technology or SaaS",
                         "Other",
                       ]}
-                      required
                     />
                     <FormField
                       id="application-location"
@@ -493,7 +497,6 @@ export function ApplicationSection() {
                       value={application.location}
                       onChange={handleFieldChange}
                       autoComplete="address-level2"
-                      required
                     />
                     <FormField
                       id="application-years"
@@ -505,7 +508,6 @@ export function ApplicationSection() {
                       min="0"
                       step="0.5"
                       inputMode="decimal"
-                      required
                     />
                   </div>
                 </fieldset>
@@ -542,7 +544,6 @@ export function ApplicationSection() {
                       name="differentiation"
                       value={application.differentiation}
                       onChange={handleFieldChange}
-                      required
                       wide
                     />
                     <TextAreaField
@@ -551,7 +552,6 @@ export function ApplicationSection() {
                       name="idealCustomer"
                       value={application.idealCustomer}
                       onChange={handleFieldChange}
-                      required
                       wide
                     />
                     <SelectField
@@ -568,7 +568,6 @@ export function ApplicationSection() {
                         "₹50 lakh–₹1 crore",
                         "Above ₹1 crore",
                       ]}
-                      required
                     />
                     <FormField
                       id="application-recent-revenue"
@@ -577,7 +576,6 @@ export function ApplicationSection() {
                       value={application.recentRevenue}
                       onChange={handleFieldChange}
                       placeholder="Example: ₹12L, ₹15L, ₹18L"
-                      required
                     />
                     <FormField
                       id="application-aov"
@@ -586,7 +584,6 @@ export function ApplicationSection() {
                       value={application.averageOrderValue}
                       onChange={handleFieldChange}
                       placeholder="Example: ₹4,500"
-                      required
                     />
                     <FormField
                       id="application-margin"
@@ -600,7 +597,6 @@ export function ApplicationSection() {
                       step="0.1"
                       inputMode="decimal"
                       suffix="%"
-                      required
                     />
                     <TextAreaField
                       id="application-bestsellers"
@@ -608,7 +604,6 @@ export function ApplicationSection() {
                       name="bestSellers"
                       value={application.bestSellers}
                       onChange={handleFieldChange}
-                      required
                       wide
                     />
                   </div>
@@ -643,7 +638,6 @@ export function ApplicationSection() {
                         "Marketplace-first",
                         "Other",
                       ]}
-                      required
                     />
                     <FormField
                       id="application-traffic"
@@ -654,7 +648,6 @@ export function ApplicationSection() {
                       type="number"
                       min="0"
                       inputMode="numeric"
-                      required
                     />
                     <FormField
                       id="application-leads"
@@ -665,7 +658,6 @@ export function ApplicationSection() {
                       type="number"
                       min="0"
                       inputMode="numeric"
-                      required
                     />
                     <FormField
                       id="application-conversion"
@@ -679,7 +671,6 @@ export function ApplicationSection() {
                       step="0.1"
                       inputMode="decimal"
                       suffix="%"
-                      required
                     />
                     <FormField
                       id="application-sales-team"
@@ -690,7 +681,6 @@ export function ApplicationSection() {
                       type="number"
                       min="0"
                       inputMode="numeric"
-                      required
                     />
                     <SelectField
                       id="application-crm"
@@ -706,7 +696,6 @@ export function ApplicationSection() {
                         "Salesforce",
                         "Other",
                       ]}
-                      required
                     />
                     <TextAreaField
                       id="application-marketing"
@@ -715,7 +704,6 @@ export function ApplicationSection() {
                       value={application.marketingChannels}
                       onChange={handleFieldChange}
                       hint="Include paid, organic, marketplace, referral, outbound, or offline channels."
-                      required
                       wide
                     />
                     <TextAreaField
@@ -724,7 +712,6 @@ export function ApplicationSection() {
                       name="fulfilment"
                       value={application.fulfilment}
                       onChange={handleFieldChange}
-                      required
                       wide
                     />
                   </div>
@@ -761,7 +748,6 @@ export function ApplicationSection() {
                       name="sixMonthSuccess"
                       value={application.sixMonthSuccess}
                       onChange={handleFieldChange}
-                      required
                       wide
                     />
                     <TextAreaField
@@ -771,7 +757,6 @@ export function ApplicationSection() {
                       value={application.supportAreas}
                       onChange={handleFieldChange}
                       hint="For example: technology, acquisition, sales, CRM, analytics, or operations."
-                      required
                       wide
                     />
                     <TextAreaField
@@ -780,7 +765,6 @@ export function ApplicationSection() {
                       name="partnershipReason"
                       value={application.partnershipReason}
                       onChange={handleFieldChange}
-                      required
                       wide
                     />
 
@@ -855,13 +839,29 @@ export function ApplicationSection() {
                   </button>
                 )}
                 {!isFinalStep ? (
-                  <button
-                    className="gs-button gs-button--primary"
-                    type="button"
-                    onClick={continueApplication}
-                  >
-                    Continue
-                  </button>
+                  <>
+                    <button
+                      className="gs-button gs-button--primary"
+                      type="submit"
+                      onClick={() => {
+                        submitIntentRef.current = true;
+                      }}
+                      disabled={status === "sending" || status === "sent"}
+                    >
+                      {status === "sending"
+                        ? "Sending…"
+                        : status === "sent"
+                          ? "Application sent"
+                          : "Submit application"}
+                    </button>
+                    <button
+                      className="gs-button gs-button--secondary"
+                      type="button"
+                      onClick={continueApplication}
+                    >
+                      Add more detail
+                    </button>
+                  </>
                 ) : (
                   <button
                     className="gs-button gs-button--primary"
@@ -1087,7 +1087,6 @@ function ChoiceGroup({ legend, name, value, onChange, options }: ChoiceGroupProp
                 value={option}
                 checked={value === option}
                 onChange={onChange}
-                required
               />
               <span className="gs-choice__label">{option}</span>
             </label>
