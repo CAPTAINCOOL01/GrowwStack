@@ -1,0 +1,88 @@
+{
+  "slug": "revenue-share-marketing-attribution-checklist",
+  "category": "Model",
+  "publishedAt": "2026-09-23",
+  "readingTime": "6 min read",
+  "metaTitle": "Revenue-Share Marketing Attribution: A Practical Checklist",
+  "metaDescription": "Agree what counts as revenue before starting a performance partnership. Define scope, baselines, refunds, repeat customers, source records and disputed orders.",
+  "title": "Revenue-share marketing: agree the measurement before the first campaign",
+  "excerpt": "A shared reporting checklist for revenue scope, refunds, repeat customers and attribution disputes, without treating an analytics dashboard as an invoice.",
+  "intro": [
+    "A revenue-share marketing arrangement depends on a shared definition of the revenue being measured. Two teams can read the same dashboard and still disagree if one counts gross orders and the other counts settled revenue after returns.",
+    "The checklist below is an operating framework for discussing a partnership. It does not set GrowwStack’s commercial terms or replace an agreement tailored to the business. The aim is to resolve predictable reporting questions before campaigns and invoices begin."
+  ],
+  "sections": [
+    {
+      "heading": "1. Write down the revenue unit",
+      "paragraphs": [
+        "Specify which products, geographies, channels and period are in scope. Decide whether the calculation starts from placed orders, paid orders or settled payments, and how cancellations, discounts, taxes, delivery charges and refunds are treated.",
+        "Use the same currency and time zone in the source reports. Give every included order or deal a stable identifier so the same transaction cannot be counted twice."
+      ],
+      "list": [
+        "Name the source of the financial record and who reconciles it.",
+        "Define the date used for inclusion, such as payment settlement or another agreed milestone.",
+        "Record how late refunds and chargebacks adjust an earlier period.",
+        "Separate gross revenue, net eligible revenue and profit."
+      ]
+    },
+    {
+      "heading": "2. Make the baseline and scope explicit",
+      "paragraphs": [
+        "If payment depends on growth above a baseline, agree how that baseline is calculated before the work starts. Consider seasonality, existing campaigns, planned promotions, stock availability and prior growth. A recent average is not automatically a fair baseline for every business.",
+        "Keep a dated record of the agreed scope and exclusions. A new product launch or a distributor contract may materially change the business without being caused by the marketing partner. Decide how such changes will be handled."
+      ]
+    },
+    {
+      "heading": "3. Distinguish attribution from causation",
+      "paragraphs": [
+        "Attribution assigns credit under a chosen rule. It does not establish that the order would never have happened without that activity. Customers can encounter several channels, change devices and complete the purchase offline.",
+        "Use analytics to understand journeys and improve campaigns, then reconcile eligible transactions against the agreed business records. Google describes different attribution models for assigning credit; the selected model should be documented and should not silently become the billing rule.",
+        "For larger programmes, incrementality may need a separate experiment or comparison design. For a small business, start by acknowledging the uncertainty and keeping the commercial rule simple enough for both teams to audit."
+      ]
+    },
+    {
+      "heading": "4. Decide how repeat and offline customers are handled",
+      "paragraphs": [
+        "Agree whether the share applies to a customer’s first purchase, repeat purchases within a defined period, or another documented scope. Set a rule for existing customers who encounter a new campaign.",
+        "For a website enquiry that closes by phone, retain the enquiry-to-deal relationship in the CRM. Do not upload contact details into ordinary analytics event parameters to create that relationship. Handle customer data in the appropriate business systems."
+      ],
+      "list": [
+        "Record the original enquiry or order identifier.",
+        "Document the agreed attribution window.",
+        "Define treatment of direct return visits and unassigned traffic.",
+        "Create a review process for cases where the available evidence is incomplete."
+      ]
+    },
+    {
+      "heading": "5. Work through an example before signing off the process",
+      "paragraphs": [
+        "This example is illustrative, not a GrowwStack quote: suppose a statement contains ₹10 lakh in gross orders, ₹1 lakh in cancellations and refunds, and ₹2 lakh in transactions excluded under the agreed scope. If those categories do not overlap, eligible revenue is ₹7 lakh.",
+        "If the example agreement then applies a 10% share to all eligible revenue, the fee would be ₹70,000 before any separately agreed taxes or charges. If it instead applies only to incremental revenue above a baseline, that calculation is incomplete until the baseline is applied.",
+        "The point is to test definitions with actual sample records. A percentage alone does not describe the economics. Media spend, product margins, fulfilment costs and the fee all affect whether the arrangement is sustainable."
+      ]
+    },
+    {
+      "heading": "6. Use one reconciliation sheet and a named owner",
+      "paragraphs": [
+        "For each reporting period, retain the eligible transaction list, exclusions, adjustments, baseline calculation where relevant, and the final calculation. Both sides should be able to trace a reported total back to its source.",
+        "Assign an owner for resolving discrepancies and set a review date. Mark unresolved items clearly rather than changing the calculation silently. Keep access limited to the data needed for the work.",
+        "Our [guide to performance-based marketing](/blog/performance-based-marketing-agency-india) explains the wider partnership discussion. The [retainer versus revenue-share comparison](/blog/marketing-retainer-vs-revenue-share-cost) is a useful next step when assessing model fit."
+      ]
+    }
+  ],
+  "takeaway": "Agree the eligible revenue, baseline, source records and adjustment rules before applying a percentage. Use analytics to guide decisions and a reconciled business record for the agreed financial calculation.",
+  "related": [
+    "performance-based-marketing-agency-india",
+    "marketing-retainer-vs-revenue-share-cost"
+  ],
+  "sources": [
+    {
+      "title": "Google Analytics: About attribution and attribution models",
+      "url": "https://support.google.com/analytics/answer/10596866"
+    },
+    {
+      "title": "Google Analytics: Ecommerce measurement",
+      "url": "https://developers.google.com/analytics/devguides/collection/ga4/ecommerce"
+    }
+  ]
+}

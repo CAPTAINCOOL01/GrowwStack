@@ -5,24 +5,35 @@ User-agent: *
 Allow: /
 Disallow: /admin
 
-# AI / LLM crawlers — explicitly allowed so generative-answer engines can cite the site.
+# Existing crawler preferences. Search retrieval and training are separate uses.
+# robots.txt is a crawl instruction, not access control.
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /admin
+
 User-agent: GPTBot
 Allow: /
+Disallow: /admin
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /admin
 
 User-agent: anthropic-ai
 Allow: /
+Disallow: /admin
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /admin
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /admin
 
 User-agent: CCBot
 Allow: /
+Disallow: /admin
 
 # Block known scraper/AI-training bots that don't add value or honor opt-out.
 User-agent: Bytespider

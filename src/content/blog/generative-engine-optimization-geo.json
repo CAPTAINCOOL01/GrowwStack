@@ -2,85 +2,98 @@
   "slug": "generative-engine-optimization-geo",
   "category": "GEO",
   "publishedAt": "2026-08-31",
-  "readingTime": "8 min read",
-  "metaTitle": "Generative Engine Optimization (GEO): Getting Cited by AI Answers",
-  "metaDescription": "AI assistants answer questions directly and cite a handful of sources. GEO is the practice of being one of them. What it shares with SEO, and where it differs.",
-  "title": "Generative Engine Optimization: getting cited by AI",
-  "excerpt": "Search increasingly ends in an answer rather than a list of links. Being the source that answer is built from is a different discipline.",
+  "readingTime": "6 min read",
+  "metaTitle": "GEO for Business Websites: AI Search Visibility and Measurement",
+  "metaDescription": "A practical GEO guide: crawl access, useful answers, evidence, Google AI impressions and assistant referrals. Learn what to measure and what cannot be promised.",
+  "title": "GEO for business websites: earn visibility and measure it honestly",
+  "excerpt": "A practical approach to Google AI features and assistant search: useful answers, clear evidence, accessible pages and separate visibility and lead metrics.",
   "intro": [
-    "A growing share of questions never reach a list of blue links. Someone asks an assistant, receives a synthesised answer, and acts on it. A few sources get cited. Everyone else is invisible, regardless of where they rank.",
-    "Generative Engine Optimization is the practice of being among those cited sources. It overlaps heavily with good SEO, but the differences are real and they are worth understanding before the field gets crowded."
+    "Generative engine optimization (GEO) means improving how a business is found and represented in AI-generated search answers. For a business website, the useful outcome is a relevant buyer finding accurate information and taking a meaningful next step.",
+    "Begin with a page that answers a real buying question and supports its claims. Then check access and measurement. There is no reliable formula that guarantees a citation or a recommendation across assistants."
   ],
   "sections": [
     {
-      "heading": "What actually changes",
+      "heading": "Start with a question your customers actually ask",
       "paragraphs": [
-        "Traditional search rewards pages that are the best overall result for a query. Generative engines do something different: they assemble an answer from fragments of several sources, then cite the ones they used.",
-        "This shifts the unit of competition. You are no longer trying to own a page-one position. You are trying to own a specific, extractable claim that a model will reach for when composing an answer.",
-        "A page can rank fifth and be cited constantly, because it states one thing more clearly than anyone else. A page can rank first and never be cited, because everything useful in it is buried in narrative."
-      ]
-    },
-    {
-      "heading": "Make claims extractable",
-      "paragraphs": [
-        "Models pull passages that stand on their own. A sentence that answers a question completely, without needing the paragraph before it, is far more likely to be quoted than the same information spread across three paragraphs of build-up.",
-        "This runs against a lot of conventional content advice, which favours narrative flow and saving the point for the end. For GEO, state the answer first and explain afterwards.",
-        "A practical test: take any sentence from your page in isolation. Does it still mean something? If almost none of them do, the page is hard to cite."
-      ]
-    },
-    {
-      "heading": "Structure is doing more work than it used to",
-      "paragraphs": [
-        "Headings that ask real questions, lists that enumerate discrete items, and tables that pair values with labels are all easier to extract than continuous prose.",
-        "This is not about gaming a parser. Clearly structured content is genuinely easier to read for humans too. The convenient thing about GEO is that most of what helps a model also helps a person skimming on a phone."
+        "Choose a decision you can help someone make: whether a revenue-share partnership fits their margins, which information an industrial buyer needs before requesting a quote, or why a store receives visits without orders. A focused answer is easier for a reader to evaluate than a page promising every growth service.",
+        "Answer the question early, then explain the conditions and evidence. Give the reader enough detail to make the decision even if they never book a call. This is an editorial standard, not a proven citation-ranking factor."
       ],
       "list": [
-        "Use headings that match how the question is actually asked",
-        "Answer immediately under the heading, before elaborating",
-        "Prefer lists and tables for anything enumerable",
-        "Keep each section self-contained enough to quote"
+        "State who the advice is for and when it does not apply.",
+        "Use descriptive headings and plain language.",
+        "Separate observed results, illustrative calculations and recommendations.",
+        "Link to the relevant service, case study or next step without repeating the same sales pitch."
+      ]
+    },
+    {
+      "heading": "Check crawl access and the content a visitor receives",
+      "paragraphs": [
+        "Inspect the actual page response as well as the rendered page. If the useful copy appears only after JavaScript runs, some retrieval systems may not receive it. Serving meaningful HTML reduces that dependency; it does not guarantee inclusion.",
+        "Keep important pages reachable through ordinary links, give each page a consistent canonical URL, and check indexing in Search Console. Google says the same SEO foundations apply to AI Overviews and AI Mode, with no additional technical requirements beyond being indexed and eligible to show a snippet. No special AI schema or AI text file is required."
       ],
-      "listType": "bullet"
-    },
-    {
-      "heading": "Specificity beats fluency",
-      "paragraphs": [
-        "Generic content is worthless to a generative engine, because the model can already produce it. There is nothing to cite you for.",
-        "What gets cited is information the model cannot generate on its own: concrete figures, dated observations, named methods, specific outcomes. A sentence like \"rebuilding the storefront and connecting checkout, conversations and order operations helped grow revenue from ₹0 to ₹1.5 crore in 110 days\" is citable. \"We deliver exceptional results\" is not.",
-        "This is the single largest practical difference between content that gets cited and content that does not, and it is why thin AI-generated filler performs badly here. It contains nothing a model did not already know."
+      "list": [
+        "Check that the intended URL returns a successful response.",
+        "Confirm the page is not accidentally excluded with a robots directive.",
+        "Verify that visible claims and structured data agree.",
+        "Use the URL inspection report to investigate a specific exclusion rather than submitting the same URL repeatedly."
       ]
     },
     {
-      "heading": "Crawlability matters more, not less",
+      "heading": "Treat search crawling and model training as separate choices",
       "paragraphs": [
-        "AI crawlers are generally less patient about executing JavaScript than Google's crawler. Content that only exists after client-side rendering may simply not be seen.",
-        "If you want to be cited, your substance needs to be in the HTML that comes back from the first request. This is worth checking directly rather than assuming.",
-        "It is also worth deciding deliberately whether to allow AI crawlers in robots.txt. Blocking them protects content from training use, but it also guarantees you are never cited. For most businesses that trade on being found, the citation is worth more than the protection."
+        "Crawler names do not all describe the same activity. OpenAI documents OAI-SearchBot for search and GPTBot for potential training use, with independent controls. Blocking a training crawler is therefore not the same as blocking search retrieval.",
+        "Review the official documentation for each crawler before changing permissions. A robots.txt allowance does not prove that a crawler visited, and robots.txt does not protect private pages. Keep authentication on anything private."
       ]
     },
     {
-      "heading": "Structured data helps disambiguate",
+      "heading": "Publish evidence a buyer can check",
       "paragraphs": [
-        "Schema markup does not directly make a model cite you. What it does is remove ambiguity about what your page is, who published it, and what the entities in it are.",
-        "For an organisation with a name that could refer to several things, explicit structured data connecting the business, its services and its author is a meaningful clarity gain. It costs little and compounds with everything else."
+        "A useful case study states the scope of work, starting point, period, outcome and limitations. Attach definitions to the numbers: revenue is different from profit, orders are different from paid orders, and a contact click is different from a qualified enquiry.",
+        "Our [sports-equipment case study](/case-studies/ecommerce-sports-equipment) reports growth from ₹0 to ₹1.5 crore in revenue over 110 days, purely organic with no paid ads. That is a reported partnership outcome, not a promise for another business or proof that any single channel caused the result.",
+        "Use named publishers, meaningful update dates and direct sources where they help verification. Do not change a publication date merely to make old material look recent."
       ]
     },
     {
-      "heading": "How to tell whether it is working",
+      "heading": "Measure Google AI visibility separately from assistant traffic",
       "paragraphs": [
-        "GEO is harder to measure than SEO. There is no equivalent of Search Console reporting citations, and referral traffic from assistants is inconsistently attributed.",
-        "The practical approach is direct: ask the assistants the questions your buyers ask, and see who gets cited. Repeat monthly. It is manual and unscientific, but it is real feedback, and it is more than most competitors are doing.",
-        "Watch for referrals from assistant domains in your analytics as well. Volumes are small today. The trend is what matters."
+        "As of this update, Google Search Console provides a Generative AI features report for supported Search features, including AI Overviews and AI Mode. It reports impressions and page, country, device and date breakdowns. Its property-level total can differ from the sum of page rows.",
+        "Use that report for Google AI visibility. It does not tell you every prompt that produced an answer or establish visibility in ChatGPT, Claude or Perplexity. In GA4, review identifiable assistant referrals separately and connect those visits to confirmed enquiries. Referrers and attribution can be incomplete.",
+        "A mention, an impression, a visit, a saved enquiry and a qualified opportunity are different stages. Keep separate counts so an increase in mentions cannot be presented as an increase in revenue."
       ]
     },
     {
-      "heading": "The honest caveat",
+      "heading": "Use a repeatable manual check for the platforms without full reporting",
       "paragraphs": [
-        "GEO is young, and anyone claiming a proven playbook is overstating. The mechanisms are not documented the way search ranking factors have been studied for two decades.",
-        "What can be said with reasonable confidence is that clear structure, specific verifiable claims and server-rendered content help — and that these are the same things that make content genuinely good. The downside risk of investing in them is close to zero, which is not true of most emerging-channel advice."
+        "Keep a small set of buyer questions and record the platform, date, region, search mode, exact question, answer and linked sources. Check both branded and unbranded questions. Repeat comparable checks and retain the result, including occasions when your business is absent.",
+        "These observations are a sample, not market share. Responses can vary between users and runs. Treat them as a way to find inaccurate descriptions and missing evidence, then evaluate whether the resulting page improvements also help real buyers."
+      ]
+    },
+    {
+      "heading": "What to improve first",
+      "paragraphs": [
+        "Fix access problems and factual errors first. Next improve the pages already earning relevant impressions, adding useful detail or evidence where the current answer is weak. Publish a new page when it addresses a distinct customer question that the existing site does not answer.",
+        "Use [structured data](/blog/structured-data-for-business-websites) to describe what is genuinely on the page, and connect content to a working [lead-generation system](/blog/website-lead-generation-system). Measure qualified enquiries alongside search visibility before scaling content production."
       ]
     }
   ],
-  "takeaway": "GEO rewards content that is specific, structured and extractable. State answers plainly, publish facts a model cannot invent, and make sure it is all in the HTML — then check monthly whether the assistants cite you.",
-  "related": ["answer-engine-optimization-aeo", "structured-data-for-business-websites"]
+  "takeaway": "Make the business easy to understand and its claims easy to verify. Track Google AI impressions, identifiable assistant visits and confirmed enquiries separately, and use the evidence to choose the next improvement.",
+  "related": [
+    "answer-engine-optimization-aeo",
+    "structured-data-for-business-websites"
+  ],
+  "updatedAt": "2026-09-23",
+  "sources": [
+    {
+      "title": "Google Search Central: AI features and your website",
+      "url": "https://developers.google.com/search/docs/appearance/ai-features"
+    },
+    {
+      "title": "Google Search Console: Generative AI performance report",
+      "url": "https://support.google.com/webmasters/answer/16984139?hl=en"
+    },
+    {
+      "title": "OpenAI: Overview of crawlers and independent controls",
+      "url": "https://developers.openai.com/api/docs/bots"
+    }
+  ]
 }

@@ -136,6 +136,8 @@ function postBody(post) {
               <span class="gs-post__cat">${esc(post.category)}</span>
               <time datetime="${esc(post.publishedAt)}">${esc(formatDate(post.publishedAt))}</time>
               <span>${esc(post.readingTime)}</span>
+              <span>By <a href="/">GrowwStack</a></span>
+              ${post.updatedAt ? `<span>Updated <time datetime="${esc(post.updatedAt)}">${esc(formatDate(post.updatedAt))}</time></span>` : ""}
             </p>`;
 
   const sections = post.sections
@@ -155,6 +157,13 @@ ${paras}${list}
             </section>`;
     })
     .join("\n\n");
+
+  const sources = (post.sources || []).map((source) => {
+    const url = new URL(source.url);
+    if (url.protocol !== "https:") throw new Error("Article source must use HTTPS");
+    return `<li><a href="${esc(url.href)}" rel="noopener noreferrer">${esc(source.title)}</a></li>`;
+  });
+  const sourceBlock = sources.length ? `<section class="gs-post__section" aria-label="Sources"><h2>Sources and further reading</h2><ul class="gs-post__list">${sources.join("\n")}</ul></section>` : "";
 
   const related = (post.related || [])
     .map((slug) => posts.find((p) => p.slug === slug))
@@ -206,6 +215,8 @@ ${sections}
               </div>
             </section>
 
+${sourceBlock}
+
 ${relatedBlock}
           </div>
         </article>`;
@@ -231,9 +242,9 @@ function postLd(post) {
       headline: post.title,
       description: post.metaDescription,
       datePublished: post.publishedAt,
-      dateModified: post.publishedAt,
-      author: { "@id": `${ORIGIN}/#founder` },
-      publisher: { "@id": `${ORIGIN}/#organization` },
+      dateModified: post.updatedAt || post.publishedAt,
+      author: { "@type": "Organization", "@id": `${ORIGIN}/#organization`, name: "GrowwStack", url: ORIGIN },
+      publisher: { "@type": "Organization", "@id": `${ORIGIN}/#organization`, name: "GrowwStack", url: ORIGIN },
       isPartOf: { "@id": `${ORIGIN}/#website` },
       image: `${ORIGIN}/og.png`,
       inLanguage: "en-IN",
@@ -481,7 +492,7 @@ const urls = [
     loc: `${ORIGIN}/blog/${p.slug}`,
     priority: "0.7",
     changefreq: "monthly",
-    lastmod: p.publishedAt,
+    lastmod: p.updatedAt || p.publishedAt,
   })),
 ];
 

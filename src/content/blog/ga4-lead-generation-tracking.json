@@ -1,0 +1,92 @@
+{
+  "slug": "ga4-lead-generation-tracking",
+  "category": "Analytics",
+  "publishedAt": "2026-09-23",
+  "readingTime": "6 min read",
+  "metaTitle": "GA4 Lead Tracking: Measure Enquiries, Not Just Button Clicks",
+  "metaDescription": "A practical measurement plan for service businesses: contact intent, saved enquiries, qualified leads and won deals, with clear event and validation rules.",
+  "title": "How to track website enquiries in GA4 without counting button clicks as leads",
+  "excerpt": "Separate contact intent from a saved enquiry, then connect the enquiry to qualification and a real commercial outcome.",
+  "intro": [
+    "A visitor clicking WhatsApp has shown intent. A successfully saved contact form has created an enquiry. A sales conversation may later turn that enquiry into a qualified opportunity. Treating all three as the same conversion makes marketing decisions harder.",
+    "For a service business, the first job is to define these stages and measure them consistently. Start with a small event plan that your website and sales process can actually support."
+  ],
+  "sections": [
+    {
+      "heading": "Define the stages before choosing event names",
+      "paragraphs": [
+        "Use a written rule for every stage. An enquiry should exist in the system your team uses to respond. A qualified enquiry should meet your agreed fit criteria, such as service requirement, location, budget fit and decision timing. A won deal should correspond to your defined commercial milestone.",
+        "Keep personal contact details in the lead-management system. Analytics should receive the minimum non-identifying information needed to compare acquisition paths."
+      ],
+      "list": [
+        "Contact intent: a phone, email, booking or WhatsApp link is clicked.",
+        "Enquiry created: the website confirms that the submitted enquiry was saved successfully.",
+        "Qualified enquiry: the team assesses the enquiry against documented criteria.",
+        "Won deal: the business confirms the agreed outcome in its sales records."
+      ]
+    },
+    {
+      "heading": "Send generate_lead after a successful save",
+      "paragraphs": [
+        "Google recommends generate_lead for initial lead acquisition and provides separate events for later lead stages. For a contact form, send the acquisition event only after the server or contact service confirms success. A submit-button click or browser validation attempt is too early.",
+        "Use a stable form identifier, such as quick_contact or partnership_application. Do not send the visitor’s name, phone number, email or message in an analytics event. Avoid embedding those details in page URLs. On this site, each enquiry form sends generate_lead only after the contact service confirms the save, with two parameters: the form identifier and a fixed lead source.",
+        "Keep failed submissions available for operational debugging without labelling them as leads. If the contact service is not configured or rejects the request, the page should show a useful error and another contact method."
+      ]
+    },
+    {
+      "heading": "Make the event important without inventing a monetary value",
+      "paragraphs": [
+        "Mark the confirmed-enquiry event as a key event in GA4 so it appears in the relevant acquisition and conversion reporting. Choose a counting rule that matches the business definition and document it. Event counts are not automatically counts of unique, qualified people.",
+        "Do not assign an arbitrary rupee amount to every form submission. Use a lead value only when there is a defensible calculation and a clear purpose. The business can still compare enquiry counts and quality without pretending each one has already generated revenue."
+      ]
+    },
+    {
+      "heading": "Keep contact clicks as a separate diagnostic",
+      "paragraphs": [
+        "Track a click to WhatsApp, email, phone or a booking page as contact intent. The website usually cannot confirm whether the person sent a message, completed the call or booked a meeting after leaving it.",
+        "Review intent alongside confirmed enquiries. A high number of contact clicks with few recorded conversations is a prompt to inspect the hand-off and team response, not proof that the traffic is worthless. Connect booking or CRM outcomes only through an appropriate, verified integration."
+      ]
+    },
+    {
+      "heading": "Validate the journey before using it to judge marketing",
+      "paragraphs": [
+        "Test locally or in a separate test setup first. Check that an invalid form produces no lead event, a failed save produces no lead event, and a successful save produces the intended event once. Ensure duplicate listeners do not fire the same event twice.",
+        "Use GA4’s debugging tools for an approved end-to-end test, label test records in your lead system and exclude them from business reporting. Then verify a genuine enquiry against the analytics record where consent and attribution allow. Reporting delays and consent choices can prevent a perfect match."
+      ],
+      "list": [
+        "Test every enquiry form, not just the first one.",
+        "Check desktop and mobile submission states.",
+        "Check the opt-out and consent behaviour.",
+        "Confirm that blog and case-study contact links are measured too.",
+        "Write down the release date so pre-change and post-change data are not treated as equivalent."
+      ]
+    },
+    {
+      "heading": "Choose a small weekly scorecard",
+      "paragraphs": [
+        "Read sessions, confirmed enquiries, qualified enquiries and won deals together. Break them down by landing page or acquisition source only when the sample is large enough to be useful. A few visits and zero recorded conversions are not enough to declare a channel ineffective.",
+        "The enquiry rate is confirmed-enquiry sessions divided by eligible sessions for the same period and population. Qualification rate uses reviewed enquiries as its denominator. Record unresolved enquiries separately so slow follow-up does not look like poor lead quality.",
+        "For the operating process behind those numbers, see our [CRM and follow-up guide](/blog/crm-and-follow-up-systems) and [website lead-generation system](/blog/website-lead-generation-system)."
+      ]
+    }
+  ],
+  "takeaway": "Count intent, saved enquiries and qualified opportunities separately. Validate the success event and use sales records to judge quality before increasing marketing spend.",
+  "related": [
+    "website-lead-generation-system",
+    "crm-and-follow-up-systems"
+  ],
+  "sources": [
+    {
+      "title": "Google Analytics: Recommended lead events",
+      "url": "https://developers.google.com/analytics/devguides/collection/ga4/reference/events"
+    },
+    {
+      "title": "Google Analytics: Set up events",
+      "url": "https://developers.google.com/analytics/devguides/collection/ga4/events"
+    },
+    {
+      "title": "Google Analytics: Lead acquisition report",
+      "url": "https://support.google.com/analytics/answer/16376749"
+    }
+  ]
+}
