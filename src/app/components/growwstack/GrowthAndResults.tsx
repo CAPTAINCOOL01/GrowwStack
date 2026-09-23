@@ -2,42 +2,42 @@ const growthLayers = [
   {
     number: "01",
     action: "Establish",
-    title: "Digital Presence",
+    title: "Digital presence",
     description:
       "Websites, landing pages, product catalogues, e-commerce stores, and digital brand positioning.",
   },
   {
     number: "02",
     action: "Attract",
-    title: "Customer Acquisition",
+    title: "Customer acquisition",
     description:
       "SEO, GEO, AEO, content strategy, organic growth, lead generation, and campaign landing pages.",
   },
   {
     number: "03",
     action: "Convert",
-    title: "Conversion Systems",
+    title: "Conversion systems",
     description:
       "Customer journeys, product pages, checkout optimisation, lead capture, follow-ups, and sales funnels.",
   },
   {
     number: "04",
     action: "Close",
-    title: "Sales Infrastructure",
+    title: "Sales infrastructure",
     description:
       "Sales representatives, scripts, SOPs, lead assignment, objection handling, performance tracking, and closures.",
   },
   {
     number: "05",
     action: "Orchestrate",
-    title: "CRM & Automation",
+    title: "CRM & automation",
     description:
       "CRM pipelines, WhatsApp automation, email workflows, reminders, customer segmentation, and lead tracking.",
   },
   {
     number: "06",
     action: "Measure",
-    title: "Revenue Intelligence",
+    title: "Revenue intelligence",
     description:
       "GA4, GTM, Meta Pixel, attribution, conversion events, revenue dashboards, and sales analytics.",
   },
@@ -47,12 +47,12 @@ const results = [
   {
     value: "₹1.5 Cr",
     label: "Revenue generated",
-    description: "Across three active partner brands within the first three months.",
+    description: "Approximately, across three active partner brands in our first three months.",
   },
   {
-    value: "₹35L+",
+    value: "₹1.5 Cr",
     label: "E-commerce revenue",
-    description: "Generated through one e-commerce partnership within 45 days.",
+    description: "Grew from ₹0 to ₹1.5 crore through one e-commerce partnership in 110 days.",
   },
   {
     value: "3",
@@ -70,26 +70,19 @@ const results = [
 
 export function GrowthStackSection() {
   return (
-    <section className="gs-stack" id="growth-stack" aria-labelledby="growth-stack-title">
+    <section className="gs-stack gs-stack--compact" id="growth-stack" aria-labelledby="growth-stack-title">
       <div className="gs-container gs-stack__container">
         <header className="gs-section-heading gs-stack__heading">
           <p className="gs-eyebrow">
-            <span aria-hidden="true">06</span>
-            The revenue operating system
+            What we do
           </p>
-          <h2 id="growth-stack-title">One partner for the complete growth journey.</h2>
+          <h2 id="growth-stack-title">Your complete growth stack.</h2>
           <p className="gs-stack__introduction">
-            We engineer every layer as one connected system—so market attention becomes qualified demand,
-            demand becomes revenue, and every result improves the next decision.
+            From your first website to sales and revenue reporting. Six connected services, one accountable partner.
           </p>
         </header>
 
         <div className="gs-stack__blueprint">
-          <div className="gs-stack__endpoint gs-stack__endpoint--input" aria-hidden="true">
-            <span>Market signal</span>
-            <span>In</span>
-          </div>
-
           <ol className="gs-stack__layers" aria-label="Six connected layers in the GrowwStack growth system">
             {growthLayers.map((layer) => (
               <li className="gs-stack__layer" key={layer.number}>
@@ -106,16 +99,8 @@ export function GrowthStackSection() {
             ))}
           </ol>
 
-          <div className="gs-stack__endpoint gs-stack__endpoint--output" aria-hidden="true">
-            <span>Revenue intelligence</span>
-            <span>Feeds every layer</span>
-          </div>
         </div>
 
-        <p className="gs-stack__closing">
-          Not six disconnected deliverables. One accountable operating stack, built around the way your business
-          actually sells.
-        </p>
       </div>
     </section>
   );
@@ -123,23 +108,12 @@ export function GrowthStackSection() {
 
 export function ResultsSection() {
   return (
-    <section className="gs-results" id="results" aria-labelledby="results-title">
-      <div className="gs-container gs-results__container">
-        <header className="gs-section-heading gs-results__heading">
-          <p className="gs-eyebrow">
-            <span aria-hidden="true">Proof</span>
-            Early partner outcomes
-          </p>
-          <h2 id="results-title">Measurable growth. Not agency activity.</h2>
-          <p>
-            We judge the work by commercial movement: stronger demand, functioning sales systems, and revenue that
-            can be measured.
-          </p>
-        </header>
+    <div className="gs-results gs-results--compact" id="results" role="region" aria-label="Early partner outcomes">
+      <div className="gs-results__container">
 
         <dl className="gs-results__ledger">
           {results.map((result) => (
-            <div className="gs-results__metric" key={result.value}>
+            <div className="gs-results__metric" key={result.label}>
               <dt className="gs-results__figure">
                 <span className="gs-results__value">{result.value}</span>
                 {result.qualifier ? <span className="gs-results__qualifier">{result.qualifier}</span> : null}
@@ -159,6 +133,6 @@ export function ResultsSection() {
           </p>
         </aside>
       </div>
-    </section>
+    </div>
   );
 }

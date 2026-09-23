@@ -9,9 +9,9 @@ const comparison = [
 ];
 
 const qualifiers = [
-  "The product solves a problem people already pay to solve.",
-  "The foundations are real — margins, delivery, and something to sell.",
-  "You are the operator, not looking for one to replace you.",
+  "A product customers already pay for.",
+  "Healthy margins and reliable delivery.",
+  "An involved founder or decision-maker.",
 ];
 
 export function FreeBuildOffer() {
@@ -20,20 +20,18 @@ export function FreeBuildOffer() {
   )}`;
 
   return (
-    <section className="gs-offer" id="offer" aria-labelledby="gs-offer-title">
+    <section className="gs-offer gs-offer--compact" id="offer" aria-labelledby="gs-offer-title">
       <div className="gs-container gs-offer__inner">
         <div className="gs-offer__copy">
-        <p className="gs-eyebrow gs-eyebrow--light">No fee. A share of what it earns.</p>
+        <p className="gs-eyebrow gs-eyebrow--light">The partnership model</p>
 
         <h2 className="gs-offer__title" id="gs-offer-title">
-          If the product is good,
-          <span>we build it for free.</span>
+          We invest in the build.
+          <span>We share in the growth.</span>
         </h2>
 
         <p className="gs-offer__lede">
-          Strong foundations and a product worth buying are all we ask for upfront. We design,
-          engineer and operate the whole system at no cost to you — and take a small cut of the
-          growth it produces. If it earns nothing, we earn nothing.
+          For selected businesses, we design, build, and operate your growth system with no upfront agency fee or monthly retainer. We earn a share of the measurable growth it produces.
         </p>
 
         <ul className="gs-offer__criteria">
@@ -46,9 +44,7 @@ export function FreeBuildOffer() {
         </ul>
 
         <p className="gs-offer__terms">
-          The cut is agreed in writing before anything starts, and it is only ever a share of growth
-          we can measure. We take a limited number of these at a time, and we say no far more often
-          than yes.
+          The share is agreed in writing before work begins, following business evaluation and mutual acceptance. Limited partnerships; no growth means no earnings for us.
         </p>
 
         <div className="gs-offer__actions">
@@ -96,8 +92,7 @@ export function FreeBuildOffer() {
           </ul>
 
           <p className="gs-offer__card-foot">
-            You carry no cost. We carry the risk. That only works if we are
-            genuinely confident in the business — which is why we are selective.
+            Built around proven products, healthy margins, and an involved business owner.
           </p>
         </aside>
       </div>

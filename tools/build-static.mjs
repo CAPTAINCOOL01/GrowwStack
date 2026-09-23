@@ -69,11 +69,12 @@ const VERIFY =
 
 function shell({ url, metaTitle, metaDescription, css, ld, body, type = "website" }) {
   return `<!doctype html>
-<html lang="en-IN">
+<html lang="en-IN" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#07111d" />
+    <script src="/theme.js"></script>
     ${VERIFY}
     <title>${esc(metaTitle)}</title>
     <meta name="description" content="${esc(metaDescription)}" />
@@ -102,21 +103,24 @@ ${ld.map((b) => `    <script type="application/ld+json">${JSON.stringify(b)}</sc
   </head>
   <body>
     <div class="gs-site gs-case">
+      <a class="gs-skip-link" href="#main-content">Skip to main content</a>
       <header class="gs-case__bar">
         <div class="gs-shell gs-case__bar-inner">
           <a class="gs-case__back" href="/">&larr; GrowwStack</a>
-          <a class="gs-button gs-button--small gs-button--dark" href="/#apply">Apply to partner</a>
+          <nav class="gs-case__nav" aria-label="Main navigation">
+            <button class="gs-theme-toggle" type="button" data-theme-toggle title="Change color theme"><svg class="gs-theme-toggle__sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg><svg class="gs-theme-toggle__moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20.8 13a9 9 0 0 1-9.8-9.8A9 9 0 1 0 20.8 13Z"/></svg><span class="gs-theme-toggle__light-label gs-visually-hidden">Switch to light theme</span><span class="gs-theme-toggle__dark-label gs-visually-hidden">Switch to dark theme</span></button>
+            <a href="/blog">Blog</a>
+            <a class="gs-button gs-button--small gs-button--dark" href="/#apply">Apply to partner</a>
+          </nav>
         </div>
       </header>
-      <main>
+      <main id="main-content">
 ${body}
       </main>
       <footer class="gs-case__foot">
-        <div class="gs-shell">
-          <p>
-            GrowwStack &mdash; growth systems for promising brands.
-            <a href="mailto:ceo-office@growwstack.in">ceo-office@growwstack.in</a>
-          </p>
+        <div class="gs-shell gs-case__foot-inner">
+          <p>GrowwStack &mdash; growth systems for promising brands.</p>
+          <a href="mailto:ceo-office@growwstack.in">ceo-office@growwstack.in</a>
         </div>
       </footer>
     </div>
@@ -193,8 +197,8 @@ ${sections}
             <section class="gs-case__cta">
               <h2>Want this built properly?</h2>
               <p>
-                We build custom websites and the systems behind them with nothing to pay upfront,
-                and are paid from the growth the work produces. We take a limited number at a time.
+                Custom websites and connected systems. No upfront agency fee;
+                we earn from the growth we create. Limited partnerships.
               </p>
               <div class="gs-case__cta-actions">
                 <a class="gs-button gs-button--primary" href="/#build">Request a website build</a>
@@ -274,10 +278,9 @@ function indexBody() {
               <span>Blog</span>
             </nav>
             <p class="gs-eyebrow"><span aria-hidden="true">Writing</span>Websites, traffic and systems</p>
-            <h1 class="gs-case__title">Notes from building growth systems</h1>
+            <h1 class="gs-case__title">Notes on websites and growth.</h1>
             <p class="gs-case__summary">
-              What we have learned building and operating websites that are expected to produce
-              revenue rather than represent a company. No theory we have not used.
+              Practical lessons from building websites, generating demand and turning enquiries into revenue.
             </p>
             <ul class="gs-bloglist">
 ${cards}
@@ -289,7 +292,7 @@ ${cards}
 /* ------------------------------------------------------------- case studies */
 
 function studyBody(study) {
-  const list = (items, cls) =>
+  const list = (items) =>
     items.map((i) => `                <li>${inline(i)}</li>`).join("\n");
 
   return `        <article class="gs-section gs-case__body">
@@ -300,15 +303,19 @@ function studyBody(study) {
               <span>${esc(study.sector)}</span>
             </nav>
 
-            <p class="gs-eyebrow"><span aria-hidden="true">${esc(study.sector)}</span>${esc(study.mandate)}</p>
-            <h1 class="gs-case__title">${esc(study.headline)}</h1>
-            <p class="gs-case__summary">${esc(study.summary)}</p>
-
-            <div class="gs-case__metric">
-              <span class="gs-case__metric-value">${esc(study.headlineMetric.value)}</span>
-              <span class="gs-case__metric-label">${esc(study.headlineMetric.label)}</span>
+            <div class="gs-case__overview">
+              <div>
+                <p class="gs-eyebrow"><span aria-hidden="true">${esc(study.sector)}</span>${esc(study.mandate)}</p>
+                <h1 class="gs-case__title">${esc(study.headline)}</h1>
+                <p class="gs-case__summary">${esc(study.summary)}</p>
+              </div>
+              <div class="gs-case__metric">
+                <span class="gs-case__metric-value">${esc(study.headlineMetric.value)}</span>
+                <span class="gs-case__metric-label">${esc(study.headlineMetric.label)}</span>
+              </div>
             </div>
 
+            <div class="gs-case__sections">
             <section class="gs-case__block">
               <h2>The problem</h2>
               <ul class="gs-case__list">
@@ -335,12 +342,12 @@ ${list(study.approach)}
               <p>${esc(study.outcome)}</p>
               <p class="gs-case__note">${esc(study.relatedNote)}</p>
             </section>
+            </div>
 
             <section class="gs-case__cta">
               <h2>Building something similar?</h2>
               <p>
-                We take on a small number of partnerships at a time. Tell us about the business and
-                we will say honestly whether we are the right fit.
+                Tell us about your business. We take on a few partnerships at a time and will tell you if we are a fit.
               </p>
               <div class="gs-case__cta-actions">
                 <a class="gs-button gs-button--primary" href="/#apply">Apply for a growth partnership</a>

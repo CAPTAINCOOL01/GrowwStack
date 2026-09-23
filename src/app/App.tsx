@@ -1,10 +1,9 @@
 import { useEffect } from "react";
 import { HeroSection } from "./components/HeroSection";
 import { FounderSection, PartnershipsSection } from "./components/growwstack/FounderAndPartnerships";
-import { GrowthStackSection, ResultsSection } from "./components/growwstack/GrowthAndResults";
+import { GrowthStackSection } from "./components/growwstack/GrowthAndResults";
 import {
   ApplicationSection,
-  PartnerFitSection,
   PartnershipProcessSection,
 } from "./components/growwstack/ProcessAndApplication";
 import { QuickContactSection } from "./components/growwstack/QuickContactSection";
@@ -25,6 +24,35 @@ export default function App() {
     initAnalytics();
     initEventTracking();
     trackPageView();
+
+    // Keep inbound links useful when optional forms are collapsed.
+    const revealHashTarget = (hash = window.location.hash) => {
+      const target = document.getElementById(hash.slice(1));
+      if (!target) return;
+      const disclosures = target.id === "build" || target.id === "apply" ? target.querySelectorAll<HTMLDetailsElement>("details[data-hash-disclosure]") : [];
+      disclosures.forEach((detail) => {
+        detail.open = true;
+      });
+      let parent: HTMLElement | null = target;
+      while (parent) {
+        if (parent instanceof HTMLDetailsElement) parent.open = true;
+        parent = parent.parentElement;
+      }
+      requestAnimationFrame(() => target.scrollIntoView({ block: "start", behavior: "instant" }));
+    };
+    revealHashTarget();
+    const onHashChange = () => revealHashTarget();
+    const onAnchorClick = (event: MouseEvent) => {
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      const anchor = event.target instanceof Element ? event.target.closest<HTMLAnchorElement>('a[href^="#"]') : null;
+      if (anchor?.hash === window.location.hash) revealHashTarget(anchor.hash);
+    };
+    window.addEventListener("hashchange", onHashChange);
+    document.addEventListener("click", onAnchorClick);
+    return () => {
+      window.removeEventListener("hashchange", onHashChange);
+      document.removeEventListener("click", onAnchorClick);
+    };
   }, []);
 
   return (
@@ -35,12 +63,10 @@ export default function App() {
       <SiteNav />
       <main id="main-content">
         <HeroSection />
-        <FounderSection />
-        <PartnershipsSection />
         <GrowthStackSection />
-        <ResultsSection />
+        <PartnershipsSection />
+        <FounderSection />
         <PartnershipProcessSection />
-        <PartnerFitSection />
         <FreeBuildOffer />
         <WebsiteBuildSection />
         <ApplicationSection />

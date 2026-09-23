@@ -46,7 +46,7 @@
       "heading": "Specificity beats fluency",
       "paragraphs": [
         "Generic content is worthless to a generative engine, because the model can already produce it. There is nothing to cite you for.",
-        "What gets cited is information the model cannot generate on its own: concrete figures, dated observations, named methods, specific outcomes. A sentence like \"rebuilding the storefront and connecting checkout, conversations and order operations contributed over ₹35 lakh within 45 days\" is citable. \"We deliver exceptional results\" is not.",
+        "What gets cited is information the model cannot generate on its own: concrete figures, dated observations, named methods, specific outcomes. A sentence like \"rebuilding the storefront and connecting checkout, conversations and order operations helped grow revenue from ₹0 to ₹1.5 crore in 110 days\" is citable. \"We deliver exceptional results\" is not.",
         "This is the single largest practical difference between content that gets cited and content that does not, and it is why thin AI-generated filler performs badly here. It contains nothing a model did not already know."
       ]
     },

@@ -40,10 +40,10 @@ const timelines = [
 ];
 
 const included = [
-  "Built from scratch to your specification. No templates.",
-  "Engineered to hold up as traffic grows.",
-  "Search, analytics and tracking wired in from day one.",
-  "Connected to the follow-up systems that turn visits into revenue.",
+  "Custom design and development. No templates.",
+  "Built to scale with your traffic.",
+  "Search, analytics, and tracking from day one.",
+  "Connected lead capture and follow-up systems.",
 ];
 
 export function WebsiteBuildSection() {
@@ -92,7 +92,7 @@ export function WebsiteBuildSection() {
   )}`;
 
   return (
-    <section id="build" className="gs-section gs-build" aria-labelledby="gs-build-title">
+    <section id="build" className="gs-section gs-build gs-build--compact" aria-labelledby="gs-build-title">
       <div className="gs-shell gs-build__shell">
         <header className="gs-build__intro">
           <p className="gs-eyebrow">
@@ -100,14 +100,18 @@ export function WebsiteBuildSection() {
             Websites for growing businesses
           </p>
           <h2 id="gs-build-title" className="gs-section__title">
-            A custom website, built from scratch. Nothing upfront.
+            A website built for your next stage.
           </h2>
           <p className="gs-build__lede">
-            We design and engineer the site your business actually needs, then bring the traffic
-            that makes it earn. Nothing to pay for the build. We are paid from the growth it
-            produces.
+            A custom site, search, and follow-up systems, with no upfront build fee for selected partners. We are paid from the growth it produces.
           </p>
 
+
+        </header>
+
+        <details className="gs-disclosure gs-build__disclosure" data-hash-disclosure>
+          <summary>Request a website build <span>Tell us what you need</span></summary>
+          <div className="gs-disclosure__body gs-build__scope">
           <ul className="gs-build__included">
             {included.map((item) => (
               <li key={item}>
@@ -118,12 +122,10 @@ export function WebsiteBuildSection() {
           </ul>
 
           <p className="gs-build__note">
-            We take on a limited number of builds at a time so each one gets operator attention.
-            Tell us about the business and we will say honestly whether we are the right fit.
+            Limited builds, direct founder attention. We review your business before agreeing the scope and partnership terms.
           </p>
-        </header>
-
-        <form className="gs-build__form" onSubmit={submit} noValidate>
+          </div>
+        <form className="gs-build__form gs-disclosure__body" onSubmit={submit} noValidate>
           <div className="gs-build__grid">
             <label className="gs-field">
               <span className="gs-field__label">Your name *</span>
@@ -250,7 +252,7 @@ export function WebsiteBuildSection() {
           </div>
 
           <p className="gs-build__hint">
-            Leave an email or phone number so we can reply. Everything except your name is optional.
+            Only your name is required. Add an email or phone number for a reply.
           </p>
 
           <div className="gs-build__actions">
@@ -283,6 +285,7 @@ export function WebsiteBuildSection() {
             </p>
           )}
         </form>
+        </details>
       </div>
     </section>
   );

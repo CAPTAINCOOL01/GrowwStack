@@ -12,31 +12,31 @@ const partnershipStages = [
     number: "01",
     title: "Apply",
     description:
-      "Tell us about your brand, product, current performance, growth challenges, and operational capacity.",
+      "Share your business, current performance, and growth challenges.",
   },
   {
     number: "02",
-    title: "We Evaluate",
+    title: "Evaluate fit",
     description:
-      "We review product quality, market potential, margins, fulfilment capability, existing demand, and founder commitment.",
+      "We assess product, demand, margins, fulfilment, and founder commitment.",
   },
   {
     number: "03",
-    title: "Founder Meeting",
+    title: "Meet the founder",
     description:
-      "Selected businesses receive an invitation for a private 1:1 growth discussion.",
+      "Shortlisted businesses have a private 1:1 growth discussion.",
   },
   {
     number: "04",
-    title: "Growth Blueprint",
+    title: "Plan the stack",
     description:
-      "We identify the technology, acquisition, sales, CRM, analytics, and operational systems required.",
+      "Define the technology, acquisition, sales, CRM, and analytics required.",
   },
   {
     number: "05",
-    title: "We Build and Operate",
+    title: "Build and operate",
     description:
-      "We work alongside your business to implement, measure, improve, and scale.",
+      "Implement together, measure performance, improve, and scale.",
   },
 ];
 
@@ -130,19 +130,15 @@ export function PartnershipProcessSection() {
   return (
     <section
       id="process"
-      className="gs-section gs-partnership-process"
+      className="gs-section gs-partnership-process gs-partnership-process--compact"
       aria-labelledby="partnership-process-title"
     >
       <div className="gs-shell">
         <header className="gs-section__header gs-partnership-process__header">
           <p className="gs-eyebrow">How partnership begins</p>
           <h2 id="partnership-process-title" className="gs-section__title">
-            A clear path from application to accountable execution.
+            From first conversation to growth.
           </h2>
-          <p className="gs-section__lede">
-            Every stage is designed to establish fit before either side commits
-            time, capital, or operating attention.
-          </p>
         </header>
 
         <ol className="gs-process" aria-label="GrowwStack partnership process">
@@ -170,6 +166,7 @@ export function PartnershipProcessSection() {
             direct founder involvement and accountable execution.
           </p>
         </aside>
+        <PartnerFitSection />
       </div>
     </section>
   );
@@ -177,23 +174,12 @@ export function PartnershipProcessSection() {
 
 export function PartnerFitSection() {
   return (
-    <section
+    <details
       id="partner-fit"
-      className="gs-section gs-partner-fit"
-      aria-labelledby="partner-fit-title"
+      className="gs-disclosure gs-partner-fit-disclosure"
     >
-      <div className="gs-shell">
-        <header className="gs-section__header gs-partner-fit__header">
-          <p className="gs-eyebrow">Who we partner with</p>
-          <h2 id="partner-fit-title" className="gs-section__title">
-            The strongest partnerships start with operating readiness.
-          </h2>
-          <p className="gs-section__lede">
-            We are most useful when a good business already has proof, a
-            committed decision-maker, and the capacity to act on growth.
-          </p>
-        </header>
-
+      <summary>Is your business ready for a partnership?</summary>
+      <div className="gs-disclosure__body">
         <ul className="gs-fit-grid" aria-label="Ideal partner criteria">
           {partnerCriteria.map((criterion) => (
             <li key={criterion} className="gs-fit-grid__item">
@@ -205,17 +191,9 @@ export function PartnerFitSection() {
           ))}
         </ul>
 
-        <div className="gs-partner-fit__action">
-          <p>
-            If this sounds like your business, give us enough context to assess
-            the opportunity properly.
-          </p>
-          <a className="gs-button gs-button--primary" href="#apply">
-            Start your application
-          </a>
-        </div>
+        <a className="gs-button gs-button--primary" href="#apply">Start your application</a>
       </div>
-    </section>
+    </details>
   );
 }
 
@@ -326,7 +304,7 @@ export function ApplicationSection() {
   return (
     <section
       id="apply"
-      className="gs-section gs-application"
+      className="gs-section gs-application gs-application--compact"
       aria-labelledby="application-title"
     >
       <div className="gs-shell">
@@ -334,32 +312,28 @@ export function ApplicationSection() {
           <header className="gs-section__header gs-application__header">
             <p className="gs-eyebrow">Partnership application</p>
             <h2 id="application-title" className="gs-section__title">
-              Give us the operating context, not a polished pitch.
+              Apply to grow together.
             </h2>
             <p className="gs-section__lede">
-              We use this information to understand whether GrowwStack can
-              create meaningful leverage for your business.
+              Start with your company and contact details. Add more context if you have it.
             </p>
 
+            <p className="gs-review-flow__note">Applications are reviewed before a meeting is offered.</p>
+          </header>
+
+          <details className="gs-disclosure gs-application__disclosure" data-hash-disclosure>
+            <summary>Open partnership application <span>Company details first · Further detail optional</span></summary>
+            <div className="gs-disclosure__body">
             <div className="gs-review-flow" aria-label="Application review flow">
               <p className="gs-review-flow__label">What happens next</p>
-              <p className="gs-review-flow__sequence">
-                Application submitted <span aria-hidden="true">→</span>
-                <span className="gs-visually-hidden">, then </span> Reviewed by
-                GrowwStack <span aria-hidden="true">→</span>
-                <span className="gs-visually-hidden">, then </span> Shortlisted{" "}
-                <span aria-hidden="true">→</span>
-                <span className="gs-visually-hidden">, then </span> Private meeting
-                invitation
-              </p>
+              <p className="gs-review-flow__sequence">Reviewed by GrowwStack. Shortlisted businesses receive a private meeting invitation.</p>
               <p className="gs-review-flow__note">
                 Submitting an application does not guarantee acceptance or a
                 meeting invitation.
               </p>
             </div>
-          </header>
-
-          <div className="gs-application__form-panel">
+            </div>
+          <div className="gs-application__form-panel gs-disclosure__body">
             <div className="gs-application-progress">
               <div className="gs-application-progress__summary">
                 <span>
@@ -892,6 +866,7 @@ export function ApplicationSection() {
 
             </form>
           </div>
+          </details>
         </div>
       </div>
     </section>

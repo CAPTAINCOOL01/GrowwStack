@@ -1,0 +1,50 @@
+/* The three logo bars retain their silhouette; interaction is translation and light. */
+.gs-logo-explorer { width: 100%; max-width: 490px; margin: 0 auto; color: var(--site-text); }
+.gs-logo-explorer__eyebrow { display: flex; align-items: center; justify-content: space-between; margin: 0 24px; color: var(--site-muted); font: .59rem var(--font-mono); letter-spacing: .12em; text-transform: uppercase; }
+.gs-logo-explorer__spark { width: 5px; height: 5px; border-radius: 50%; background: var(--gs-signal); box-shadow: 0 0 14px #ff6b3566; }
+.gs-logo-explorer__stage { position: relative; isolation: isolate; height: 304px; display: flex; align-items: center; padding: 25px 42px; }
+.gs-logo-explorer__stage::before { content: ''; position: absolute; inset: 0; z-index: -1; background: radial-gradient(ellipse at 45% 50%, #ff6b3514, transparent 65%); }
+.gs-logo-explorer__guides { position: absolute; inset: 22px 24px; z-index: -1; border-left: 1px solid var(--site-line); border-right: 1px solid var(--site-line); background: repeating-linear-gradient(0deg, transparent, transparent 63px, var(--site-line) 64px, transparent 65px); opacity: .38; }
+.gs-logo-explorer__bars { width: 100%; display: flex; flex-direction: column; gap: 18px; }
+.gs-logo-explorer__bar { position: relative; overflow: hidden; display: flex; align-items: center; gap: 14px; width: 96%; height: 57px; padding: 0 20px; border: 1px solid #ffab724d; border-radius: 2px; color: #351609; background: linear-gradient(110deg, #ff8b4a, #ff6b35); box-shadow: 0 6px 0 #a43f18, 0 14px 25px #00000026, inset 0 1px #ffffff52; cursor: pointer; text-align: left; transition: transform 260ms ease, filter 260ms ease, box-shadow 260ms ease; }
+.gs-logo-explorer__bar:nth-child(2) { width: 70%; }
+.gs-logo-explorer__bar:nth-child(3) { width: 44%; min-width: 148px; }
+.gs-logo-explorer__bar::after { content: ''; position: absolute; inset: 0; background: linear-gradient(100deg, transparent 20%, #ffffff45 50%, transparent 80%); transform: translateX(-120%); pointer-events: none; }
+.gs-logo-explorer__bar[aria-pressed="true"] { transform: translateX(12px); filter: brightness(1.13); box-shadow: 0 6px 0 #b44b20, 0 12px 30px #ff6b3524, inset 0 1px #ffffff70; }
+.gs-logo-explorer__bar[aria-pressed="true"]::after { animation: gs-logo-light 650ms ease both; }
+.gs-logo-explorer__bar:focus-visible { outline: 2px solid var(--site-text); outline-offset: 6px; }
+.gs-logo-explorer__bar-number { font: .59rem var(--font-mono); opacity: .7; }
+.gs-logo-explorer__bar-name { font-size: 1rem; font-weight: 600; letter-spacing: -.035em; }
+.gs-logo-explorer__bar-arrow { margin-left: auto; font-size: 1.1rem; }
+.gs-logo-explorer__signature { position: absolute; right: 24px; bottom: 25px; writing-mode: vertical-rl; color: var(--site-muted); font: .5rem var(--font-mono); letter-spacing: .17em; opacity: .65; }
+.gs-logo-explorer__caption { margin: 0 24px; border-top: 1px solid var(--site-line); padding-top: 19px; }
+.gs-logo-explorer__detail { display: grid; grid-template-columns: 45px minmax(0,1fr); gap: 15px; min-height: 80px; }
+.gs-logo-explorer__step { color: var(--site-accent); font: .6rem/1.7 var(--font-mono); padding-top: 2px; }
+.gs-logo-explorer__detail strong { display: block; font-size: .9rem; font-weight: 500; letter-spacing: -.025em; }
+.gs-logo-explorer__detail p { margin: 7px 0 0; font-size: .8rem; line-height: 1.65; color: var(--site-muted); max-width: 320px; }
+.gs-logo-explorer__hint { display: flex; justify-content: space-between; margin: 13px 0 0; color: var(--site-muted); font-size: .66rem; }
+.gs-logo-explorer__hint span { color: var(--site-accent); }
+@keyframes gs-logo-light { to { transform: translateX(120%); } }
+@media (max-width: 1000px) and (min-width: 701px) {
+  .gs-logo-explorer__stage { padding-inline: 20px; height: 300px; }
+  .gs-logo-explorer__bar { padding-inline: 13px; gap: 9px; }
+  .gs-logo-explorer__eyebrow, .gs-logo-explorer__caption { margin-inline: 10px; }
+  .gs-logo-explorer__detail { grid-template-columns: 1fr; gap: 5px; min-height: 113px; }
+  .gs-logo-explorer__signature { right: 5px; }
+}
+@media (max-width: 700px) {
+  .gs-logo-explorer { margin-top: 34px; max-width: 420px; }
+  .gs-logo-explorer__eyebrow, .gs-logo-explorer__caption { margin-inline: 8px; }
+  .gs-logo-explorer__stage { height: 273px; padding-inline: 22px; }
+  .gs-logo-explorer__bar { height: 53px; padding-inline: 13px; gap: 10px; }
+  .gs-logo-explorer__bar-name { font-size: .93rem; }
+  .gs-logo-explorer__bar:nth-child(3) { min-width: 137px; }
+  .gs-logo-explorer__signature { right: 8px; }
+  .gs-logo-explorer__detail { min-height: 87px; }
+  .gs-logo-explorer__hint { margin-top: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gs-logo-explorer__bar { transition: none; }
+  .gs-logo-explorer__bar[aria-pressed="true"] { transform: none; }
+  .gs-logo-explorer__bar[aria-pressed="true"]::after { animation: none; }
+}

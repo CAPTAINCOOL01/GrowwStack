@@ -60,17 +60,17 @@ export function QuickContactSection() {
   return (
     <section
       id="contact"
-      className="gs-section gs-quick-contact"
+      className="gs-section gs-quick-contact gs-quick-contact--compact"
       aria-labelledby="quick-contact-title"
     >
       <div className="gs-shell gs-quick-contact__shell">
         <header className="gs-quick-contact__intro">
           <p className="gs-eyebrow">Quick contact</p>
           <h2 id="quick-contact-title" className="gs-quick-contact__title">
-            Not ready for the full application? Send us a short note.
+            Tell us about your business.
           </h2>
           <p className="gs-quick-contact__lede">
-            Two lines are enough. We reply from the founder's desk within one working day.
+            Send a short note. The founder replies within one working day.
           </p>
           <ul className="gs-quick-contact__channels" aria-label="Direct channels">
             <li>
@@ -156,7 +156,7 @@ export function QuickContactSection() {
               <textarea
                 className="gs-field__textarea"
                 name="message"
-                rows={3}
+                rows={2}
                 value={values.message}
                 onChange={handleChange}
                 placeholder="One or two lines about your business and the outcome you want."
@@ -165,7 +165,7 @@ export function QuickContactSection() {
           </div>
 
           <p className="gs-quick-contact__hint">
-            At least one of email or phone helps us respond. All fields other than name are optional.
+            Only your name is required. Add an email or phone number for a reply.
           </p>
 
           <div className="gs-quick-contact__actions">

@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 
+import { ThemeToggle } from "./ThemeToggle";
+
 const navItems = [
-  { label: "Home", href: "#home" },
-  { label: "Founder", href: "#founder" },
-  { label: "Partnerships", href: "#partnerships" },
-  { label: "Results", href: "#results" },
-  { label: "Websites", href: "#build" },
-  { label: "Blog", href: "/blog" },
+  { label: "Services", href: "#growth-stack" },
+  { label: "Our work", href: "#partnerships" },
+  { label: "About", href: "#founder" },
   { label: "Free build", href: "#offer", highlight: true },
+  { label: "Blog", href: "/blog" },
 ];
 
 export function SiteNav() {
@@ -47,18 +47,21 @@ export function SiteNav() {
           <span className="gs-brand__descriptor">Growth systems</span>
         </a>
 
-        <button
-          ref={toggleRef}
-          className="gs-nav__toggle"
-          type="button"
-          aria-expanded={menuOpen}
-          aria-controls="primary-navigation"
-          aria-label={menuOpen ? "Close navigation" : "Open navigation"}
-          onClick={() => setMenuOpen((current) => !current)}
-        >
-          <span />
-          <span />
-        </button>
+        <div className="gs-nav__utilities">
+          <ThemeToggle />
+          <button
+            ref={toggleRef}
+            className="gs-nav__toggle"
+            type="button"
+            aria-expanded={menuOpen}
+            aria-controls="primary-navigation"
+            aria-label={menuOpen ? "Close navigation" : "Open navigation"}
+            onClick={() => setMenuOpen((current) => !current)}
+          >
+            <span />
+            <span />
+          </button>
+        </div>
 
         <nav className="gs-nav__menu" id="primary-navigation" aria-label="Primary navigation">
           <div className="gs-nav__links">
@@ -74,8 +77,8 @@ export function SiteNav() {
               </a>
             ))}
           </div>
-          <a className="gs-button gs-button--small gs-button--dark" href="#apply" onClick={() => setMenuOpen(false)}>
-            Apply to partner
+          <a className="gs-button gs-button--small gs-button--signal" href="#contact" onClick={() => setMenuOpen(false)}>
+            Let’s talk
             <span aria-hidden="true">↗</span>
           </a>
         </nav>
