@@ -46,13 +46,13 @@ const growthLayers = [
 const results = [
   {
     value: "₹1.5 Cr",
-    label: "Revenue generated",
-    description: "Approximately, across three active partner brands in our first three months.",
+    label: "Organic revenue generated",
+    description: "Approximately, across three active partner brands in our first three months. No paid ads.",
   },
   {
     value: "₹1.5 Cr",
-    label: "E-commerce revenue",
-    description: "Grew from ₹0 to ₹1.5 crore through one e-commerce partnership in 110 days.",
+    label: "Organic e-commerce revenue",
+    description: "Grew from ₹0 to ₹1.5 crore through one e-commerce partnership in 110 days, without any paid ads.",
   },
   {
     value: "3",

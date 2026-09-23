@@ -4,11 +4,11 @@
     "sector": "Sports equipment",
     "mandate": "End-to-end e-commerce growth",
     "title": "E-commerce growth for a sports equipment brand",
-    "metaTitle": "E-commerce Growth Case Study — Sports Equipment Brand | GrowwStack",
-    "metaDescription": "How GrowwStack built an end-to-end e-commerce operating layer for a sports equipment brand, growing revenue from ₹0 to ₹1.5 crore in 110 days.",
+    "metaTitle": "E-commerce Case Study: ₹0 to ₹1.5 Cr in 110 Days, No Paid Ads | GrowwStack",
+    "metaDescription": "How GrowwStack built an end-to-end e-commerce operating layer for a sports equipment brand, growing revenue from ₹0 to ₹1.5 crore in 110 days with no paid ads.",
     "headline": "An operating layer across discovery, checkout and follow-up.",
-    "summary": "A sports equipment brand with product-market fit but a storefront that leaked revenue at every step. We rebuilt the path from product discovery through checkout, customer conversation, fulfilment and the reporting behind each decision.",
-    "headlineMetric": { "value": "₹1.5 Cr", "label": "Revenue from ₹0 in 110 days" },
+    "summary": "A sports equipment brand with product-market fit but a storefront that leaked revenue at every step. We rebuilt the path from product discovery through checkout, customer conversation, fulfilment and the reporting behind each decision. The growth was purely organic: no paid ads were used.",
+    "headlineMetric": { "value": "₹1.5 Cr", "label": "Revenue from ₹0 in 110 days · no paid ads" },
     "problem": [
       "Traffic arrived but converted inconsistently, with no reliable view of where it dropped off.",
       "Customer conversations lived in personal inboxes and phones rather than a system anyone could pick up.",
@@ -21,12 +21,12 @@
       "Payments, order operations, and customer support"
     ],
     "approach": [
-      "Fixed the storefront first — positioning, product presentation and the checkout path — so existing traffic converted better before any spend went into acquiring more.",
+      "Fixed the storefront first — positioning, product presentation and the checkout path — so the brand's existing organic traffic converted better. No money was spent on paid ads.",
       "Instrumented the funnel with analytics so every later decision was based on where visitors actually dropped, not assumptions.",
       "Moved buyer conversations into WhatsApp workflows connected to a CRM, so follow-ups happened on time and nothing depended on someone remembering.",
       "Connected payments, order operations and support so fulfilment held up as volume grew."
     ],
-    "outcome": "The partnership grew from ₹0 to ₹1.5 crore in e-commerce revenue in 110 days.",
+    "outcome": "The partnership grew from ₹0 to ₹1.5 crore in e-commerce revenue in 110 days, purely organically and without any paid ads.",
     "relatedNote": "This engagement runs on the same terms as every GrowwStack partnership: no upfront agency fee, with the work judged on commercial movement."
   },
   {
@@ -56,7 +56,7 @@
       "Defined follow-up sequences so a missed call becomes a scheduled callback rather than a lost patient.",
       "Improved digital visibility so the practice is found at the moment someone is searching for care."
     ],
-    "outcome": "The practice now works from a single view of enquiries and appointments, with follow-up running as a defined process rather than an individual's memory. It is one of the three partnerships behind ₹1.5 crore generated in three months.",
+    "outcome": "The practice now works from a single view of enquiries and appointments, with follow-up running as a defined process rather than an individual's memory. It is one of the three partnerships behind ₹1.5 crore generated organically, with no paid ads, in three months.",
     "relatedNote": "Healthcare work is handled with the discretion the sector requires. Patient data stays inside the clinic's own systems."
   },
   {
@@ -86,7 +86,7 @@
       "Set up B2B lead generation so qualified enquiries arrive through a process rather than through personal contacts.",
       "Connected sales and business-development systems so long, multi-touch deal cycles are tracked rather than remembered."
     ],
-    "outcome": "Technical capability is now expressed in terms a commercial buyer can evaluate, supported by systems built for long B2B cycles. This is one of three active partnerships behind ₹1.5 crore in three months.",
+    "outcome": "Technical capability is now expressed in terms a commercial buyer can evaluate, supported by systems built for long B2B cycles. This is one of three active partnerships behind ₹1.5 crore generated organically, with no paid ads, in three months.",
     "relatedNote": "Founder experience spans Ecozen Solutions and Dover Corporation in refrigeration, thermal systems and product development."
   }
 ]

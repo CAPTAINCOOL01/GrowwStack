@@ -34,6 +34,9 @@
 .gs-hero__actions { margin-top: 28px; gap: 12px; flex-direction: row; }
 .gs-hero__note { margin: 19px 0 0; color: #8e9eac; font-size: .76rem; line-height: 1.7; }
 .gs-hero__note a { color: #c3cdd6; white-space: nowrap; text-decoration: underline; text-underline-offset: 3px; }
+.gs-hero__organic { width: fit-content; max-width: 100%; margin: 18px 0 0; padding: 8px 13px; border: 1px solid var(--site-line); border-left: 3px solid var(--site-accent); border-radius: 3px; background: var(--site-surface); color: var(--site-muted); font-size: .88rem; line-height: 1.5; }
+.gs-hero__organic strong { color: var(--site-text); font-weight: 600; }
+.gs-hero__organic span { white-space: nowrap; }
 .gs-proof-strip { grid-template-columns: repeat(4,minmax(0,1fr)); }
 .gs-proof-strip__item { min-height: 98px; padding: 18px 24px; display: flex; align-items: flex-start; justify-content: center; flex-direction: column; gap: 7px; }
 .gs-proof-strip__item strong { font: 500 clamp(1.6rem,2.4vw,2.1rem)/1 var(--font-body); letter-spacing: -.05em; }
