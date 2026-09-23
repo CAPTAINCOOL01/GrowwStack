@@ -6,7 +6,8 @@
  * client entry hydrates this markup rather than replacing it.
  *
  * /admin is client-only and must not hydrate homepage markup, so the untouched
- * shell is kept as dist/admin.html and vercel.json rewrites /admin to it.
+ * shell is kept as dist/admin.html, which cleanUrls serves at /admin; vercel.json
+ * rewrites /admin/* there too. (A rewrite to "/admin.html" 404s under cleanUrls.)
  */
 import fs from "node:fs";
 import path from "node:path";

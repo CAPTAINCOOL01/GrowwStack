@@ -8,7 +8,7 @@ const container = document.getElementById("root")!;
 const app = (
   <BrowserRouter>
     <Routes>
-      <Route path="/admin" element={<AdminDashboard />} />
+      <Route path="/admin/*" element={<AdminDashboard />} />
       <Route path="*" element={<App />} />
     </Routes>
   </BrowserRouter>
