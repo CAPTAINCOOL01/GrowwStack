@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react";
 import { GA_ID } from "../../../lib/config";
 import { readConsent, setConsent, type ConsentChoice } from "../../../lib/analytics";
+import { isOptedOut, syncOptOutFromUrl } from "../../../lib/optOut";
 
 export function ConsentBanner() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    // Nothing to consent to when analytics isn't configured.
-    if (!GA_ID) return;
+    // Nothing to consent to when analytics isn't configured or this browser opted out.
+    // Child effects run before App's, so read ?gs_track here too.
+    syncOptOutFromUrl();
+    if (!GA_ID || isOptedOut()) return;
     if (readConsent() === null) setOpen(true);
   }, []);
 
