@@ -8,11 +8,11 @@
   "rewrites": [
     {
       "source": "/admin",
-      "destination": "/"
+      "destination": "/admin.html"
     },
     {
       "source": "/admin/:path*",
-      "destination": "/"
+      "destination": "/admin.html"
     }
   ],
   "headers": [
