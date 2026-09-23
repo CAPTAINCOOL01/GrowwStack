@@ -15,16 +15,27 @@ export async function sbInsert<T extends Record<string, unknown>>(
   table: string,
   row: T,
 ): Promise<void> {
-  if (!SUPABASE_URL || !SUPABASE_ANON_KEY) return;
-  const res = await fetch(`${restUrl}/${table}`, {
-    method: "POST",
-    headers: headers({ Prefer: "return=minimal" }),
-    body: JSON.stringify(row),
-    keepalive: true,
-  });
+  if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
+    throw new Error("The contact service is unavailable right now.");
+  }
+  // Forms show this message to visitors, so the technical detail travels as the
+  // cause instead of being printed on the page.
+  const unsaved = (cause: unknown) =>
+    new Error("We could not save your details just now. Please try again.", { cause });
+  let res: Response;
+  try {
+    res = await fetch(`${restUrl}/${table}`, {
+      method: "POST",
+      headers: headers({ Prefer: "return=minimal" }),
+      body: JSON.stringify(row),
+      keepalive: true,
+    });
+  } catch (err) {
+    throw unsaved(err);
+  }
   if (!res.ok) {
     const text = await res.text().catch(() => "");
-    throw new Error(`Supabase insert failed (${res.status}): ${text}`);
+    throw unsaved(`Supabase insert failed (${res.status}): ${text}`);
   }
 }
 

@@ -5,7 +5,7 @@ import {
   type FormEvent,
 } from "react";
 import { sbInsert } from "../../../lib/supabase";
-import { trackEvent } from "../../../lib/events";
+import { trackLead } from "../../../lib/events";
 
 const partnershipStages = [
   {
@@ -206,6 +206,8 @@ export function ApplicationSection() {
   const [errorMsg, setErrorMsg] = useState(null);
   const formRef = useRef<HTMLFormElement>(null);
   const submitIntentRef = useRef(false);
+  // A ref, not state: two submits in the same tick must not both save a lead.
+  const inFlightRef = useRef(false);
   const stepHeadingRef = useRef<HTMLHeadingElement>(null);
 
   const activeStep = applicationSteps[currentStep];
@@ -239,6 +241,7 @@ export function ApplicationSection() {
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    if (inFlightRef.current || status === "sent") return;
 
     // Enter inside a field advances the step; only an explicit submit press sends.
     if (!isFinalStep && !submitIntentRef.current) {
@@ -249,6 +252,7 @@ export function ApplicationSection() {
 
     if (!formRef.current?.reportValidity()) return;
 
+    inFlightRef.current = true;
     setStatus("sending");
     setErrorMsg(null);
 
@@ -292,12 +296,14 @@ export function ApplicationSection() {
         user_agent: navigator.userAgent,
       });
       setStatus("sent");
-      trackEvent("form_submit", "partnership_application");
+      trackLead("partnership_application");
     } catch (err) {
       setStatus("error");
       setErrorMsg(
         err instanceof Error ? err.message : "Something went wrong. Please try again.",
       );
+    } finally {
+      inFlightRef.current = false;
     }
   };
 
@@ -373,7 +379,7 @@ export function ApplicationSection() {
               Step {currentStep + 1}: {activeStep.label}
             </p>
 
-            <form
+            <form data-lead-form="partnership_application"
               ref={formRef}
               className="gs-application-form"
               onSubmit={handleSubmit}

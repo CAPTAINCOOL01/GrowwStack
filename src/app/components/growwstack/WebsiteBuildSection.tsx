@@ -1,7 +1,8 @@
-import { useState, type FormEvent } from "react";
+import { useRef, useState, type FormEvent } from "react";
 import { CONTACT_PHONE } from "../../../lib/config";
 import { sbInsert } from "../../../lib/supabase";
-import { trackEvent } from "../../../lib/events";
+import { trackLead } from "../../../lib/events";
+import { contactProblem } from "../../../lib/contact";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -50,6 +51,8 @@ export function WebsiteBuildSection() {
   const [values, setValues] = useState(initial);
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState<string | null>(null);
+  // A ref, not state: two submits in the same tick must not both save a lead.
+  const inFlight = useRef(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
@@ -59,6 +62,14 @@ export function WebsiteBuildSection() {
 
   const submit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (inFlight.current) return;
+    const problem = contactProblem(values.email, values.phone);
+    if (problem) {
+      setStatus("error");
+      setError(problem);
+      return;
+    }
+    inFlight.current = true;
     setStatus("sending");
     setError(null);
     try {
@@ -79,11 +90,13 @@ export function WebsiteBuildSection() {
         user_agent: navigator.userAgent,
       });
       setStatus("sent");
-      trackEvent("form_submit", "website_build");
+      trackLead("website_build");
       setValues(initial);
     } catch (err) {
       setStatus("error");
       setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+    } finally {
+      inFlight.current = false;
     }
   };
 
@@ -125,7 +138,7 @@ export function WebsiteBuildSection() {
             Limited builds, direct founder attention. We review your business before agreeing the scope and partnership terms.
           </p>
           </div>
-        <form className="gs-build__form gs-disclosure__body" onSubmit={submit} noValidate>
+        <form data-lead-form="website_build" className="gs-build__form gs-disclosure__body" onSubmit={submit} noValidate>
           <div className="gs-build__grid">
             <label className="gs-field">
               <span className="gs-field__label">Your name *</span>
@@ -252,7 +265,7 @@ export function WebsiteBuildSection() {
           </div>
 
           <p className="gs-build__hint">
-            Only your name is required. Add an email or phone number for a reply.
+            Your name and an email or phone number are required, so we can reply.
           </p>
 
           <div className="gs-build__actions">

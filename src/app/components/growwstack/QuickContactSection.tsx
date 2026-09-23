@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react";
+import { useRef, useState, type FormEvent } from "react";
 import {
   CALENDLY_CALL,
   CALENDLY_MEET,
@@ -6,9 +6,10 @@ import {
   CONTACT_PHONE_DISPLAY,
 } from "../../../lib/config";
 import { sbInsert } from "../../../lib/supabase";
-import { trackEvent } from "../../../lib/events";
+import { trackLead } from "../../../lib/events";
+import { contactProblem } from "../../../lib/contact";
 
-type Status = "idle" | "sending" | "sent" | "error";
+type Status = "idle" | "invalid" | "sending" | "sent" | "error";
 
 const initial = { name: "", email: "", phone: "", company: "", message: "" };
 
@@ -21,6 +22,8 @@ export function QuickContactSection() {
   const [values, setValues] = useState(initial);
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState<string | null>(null);
+  // A ref, not state: two submits in the same tick must not both save a lead.
+  const inFlight = useRef(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -30,6 +33,14 @@ export function QuickContactSection() {
 
   const submit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (inFlight.current) return;
+    const problem = contactProblem(values.email, values.phone);
+    if (problem) {
+      setStatus("invalid");
+      setError(problem);
+      return;
+    }
+    inFlight.current = true;
     setStatus("sending");
     setError(null);
     try {
@@ -45,11 +56,13 @@ export function QuickContactSection() {
         user_agent: navigator.userAgent,
       });
       setStatus("sent");
-      trackEvent("form_submit", "quick_contact");
+      trackLead("quick_contact");
       setValues(initial);
     } catch (err) {
       setStatus("error");
       setError(err instanceof Error ? err.message : "Something went wrong");
+    } finally {
+      inFlight.current = false;
     }
   };
 
@@ -106,7 +119,7 @@ export function QuickContactSection() {
           </ul>
         </header>
 
-        <form className="gs-quick-contact__form" onSubmit={submit} noValidate>
+        <form data-lead-form="quick_contact" className="gs-quick-contact__form" onSubmit={submit} noValidate>
           <div className="gs-quick-contact__grid">
             <label className="gs-field">
               <span className="gs-field__label">Your name *</span>
@@ -165,7 +178,7 @@ export function QuickContactSection() {
           </div>
 
           <p className="gs-quick-contact__hint">
-            Only your name is required. Add an email or phone number for a reply.
+            Your name and an email or phone number are required, so we can reply.
           </p>
 
           <div className="gs-quick-contact__actions">
@@ -192,9 +205,14 @@ export function QuickContactSection() {
               Thank you. We have your note and will reply within one working day.
             </p>
           )}
+          {status === "invalid" && (
+            <p className="gs-quick-contact__status gs-quick-contact__status--err" role="alert">
+              {error}
+            </p>
+          )}
           {status === "error" && (
             <p className="gs-quick-contact__status gs-quick-contact__status--err" role="alert">
-              We couldn't submit that. {error ?? ""} You can reach us directly on WhatsApp or email above.
+              {error ?? "We couldn't submit that."} You can also reach us directly on WhatsApp or email above.
             </p>
           )}
         </form>

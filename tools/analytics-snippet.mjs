@@ -53,6 +53,27 @@ function body(gaId, sbUrl, sbKey) {
     }
   }
 
+  // Contact intent on content pages; this is not a confirmed lead.
+  document.addEventListener("click", function (e) {
+    if (ls(function () { return localStorage.getItem("gs_optout"); }) === "1") return;
+    var a = e.target && e.target.closest && e.target.closest("a");
+    if (!a) return;
+    var href = a.getAttribute("href") || "", name = null;
+    if (href.indexOf("https://wa.me/") === 0) name = "click_whatsapp";
+    else if (href.indexOf("https://calendly.com/") === 0) name = "click_calendly";
+    else if (href.indexOf("tel:") === 0) name = "click_phone";
+    else if (href.indexOf("mailto:") === 0) name = "click_email";
+    else if (["/#apply", "/#build", "/#offer", "/#contact"].indexOf(href) !== -1) name = "click_cta";
+    if (!name) return;
+    var label = (a.textContent || "").trim().slice(0, 80) || name;
+    if (window.gtag) window.gtag("event", name, { event_label: label });
+    if (SBU && SBK) fetch(SBU + "/rest/v1/gs_events", {
+      method: "POST", keepalive: true,
+      headers: { apikey: SBK, Authorization: "Bearer " + SBK, "Content-Type": "application/json", Prefer: "return=minimal" },
+      body: JSON.stringify({ session_id: ls(function () { return sessionStorage.getItem("gs_session_id"); }, "anon") || "anon", event_name: name, label: label, page_path: location.pathname, referrer: document.referrer || null })
+    }).catch(function () {});
+  }, { capture: true, passive: true });
+
   if (!GA) return;
   window.dataLayer = window.dataLayer || [];
   function gtag() { window.dataLayer.push(arguments); }
