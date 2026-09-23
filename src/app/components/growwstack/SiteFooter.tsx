@@ -19,6 +19,7 @@ export function SiteFooter() {
         <p>Founder-led growth systems for selected brands.</p>
         <div className="gs-footer__links">
           <a href="/blog">Blog</a>
+          <a href="/blog/performance-based-marketing-agency-india">How revenue share works</a>
           <a href="#apply">Partnership application</a>
           <a href={`tel:+${CONTACT_PHONE}`}>{CONTACT_PHONE_DISPLAY}</a>
           <a href={whatsappHref} target="_blank" rel="noopener noreferrer">

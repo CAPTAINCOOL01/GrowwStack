@@ -2,16 +2,24 @@
   "slug": "performance-based-marketing-agency-india",
   "category": "Model",
   "publishedAt": "2026-09-12",
-  "readingTime": "9 min read",
-  "metaTitle": "Performance-Based Marketing in India: How Revenue Share Actually Works",
-  "metaDescription": "What counts as attributable growth, how the baseline is set, who audits the numbers, and when a revenue-share partnership is the wrong choice. The mechanics, in full.",
+  "updatedAt": "2026-09-23",
+  "readingTime": "10 min read",
+  "metaTitle": "Performance-Based Marketing in India: How Revenue Share Works",
+  "metaDescription": "How revenue-share marketing works in India: baselines, audits, term and fit. One partner grew from ₹0 to ₹1.5 Cr in 110 days with no paid ads.",
   "title": "How a revenue-share marketing partnership actually works",
-  "excerpt": "Plenty of Indian agencies call themselves performance-based while billing a monthly fee. Here are the mechanics that decide whether the label means anything.",
+  "excerpt": "Performance-based pricing is not the same as performance marketing. Here are the mechanics that decide whether the label means anything.",
   "intro": [
-    "A large number of Indian agencies describe themselves as performance-based. Most of them still invoice a retainer on the first of the month regardless of what happened in the previous one.",
+    "In India, performance marketing usually means running paid ads, and the agency is typically paid a monthly retainer, sometimes plus a percentage of ad spend. Neither payment depends on whether your revenue grows.",
     "The label is close to meaningless on its own. What matters is the mechanics underneath it: what counts as growth, who measures it, what the baseline is, and what happens when the two of you disagree. This is how we structure it, including the parts that are uncomfortable to publish."
   ],
   "sections": [
+    {
+      "heading": "Performance-based is not the same as performance marketing",
+      "paragraphs": [
+        "Performance marketing describes channels: paid search, social and marketplace ads, judged on measures such as return on ad spend. Performance-based describes how the supplier is paid: the fee is tied to an agreed commercial outcome. An agency can run performance marketing on a fixed retainer, and a performance-based partner can grow a business without buying ads at all.",
+        "Our published results are an example of the second. The [sports-equipment partnership](/case-studies/ecommerce-sports-equipment) grew from ₹0 to ₹1.5 crore in revenue in 110 days with no paid ads. Paid media can still be the right tool for some businesses. The pricing model and the channel mix are separate decisions, and it helps to agree both explicitly."
+      ]
+    },
     {
       "heading": "The baseline is agreed before any work starts",
       "paragraphs": [
@@ -24,7 +32,8 @@
       "heading": "What counts as attributable, and what does not",
       "paragraphs": [
         "The honest position is that attribution is never perfect and anyone claiming otherwise is selling something. What you can do is agree the rules in advance rather than argue about them later.",
-        "Our default is that revenue through channels we build and operate is attributable. Revenue that arrives through channels we never touched is not."
+        "Our default is that revenue through channels we build and operate is attributable. Revenue that arrives through channels we never touched is not.",
+        "Test those rules on real records before signing. Our [revenue-share attribution checklist](/blog/revenue-share-marketing-attribution-checklist) covers revenue scope, refunds, repeat customers and disputed orders."
       ],
       "list": [
         "Attributable: orders through the site we built, enquiries from search or campaigns we run, deals closed through follow-up systems we put in place",
@@ -90,5 +99,11 @@
     }
   ],
   "takeaway": "Performance-based only means something if the baseline is written down first, attribution rules are agreed in advance, the numbers come from systems you own, the share is set against your margin, and the term ends. Ask any supplier using the label to answer those five things in writing. See [how we structure it](/#offer).",
+  "sources": [
+    {
+      "title": "Google Analytics: Get started with attribution",
+      "url": "https://support.google.com/analytics/answer/10596866"
+    }
+  ],
   "related": ["website-cost-india", "marketing-retainer-vs-revenue-share-cost", "revenue-share-marketing-attribution-checklist"]
 }

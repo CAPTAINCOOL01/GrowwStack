@@ -3,13 +3,13 @@
   "category": "E-commerce",
   "publishedAt": "2026-09-12",
   "readingTime": "7 min read",
-  "metaTitle": "Traffic but No Sales? A D2C Store Diagnostic for India",
+  "metaTitle": "Traffic but No Sales? Shopify and D2C Store Diagnostic for India",
   "metaDescription": "Check measurement, traffic intent, product pages, checkout and follow-up before increasing ad spend. Includes a worked funnel example and a practical test log.",
   "title": "Traffic but no sales: find the leak in your D2C store",
   "excerpt": "Use a verified funnel and a short test log to separate traffic problems from product-page and checkout problems.",
   "intro": [
     "When a store receives visitors but few orders, there are several possible explanations: the visitors are not ready to buy, the offer is unclear, checkout is failing, or the reporting is incomplete. The headline traffic count cannot distinguish them.",
-    "Use the checks below to narrow the problem before buying more traffic. Fix a confirmed payment or checkout failure promptly, but do not assume the first friction you notice explains every lost order."
+    "Use the checks below to narrow the problem before buying more traffic. They apply whether the store runs on Shopify, WooCommerce or a custom build. Fix a confirmed payment or checkout failure promptly, but do not assume the first friction you notice explains every lost order."
   ],
   "sections": [
     {

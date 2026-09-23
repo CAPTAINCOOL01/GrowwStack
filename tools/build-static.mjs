@@ -392,6 +392,7 @@ function studyLd(study) {
       headline: study.title,
       description: study.metaDescription,
       about: { "@type": "Thing", name: study.sector },
+      ...(study.updatedAt ? { dateModified: study.updatedAt } : {}),
       isPartOf: { "@id": `${ORIGIN}/#website` },
       publisher: { "@id": `${ORIGIN}/#organization` },
       author: { "@id": `${ORIGIN}/#founder` },
@@ -479,14 +480,17 @@ fs.writeFileSync(
 );
 console.log(`  blog posts   -> ${posts.length} (+ index)`);
 
-const today = new Date().toISOString().slice(0, 10);
+// lastmod only where a real content date exists. A build date would claim every
+// page changed on every deploy, and Google ignores lastmod it cannot trust.
+const latestPost = posts.map((p) => p.updatedAt || p.publishedAt).sort().at(-1);
 const urls = [
   { loc: `${ORIGIN}/`, priority: "1.0", changefreq: "weekly" },
-  { loc: `${ORIGIN}/blog`, priority: "0.9", changefreq: "weekly" },
+  { loc: `${ORIGIN}/blog`, priority: "0.9", changefreq: "weekly", lastmod: latestPost },
   ...studies.map((s) => ({
     loc: `${ORIGIN}/case-studies/${s.slug}`,
     priority: "0.8",
     changefreq: "monthly",
+    lastmod: s.updatedAt,
   })),
   ...posts.map((p) => ({
     loc: `${ORIGIN}/blog/${p.slug}`,
@@ -503,8 +507,7 @@ fs.writeFileSync(
 ${urls
   .map(
     (u) => `  <url>
-    <loc>${u.loc}</loc>
-    <lastmod>${u.lastmod || today}</lastmod>
+    <loc>${u.loc}</loc>${u.lastmod ? `\n    <lastmod>${u.lastmod}</lastmod>` : ""}
     <changefreq>${u.changefreq}</changefreq>
     <priority>${u.priority}</priority>
   </url>`,
