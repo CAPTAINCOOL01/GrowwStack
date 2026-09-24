@@ -47,7 +47,7 @@ const results = [
   {
     value: "₹1.5 Cr",
     label: "Organic e-commerce revenue",
-    description: "Grew from ₹0 to ₹1.5 crore through one e-commerce partnership in 110 days, without any paid ads.",
+    description: "Camstar Sports' e-commerce revenue grew from ₹0 to ₹1.5 crore in 110 days, without any paid ads.",
   },
   {
     value: "2",

@@ -1,15 +1,16 @@
 [
   {
     "slug": "ecommerce-sports-equipment",
-    "updatedAt": "2026-09-23",
+    "updatedAt": "2026-09-24",
     "sector": "Sports equipment",
     "mandate": "End-to-end e-commerce growth",
-    "title": "E-commerce growth for a sports equipment brand",
-    "metaTitle": "E-commerce Case Study: ₹0 to ₹1.5 Cr in 110 Days, No Paid Ads | GrowwStack",
-    "metaDescription": "How GrowwStack built an end-to-end e-commerce operating layer for a sports equipment brand, growing revenue from ₹0 to ₹1.5 crore in 110 days with no paid ads.",
+    "client": { "name": "Camstar Sports", "url": "https://camstarsports.com/" },
+    "title": "E-commerce growth for Camstar Sports",
+    "metaTitle": "Camstar Sports: ₹0 to ₹1.5 Cr in E-commerce Revenue, No Paid Ads",
+    "metaDescription": "How GrowwStack built Camstar Sports' e-commerce operating layer, growing online revenue from ₹0 to ₹1.5 crore in 110 days with no paid ads.",
     "headline": "An operating layer across discovery, checkout and follow-up.",
-    "summary": "A sports equipment brand with product-market fit but a storefront that leaked revenue at every step. We rebuilt the path from product discovery through checkout, customer conversation, fulfilment and the reporting behind each decision. The growth was purely organic: no paid ads were used.",
-    "headlineMetric": { "value": "₹1.5 Cr", "label": "Revenue from ₹0 in 110 days · no paid ads" },
+    "summary": "Camstar Sports, a Kanpur-based airgun manufacturer, had product-market fit but a storefront that leaked revenue at every step. We rebuilt the path from product discovery through checkout, customer conversation, fulfilment and the reporting behind each decision. The growth was purely organic: no paid ads were used.",
+    "headlineMetric": { "value": "₹1.5 Cr", "label": "E-commerce revenue from ₹0 in 110 days · no paid ads" },
     "problem": [
       "Traffic arrived but converted inconsistently, with no reliable view of where it dropped off.",
       "Customer conversations lived in personal inboxes and phones rather than a system anyone could pick up.",
@@ -27,7 +28,7 @@
       "Moved buyer conversations into WhatsApp workflows connected to a CRM, so follow-ups happened on time and nothing depended on someone remembering.",
       "Connected payments, order operations and support so fulfilment held up as volume grew."
     ],
-    "outcome": "The partnership grew from ₹0 to ₹1.5 crore in e-commerce revenue in 110 days, purely organically and without any paid ads.",
+    "outcome": "Camstar Sports' e-commerce revenue grew from ₹0 to ₹1.5 crore in 110 days, purely organically and without any paid ads.",
     "relatedNote": "This engagement runs on the same terms as every GrowwStack partnership: no upfront agency fee, with the work judged on commercial movement."
   },
   {

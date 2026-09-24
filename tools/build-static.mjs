@@ -302,6 +302,18 @@ ${cards}
 
 /* ------------------------------------------------------------- case studies */
 
+// A named client links out, so the URL is validated like article sources.
+function clientUrl(study) {
+  const url = new URL(study.client.url);
+  if (url.protocol !== "https:") throw new Error("Client URL must use HTTPS");
+  return url.href;
+}
+
+function clientLine(study) {
+  if (!study.client) return "";
+  return `                <p class="gs-case__note">Client: <a href="${esc(clientUrl(study))}" rel="noopener">${esc(study.client.name)}</a></p>\n`;
+}
+
 function studyBody(study) {
   const list = (items) =>
     items.map((i) => `                <li>${inline(i)}</li>`).join("\n");
@@ -319,7 +331,7 @@ function studyBody(study) {
                 <p class="gs-eyebrow"><span aria-hidden="true">${esc(study.sector)}</span>${esc(study.mandate)}</p>
                 <h1 class="gs-case__title">${esc(study.headline)}</h1>
                 <p class="gs-case__summary">${esc(study.summary)}</p>
-              </div>
+${clientLine(study)}              </div>
               <div class="gs-case__metric">
                 <span class="gs-case__metric-value">${esc(study.headlineMetric.value)}</span>
                 <span class="gs-case__metric-label">${esc(study.headlineMetric.label)}</span>
@@ -391,7 +403,9 @@ function studyLd(study) {
       "@id": `${url}#article`,
       headline: study.title,
       description: study.metaDescription,
-      about: { "@type": "Thing", name: study.sector },
+      about: study.client
+        ? [{ "@type": "Thing", name: study.sector }, { "@type": "Organization", name: study.client.name, url: clientUrl(study) }]
+        : { "@type": "Thing", name: study.sector },
       ...(study.updatedAt ? { dateModified: study.updatedAt } : {}),
       isPartOf: { "@id": `${ORIGIN}/#website` },
       publisher: { "@id": `${ORIGIN}/#organization` },

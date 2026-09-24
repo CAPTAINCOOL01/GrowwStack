@@ -58,7 +58,7 @@ const activePartnerships = [
   {
     sector: "Sports equipment",
     mandate: "End-to-end e-commerce growth",
-    summary: "Product discovery, checkout, customer conversations, and fulfilment in one system.",
+    summary: "For Camstar Sports: product discovery, checkout, customer conversations and fulfilment in one system.",
     systems: [
       "Website optimisation and product positioning",
       "SEO, analytics, and conversion funnels",

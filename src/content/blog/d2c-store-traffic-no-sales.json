@@ -73,7 +73,7 @@
       "paragraphs": [
         "For each issue, record the observed evidence, hypothesis, affected page or device, proposed change, owner and review date. Include the expected metric and the condition under which you would revert the change.",
         "At low traffic levels, automated split tests may not produce a clear answer quickly. Combine direct usability checks with a longer observation window and describe uncertainty. Avoid attributing all movement to a redesign when promotions, stock or campaign targeting also changed.",
-        "In our [sports-equipment partnership](/case-studies/ecommerce-sports-equipment), the published outcome is growth from ₹0 to ₹1.5 crore in revenue in 110 days, purely organic with no paid ads, across a wider programme of storefront, customer conversation and operational work. That outcome is context for the work, not a controlled estimate of the effect of any one fix."
+        "In our [Camstar Sports partnership](/case-studies/ecommerce-sports-equipment), the published outcome is e-commerce revenue growth from ₹0 to ₹1.5 crore in 110 days, purely organic with no paid ads, across a wider programme of storefront, customer conversation and operational work. That outcome is context for the work, not a controlled estimate of the effect of any one fix."
       ]
     }
   ],
