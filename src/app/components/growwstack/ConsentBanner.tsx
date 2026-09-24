@@ -36,8 +36,8 @@ export function ConsentBanner() {
             Analytics cookies
           </p>
           <p>
-            We use Google Analytics to see which pages bring partners in. Nothing is stored on your device
-            until you accept, and we never use it for advertising.
+            We use Google Analytics to measure visits, enquiries and campaign performance. Analytics
+            cookies are stored only when you accept. We do not use Analytics for personalised advertising.
           </p>
         </div>
         <div className="gs-consent__actions">
