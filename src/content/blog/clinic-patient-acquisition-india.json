@@ -2,6 +2,7 @@
   "slug": "clinic-patient-acquisition-india",
   "category": "Healthcare",
   "publishedAt": "2026-09-12",
+  "updatedAt": "2026-09-24",
   "readingTime": "9 min read",
   "metaTitle": "How Indian Clinics Actually Get Patients Online: The Booking Path",
   "metaDescription": "Most clinics do not have a discovery problem, they have a booking problem. Trace one patient from search to confirmed appointment and the real leak becomes obvious.",
@@ -95,7 +96,7 @@
       "heading": "How this looked in practice",
       "paragraphs": [
         "In our [healthcare partnership](/case-studies/healthcare-clinic-growth), the work was a connected system rather than a campaign: a site built around the booking decision, every enquiry routed into one CRM with appointment tracking, and follow-up running as a defined process rather than depending on whoever was at the desk.",
-        "It is one of three partnerships behind roughly ₹1.5 crore generated in three months, organically and without any paid ads. We are deliberately not naming the practice, and we would not publish patient outcomes or testimonials for it."
+        "GrowwStack runs the practice's systems, AI agents and search work (SEO, GEO and AEO). We are deliberately not naming the practice, and we would not publish patient outcomes or testimonials for it."
       ]
     }
   ],

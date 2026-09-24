@@ -32,7 +32,7 @@
   },
   {
     "slug": "healthcare-clinic-growth",
-    "updatedAt": "2026-09-23",
+    "updatedAt": "2026-09-24",
     "sector": "Healthcare and clinics",
     "mandate": "Patient acquisition and clinic growth",
     "title": "Patient acquisition systems for a healthcare practice",
@@ -50,7 +50,8 @@
       "Website development and lead generation",
       "CRM and appointment tracking",
       "Customer follow-ups and sales processes",
-      "Digital visibility"
+      "AI agents",
+      "SEO, GEO and AEO"
     ],
     "approach": [
       "Built the site around the decision a patient is actually making, so the path to booking is short and obvious.",
@@ -58,12 +59,12 @@
       "Defined follow-up sequences so a missed call becomes a scheduled callback rather than a lost patient.",
       "Improved digital visibility so the practice is found at the moment someone is searching for care."
     ],
-    "outcome": "The practice now works from a single view of enquiries and appointments, with follow-up running as a defined process rather than an individual's memory. It is one of the three partnerships behind ₹1.5 crore generated organically, with no paid ads, in three months.",
+    "outcome": "The practice now works from a single view of enquiries and appointments, with follow-up running as a defined process rather than an individual's memory. GrowwStack runs the systems, AI agents and search work (SEO, GEO and AEO) behind it.",
     "relatedNote": "Healthcare work is handled with the discretion the sector requires. Patient data stays inside the clinic's own systems."
   },
   {
     "slug": "deep-tech-b2b-expansion",
-    "updatedAt": "2026-09-23",
+    "updatedAt": "2026-09-24",
     "sector": "Refrigeration and deep technology",
     "mandate": "Technical business expansion",
     "title": "B2B expansion for a deep technology manufacturer",
@@ -81,7 +82,9 @@
       "Brand positioning and technical websites",
       "B2B lead generation",
       "Product communication",
-      "Sales and business-development systems"
+      "Sales and business-development systems",
+      "AI agents",
+      "SEO, GEO and AEO"
     ],
     "approach": [
       "Rewrote the product story so the commercial value is legible before the technical detail arrives, without diluting the engineering.",
@@ -89,7 +92,7 @@
       "Set up B2B lead generation so qualified enquiries arrive through a process rather than through personal contacts.",
       "Connected sales and business-development systems so long, multi-touch deal cycles are tracked rather than remembered."
     ],
-    "outcome": "Technical capability is now expressed in terms a commercial buyer can evaluate, supported by systems built for long B2B cycles. This is one of three active partnerships behind ₹1.5 crore generated organically, with no paid ads, in three months.",
+    "outcome": "Technical capability is now expressed in terms a commercial buyer can evaluate, supported by systems built for long B2B cycles. GrowwStack runs the systems, AI agents and search work (SEO, GEO and AEO) behind it.",
     "relatedNote": "Founder experience spans Ecozen Solutions and Dover Corporation in refrigeration, thermal systems and product development."
   }
 ]

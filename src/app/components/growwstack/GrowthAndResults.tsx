@@ -46,13 +46,14 @@ const growthLayers = [
 const results = [
   {
     value: "₹1.5 Cr",
-    label: "Organic revenue generated",
-    description: "Approximately, across three active partner brands in our first three months. No paid ads.",
-  },
-  {
-    value: "₹1.5 Cr",
     label: "Organic e-commerce revenue",
     description: "Grew from ₹0 to ₹1.5 crore through one e-commerce partnership in 110 days, without any paid ads.",
+  },
+  {
+    value: "2",
+    qualifier: "partners",
+    label: "Systems, AI agents and search",
+    description: "Our healthcare and deep-tech partners run on GrowwStack systems, AI agents, and SEO, GEO and AEO.",
   },
   {
     value: "3",

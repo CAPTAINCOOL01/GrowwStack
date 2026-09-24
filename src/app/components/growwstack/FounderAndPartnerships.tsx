@@ -51,7 +51,8 @@ const activePartnerships = [
       "Website development and lead generation",
       "CRM and appointment tracking",
       "Customer follow-ups and sales processes",
-      "Digital visibility",
+      "AI agents",
+      "SEO, GEO and AEO",
     ],
   },
   {
@@ -74,6 +75,8 @@ const activePartnerships = [
       "B2B lead generation",
       "Product communication",
       "Sales and business-development systems",
+      "AI agents",
+      "SEO, GEO and AEO",
     ],
   },
 ] as const;
