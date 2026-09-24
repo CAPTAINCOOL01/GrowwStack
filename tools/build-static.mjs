@@ -17,6 +17,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { analyticsSnippet } from "./analytics-snippet.mjs";
+import { blogLocales, postLanguage } from "./blog-locales.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const dist = path.join(root, "dist");
@@ -35,6 +36,10 @@ const posts = fs
   // staggered without deleting work.
   .filter((p) => !p.draft)
   .sort((a, b) => String(b.publishedAt).localeCompare(String(a.publishedAt)));
+
+// Check languages before writing pages so a typo cannot silently produce English metadata.
+posts.forEach(postLanguage);
+const languages = Object.keys(blogLocales).filter((language) => posts.some((p) => postLanguage(p) === language));
 
 const esc = (s) =>
   String(s)
@@ -67,9 +72,10 @@ const ANALYTICS = analyticsSnippet();
 const VERIFY =
   '<meta name="google-site-verification" content="hNmg2XkeP3fmFhpV0CLhl85GMDJYZSv4h6Fct36obAM" />';
 
-function shell({ url, metaTitle, metaDescription, css, ld, body, type = "website" }) {
+function shell({ url, metaTitle, metaDescription, css, ld, body, type = "website", language = "en-IN", multilingual = false }) {
+  const ui = blogLocales[language];
   return `<!doctype html>
-<html lang="en-IN" data-theme="dark">
+<html lang="${language}" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -83,7 +89,7 @@ function shell({ url, metaTitle, metaDescription, css, ld, body, type = "website
 
     <meta property="og:type" content="${type}" />
     <meta property="og:site_name" content="GrowwStack" />
-    <meta property="og:locale" content="en_IN" />
+    <meta property="og:locale" content="${language.replace("-", "_")}" />
     <meta property="og:url" content="${url}" />
     <meta property="og:title" content="${esc(metaTitle)}" />
     <meta property="og:description" content="${esc(metaDescription)}" />
@@ -96,21 +102,22 @@ function shell({ url, metaTitle, metaDescription, css, ld, body, type = "website
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    ${multilingual ? '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&amp;family=Noto+Sans+Devanagari:wght@400;500;600;700&amp;family=Noto+Sans+Gujarati:wght@400;500;600;700&amp;display=swap" />' : ""}
     <link rel="stylesheet" href="${css}" />
     ${ANALYTICS}
 
 ${ld.map((b) => `    <script type="application/ld+json">${JSON.stringify(b)}</script>`).join("\n")}
   </head>
-  <body>
+  <body class="gs-content-page">
     <div class="gs-site gs-case">
-      <a class="gs-skip-link" href="#main-content">Skip to main content</a>
+      <a class="gs-skip-link" href="#main-content">${ui.skip}</a>
       <header class="gs-case__bar">
         <div class="gs-shell gs-case__bar-inner">
           <a class="gs-case__back" href="/">&larr; GrowwStack</a>
-          <nav class="gs-case__nav" aria-label="Main navigation">
-            <button class="gs-theme-toggle" type="button" data-theme-toggle title="Change color theme"><svg class="gs-theme-toggle__sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg><svg class="gs-theme-toggle__moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20.8 13a9 9 0 0 1-9.8-9.8A9 9 0 1 0 20.8 13Z"/></svg><span class="gs-theme-toggle__light-label gs-visually-hidden">Switch to light theme</span><span class="gs-theme-toggle__dark-label gs-visually-hidden">Switch to dark theme</span></button>
-            <a href="/blog">Blog</a>
-            <a class="gs-button gs-button--small gs-button--dark" href="/#apply">Apply to partner</a>
+          <nav class="gs-case__nav" aria-label="${ui.navigation}">
+            <button class="gs-theme-toggle" type="button" data-theme-toggle title="${ui.theme}"><svg class="gs-theme-toggle__sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg><svg class="gs-theme-toggle__moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20.8 13a9 9 0 0 1-9.8-9.8A9 9 0 1 0 20.8 13Z"/></svg><span class="gs-theme-toggle__light-label gs-visually-hidden">${ui.light}</span><span class="gs-theme-toggle__dark-label gs-visually-hidden">${ui.dark}</span></button>
+            <a href="/blog">${ui.blog}</a>
+            <a class="gs-button gs-button--small gs-button--dark" href="/#apply">${ui.partner}</a>
           </nav>
         </div>
       </header>
@@ -119,7 +126,7 @@ ${body}
       </main>
       <footer class="gs-case__foot">
         <div class="gs-shell gs-case__foot-inner">
-          <p>GrowwStack &mdash; growth systems for promising brands.</p>
+          <p>${ui.footer}</p>
           <a href="mailto:ceo-office@growwstack.in">ceo-office@growwstack.in</a>
         </div>
       </footer>
@@ -132,12 +139,15 @@ ${body}
 /* ---------------------------------------------------------------- blog post */
 
 function postBody(post) {
+  const language = postLanguage(post);
+  const ui = blogLocales[language];
   const byline = `<p class="gs-post__meta">
               <span class="gs-post__cat">${esc(post.category)}</span>
-              <time datetime="${esc(post.publishedAt)}">${esc(formatDate(post.publishedAt))}</time>
+              <a href="/blog/${ui.slug}" lang="${language}">${ui.name}</a>
+              <time datetime="${esc(post.publishedAt)}">${esc(formatDate(post.publishedAt, language))}</time>
               <span>${esc(post.readingTime)}</span>
-              <span>By <a href="/">GrowwStack</a></span>
-              ${post.updatedAt ? `<span>Updated <time datetime="${esc(post.updatedAt)}">${esc(formatDate(post.updatedAt))}</time></span>` : ""}
+              <span>${ui.by} <a href="/">GrowwStack</a></span>
+              ${post.updatedAt ? `<span>${ui.updated} <time datetime="${esc(post.updatedAt)}">${esc(formatDate(post.updatedAt, language))}</time></span>` : ""}
             </p>`;
 
   const sections = post.sections
@@ -163,20 +173,20 @@ ${paras}${list}
     if (url.protocol !== "https:") throw new Error("Article source must use HTTPS");
     return `<li><a href="${esc(url.href)}" rel="noopener noreferrer">${esc(source.title)}</a></li>`;
   });
-  const sourceBlock = sources.length ? `<section class="gs-post__section" aria-label="Sources"><h2>Sources and further reading</h2><ul class="gs-post__list">${sources.join("\n")}</ul></section>` : "";
+  const sourceBlock = sources.length ? `<section class="gs-post__section" aria-label="${ui.sources}"><h2>${ui.sources}</h2><ul class="gs-post__list">${sources.join("\n")}</ul></section>` : "";
 
   const related = (post.related || [])
     .map((slug) => posts.find((p) => p.slug === slug))
     .filter(Boolean);
 
   const relatedBlock = related.length
-    ? `            <nav class="gs-case__more" aria-label="Related reading">
-              <h2>Related reading</h2>
+    ? `            <nav class="gs-case__more" aria-label="${ui.related}">
+              <h2>${ui.related}</h2>
               <ul>
 ${related
   .map(
     (r) =>
-      `                <li><a href="/blog/${r.slug}"><strong>${esc(r.title)}</strong><span>${esc(r.category)}</span></a></li>`,
+      `                <li lang="${postLanguage(r)}"><a href="/blog/${r.slug}" hreflang="${postLanguage(r)}"><strong>${esc(r.title)}</strong><span>${esc(r.category)} · ${blogLocales[postLanguage(r)].name}</span></a></li>`,
   )
   .join("\n")}
               </ul>
@@ -185,12 +195,14 @@ ${related
 
   return `        <article class="gs-section gs-case__body gs-post">
           <div class="gs-shell">
-            <nav class="gs-case__crumbs" aria-label="Breadcrumb">
-              <a href="/">Home</a> <span aria-hidden="true">/</span>
-              <a href="/blog">Blog</a> <span aria-hidden="true">/</span>
+            <nav class="gs-case__crumbs" aria-label="${ui.breadcrumb}">
+              <a href="/">${ui.home}</a> <span aria-hidden="true">/</span>
+              <a href="/blog">${ui.blog}</a> <span aria-hidden="true">/</span>
+              <a href="/blog/${ui.slug}">${ui.name}</a> <span aria-hidden="true">/</span>
               <span>${esc(post.category)}</span>
             </nav>
 
+            ${languageNav(language)}
             ${byline}
             <h1 class="gs-case__title gs-post__title">${esc(post.title)}</h1>
 
@@ -199,19 +211,16 @@ ${(post.intro || []).map((p) => `            <p class="gs-post__intro">${inline(
 ${sections}
 
             <aside class="gs-post__takeaway">
-              <p class="gs-post__takeaway-label">In short</p>
+              <p class="gs-post__takeaway-label">${ui.takeaway}</p>
               <p>${inline(post.takeaway)}</p>
             </aside>
 
             <section class="gs-case__cta">
-              <h2>Want this built properly?</h2>
-              <p>
-                Custom websites and connected systems. No upfront agency fee;
-                we earn from the growth we create. Limited partnerships.
-              </p>
+              <h2>${ui.ctaTitle}</h2>
+              <p>${ui.ctaText}</p>
               <div class="gs-case__cta-actions">
-                <a class="gs-button gs-button--primary" href="/#build">Request a website build</a>
-                <a class="gs-button gs-button--secondary" href="/#apply">Apply for a partnership</a>
+                <a class="gs-button gs-button--primary" href="/#build">${ui.build}</a>
+                <a class="gs-button gs-button--secondary" href="/#apply">${ui.apply}</a>
               </div>
             </section>
 
@@ -222,9 +231,9 @@ ${relatedBlock}
         </article>`;
 }
 
-function formatDate(iso) {
+function formatDate(iso, language = "en-IN") {
   const d = new Date(iso + "T00:00:00Z");
-  return d.toLocaleDateString("en-IN", {
+  return d.toLocaleDateString(language, {
     day: "numeric",
     month: "long",
     year: "numeric",
@@ -234,6 +243,7 @@ function formatDate(iso) {
 
 function postLd(post) {
   const url = `${ORIGIN}/blog/${post.slug}`;
+  const ui = blogLocales[postLanguage(post)];
   return [
     {
       "@context": "https://schema.org",
@@ -247,7 +257,7 @@ function postLd(post) {
       publisher: { "@type": "Organization", "@id": `${ORIGIN}/#organization`, name: "GrowwStack", url: ORIGIN },
       isPartOf: { "@id": `${ORIGIN}/#website` },
       image: `${ORIGIN}/og.png`,
-      inLanguage: "en-IN",
+      inLanguage: postLanguage(post),
       articleSection: post.category,
       mainEntityOfPage: url,
     },
@@ -255,9 +265,10 @@ function postLd(post) {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: `${ORIGIN}/` },
-        { "@type": "ListItem", position: 2, name: "Blog", item: `${ORIGIN}/blog` },
-        { "@type": "ListItem", position: 3, name: post.title, item: url },
+        { "@type": "ListItem", position: 1, name: ui.home, item: `${ORIGIN}/` },
+        { "@type": "ListItem", position: 2, name: ui.blog, item: `${ORIGIN}/blog` },
+        { "@type": "ListItem", position: 3, name: ui.name, item: `${ORIGIN}/blog/${ui.slug}` },
+        { "@type": "ListItem", position: 4, name: post.title, item: url },
       ],
     },
   ];
@@ -265,18 +276,31 @@ function postLd(post) {
 
 /* --------------------------------------------------------------- blog index */
 
-function indexBody() {
-  const cards = posts
+function languageNav(language = "en-IN", currentPath = "") {
+  const ui = blogLocales[language];
+  const link = (href, label, lang) => `<a href="${href}" lang="${lang}"${currentPath === href ? ' aria-current="page"' : ""}>${label}</a>`;
+  return `<nav class="gs-blog-languages" aria-label="${ui.languages}">
+              <span>${ui.languages}</span>
+              ${link("/blog", ui.all, language)}
+              ${languages.map((lang) => link(`/blog/${blogLocales[lang].slug}`, blogLocales[lang].name, lang)).join("\n              ")}
+            </nav>`;
+}
+
+function indexBody(language) {
+  const ui = blogLocales[language || "en-IN"];
+  const collection = language ? posts.filter((p) => postLanguage(p) === language) : posts;
+  const cards = collection
     .map(
-      (p) => `              <li class="gs-bloglist__item">
-                <a href="/blog/${p.slug}">
+      (p) => `              <li class="gs-bloglist__item" lang="${postLanguage(p)}">
+                <a href="/blog/${p.slug}" hreflang="${postLanguage(p)}">
                   <p class="gs-post__meta">
                     <span class="gs-post__cat">${esc(p.category)}</span>
+                    <span>${blogLocales[postLanguage(p)].name}</span>
                     <span>${esc(p.readingTime)}</span>
                   </p>
                   <h2>${esc(p.title)}</h2>
                   <p class="gs-bloglist__excerpt">${esc(p.excerpt)}</p>
-                  <span class="gs-bloglist__more">Read <span aria-hidden="true">&rarr;</span></span>
+                  <span class="gs-bloglist__more">${blogLocales[postLanguage(p)].read} <span aria-hidden="true">&rarr;</span></span>
                 </a>
               </li>`,
     )
@@ -284,15 +308,14 @@ function indexBody() {
 
   return `        <div class="gs-section gs-case__body">
           <div class="gs-shell">
-            <nav class="gs-case__crumbs" aria-label="Breadcrumb">
-              <a href="/">Home</a> <span aria-hidden="true">/</span>
-              <span>Blog</span>
+            <nav class="gs-case__crumbs" aria-label="${ui.breadcrumb}">
+              <a href="/">${ui.home}</a> <span aria-hidden="true">/</span>
+              ${language ? `<a href="/blog">${ui.blog}</a> <span aria-hidden="true">/</span><span>${ui.name}</span>` : `<span>${ui.blog}</span>`}
             </nav>
-            <p class="gs-eyebrow"><span aria-hidden="true">Writing</span>Websites, traffic and systems</p>
-            <h1 class="gs-case__title">Notes on websites and growth.</h1>
-            <p class="gs-case__summary">
-              Practical lessons from building websites, generating demand and turning enquiries into revenue.
-            </p>
+            <p class="gs-eyebrow">${ui.eyebrow}</p>
+            <h1 class="gs-case__title">${ui.title}</h1>
+            <p class="gs-case__summary">${ui.summary}</p>
+            ${languageNav(language, language ? `/blog/${ui.slug}` : "/blog")}
             <ul class="gs-bloglist">
 ${cards}
             </ul>
@@ -460,39 +483,50 @@ for (const post of posts) {
       ld: postLd(post),
       body: postBody(post),
       type: "article",
+      language: postLanguage(post),
+      multilingual: true,
     }),
   );
 }
 
-fs.writeFileSync(
-  path.join(dist, "blog.html"),
-  shell({
-    url: `${ORIGIN}/blog`,
-    metaTitle: "Blog — Websites, Traffic and Growth Systems | GrowwStack",
-    metaDescription:
-      "Practical writing on why websites fail to generate traffic and leads, what custom builds change, and how SEO, GEO and AEO actually work.",
-    css,
-    ld: [
-      {
-        "@context": "https://schema.org",
-        "@type": "Blog",
-        "@id": `${ORIGIN}/blog#blog`,
-        name: "GrowwStack Blog",
-        url: `${ORIGIN}/blog`,
-        publisher: { "@id": `${ORIGIN}/#organization` },
-        inLanguage: "en-IN",
-        blogPost: posts.map((p) => ({
-          "@type": "BlogPosting",
-          headline: p.title,
-          url: `${ORIGIN}/blog/${p.slug}`,
-          datePublished: p.publishedAt,
-        })),
-      },
-    ],
-    body: indexBody(),
-  }),
-);
-console.log(`  blog posts   -> ${posts.length} (+ index)`);
+function writeBlogIndex(language) {
+  const ui = blogLocales[language || "en-IN"];
+  const collection = language ? posts.filter((p) => postLanguage(p) === language) : posts;
+  const url = `${ORIGIN}/blog${language ? `/${ui.slug}` : ""}`;
+  fs.writeFileSync(
+    language ? path.join(dist, "blog", `${ui.slug}.html`) : path.join(dist, "blog.html"),
+    shell({
+      url,
+      metaTitle: language ? ui.metaTitle : "Blog — Business Growth in English, Hindi, Gujarati & Bengali | GrowwStack",
+      metaDescription: language ? ui.metaDescription : ui.summary,
+      css,
+      language: language || "en-IN",
+      multilingual: true,
+      ld: [
+        {
+          "@context": "https://schema.org",
+          "@type": "Blog",
+          "@id": `${url}#blog`,
+          name: language ? ui.metaTitle : "GrowwStack Blog",
+          url,
+          publisher: { "@id": `${ORIGIN}/#organization` },
+          inLanguage: language || languages,
+          blogPost: collection.map((p) => ({
+            "@type": "BlogPosting",
+            headline: p.title,
+            url: `${ORIGIN}/blog/${p.slug}`,
+            datePublished: p.publishedAt,
+            inLanguage: postLanguage(p),
+          })),
+        },
+      ],
+      body: indexBody(language),
+    }),
+  );
+}
+writeBlogIndex();
+languages.forEach(writeBlogIndex);
+console.log(`  blog posts   -> ${posts.length} (+ index and ${languages.length} language collections)`);
 
 // lastmod only where a real content date exists. A build date would claim every
 // page changed on every deploy, and Google ignores lastmod it cannot trust.
@@ -500,6 +534,12 @@ const latestPost = posts.map((p) => p.updatedAt || p.publishedAt).sort().at(-1);
 const urls = [
   { loc: `${ORIGIN}/`, priority: "1.0", changefreq: "weekly" },
   { loc: `${ORIGIN}/blog`, priority: "0.9", changefreq: "weekly", lastmod: latestPost },
+  ...languages.map((language) => ({
+    loc: `${ORIGIN}/blog/${blogLocales[language].slug}`,
+    priority: "0.8",
+    changefreq: "weekly",
+    lastmod: posts.filter((p) => postLanguage(p) === language).map((p) => p.updatedAt || p.publishedAt).sort().at(-1),
+  })),
   ...studies.map((s) => ({
     loc: `${ORIGIN}/case-studies/${s.slug}`,
     priority: "0.8",
