@@ -1,0 +1,262 @@
+/*
+ * Landing page for the paid-search test (/partner), rendered by
+ * src/app/pages/PartnerLanding.tsx. Self-contained layout so the ad's form sits
+ * beside the pitch instead of eight sections down the homepage. Uses the public
+ * theme tokens from color-theme.css, so it follows dark/light like the rest of
+ * the site.
+ */
+
+.gs-lp {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  background: var(--site-bg);
+  color: var(--site-text);
+}
+
+.gs-lp__bar {
+  border-bottom: 1px solid var(--site-line);
+  background: var(--site-bg);
+}
+.gs-lp__bar-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.gs-lp__bar-utilities {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.gs-lp__bar-phone {
+  color: var(--site-text);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.gs-lp__bar-phone:hover {
+  color: var(--site-accent);
+}
+
+.gs-lp__main {
+  flex: 1 0 auto;
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+  padding: clamp(28px, 5vw, 56px) 24px 48px;
+}
+
+.gs-lp__grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(24px, 4vw, 48px);
+  align-items: start;
+}
+
+.gs-lp__title {
+  margin: 14px 0 0;
+  font: 700 clamp(2rem, 4.4vw, 3.15rem) / 1.08 var(--font-display, system-ui, sans-serif);
+  letter-spacing: -0.01em;
+}
+.gs-lp__title span {
+  color: var(--site-accent);
+  display: block;
+}
+.gs-lp__lede {
+  margin: 18px 0 0;
+  max-width: 34em;
+  color: var(--site-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+.gs-lp__proof {
+  width: fit-content;
+  max-width: 100%;
+  margin: 20px 0 0;
+  padding: 10px 14px;
+  border: 1px solid var(--site-line);
+  border-left: 3px solid var(--site-accent);
+  border-radius: 3px;
+  background: var(--site-surface);
+  color: var(--site-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.gs-lp__proof strong {
+  color: var(--site-text);
+  font-weight: 600;
+}
+.gs-lp__trust {
+  list-style: none;
+  margin: 22px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+.gs-lp__trust li {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  color: var(--site-text);
+  font-size: 0.98rem;
+}
+.gs-lp__trust li span {
+  color: var(--site-accent);
+  font-weight: 700;
+}
+
+/* Form card */
+.gs-lp__form-card {
+  position: sticky;
+  top: 24px;
+  padding: clamp(20px, 3vw, 28px);
+  border: 1px solid var(--site-line);
+  border-radius: 6px;
+  background: var(--site-surface);
+  box-shadow: 0 18px 44px rgba(4, 12, 22, 0.28);
+}
+.gs-lp__form-title {
+  margin: 0;
+  font: 600 1.4rem/1.2 var(--font-display, system-ui, sans-serif);
+}
+.gs-lp__form-sub {
+  margin: 8px 0 18px;
+  color: var(--site-muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+.gs-lp__form {
+  display: grid;
+  gap: 14px;
+}
+.gs-lp__hint {
+  margin: 2px 0 0;
+  color: var(--site-muted);
+  font-size: 0.8rem;
+}
+.gs-lp__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 4px;
+}
+.gs-lp__status {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+.gs-lp__status--ok {
+  color: var(--site-text);
+}
+.gs-lp__status--err {
+  color: var(--site-error);
+}
+
+/* Risk table */
+.gs-lp__risk {
+  margin-top: clamp(40px, 6vw, 72px);
+  padding-top: clamp(28px, 4vw, 40px);
+  border-top: 1px solid var(--site-line);
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(24px, 4vw, 48px);
+  align-items: center;
+}
+.gs-lp__risk-title {
+  margin: 0 0 12px;
+  font: 600 clamp(1.4rem, 2.4vw, 1.9rem)/1.15 var(--font-display, system-ui, sans-serif);
+}
+.gs-lp__risk-copy p {
+  margin: 0 0 18px;
+  color: var(--site-muted);
+  line-height: 1.6;
+  max-width: 34em;
+}
+.gs-lp__compare {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--site-line);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.gs-lp__compare-head,
+.gs-lp__compare-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 12px;
+  padding: 12px 16px;
+  align-items: center;
+}
+.gs-lp__compare-head {
+  background: var(--site-raised);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.gs-lp__compare-head span {
+  color: var(--site-muted);
+}
+.gs-lp__compare-head span:last-child {
+  color: var(--site-accent);
+}
+.gs-lp__compare-row {
+  border-top: 1px solid var(--site-line);
+  font-size: 0.95rem;
+}
+.gs-lp__compare-label {
+  color: var(--site-text);
+  font-weight: 500;
+}
+.gs-lp__compare-usual {
+  color: var(--site-muted);
+}
+.gs-lp__compare-ours {
+  color: var(--site-accent);
+  font-weight: 600;
+}
+
+.gs-lp__foot {
+  border-top: 1px solid var(--site-line);
+  background: var(--site-bg);
+}
+.gs-lp__foot p {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  color: var(--site-muted);
+  font-size: 0.88rem;
+}
+.gs-lp__foot a {
+  color: var(--site-link);
+}
+
+@media (max-width: 860px) {
+  .gs-lp__grid {
+    grid-template-columns: 1fr;
+  }
+  .gs-lp__form-card {
+    position: static;
+  }
+  .gs-lp__risk {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .gs-lp__bar-phone {
+    display: none;
+  }
+  .gs-lp__compare-head,
+  .gs-lp__compare-row {
+    grid-template-columns: 1.1fr 0.95fr 0.95fr;
+    gap: 8px;
+    padding: 11px 12px;
+    font-size: 0.85rem;
+  }
+}

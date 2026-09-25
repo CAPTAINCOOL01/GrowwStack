@@ -41,10 +41,11 @@ try {
 
   const robots = /<meta name="robots" content="[^"]*" \/>/;
   if (!robots.test(shell)) throw new Error("dist/index.html has no robots meta to replace");
-  fs.writeFileSync(
-    path.join(dist, "admin.html"),
-    shell.replace(robots, '<meta name="robots" content="noindex, nofollow" />'),
-  );
+  const noindexShell = shell.replace(robots, '<meta name="robots" content="noindex, nofollow" />');
+  // /admin and /partner are client-only shells that must not hydrate homepage markup
+  // and must stay out of the index (the partner page is a paid-ad landing page).
+  fs.writeFileSync(path.join(dist, "admin.html"), noindexShell);
+  fs.writeFileSync(path.join(dist, "partner.html"), noindexShell);
   fs.writeFileSync(shellPath, shell.replace(EMPTY_ROOT, () => `<div id="root">${markup}</div>`));
   console.log(`  homepage     -> prerendered (${Math.round(markup.length / 1024)} KB of markup)`);
 } finally {

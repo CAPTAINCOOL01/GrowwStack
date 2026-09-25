@@ -2,6 +2,7 @@ import { createRoot, hydrateRoot } from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router";
 import App from "./app/App.tsx";
 import { AdminDashboard } from "./app/pages/AdminDashboard.tsx";
+import { PartnerLanding } from "./app/pages/PartnerLanding.tsx";
 import "./styles/index.css";
 
 const container = document.getElementById("root")!;
@@ -9,6 +10,7 @@ const app = (
   <BrowserRouter>
     <Routes>
       <Route path="/admin/*" element={<AdminDashboard />} />
+      <Route path="/partner" element={<PartnerLanding />} />
       <Route path="*" element={<App />} />
     </Routes>
   </BrowserRouter>
