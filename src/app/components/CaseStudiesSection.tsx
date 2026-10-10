@@ -4,7 +4,7 @@ import { ArrowUpRight, Calendar, TrendingUp } from "lucide-react";
 const caseStudies = [
   {
     industry: "SPORTS & LIFESTYLE BRAND",
-    company: "Camstar Sports",
+    company: "Sports equipment brand",
     before: {
       state: "No digital presence, word-of-mouth only, 10 sales/month",
       metric: "₹2,55,000 / month",

@@ -17,7 +17,7 @@ const founderExperience = [
     focus: "Refrigeration, product optimisation, and manufacturing",
   },
   {
-    company: "Camstar Sports",
+    company: "Sports equipment brand",
     domain: "E-commerce",
     focus: "Growth, analytics, CRM, sales operations, and revenue systems",
   },
@@ -58,7 +58,7 @@ const activePartnerships = [
   {
     sector: "Sports equipment",
     mandate: "End-to-end e-commerce growth",
-    summary: "For Camstar Sports: product discovery, checkout, customer conversations and fulfilment in one system.",
+    summary: "For a sports-equipment partner: product discovery, checkout, customer conversations and fulfilment in one system.",
     systems: [
       "Website optimisation and product positioning",
       "SEO, analytics, and conversion funnels",
