@@ -36,15 +36,24 @@ const founderProof = [
   },
 ] as const;
 
-const caseStudySlugs: Record<string, string> = {
-  "Healthcare & clinics": "healthcare-clinic-growth",
-  "Sports equipment": "ecommerce-sports-equipment",
-  "Refrigeration & deep tech": "deep-tech-b2b-expansion",
-};
+const caseStudyLink = (slug: string) => ({
+  href: `/case-studies/${slug}`,
+  label: "Read the case study",
+  external: false,
+});
+
+const newPartnerSystems = [
+  "SaaS products",
+  "E-commerce website and store",
+  "SEO, GEO and AEO",
+  "CRM, WhatsApp and automation",
+  "Analytics and revenue reporting",
+];
 
 const activePartnerships = [
   {
     sector: "Healthcare & clinics",
+    link: caseStudyLink("healthcare-clinic-growth"),
     mandate: "Patient acquisition and clinic growth",
     summary: "From digital discovery to booked appointments and patient follow-ups.",
     systems: [
@@ -57,6 +66,7 @@ const activePartnerships = [
   },
   {
     sector: "Sports equipment",
+    link: caseStudyLink("ecommerce-sports-equipment"),
     mandate: "End-to-end e-commerce growth",
     summary: "For a sports-equipment partner: product discovery, checkout, customer conversations and fulfilment in one system.",
     systems: [
@@ -68,6 +78,7 @@ const activePartnerships = [
   },
   {
     sector: "Refrigeration & deep tech",
+    link: caseStudyLink("deep-tech-b2b-expansion"),
     mandate: "Technical business expansion",
     summary: "Technical positioning and B2B systems that create qualified commercial conversations.",
     systems: [
@@ -78,6 +89,20 @@ const activePartnerships = [
       "AI agents",
       "SEO, GEO and AEO",
     ],
+  },
+  {
+    sector: "Pet supplies · Furtopia",
+    link: { href: "https://furtopia.co.in/", label: "Visit furtopia.co.in", external: true },
+    mandate: "D2C pet-supplies growth",
+    summary: "For Furtopia, a Navi Mumbai pet store shipping across India: the store, search visibility and the systems behind every order.",
+    systems: newPartnerSystems,
+  },
+  {
+    sector: "Fitness equipment",
+    link: null,
+    mandate: "Digital growth for a ₹350 Cr+ gym brand",
+    summary: "For a ₹350 Cr+ fitness-equipment brand: SaaS products, e-commerce, search and the sales systems that connect them.",
+    systems: newPartnerSystems,
   },
 ] as const;
 
@@ -162,7 +187,7 @@ export function PartnershipsSection() {
         <header className="gs-section__header gs-partnerships__header">
           <p className="gs-eyebrow">Active partnerships</p>
           <h2 className="gs-section__title" id="gs-partnerships-title">
-            Three industries. <span>Growth in operation.</span>
+            Five industries. <span>Growth in operation.</span>
           </h2>
         </header>
 
@@ -192,13 +217,16 @@ export function PartnershipsSection() {
 
               <footer className="gs-partnerships__case-footer">
                 <span className="gs-partnerships__status">Active partnership</span>
-                <a
-                  className="gs-partnerships__case-link"
-                  href={`/case-studies/${caseStudySlugs[partnership.sector]}`}
-                >
-                  Read the case study
-                  <span aria-hidden="true"> →</span>
-                </a>
+                {partnership.link ? (
+                  <a
+                    className="gs-partnerships__case-link"
+                    href={partnership.link.href}
+                    {...(partnership.link.external ? { target: "_blank", rel: "noopener" } : {})}
+                  >
+                    {partnership.link.label}
+                    <span aria-hidden="true">{partnership.link.external ? " ↗" : " →"}</span>
+                  </a>
+                ) : null}
               </footer>
             </article>
           ))}

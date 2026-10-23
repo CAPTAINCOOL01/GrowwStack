@@ -45,21 +45,21 @@ const growthLayers = [
 
 const results = [
   {
-    value: "₹1.5 Cr",
+    value: "₹2.2 Cr+",
     label: "Organic e-commerce revenue",
-    description: "Our sports-equipment partner's e-commerce revenue grew from ₹0 to ₹1.5 crore in 110 days, without any paid ads.",
+    description: "Our sports-equipment partner's e-commerce revenue grew from ₹0 to over ₹2.2 crore, the first ₹1.5 crore in 110 days, without any paid ads.",
   },
   {
-    value: "2",
+    value: "4",
     qualifier: "partners",
-    label: "Systems, AI agents and search",
-    description: "Our healthcare and deep-tech partners run on GrowwStack systems, AI agents, and SEO, GEO and AEO.",
+    label: "Systems, SaaS, AI agents and search",
+    description: "Our healthcare, deep-tech, pet-supplies and fitness-equipment partners run on GrowwStack systems, SaaS products, AI agents, and SEO, GEO and AEO.",
   },
   {
-    value: "3",
+    value: "5",
     qualifier: "industries",
     label: "Active sector experience",
-    description: "Healthcare, sports equipment, and refrigeration and deep tech.",
+    description: "Healthcare, sports equipment, refrigeration and deep tech, pet supplies, and fitness equipment.",
   },
   {
     value: "₹0",

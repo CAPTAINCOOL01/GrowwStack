@@ -24,7 +24,7 @@ const initial = { name: "", email: "", phone: "", message: "" };
  * The ad promises the revenue-share / pay-on-results model, so the page leads with
  * that promise and puts a short lead form beside it — a click should not have to
  * scroll eight sections of the homepage to reach a form. Copy and proof are reused
- * from the homepage verbatim; the ₹1.5 Cr figure stays attributed to the sports-equipment partner's
+ * from the homepage verbatim; the ₹2.2 Cr+ figure stays attributed to the sports-equipment partner's
  * e-commerce revenue, purely organic, exactly as everywhere else on the site.
  *
  * Rendered client-side from dist/partner.html (a noindex shell), so it never enters
@@ -148,8 +148,7 @@ export function PartnerLanding() {
             </p>
             <p className="gs-lp__proof">
               <strong>
-                Our sports-equipment partner's e-commerce revenue grew from ₹0 to ₹1.5 Cr in 110
-                days.
+                Our sports-equipment partner's e-commerce revenue grew from ₹0 to ₹2.2 Cr+.
               </strong>{" "}
               <span>Purely organic — ₹0 spent on ads.</span>
             </p>
