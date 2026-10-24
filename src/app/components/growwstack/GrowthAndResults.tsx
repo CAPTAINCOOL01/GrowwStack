@@ -101,6 +101,11 @@ export function GrowthStackSection() {
           </ol>
 
         </div>
+        <details className="gs-search-notes">
+          <summary>How we approach search and AI visibility</summary>
+          <p><strong>SEO:</strong> Help the right pages appear in search. <strong>AEO:</strong> Structure clear answers to buyer questions. <strong>GEO:</strong> Build useful, credible information that AI tools can reference.</p>
+          <p>We measure a baseline, prioritise buyer intent, improve pages and review what changes. AI-assisted work is reviewed by people before publication; progress is measured in Search Console and GA4.</p>
+        </details>
 
       </div>
     </section>

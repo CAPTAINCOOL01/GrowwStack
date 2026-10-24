@@ -3,10 +3,10 @@ import { useEffect, useRef, useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
 
 const navItems = [
-  { label: "Services", href: "#growth-stack" },
-  { label: "Our work", href: "#partnerships" },
-  { label: "About", href: "#founder" },
-  { label: "Free build", href: "#offer", highlight: true },
+  { label: "Services", href: "/services" },
+  { label: "Our work", href: "/work" },
+  { label: "About", href: "/about" },
+  { label: "Partnership", href: "/partnership", highlight: true },
   { label: "Blog", href: "/blog" },
 ];
 
@@ -37,7 +37,7 @@ export function SiteNav() {
   return (
     <header className="gs-nav" data-scrolled={scrolled} data-open={menuOpen}>
       <div className="gs-container gs-nav__inner">
-        <a className="gs-brand" href="#home" aria-label="GrowwStack home" onClick={() => setMenuOpen(false)}>
+        <a className="gs-brand" href="/" aria-label="GrowwStack home" onClick={() => setMenuOpen(false)}>
           <span className="gs-brand__mark" aria-hidden="true">
             <i />
             <i />
@@ -77,7 +77,7 @@ export function SiteNav() {
               </a>
             ))}
           </div>
-          <a className="gs-button gs-button--small gs-button--signal" href="#contact" onClick={() => setMenuOpen(false)}>
+          <a className="gs-button gs-button--small gs-button--signal" href="/contact" onClick={() => setMenuOpen(false)}>
             Let’s talk
             <span aria-hidden="true">↗</span>
           </a>

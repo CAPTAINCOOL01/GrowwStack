@@ -47,6 +47,15 @@ try {
   fs.writeFileSync(path.join(dist, "admin.html"), noindexShell);
   fs.writeFileSync(path.join(dist, "partner.html"), noindexShell);
   fs.writeFileSync(shellPath, shell.replace(EMPTY_ROOT, () => `<div id="root">${markup}</div>`));
+  const pages = { services: "Services", work: "Our work", about: "About", partnership: "Growth partnerships", contact: "Contact" };
+  for (const [slug, title] of Object.entries(pages)) {
+    const pageShell = shell
+      .replace(/<title>[\s\S]*?<\/title>/, `<title>${title} | GrowwStack</title>`)
+      .replace(/(<link rel="canonical" href=")[^"]*("\s*\/?>)/, `$1https://growwstack.in/${slug}$2`)
+      .replace(/(<meta property="og:url" content=")[^"]*("\s*\/?>)/, `$1https://growwstack.in/${slug}$2`)
+      .replace(/<meta\s+name="description"\s+content="[^"]*"\s*\/?>/, `<meta name="description" content="${title} at GrowwStack. Founder-led websites, customer acquisition and sales systems." />`);
+    fs.writeFileSync(path.join(dist, `${slug}.html`), pageShell.replace(EMPTY_ROOT, () => `<div id="root">${render(`/${slug}`)}</div>`));
+  }
   console.log(`  homepage     -> prerendered (${Math.round(markup.length / 1024)} KB of markup)`);
 } finally {
   fs.rmSync(ssrOut, { recursive: true, force: true });

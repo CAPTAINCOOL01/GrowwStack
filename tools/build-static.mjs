@@ -533,6 +533,7 @@ console.log(`  blog posts   -> ${posts.length} (+ index and ${languages.length} 
 const latestPost = posts.map((p) => p.updatedAt || p.publishedAt).sort().at(-1);
 const urls = [
   { loc: `${ORIGIN}/`, priority: "1.0", changefreq: "weekly" },
+  ...["services", "work", "about", "partnership", "contact"].map((slug) => ({ loc: `${ORIGIN}/${slug}`, priority: "0.8", changefreq: "monthly" })),
   { loc: `${ORIGIN}/blog`, priority: "0.9", changefreq: "weekly", lastmod: latestPost },
   ...languages.map((language) => ({
     loc: `${ORIGIN}/blog/${blogLocales[language].slug}`,

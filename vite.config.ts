@@ -17,6 +17,15 @@ function figmaAssetResolver() {
 }
 
 export default defineConfig({
+  server: {
+    watch: {
+      // Windows/network drives can lock native file watchers. Poll source files
+      // and exclude generated reports and build output from the dev watcher.
+      usePolling: true,
+      interval: 500,
+      ignored: ['**/growth/**', '**/tmp/**', '**/dist/**', '**/dist-ssr/**'],
+    },
+  },
   plugins: [
     figmaAssetResolver(),
     // The React and Tailwind plugins are both required for Make, even if

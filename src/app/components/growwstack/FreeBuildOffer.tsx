@@ -46,6 +46,10 @@ export function FreeBuildOffer() {
         <p className="gs-offer__terms">
           The share is agreed in writing before work begins, following business evaluation and mutual acceptance. Limited partnerships; no growth means no earnings for us.
         </p>
+        <details className="gs-search-notes">
+          <summary>Clear scope. Measured results.</summary>
+          <p>We agree the baseline, target, revenue share and scope before starting. Performance is measured in your own analytics. Access, technology ownership and exit arrangements are documented for each partnership.</p>
+        </details>
 
         <div className="gs-offer__actions">
           <a className="gs-button gs-button--signal" href="#build">

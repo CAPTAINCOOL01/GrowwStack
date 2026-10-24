@@ -1,6 +1,9 @@
 import { useEffect } from "react";
-import { HeroSection } from "./components/HeroSection";
-import { FounderSection, PartnershipsSection } from "./components/growwstack/FounderAndPartnerships";
+import { useLocation } from "react-router";
+import { PageIntro } from "./components/growwstack/PageIntro";
+import { MinimalHome } from "./components/growwstack/MinimalHome";
+import { FounderSection } from "./components/growwstack/FounderAndPartnerships";
+import { WorkSection } from "./components/growwstack/WorkSection";
 import { GrowthStackSection } from "./components/growwstack/GrowthAndResults";
 import {
   ApplicationSection,
@@ -19,6 +22,7 @@ import { initEventTracking } from "../lib/events";
 import { ConsentBanner } from "./components/growwstack/ConsentBanner";
 
 export default function App() {
+  const { pathname } = useLocation();
   useEffect(() => {
     syncOptOutFromUrl();
     initAnalytics();
@@ -27,6 +31,10 @@ export default function App() {
 
     // Keep inbound links useful when optional forms are collapsed.
     const revealHashTarget = (hash = window.location.hash) => {
+      if (pathname === "/" && ["#apply", "#build", "#process"].includes(hash)) {
+        window.location.replace(`/partnership${hash}`);
+        return;
+      }
       const target = document.getElementById(hash.slice(1));
       if (!target) return;
       const disclosures = target.id === "build" || target.id === "apply" ? target.querySelectorAll<HTMLDetailsElement>("details[data-hash-disclosure]") : [];
@@ -62,15 +70,12 @@ export default function App() {
       </a>
       <SiteNav />
       <main id="main-content">
-        <HeroSection />
-        <GrowthStackSection />
-        <PartnershipsSection />
-        <FounderSection />
-        <PartnershipProcessSection />
-        <FreeBuildOffer />
-        <WebsiteBuildSection />
-        <ApplicationSection />
-        <QuickContactSection />
+        <PageIntro pathname={pathname} />
+        {pathname === "/services" ? <GrowthStackSection /> :
+         pathname === "/work" ? <WorkSection /> :
+         pathname === "/about" ? <FounderSection /> :
+         pathname === "/partnership" ? <><FreeBuildOffer /><PartnershipProcessSection /><WebsiteBuildSection /><ApplicationSection /></> :
+         pathname === "/contact" ? <QuickContactSection /> : <MinimalHome />}
       </main>
       <SiteFooter />
       <WhatsAppFab />
@@ -78,3 +83,4 @@ export default function App() {
     </div>
   );
 }
+

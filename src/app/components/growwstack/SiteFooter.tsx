@@ -8,7 +8,7 @@ export function SiteFooter() {
   return (
     <footer className="gs-footer">
       <div className="gs-container gs-footer__base">
-        <a className="gs-brand gs-brand--footer" href="#home" aria-label="GrowwStack home">
+        <a className="gs-brand gs-brand--footer" href="/" aria-label="GrowwStack home">
           <span className="gs-brand__mark" aria-hidden="true">
             <i />
             <i />
@@ -20,13 +20,13 @@ export function SiteFooter() {
         <div className="gs-footer__links">
           <a href="/blog">Blog</a>
           <a href="/blog/performance-based-marketing-agency-india">How revenue share works</a>
-          <a href="#apply">Partnership application</a>
+          <a href="/partnership#apply">Partnership application</a>
           <a href={`tel:+${CONTACT_PHONE}`}>{CONTACT_PHONE_DISPLAY}</a>
           <a href={whatsappHref} target="_blank" rel="noopener noreferrer">
             WhatsApp
           </a>
           <a href="mailto:ceo-office@growwstack.in">ceo-office@growwstack.in</a>
-          <a href="#home">Back to top ↑</a>
+          <a href="/">Back to top ↑</a>
         </div>
       </div>
     </footer>

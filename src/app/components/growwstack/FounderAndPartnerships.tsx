@@ -1,4 +1,5 @@
 import { ResultsSection } from "./GrowthAndResults";
+import { coreTeam } from "../../../content/company";
 
 const founderExperience = [
   {
@@ -65,7 +66,7 @@ const activePartnerships = [
     ],
   },
   {
-    sector: "Sports equipment",
+    sector: "Sports equipment · Camstar Sports",
     link: caseStudyLink("ecommerce-sports-equipment"),
     mandate: "End-to-end e-commerce growth",
     summary: "For a sports-equipment partner: product discovery, checkout, customer conversations and fulfilment in one system.",
@@ -98,7 +99,7 @@ const activePartnerships = [
     systems: newPartnerSystems,
   },
   {
-    sector: "Fitness equipment",
+    sector: "Fitness equipment · Viva Fitness",
     link: null,
     mandate: "Digital growth for a ₹350 Cr+ gym brand",
     summary: "For a ₹350 Cr+ fitness-equipment brand: SaaS products, e-commerce, search and the sales systems that connect them.",
@@ -115,12 +116,17 @@ export function FounderSection() {
     >
       <div className="gs-shell">
         <header className="gs-section__header gs-founder__header">
-          <p className="gs-eyebrow">Founder-led execution</p>
+          <p className="gs-eyebrow">About GrowwStack · Pune, India</p>
           <h2 className="gs-section__title" id="gs-founder-title">
             Engineering depth. <span>Commercial focus.</span>
           </h2>
         </header>
 
+        <p className="gs-about-intro">We build and operate websites, organic acquisition and sales systems for Indian brands. A small core team, with direct founder involvement.</p>
+        <section className="gs-team" aria-labelledby="gs-team-title">
+          <h2 id="gs-team-title">Meet the core team.</h2>
+          <div className="gs-team__grid">{coreTeam.map(person => <article key={person.name}><h3>{person.name}</h3><p>{person.detail}</p></article>)}</div>
+        </section>
         <div className="gs-founder__layout">
           <article className="gs-founder__profile">
             <header className="gs-founder__identity">
@@ -187,7 +193,7 @@ export function PartnershipsSection() {
         <header className="gs-section__header gs-partnerships__header">
           <p className="gs-eyebrow">Active partnerships</p>
           <h2 className="gs-section__title" id="gs-partnerships-title">
-            Five industries. <span>Growth in operation.</span>
+            Camstar Sports. Viva Fitness. Furtopia.<span> And many more.</span>
           </h2>
         </header>
 
