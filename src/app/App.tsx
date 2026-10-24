@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router";
 import { PageIntro } from "./components/growwstack/PageIntro";
+import { SearchServices } from "./components/growwstack/SearchServices";
 import { MinimalHome } from "./components/growwstack/MinimalHome";
 import { FounderSection } from "./components/growwstack/FounderAndPartnerships";
 import { WorkSection } from "./components/growwstack/WorkSection";
@@ -71,7 +72,7 @@ export default function App() {
       <SiteNav />
       <main id="main-content">
         <PageIntro pathname={pathname} />
-        {pathname === "/services" ? <GrowthStackSection /> :
+        {pathname === "/services" ? <><GrowthStackSection /><SearchServices /></> :
          pathname === "/work" ? <WorkSection /> :
          pathname === "/about" ? <FounderSection /> :
          pathname === "/partnership" ? <><FreeBuildOffer /><PartnershipProcessSection /><WebsiteBuildSection /><ApplicationSection /></> :
@@ -83,4 +84,3 @@ export default function App() {
     </div>
   );
 }
-

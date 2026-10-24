@@ -2,7 +2,7 @@
   "slug": "free-website-revenue-share-india",
   "category": "Model",
   "publishedAt": "2026-09-12",
-  "updatedAt": "2026-10-23",
+  "updatedAt": "2026-10-24",
   "readingTime": "8 min read",
   "metaTitle": "We Build Websites Free for Good Products. Here Is the Catch, in Full.",
   "metaDescription": "A free custom website in exchange for a share of the growth it produces. What qualifies, what we take, who owns what, and the businesses we turn down.",
@@ -88,8 +88,18 @@
         "The fastest route is to tell us what the business does, roughly what it earns now, and what you think is blocking it. If it is not a fit we will say so directly rather than running you through a process.",
         "We take a limited number of these at a time, which is a constraint on us rather than a sales tactic — each one is an ongoing operating commitment, not a delivery."
       ]
+    },
+    {
+      "heading": "Is a no-upfront website the same as free SEO?",
+      "paragraphs": [
+        "No. A website build, ongoing search work and a growth partnership have different scopes. No upfront agency fee does not establish that every technology expense, third-party service or business operating cost is included. Agree the scope and responsibilities before deciding whether an offer is affordable.",
+        "GrowwStack evaluates selected businesses for a revenue-share engagement. Businesses looking for pay-after-work website development should clarify whether payment follows delivery or an agreed commercial outcome. The [partnership guide](/blog/performance-based-marketing-agency-india) explains the distinction."
+      ]
     }
   ],
   "takeaway": "We build free and take a share of measurable growth above an agreed baseline, for a defined term, with you owning everything throughout. It works when there is existing demand, margin to share and capacity to deliver — and we turn down everything else. [Tell us about the business](/#build) and we will say honestly whether it fits.",
-  "related": ["website-cost-india", "website-builder-vs-custom-code"]
+  "related": [
+    "website-cost-india",
+    "website-builder-vs-custom-code"
+  ]
 }

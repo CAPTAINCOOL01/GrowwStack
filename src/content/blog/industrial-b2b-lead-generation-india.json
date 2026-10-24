@@ -2,14 +2,14 @@
   "slug": "industrial-b2b-lead-generation-india",
   "category": "B2B",
   "publishedAt": "2026-09-12",
-  "updatedAt": "2026-09-24",
+  "updatedAt": "2026-10-24",
   "readingTime": "9 min read",
-  "metaTitle": "Lead Generation for Industrial and Deep-Tech B2B Companies in India",
-  "metaDescription": "Industrial B2B sites fail for reasons consumer marketing advice never addresses. The buyer is a specifying engineer, and lead counts actively mislead.",
+  "metaTitle": "Manufacturing SEO & Industrial B2B Lead Generation in India",
+  "metaDescription": "Turn manufacturer website searches into useful RFQs with technical product content, buyer intent, enquiry qualification and sales follow-up.",
   "title": "Lead generation for industrial and deep-tech B2B in India",
   "excerpt": "Your buyer is an engineer writing a specification. Most marketing advice is written for a consumer making an impulse decision, and it makes industrial sites worse.",
   "intro": [
-    "Almost all marketing advice assumes a consumer making a relatively fast decision alone. Industrial and deep-technology B2B breaks every one of those assumptions, and applying consumer tactics to it produces websites that are worse at their job than the PDF catalogue they replaced.",
+    "Manufacturing SEO should connect product and capability searches to useful requests for quotation. Industrial B2B lead generation also needs accurate specifications, a clear enquiry route and a sales team that can qualify and follow up. Traffic alone does not establish a useful pipeline.",
     "The buyer is frequently an engineer writing a specification. The cycle runs for months. Several people must agree. And the metric everyone reports — lead count — is close to useless."
   ],
   "sections": [
@@ -82,8 +82,19 @@
         "In our [refrigeration and deep-technology partnership](/case-studies/deep-tech-b2b-expansion), the engineering was strong and the public explanation of it assumed the reader already understood the field. The work was positioning and infrastructure: rewriting the product story so commercial value is legible before the technical detail arrives without diluting the engineering, building a site serving both the specifying engineer and the approving manager, and putting B2B lead generation and business-development tracking behind it.",
         "GrowwStack runs the systems, AI agents and search work (SEO, GEO and AEO) behind it. Our founder's background is in this sector — product development and thermal systems work at Ecozen Solutions and refrigeration at Dover Corporation — which is why we take this category at all."
       ]
+    },
+    {
+      "heading": "Choosing a manufacturing SEO agency or lead-generation partner",
+      "paragraphs": [
+        "Ask the supplier which product families, applications and buyer countries it would prioritize, and what evidence supports that choice. Then ask who will verify technical content, route enquiries and report qualified RFQs. An engineering-company SEO project should not begin with a generic list of consumer keywords.",
+        "If you currently depend on IndiaMART or another lead portal, evaluate an owned website as another acquisition route rather than assuming it can immediately replace the portal. Compare actual lead quality, acquisition cost, response time and eventual orders across channels. Use the [export enquiry system guide](/blog/industrial-exporter-enquiry-system-india) when overseas qualification and follow-up are part of the requirement."
+      ]
     }
   ],
-  "takeaway": "Publish the specifications as web pages, write for the engineer and the approver on the same page, ask four fields rather than twenty, and track stage progression rather than lead count. In a six-month cycle, the deals you lose are lost to silence, so the CRM matters more than the campaign.",
-  "related": ["structured-data-for-business-websites", "website-lead-generation-system"]
+  "takeaway": "Publish the specifications as web pages, write for the engineer and the approver on the same page, ask four fields rather than twenty, and track stage progression rather than lead count. In a six-month cycle, the deals you lose are lost to silence, so the CRM matters more than the campaign. For export enquiries, use the [industrial exporter enquiry checklist](/blog/industrial-exporter-enquiry-system-india) to connect product information with the sales handoff.",
+  "related": [
+    "manufacturer-product-page-rfq-checklist",
+    "industrial-exporter-enquiry-system-india",
+    "crm-and-follow-up-systems"
+  ]
 }

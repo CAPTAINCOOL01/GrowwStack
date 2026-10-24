@@ -73,7 +73,8 @@
   "takeaway": "Agree the eligible revenue, baseline, source records and adjustment rules before applying a percentage. Use analytics to guide decisions and a reconciled business record for the agreed financial calculation.",
   "related": [
     "performance-based-marketing-agency-india",
-    "marketing-retainer-vs-revenue-share-cost"
+    "marketing-retainer-vs-revenue-share-cost",
+    "questions-to-ask-marketing-agency-india"
   ],
   "sources": [
     {
@@ -84,5 +85,6 @@
       "title": "Google Analytics: Ecommerce measurement",
       "url": "https://developers.google.com/analytics/devguides/collection/ga4/ecommerce"
     }
-  ]
+  ],
+  "updatedAt": "2026-10-24"
 }

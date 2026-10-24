@@ -74,6 +74,13 @@
         "Fix access problems and factual errors first. Next improve the pages already earning relevant impressions, adding useful detail or evidence where the current answer is weak. Publish a new page when it addresses a distinct customer question that the existing site does not answer.",
         "Use [structured data](/blog/structured-data-for-business-websites) to describe what is genuinely on the page, and connect content to a working [lead-generation system](/blog/website-lead-generation-system). Measure qualified enquiries alongside search visibility before scaling content production."
       ]
+    },
+    {
+      "heading": "What should an Indian business buy from a GEO agency?",
+      "paragraphs": [
+        "Ask for a defined buyer-question panel, a dated visibility baseline, page-level recommendations and a method for tracking citations and referral activity. For a manufacturer, questions should reflect products, applications and supplier evaluation. For a D2C business, they should reflect product suitability and buying decisions.",
+        "GEO agency, AI SEO and LLM SEO are overlapping market labels, not separate guarantees. Evaluate the actual deliverables and evidence. Google states that its AI features use the same foundational SEO practices and do not require special optimization. There is no Google requirement to add a special LLM tag or llms.txt file."
+      ]
     }
   ],
   "takeaway": "Make the business easy to understand and its claims easy to verify. Track Google AI impressions, identifiable assistant visits and confirmed enquiries separately, and use the evidence to choose the next improvement.",
@@ -81,7 +88,7 @@
     "answer-engine-optimization-aeo",
     "structured-data-for-business-websites"
   ],
-  "updatedAt": "2026-10-23",
+  "updatedAt": "2026-10-24",
   "sources": [
     {
       "title": "Google Search Central: AI features and your website",

@@ -3,13 +3,13 @@
   "category": "AEO",
   "publishedAt": "2026-08-31",
   "readingTime": "6 min read",
-  "metaTitle": "Answer Engine Optimization (AEO): Winning the Zero-Click Result",
-  "metaDescription": "More searches end without a click. AEO is about being the answer shown rather than a link below it — and about making that worth something commercially.",
-  "title": "Answer Engine Optimization: winning the zero-click result",
-  "excerpt": "A large share of searches now end without anyone visiting a website. That is a problem and an opportunity, depending on how you treat it.",
+  "metaTitle": "AEO for Business Websites: Buyer Questions, Answers & Measurement",
+  "metaDescription": "Understand answer engine optimization and how to evaluate an AEO agency: useful answers, credible evidence, crawlable links and honest measurement.",
+  "title": "AEO for business websites: answer buyer questions clearly",
+  "excerpt": "Choose commercially relevant buyer questions, answer them directly and measure the outcome without promising a search placement.",
   "intro": [
-    "A significant and growing share of searches end without a click. The user asks, the engine answers on the results page, and nobody visits a website.",
-    "Answer Engine Optimization is about being the source of that answer. It is closely related to GEO but not identical: AEO is largely about featured snippets, knowledge panels and voice results within conventional search, where the mechanics are better understood."
+    "Answer engine optimization, or AEO, is a practical way to organize useful answers to buyer questions so people and retrieval systems can understand them. Service providers use the term in different ways; ask which search or AI experience they mean and how they measure it.",
+    "For a business website, begin with clear answers, readable evidence and crawlable links. AEO, GEO and SEO overlap. Google’s AI-feature guidance does not require a separate optimization system or special markup. Visibility and inclusion cannot be guaranteed."
   ],
   "sections": [
     {
@@ -23,16 +23,15 @@
     {
       "heading": "Answer the question in the first two sentences",
       "paragraphs": [
-        "Snippet extraction favours a direct answer placed immediately after a heading that matches the question.",
-        "Most business writing does the opposite. It sets context, establishes credibility, and arrives at the answer in paragraph four. That structure loses the snippet to a competitor who simply said the thing.",
-        "State the answer plainly, then earn the reader's attention with the explanation underneath. This is better writing regardless of search."
+        "Put a useful direct answer close to the heading, then explain the conditions and evidence. This helps a reader understand the page without searching through introductory copy.",
+        "Use this as a writing practice, not a guarantee that an engine will extract the passage. If the answer depends on the product, market or contract terms, explain those limits immediately."
       ]
     },
     {
       "heading": "Match the question's actual phrasing",
       "paragraphs": [
-        "People ask questions in natural language, particularly by voice. \"How much should a website cost\" is a query. \"Web Development Pricing Structures\" is a heading nobody searches.",
-        "Use headings that mirror the question as it is spoken. Then answer it directly underneath. The gap between how businesses phrase headings and how customers phrase questions is one of the largest and cheapest wins available on most sites."
+        "Use the vocabulary your buyers use in enquiries, sales conversations and observed search queries. Keep an evidence label for phrases proposed by the editorial team but not yet observed.",
+        "A clear question heading can help when the page answers that question. Do not force every heading into a keyword variant or imply that a synonym has verified search demand."
       ],
       "list": [
         "Write headings as questions where a question is what people ask",
@@ -44,34 +43,49 @@
     {
       "heading": "Format for the answer type",
       "paragraphs": [
-        "Different questions produce different snippet formats, and matching the format improves your odds considerably.",
-        "A \"how to\" question tends to produce a numbered list. A \"what is\" question produces a paragraph. A \"best\" or comparison question often produces a table. Writing a wall of prose for a question that wants a list gives the engine nothing convenient to extract."
+        "Choose the format that makes the answer easiest to use: steps for a process, a table for a genuine comparison, and a paragraph for a short explanation.",
+        "The format should follow the information. Adding lists or tables does not establish eligibility for a particular search display."
       ]
     },
     {
       "heading": "Structured data for the questions you answer",
       "paragraphs": [
-        "FAQ and HowTo markup make the question-and-answer relationship explicit rather than inferred. Support for rich display of these has fluctuated over the years, so treat them as clarity rather than as a guaranteed visual result.",
-        "The important part is honesty: mark up questions you genuinely answer on the page. Marking up questions you do not answer is the kind of thing that gets manual actions, and it is not worth the risk."
+        "Use supported structured data that describes the visible content. Article and breadcrumb information can describe an editorial guide; service information can describe an actual service.",
+        "Question headings and visible answers are useful without adding FAQ or HowTo markup everywhere. Verify current platform support before adding a schema type, and never promise a rich result or AI citation from markup."
       ]
     },
     {
       "heading": "Choose questions with commercial gravity",
       "paragraphs": [
-        "This is the part most AEO advice skips. Winning the answer to \"what is a CRM\" produces nothing. The answer is complete, the reader leaves satisfied, and there is no next step.",
-        "Winning \"why is my website not generating leads\" is different. The answer is genuinely useful, and it also reveals a problem the reader now knows they have. That is a question worth being the authority on.",
-        "Pick questions where being right in public makes the reader want the person who was right."
+        "Prioritize questions whose answers help a buyer decide what to do next, such as why a website gets visits but no relevant enquiries. Broader definitions may still be useful, but their commercial role should be clear.",
+        "Measure the next steps separately: being cited, receiving a visit, saving an enquiry and qualifying an opportunity are different outcomes."
       ]
     },
     {
       "heading": "How AEO and GEO differ in practice",
       "paragraphs": [
-        "Both reward direct answers and clear structure. The difference is mostly scope and measurability.",
-        "AEO concerns conventional search surfaces where you can see results and measure impressions in Search Console. GEO concerns assistant answers, where measurement is manual and the mechanisms are less understood.",
-        "The practical consequence is that the same content work serves both. Write to answer questions precisely, structure it so the answer is extractable, and you are optimising for both surfaces without doing the work twice."
+        "These labels overlap and are used differently by providers. AEO often emphasizes question-and-answer content; GEO often emphasizes how a business is represented in generated answers. Ask which platform and measurement method a supplier means.",
+        "The same accurate, accessible page can support both. Review evidence and referrals over a defined question set rather than assuming one mention means a universal ranking."
+      ]
+    },
+    {
+      "heading": "Questions to ask before hiring an AEO agency",
+      "paragraphs": [
+        "Which buyer questions are in scope? Which existing pages should answer them? What facts need review by our product or sales team? How will we distinguish citations, referred visits and qualified enquiries? These questions are more useful than asking how many keyword variations will be inserted.",
+        "Keep answers visible in the page and make structured data agree with that content. Use the [GEO measurement guide](/blog/generative-engine-optimization-geo) for AI visibility and the [lead-tracking guide](/blog/ga4-lead-generation-tracking) for the commercial handoff."
       ]
     }
   ],
   "takeaway": "AEO is answering the question directly, in the format the question implies, using the words people actually say. Choose questions where being the authority creates demand rather than satisfying it completely.",
-  "related": ["generative-engine-optimization-geo", "why-your-website-gets-no-traffic"]
+  "related": [
+    "generative-engine-optimization-geo",
+    "why-your-website-gets-no-traffic"
+  ],
+  "updatedAt": "2026-10-24",
+  "sources": [
+    {
+      "title": "Google Search Central: AI features and your website",
+      "url": "https://developers.google.com/search/docs/appearance/ai-features"
+    }
+  ]
 }

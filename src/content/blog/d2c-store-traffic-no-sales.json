@@ -75,14 +75,22 @@
         "At low traffic levels, automated split tests may not produce a clear answer quickly. Combine direct usability checks with a longer observation window and describe uncertainty. Avoid attributing all movement to a redesign when promotions, stock or campaign targeting also changed.",
         "In our [sports-equipment partnership](/case-studies/ecommerce-sports-equipment), the published outcome is e-commerce revenue growth from ₹0 to over ₹2.2 crore (the first ₹1.5 crore in 110 days), purely organic with no paid ads, across a wider programme of storefront, customer conversation and operational work. That outcome is context for the work, not a controlled estimate of the effect of any one fix."
       ]
+    },
+    {
+      "heading": "When should a D2C brand hire an organic growth agency?",
+      "paragraphs": [
+        "Consider outside help when the brand has a product customers already buy, fulfilment capacity and a clear acquisition or conversion problem the team cannot resolve alone. An ecommerce SEO partner should distinguish low relevant demand from a broken purchase path and explain which pages need attention.",
+        "If discussing revenue share, agree the baseline, returns, assisted sales and channel attribution. Do not assume that every new order was caused by SEO. Review the [agency payment-model comparison](/blog/marketing-retainer-vs-revenue-share-cost) before choosing a compensation model."
+      ]
     }
   ],
   "takeaway": "Verify the order and analytics data, compare relevant buyer groups, then investigate the funnel stages with evidence of friction. Prioritize confirmed defects and useful product information before increasing acquisition spend.",
   "related": [
-    "website-lead-generation-system",
-    "core-web-vitals-explained"
+    "d2c-seo-product-prioritization",
+    "whatsapp-abandoned-checkout-recovery-india",
+    "marketing-retainer-vs-revenue-share-cost"
   ],
-  "updatedAt": "2026-10-23",
+  "updatedAt": "2026-10-24",
   "sources": [
     {
       "title": "Google Analytics: Measure ecommerce events",

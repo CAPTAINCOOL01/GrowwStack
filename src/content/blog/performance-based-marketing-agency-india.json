@@ -2,14 +2,14 @@
   "slug": "performance-based-marketing-agency-india",
   "category": "Model",
   "publishedAt": "2026-09-12",
-  "updatedAt": "2026-10-23",
+  "updatedAt": "2026-10-24",
   "readingTime": "10 min read",
-  "metaTitle": "Performance-Based Marketing in India: How Revenue Share Works",
-  "metaDescription": "How revenue-share marketing works in India: baselines, audits, term and fit. One e-commerce partner's online revenue grew from ₹0 to ₹2.2 Cr+ with no paid ads.",
+  "metaTitle": "Revenue-Share Marketing Agency India: How the Model Works",
+  "metaDescription": "Compare revenue-share growth partnerships with pay-for-performance SEO and paid-ad retainers. Check business fit, attribution and payment terms before choosing.",
   "title": "How a revenue-share marketing partnership actually works",
   "excerpt": "Performance-based pricing is not the same as performance marketing. Here are the mechanics that decide whether the label means anything.",
   "intro": [
-    "In India, performance marketing usually means running paid ads, and the agency is typically paid a monthly retainer, sometimes plus a percentage of ad spend. Neither payment depends on whether your revenue grows.",
+    "A revenue-share marketing partnership pays the agency from an agreed measure of business growth. That is different from pay-after-results SEO billed against rankings, a fee for each qualified lead, or a fixed monthly retainer. Agree what counts as a result before comparing offers.",
     "The label is close to meaningless on its own. What matters is the mechanics underneath it: what counts as growth, who measures it, what the baseline is, and what happens when the two of you disagree. This is how we structure it, including the parts that are uncomfortable to publish."
   ],
   "sections": [
@@ -96,14 +96,25 @@
         "That is five businesses, not a portfolio of hundreds, and it is worth reading it that way. The [sports-equipment partnership](/case-studies/ecommerce-sports-equipment) grew e-commerce revenue from ₹0 to over ₹2.2 crore (the first ₹1.5 crore in 110 days) with no paid ads, which is the clearest single illustration of how the model pays for itself when it works.",
         "We publish those numbers because the alternative — claiming an average return across clients we will not name — is exactly the unfalsifiable marketing this post is arguing against."
       ]
+    },
+    {
+      "heading": "Does pay after work mean the same thing as pay after results?",
+      "paragraphs": [
+        "No. Pay after work normally describes when an invoice is due after a deliverable. Pay after results describes an outcome that must be defined, such as an agreed ranking measure, accepted enquiry or attributable revenue. A later invoice alone does not make a service performance-based.",
+        "GrowwStack’s selective partnership model is based on measurable growth under agreed terms. It is not an open promise to work free until any keyword reaches first place. Compare the [retainer and revenue-share calculations](/blog/marketing-retainer-vs-revenue-share-cost) and agree the [attribution rules](/blog/revenue-share-marketing-attribution-checklist) before starting."
+      ]
     }
   ],
-  "takeaway": "Performance-based only means something if the baseline is written down first, attribution rules are agreed in advance, the numbers come from systems you own, the share is set against your margin, and the term ends. Ask any supplier using the label to answer those five things in writing. See [how we structure it](/#offer).",
+  "takeaway": "Performance-based only means something if the baseline is written down first, attribution rules are agreed in advance, the numbers come from systems you own, the share is set against your margin, and the term ends. Ask any supplier using the label to answer those five things in writing. See [how we structure it](/#offer). Compare [retainer and revenue-share costs](/blog/marketing-retainer-vs-revenue-share-cost), then work through the [attribution checklist](/blog/revenue-share-marketing-attribution-checklist) before discussing a partnership.",
   "sources": [
     {
       "title": "Google Analytics: Get started with attribution",
       "url": "https://support.google.com/analytics/answer/10596866"
     }
   ],
-  "related": ["website-cost-india", "marketing-retainer-vs-revenue-share-cost", "revenue-share-marketing-attribution-checklist"]
+  "related": [
+    "pay-after-results-seo-india",
+    "marketing-retainer-vs-revenue-share-cost",
+    "revenue-share-marketing-attribution-checklist"
+  ]
 }

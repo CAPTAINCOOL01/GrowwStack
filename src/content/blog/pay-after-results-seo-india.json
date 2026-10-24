@@ -1,0 +1,101 @@
+{
+  "slug": "pay-after-results-seo-india",
+  "category": "Agency selection",
+  "publishedAt": "2026-10-24",
+  "readingTime": "7 min read",
+  "metaTitle": "Pay After Results SEO in India: What Should You Agree?",
+  "metaDescription": "Compare pay-after-ranking SEO, pay-per-lead fees and revenue-share growth. Define results, scope and measurement before choosing an agency in India.",
+  "title": "Pay after results SEO in India: what exactly are you paying for?",
+  "excerpt": "Ranking fees, qualified-lead fees and revenue share solve different problems. Compare the outcome, scope and measurement before the headline offer.",
+  "intro": [
+    "Pay-after-results SEO means that an agreed result affects when or how the supplier is paid. The phrase alone does not define that result. An agency may mean keyword positions, a volume of accepted leads or an agreed share of attributable growth. Ask for the definition before comparing prices.",
+    "For an Indian manufacturer or established D2C business, the useful question is whether the work creates a measurable path to commercially relevant enquiries or orders. A deferred invoice can still pay for work that has little connection to your buyers."
+  ],
+  "sections": [
+    {
+      "heading": "Pay after work, pay after rankings and revenue share are different",
+      "paragraphs": [
+        "Pay after work describes a delivery and invoicing arrangement: a website or defined project is completed before payment is due. It does not necessarily make the invoice conditional on traffic or sales.",
+        "Pay after rankings ties some payment to a search-position measure. Pay per lead uses an agreed enquiry definition. Revenue share uses a defined revenue base. A hybrid may combine fixed and variable charges. None of these labels removes the need to understand costs, ownership, scope and termination.",
+        "If an agency calls itself performance-based, ask which of those units it uses and why that unit matches your business. A manufacturer quoting complex machinery and a store selling an available product may need different qualification and attribution rules."
+      ]
+    },
+    {
+      "heading": "What counts as an SEO result?",
+      "paragraphs": [
+        "A keyword position is a visibility measure, not a sale. It depends on the query, location, device, search result and observation method. Search Console reports average position across recorded impressions; it is not a promise that every person sees your page at that position.",
+        "An agency can report a strong movement for a phrase that almost none of your buyers use. Conversely, a specific product enquiry from a low-volume query may be commercially useful. Review the proposed keyword cohort and the buyer intent behind it before linking fees to a position target."
+      ],
+      "list": [
+        "Define the exact queries and target countries or service areas.",
+        "Separate branded searches from discovery searches.",
+        "Agree how position, traffic, enquiries and orders will be recorded.",
+        "Keep counts beside rates and identify small samples.",
+        "Document what happens when the search result or measurement method changes."
+      ]
+    },
+    {
+      "heading": "For manufacturers, define a useful RFQ",
+      "paragraphs": [
+        "A contact record is not automatically a qualified request for quotation. Define the relevant product or capability, serviceable location and minimum information needed for sales to assess the enquiry. Agree how duplicates, suppliers pitching to you and unrelated requests are handled.",
+        "The website also needs accurate technical product information and a working handoff. If the enquiry is captured but never assigned, more rankings may only add more unanswered requests. The [manufacturing lead-generation guide](/blog/industrial-b2b-lead-generation-india) explains that connection."
+      ]
+    },
+    {
+      "heading": "For D2C brands, agree which revenue is attributable",
+      "paragraphs": [
+        "Define the baseline, channel scope and treatment of returns, cancellations, repeat purchases and assisted sales. Revenue and profit are different measures. A fee that appears affordable on sales can be difficult to sustain after fulfilment and returns.",
+        "Keep the underlying records in business-owned systems. Analytics can help investigate acquisition paths, but it is not a substitute for an agreed order and revenue definition. Use the [revenue-share attribution checklist](/blog/revenue-share-marketing-attribution-checklist) before discussing a share."
+      ]
+    },
+    {
+      "heading": "Does pay after results include SEO, AEO and GEO?",
+      "paragraphs": [
+        "Only if the agreed scope says so. Some providers use AEO for answer-focused content and GEO or LLM SEO for visibility in AI-generated responses. Ask which pages, question set, technical work and measurement are included rather than treating each acronym as another guaranteed placement.",
+        "For Google’s AI features, the official guidance says foundational SEO practices remain relevant and no special optimization is required. Useful content, crawl access, internal discovery and credible evidence still matter. A special LLM tag or an llms.txt file does not establish that the page will be cited."
+      ]
+    },
+    {
+      "heading": "Questions to put in the proposal review",
+      "paragraphs": [
+        "Request a concrete work plan that names the initial pages, who verifies their facts and how changes are reviewed. Ask to see the measurement process before you depend on it. Google’s hiring guidance is a useful independent starting point for assessing an SEO supplier.",
+        "Compare scope and ownership alongside the compensation model. Do not choose a supplier because a ranking guarantee sounds more certain than a careful explanation of the work."
+      ],
+      "list": [
+        "What specific outcome triggers payment, and where can we verify it?",
+        "Which setup, tools, hosting and content costs are included or separate?",
+        "Who owns the domain, website, accounts, content and collected enquiries?",
+        "How are rejected leads, returns and disputed attribution handled?",
+        "What work continues after a visibility milestone is reached?",
+        "What are the review, change-control and exit arrangements?"
+      ]
+    },
+    {
+      "heading": "How GrowwStack approaches this decision",
+      "paragraphs": [
+        "GrowwStack evaluates selected businesses for a growth partnership connecting websites, organic acquisition, CRM and sales operations. The proposed scope and revenue-share terms depend on business evaluation and mutual agreement. This is not a universal pay-per-ranking package or a guarantee of a particular search position.",
+        "If the business needs a defined project, compare that requirement with a project proposal rather than forcing it into revenue share. If it needs ongoing commercial growth, begin with product fit, delivery capacity and measurement. The [partnership explanation](/blog/performance-based-marketing-agency-india) and [cost comparison](/blog/marketing-retainer-vs-revenue-share-cost) help frame that discussion."
+      ]
+    }
+  ],
+  "takeaway": "Ask what the word result means, who measures it and whether it maps to a business outcome you value. Then compare scope, commercial fit and ownership. Describe your business and current acquisition problem through [GrowwStack’s contact page](/contact).",
+  "sources": [
+    {
+      "title": "Google Search Central: Do you need an SEO?",
+      "url": "https://developers.google.com/search/docs/fundamentals/do-i-need-seo"
+    },
+    {
+      "title": "Google Search Central: AI features and your website",
+      "url": "https://developers.google.com/search/docs/appearance/ai-features"
+    },
+    {
+      "title": "Search Console: Performance report",
+      "url": "https://support.google.com/webmasters/answer/7576553"
+    }
+  ],
+  "related": [
+    "performance-based-marketing-agency-india",
+    "marketing-retainer-vs-revenue-share-cost",
+    "revenue-share-marketing-attribution-checklist"
+  ]
+}

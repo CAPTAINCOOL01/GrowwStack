@@ -3,8 +3,8 @@
   "category": "Pricing",
   "publishedAt": "2026-09-12",
   "readingTime": "8 min read",
-  "metaTitle": "Retainer vs Revenue Share: What Each Costs You Over Twelve Months",
-  "metaDescription": "Work both structures out against your own revenue and margin. Revenue share is not always cheaper — here is the crossover point and how to find yours.",
+  "metaTitle": "SEO Retainer vs Revenue Share: Compare Agency Payment Models",
+  "metaDescription": "Compare a fixed agency retainer, pay-per-result fees and revenue share against your own margin, baseline and agreed scope. No invented market-price benchmark.",
   "title": "Retainer vs revenue share: what each actually costs over a year",
   "excerpt": "Revenue share is not automatically cheaper. Work it out against your own numbers, including the case where it costs you considerably more.",
   "intro": [
@@ -78,8 +78,20 @@
         "Under a retainer the answer has to be professionalism, which is real but unsupported by the commercial structure. Under revenue share it is that they only earn if the number keeps moving.",
         "Neither is automatically correct. Knowing which one you are buying is what matters. We set out the mechanics of how we structure the share — baseline, attribution, term and exit — in [how a revenue-share partnership actually works](/blog/performance-based-marketing-agency-india)."
       ]
+    },
+    {
+      "heading": "Where pay-per-ranking and pay-per-lead offers fit",
+      "paragraphs": [
+        "A ranking-based fee charges for an agreed visibility measure. A pay-per-lead fee charges for an accepted enquiry under a written definition. Revenue share charges against the agreed revenue scope. These are different units, so a lower headline fee is not a comparable price until you know what is included.",
+        "Ask whether setup, tools, hosting, advertising, content and ongoing maintenance are included. For leads, define duplicates, serviceable geography, product fit, rejected contacts and disputes. For organic growth, separate a contact click from an enquiry and a won order. This guide’s numerical comparison remains a scenario using your own inputs, not a quoted market rate."
+      ]
     }
   ],
   "takeaway": "Divide the annual retainer by the revenue-share percentage to find your crossover point. Below it revenue share is cheaper; above it the retainer wins. If the work succeeds dramatically, revenue share costs you more — that is the trade for paying nothing when it does not.",
-  "related": ["website-cost-india", "performance-based-marketing-agency-india", "revenue-share-marketing-attribution-checklist"]
+  "related": [
+    "website-cost-india",
+    "performance-based-marketing-agency-india",
+    "revenue-share-marketing-attribution-checklist"
+  ],
+  "updatedAt": "2026-10-24"
 }

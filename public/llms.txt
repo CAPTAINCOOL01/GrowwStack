@@ -1,0 +1,38 @@
+# GrowwStack
+
+> GrowwStack is a founder-led growth partner for Indian businesses, connecting websites, customer acquisition, CRM, automation and sales systems.
+
+Some businesses may qualify for a revenue-share partnership after evaluation. Terms and scope are agreed individually. The website is the source of current service and partnership details. This optional discovery file is not an indexing instruction or a guarantee of AI citations.
+
+## Company and contact
+- [GrowwStack](https://growwstack.in/): Services, founder background, partnership process and contact options.
+- [Business growth articles](https://growwstack.in/blog): Practical guidance on websites, acquisition, measurement and revenue operations.
+
+## Partnership and measurement
+- [How a revenue-share marketing partnership works](https://growwstack.in/blog/performance-based-marketing-agency-india): Business fit, baseline and measurement considerations.
+- [Revenue-share attribution checklist](https://growwstack.in/blog/revenue-share-marketing-attribution-checklist): Agree attribution and revenue scope before starting.
+- [GA4 lead tracking](https://growwstack.in/blog/ga4-lead-generation-tracking): Distinguish contact clicks, saved enquiries and qualified opportunities.
+
+## Business problems
+- [Industrial B2B lead generation](https://growwstack.in/blog/industrial-b2b-lead-generation-india): Product information, enquiry paths and follow-up.
+- [D2C traffic without sales](https://growwstack.in/blog/d2c-store-traffic-no-sales): Diagnose acquisition, product-page and checkout friction.
+- [Website lead generation systems](https://growwstack.in/blog/website-lead-generation-system): Connect discovery, enquiries and sales operations.
+
+## Published work
+- [Sports-equipment e-commerce](https://growwstack.in/case-studies/ecommerce-sports-equipment)
+- [Healthcare clinic growth](https://growwstack.in/case-studies/healthcare-clinic-growth)
+- [Technical B2B expansion](https://growwstack.in/case-studies/deep-tech-b2b-expansion)
+
+## Search and answer engines
+- [Answer engine optimization](https://growwstack.in/blog/answer-engine-optimization-aeo)
+- [Generative engine optimization](https://growwstack.in/blog/generative-engine-optimization-geo)
+
+## Evaluating agency payment models
+- [Retainer versus revenue share](https://growwstack.in/blog/marketing-retainer-vs-revenue-share-cost): Compare fixed agency fees, pay-per-result units and a share of agreed growth.
+- [No-upfront website partnerships](https://growwstack.in/blog/free-website-revenue-share-india): Understand selective business fit and why no upfront agency fee does not mean every cost is included.
+- [Exporter enquiry systems](https://growwstack.in/blog/industrial-exporter-enquiry-system-india): Product requirements, buyer qualification and the sales handoff.
+
+## Focused buyer guides
+- [Pay-after-results SEO in India](https://growwstack.in/blog/pay-after-results-seo-india): Compare ranking-linked fees, qualified-lead fees and revenue share before choosing an agency.
+- [Manufacturer product pages and RFQs](https://growwstack.in/blog/manufacturer-product-page-rfq-checklist): Technical product information, quotation requirements and the sales handoff.
+- [D2C product-page SEO priorities](https://growwstack.in/blog/d2c-seo-product-prioritization): Choose an SEO pilot using observed demand, availability and conversion readiness.

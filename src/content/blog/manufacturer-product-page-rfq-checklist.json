@@ -1,0 +1,92 @@
+{
+  "slug": "manufacturer-product-page-rfq-checklist",
+  "category": "Manufacturing",
+  "publishedAt": "2026-10-24",
+  "readingTime": "6 min read",
+  "metaTitle": "Manufacturer Product Pages: A Checklist for Better RFQs",
+  "metaDescription": "Help industrial buyers send useful enquiries. Build product pages around specifications, application fit, commercial constraints and a clear RFQ handoff.",
+  "title": "What should a manufacturer put on a product page to get a useful RFQ?",
+  "excerpt": "A practical product-page brief for manufacturers who need relevant enquiries rather than another download of the company brochure.",
+  "intro": [
+    "A useful manufacturer product page helps a buyer answer three questions: can this product do the job, can this supplier serve my requirement, and what information is needed for a quotation? Put those answers beside a clear request-for-quotation path.",
+    "This checklist is an implementation framework, not a claim that adding fields will produce a particular conversion rate. Start with one commercially important product family, ask the sales team which enquiries are hardest to qualify, and improve that page before rewriting the whole catalogue."
+  ],
+  "sections": [
+    {
+      "heading": "Start with the buying application",
+      "paragraphs": [
+        "Name the product in the language a buyer uses, then describe its intended application. A machine sold under an internal model number also needs a plain description of its function. Explain the operating environment and the customer problem without substituting broad claims such as best quality for product information.",
+        "For a hypothetical cooling-equipment page, a buyer might need to understand intended storage conditions, usable capacity, power requirements and installation constraints. The actual specifications must come from the manufacturer. Do not copy numbers from a comparable machine or imply that every configuration shares the same performance."
+      ]
+    },
+    {
+      "heading": "Put comparable specifications in the page itself",
+      "paragraphs": [
+        "Keep essential specifications as readable HTML text or a table. Offer a PDF when useful, but do not make a brochure the only place to find product information. Google recommends making the same important content available on the mobile and desktop versions of a page.",
+        "Explain units, test conditions and configuration differences. If a specification depends on an optional component, state that dependency. A buyer should be able to distinguish a standard model from a customised version without calling the founder."
+      ],
+      "list": [
+        "Product and model identifiers, with a plain-language description.",
+        "Relevant dimensions, materials, operating requirements and capacity.",
+        "Configuration options and the limits of customisation.",
+        "Installation, maintenance and support scope that the supplier can substantiate.",
+        "Technical documents with a revision date and a named owner for updates."
+      ]
+    },
+    {
+      "heading": "Explain the commercial constraints before the form",
+      "paragraphs": [
+        "Clarify whether the supplier serves end users, distributors, OEMs or all three. State the actual serviceable geography, ordering constraints and quotation process where these are known. If pricing depends on configuration, explain what determines it rather than inventing a starting price.",
+        "Only publish delivery estimates, certifications, guarantees or support commitments after the responsible team has verified them. If lead times vary, describe the variables and make confirmation part of the quotation process."
+      ]
+    },
+    {
+      "heading": "Ask for the minimum information needed to route an enquiry",
+      "paragraphs": [
+        "Keep the first RFQ form short enough to complete on a phone. Capture the product context automatically where possible. Then ask for contact details and the few requirement fields the sales team genuinely needs, such as application, quantity and delivery location.",
+        "For a hypothetical industrial supplier, a free-text requirement field may be more useful than forcing every buyer through a long engineering questionnaire. Put optional detailed specifications in a second step or the follow-up conversation. Avoid asking the buyer to repeat the same product identifier in several places."
+      ],
+      "list": [
+        "Carry the originating product URL into the CRM record.",
+        "Show a clear success message only after the enquiry is saved.",
+        "Assign an enquiry owner and a follow-up due date.",
+        "Keep personal contact details out of analytics events.",
+        "Offer a working alternative contact path if the form fails."
+      ]
+    },
+    {
+      "heading": "Measure quality through the sales handoff",
+      "paragraphs": [
+        "Track saved enquiries separately from clicks on a phone or WhatsApp link. Google Analytics provides recommended lead-generation events, but the event name alone does not establish that an enquiry is commercially useful.",
+        "Review accepted RFQs with sales: correct product fit, serviceable location, understandable requirement and a reachable buyer. Compare like-for-like periods and check low sample sizes before crediting the page rewrite. Use the [GA4 enquiry-tracking guide](/blog/ga4-lead-generation-tracking) to define the distinction between contact intent and a saved lead."
+      ]
+    },
+    {
+      "heading": "Connect the page to the rest of the buying journey",
+      "paragraphs": [
+        "Link from the relevant category or application page using a descriptive product name. Link back to related configurations, suitable applications and evidence that helps a buyer make a decision. Google recommends crawlable links and descriptive anchor text; an image-only catalogue should not be the only route into a product page.",
+        "If your problem is broader than one page, use the [industrial B2B lead-generation guide](/blog/industrial-b2b-lead-generation-india) for the acquisition and follow-up system. The [technical B2B case study](/case-studies/deep-tech-b2b-expansion) gives context for GrowwStack’s published work without implying that every manufacturer will get the same outcome."
+      ]
+    }
+  ],
+  "takeaway": "Choose one priority product family, verify its specifications, make quotation requirements clear, and connect each saved RFQ to a sales owner. Discuss your catalogue and enquiry workflow through the [GrowwStack contact page](/contact).",
+  "sources": [
+    {
+      "title": "Google Search Central: Link best practices",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/links-crawlable"
+    },
+    {
+      "title": "Google Search Central: Mobile-first indexing",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/mobile/mobile-sites-mobile-first-indexing"
+    },
+    {
+      "title": "Google Analytics: Recommended events",
+      "url": "https://developers.google.com/analytics/devguides/collection/ga4/reference/events"
+    }
+  ],
+  "related": [
+    "industrial-b2b-lead-generation-india",
+    "industrial-exporter-enquiry-system-india",
+    "ga4-lead-generation-tracking"
+  ]
+}
