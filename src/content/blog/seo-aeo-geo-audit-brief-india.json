@@ -1,0 +1,92 @@
+{
+  "slug": "seo-aeo-geo-audit-brief-india",
+  "category": "Organic growth",
+  "publishedAt": "2026-10-24",
+  "readingTime": "7 min read",
+  "metaTitle": "SEO, AEO and GEO Audit Brief: What Should an Agency Deliver?",
+  "metaDescription": "Use a concrete audit brief to compare SEO, AEO and GEO proposals: evidence, page ownership, acceptance checks, costs and measurement.",
+  "title": "SEO, AEO and GEO Audit Brief: What Should an Agency Deliver?",
+  "excerpt": "Use a concrete audit brief to compare SEO, AEO and GEO proposals: evidence, page ownership, acceptance checks, costs and measurement.",
+  "intro": [
+    "A useful SEO, AEO or GEO audit should name the problem, show the evidence, identify the affected pages and explain how the fix will be checked. Ask an agency for that chain before comparing a page count or a promise of AI visibility. The same brief can help your internal team decide what to implement first.",
+    "This is a practical procurement and delivery worksheet for an Indian business. It is not a quotation, contract template or promise of a particular search result. GrowwStack offers selected businesses individually agreed growth work; the scope and commercial arrangement require evaluation."
+  ],
+  "sections": [
+    {
+      "heading": "Write the business problem in one paragraph",
+      "paragraphs": [
+        "State who you sell to, what you sell, where you can serve customers and what a useful enquiry or purchase looks like. Add the current constraint: no relevant discovery, weak enquiry quality, poor product information or unreliable follow-up. These problems need different work even when all are described as needing SEO.",
+        "For a hypothetical industrial supplier, the brief might ask for serviceable RFQs containing a product family and intended application. For a D2C store, it might ask for discovery of available categories with reliable order tracking. These are examples of scope, not target results or client outcomes."
+      ]
+    },
+    {
+      "heading": "Specify the baseline and access before the recommendations",
+      "paragraphs": [
+        "Request a business-owned Search Console property and analytics view with defined reporting windows. The supplier should record filters, countries, devices and data availability. Share the minimum authorized access needed for the work, rather than moving ownership of the domain or analytics account to the supplier.",
+        "Ask for a fixed cohort of relevant queries, page-level opportunities and separate brand/non-brand interpretation. Average position is not a fixed ranking. Missing query rows are not rank zero. An audit that reports only green percentage changes without counts and date ranges makes it difficult to assess progress."
+      ]
+    },
+    {
+      "heading": "Require a page-level issue register",
+      "paragraphs": [
+        "A useful row contains the affected URL, the observed issue, evidence date, business consequence, recommended change, dependency, owner and acceptance check. A statement such as improve technical SEO is too broad to assign or verify. A specific canonical mismatch or broken internal link is actionable when the evidence supports it.",
+        "Group issues into access/indexing, information quality, site navigation, performance and measurement. Keep verified defects separate from experiments. For example, a failed form save is a defect; testing a clearer page title is an optimization hypothesis. They should not receive the same confidence label or review process."
+      ]
+    },
+    {
+      "heading": "Make AEO and GEO deliverables inspectable",
+      "paragraphs": [
+        "Ask which buyer questions the work will answer and which pages will answer them. Require the factual reviewer, source requirements and publication checks. If the proposal includes AI visibility monitoring, define platforms, prompts, geography where observable, capture dates and the difference between a mention, a citation and a referred visit.",
+        "For Google AI features, the official guidance does not require special AI markup. That does not make content quality or technical access optional. Treat llms.txt as supplementary experimentation rather than a deliverable that establishes placement. The [AEO guide](/blog/answer-engine-optimization-aeo) and [GEO guide](/blog/generative-engine-optimization-geo) explain the boundaries."
+      ]
+    },
+    {
+      "heading": "Use acceptance checks instead of a blog quota",
+      "paragraphs": [
+        "An article is complete when the intended reader can use it, the facts are reviewed, the page is live and the technical checks pass. It is not complete merely because a document was written. Ask which existing page would be improved instead if a proposed topic duplicates its intent."
+      ],
+      "list": [
+        "Named primary intent and destination URL, checked against existing content.",
+        "Original useful answer with accurate claims and clear illustrative examples.",
+        "Descriptive metadata, appropriate canonical and accessible internal links.",
+        "Valid structured data matching visible content, where appropriate.",
+        "Rendered mobile review, working next step and live deployment evidence.",
+        "Sitemap/indexing status recorded without promising inclusion."
+      ]
+    },
+    {
+      "heading": "Compare scope, costs and ownership together",
+      "paragraphs": [
+        "Ask which work is included, what depends on your team and what is billed separately. A fixed retainer, deferred project payment and revenue share are different arrangements. A headline such as pay after results does not identify the payment trigger or define the underlying result.",
+        "Record content and account ownership, the review cadence and the handover process in the proposal discussion. Use the [SEO payment-model guide](/blog/pay-after-results-seo-india) to compare outcome definitions and the [retainer versus revenue-share comparison](/blog/marketing-retainer-vs-revenue-share-cost) to frame costs. Neither replaces review of your actual agreement."
+      ]
+    },
+    {
+      "heading": "Ask for a report that can show failure",
+      "paragraphs": [
+        "Require the same tracked cohort and comparable complete periods even when visibility declines. Show what shipped, what was verified live, what indexing state is actually known and what remains blocked. Keep enquiries and sales separate from search clicks. An honest report can say that work is complete but its effect cannot yet be measured.",
+        "Use a first pilot to test the working relationship: one bounded business problem, a small set of relevant pages and explicit checks. Review whether the supplier explains uncertainty and changes course when evidence disagrees. A proposal becomes useful when the business can tell what happened without relying on a ranking guarantee."
+      ]
+    }
+  ],
+  "related": [
+    "questions-to-ask-marketing-agency-india",
+    "pay-after-results-seo-india",
+    "generative-engine-optimization-geo"
+  ],
+  "sources": [
+    {
+      "title": "Google Search Central: Hiring an SEO",
+      "url": "https://developers.google.com/search/docs/fundamentals/do-i-need-seo"
+    },
+    {
+      "title": "Google Search Central: AI features and your website",
+      "url": "https://developers.google.com/search/docs/appearance/ai-features"
+    },
+    {
+      "title": "Search Console: Performance report",
+      "url": "https://support.google.com/webmasters/answer/7576553"
+    }
+  ],
+  "takeaway": "Use the worksheet with your own business facts and search data. For help connecting search visibility with qualified enquiries, [describe your business to GrowwStack](/contact)."
+}

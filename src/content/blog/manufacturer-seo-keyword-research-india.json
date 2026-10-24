@@ -1,0 +1,87 @@
+{
+  "slug": "manufacturer-seo-keyword-research-india",
+  "category": "Organic growth",
+  "publishedAt": "2026-10-24",
+  "readingTime": "7 min read",
+  "metaTitle": "SEO Keyword Research for Indian Manufacturers: A Practical Map",
+  "metaDescription": "Map industrial buyer searches to capability, product and application pages. Use an RFQ worksheet to choose useful manufacturing SEO topics.",
+  "title": "SEO Keyword Research for Indian Manufacturers: A Practical Map",
+  "excerpt": "Map industrial buyer searches to capability, product and application pages. Use an RFQ worksheet to choose useful manufacturing SEO topics.",
+  "intro": [
+    "For a manufacturer, keyword research should connect what the factory can supply with what a buyer needs to evaluate. Start with products, processes, materials and quotation requirements, then validate the language against real enquiries and Search Console. A long list of generic manufacturing phrases is not a search strategy.",
+    "This guide is a worksheet for an Indian manufacturer planning its own website. The industrial examples are hypothetical, not claims about GrowwStack clients or measured keyword volumes. A technical or sales owner must review every specification before it appears online."
+  ],
+  "sections": [
+    {
+      "heading": "Start with the buying job, not the agency keyword",
+      "paragraphs": [
+        "A business owner looking for an industrial SEO agency and a procurement manager looking for a component have different tasks. The first is choosing a service supplier; the second is checking whether a factory can meet a requirement. Your manufacturing website should mainly answer the second task. An agency article can explain how to plan that work without pretending to sell the component itself.",
+        "Ask sales to list the last few genuine requests by product family, application, buying stage and missing information. Remove personal details from the working sheet. Keep a separate column for phrases the team proposes but has not observed. That prevents an attractive brainstorming idea from becoming a reported demand figure."
+      ]
+    },
+    {
+      "heading": "Build five useful groups of industrial searches",
+      "paragraphs": [
+        "Group terms by the information needed to make a decision. A product query may need dimensions and variants. A capability query may need process limits and inspection details. A comparison may need a balanced explanation of tradeoffs. These groups often deserve different destinations because their answers are different."
+      ],
+      "list": [
+        "Product or part: a named component plus the specification a buyer knows.",
+        "Capability: a manufacturing process, supported material and relevant constraint.",
+        "Application: the operating problem, environment or industry requirement.",
+        "Evaluation: options, compatibility, maintenance or selection questions.",
+        "Supplier qualification: actual capacity, quality documentation and quotation process."
+      ]
+    },
+    {
+      "heading": "Use a page-mapping worksheet before writing",
+      "paragraphs": [
+        "For a hypothetical precision-components supplier, custom stainless steel shaft manufacturing could map to a capability page. Shaft material selection for a corrosive environment could map to an application guide. A particular shaft model belongs on its product page. The factory must confirm that it genuinely offers the material and process; these examples are not recommendations to claim every capability.",
+        "Use one row per intent, with these fields: buyer question; proposed phrase; evidence source and date; product or capability offered; primary URL; proof required; next step; content owner. Assign one primary URL before commissioning copy. If two pages already serve the same task, compare their content and search evidence before deciding whether to differentiate or consolidate them."
+      ]
+    },
+    {
+      "heading": "Validate relevance before comparing volume",
+      "paragraphs": [
+        "Check Search Console queries and landing pages under a fixed country and date window. Keep impressions and clicks beside average position. A phrase absent from the report may be suppressed, newly relevant or genuinely unobserved; it is not proof of zero searches. Search Console data describes your property, not the whole market.",
+        "Use sales language and current search results to test intent. Inspect whether results are product catalogues, technical explanations, directories or agencies. A competitor using a phrase is evidence of its positioning, not proof that buyers search it often. If you have no authorized volume source, mark volume unknown and prioritize fit, evidence and ability to serve the enquiry."
+      ]
+    },
+    {
+      "heading": "Write the answer an engineer or buyer needs",
+      "paragraphs": [
+        "A useful capability page can explain the process, suitable applications, verified operating limits, documentation available and what information is required for a quotation. State constraints honestly. Do not add an industry certification, tolerance or export capability merely because a keyword list includes it.",
+        "Keep essential information in readable page content. Link detailed documents where useful, and explain what each document contains. On an RFQ path, request enough information to assess the job without making every first contact complete a lengthy technical specification. The [product-page and RFQ checklist](/blog/manufacturer-product-page-rfq-checklist) covers that handoff."
+      ]
+    },
+    {
+      "heading": "Decide which topic deserves the first pilot",
+      "paragraphs": [
+        "Choose a product family the business wants and can fulfil, where buyers need information the current page does not provide. A small pilot could include one capability page, one real selection question and a working RFQ handoff. This is an illustrative scope, not a promise of traffic or a required package.",
+        "Defer broad glossaries that attract students when the sales team needs procurement enquiries. Defer city variants unless the business has distinct, useful local information. A national supplier does not need a near-identical page for every industrial city. The [industrial lead-generation guide](/blog/industrial-b2b-lead-generation-india) connects content with follow-up."
+      ]
+    },
+    {
+      "heading": "Measure qualified enquiries as well as visibility",
+      "paragraphs": [
+        "Record the publishing date, URL and reviewed claims. Compare complete periods after enough search data becomes available. Track relevant query impressions, clicks, saved RFQs and sales acceptance separately. A change in average position can reflect a different mix of queries rather than a universal improvement.",
+        "For exporter enquiries, record serviceable markets and the information needed to assess delivery rather than assuming every overseas visit is a qualified opportunity. Use the [exporter enquiry workflow](/blog/industrial-exporter-enquiry-system-india) to plan routing. Do not report a submitted indexing request as confirmed indexing or attribute a short-term movement to one article without evidence."
+      ]
+    }
+  ],
+  "related": [
+    "industrial-b2b-lead-generation-india",
+    "manufacturer-product-page-rfq-checklist",
+    "industrial-exporter-enquiry-system-india"
+  ],
+  "sources": [
+    {
+      "title": "Google Search Central: SEO starter guide",
+      "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+    },
+    {
+      "title": "Search Console: Performance report",
+      "url": "https://support.google.com/webmasters/answer/7576553"
+    }
+  ],
+  "takeaway": "Use the worksheet with your own business facts and search data. For help connecting search visibility with qualified enquiries, [describe your business to GrowwStack](/contact)."
+}

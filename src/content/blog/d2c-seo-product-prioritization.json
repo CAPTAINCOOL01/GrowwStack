@@ -60,6 +60,12 @@
         "Monitor organic landing sessions, completed purchases and commercial outcomes with the correct attribution caveats. Search Console clicks and GA4 sessions are different measures and need not match. Do not sum page-level impressions to recreate a property-level impression total.",
         "If visitors arrive but do not buy, investigate the [D2C traffic-without-sales checklist](/blog/d2c-store-traffic-no-sales) before commissioning another batch of articles. If your sales process involves assisted purchases, connect enquiries and follow-ups through the [CRM workflow guide](/blog/crm-and-follow-up-systems)."
       ]
+    },
+    {
+      "heading": "Turn a category pilot into a usable page",
+      "paragraphs": [
+        "Once a category is selected, use the [category-page SEO checklist](/blog/ecommerce-category-page-seo-checklist) to review buying guidance, product links, filters and live acceptance checks."
+      ]
     }
   ],
   "takeaway": "Prioritize pages where observed demand, fulfilment readiness and a clear fix meet. Keep uncertain opportunities in a separate test queue. Bring your catalogue and measurement questions to [GrowwStack](/contact).",
@@ -81,5 +87,6 @@
     "d2c-store-traffic-no-sales",
     "whatsapp-abandoned-checkout-recovery-india",
     "crm-and-follow-up-systems"
-  ]
+  ],
+  "updatedAt": "2026-10-24"
 }

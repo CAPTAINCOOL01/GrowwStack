@@ -36,3 +36,8 @@ Some businesses may qualify for a revenue-share partnership after evaluation. Te
 - [Pay-after-results SEO in India](https://growwstack.in/blog/pay-after-results-seo-india): Compare ranking-linked fees, qualified-lead fees and revenue share before choosing an agency.
 - [Manufacturer product pages and RFQs](https://growwstack.in/blog/manufacturer-product-page-rfq-checklist): Technical product information, quotation requirements and the sales handoff.
 - [D2C product-page SEO priorities](https://growwstack.in/blog/d2c-seo-product-prioritization): Choose an SEO pilot using observed demand, availability and conversion readiness.
+
+## Planning and implementation worksheets
+- [SEO Keyword Research for Indian Manufacturers: A Practical Map](https://growwstack.in/blog/manufacturer-seo-keyword-research-india): Map industrial buyer searches to capability, product and application pages. Use an RFQ worksheet to choose useful manufacturing SEO topics.
+- [E-commerce Category Page SEO: A Checklist for D2C Stores](https://growwstack.in/blog/ecommerce-category-page-seo-checklist): Improve category and collection pages with useful buying guidance, clear product links and consistent URLs. A practical D2C SEO checklist.
+- [SEO, AEO and GEO Audit Brief: What Should an Agency Deliver?](https://growwstack.in/blog/seo-aeo-geo-audit-brief-india): Use a concrete audit brief to compare SEO, AEO and GEO proposals: evidence, page ownership, acceptance checks, costs and measurement.
