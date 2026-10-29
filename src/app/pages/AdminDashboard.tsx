@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState, type FormEvent } from "react";
 import { adminFetch, clearToken, readToken } from "../../lib/adminApi";
+import { attributionFromRecord, campaignLabel, channelLabel } from "../../lib/attribution.mjs";
 
 type Lead = {
   id: string;
@@ -28,6 +29,8 @@ type Application = {
   monthly_revenue_range: string | null;
   scaling_blocker: string | null;
   partnership_reason: string | null;
+  page_path: string | null;
+  referrer: string | null;
 };
 
 type Order = {
@@ -44,6 +47,8 @@ type Order = {
   timeline: string | null;
   message: string | null;
   source: string | null;
+  page_path: string | null;
+  referrer: string | null;
 };
 
 type Visitor = {
@@ -143,6 +148,15 @@ function LoginGate({ onSubmit }: { onSubmit: (pw: string) => Promise<boolean> })
 
 type Tab = "leads" | "applications" | "orders" | "visitors";
 
+const CHANNELS = ["email", "organic_search", "paid_search", "referral", "direct", "other_campaign", "unknown"];
+
+function exportAttribution<T extends { page_path?: string | null; referrer?: string | null }>(rows: T[]) {
+  return rows.map((row) => {
+    const a = attributionFromRecord(row);
+    return { ...row, acquisition_channel: channelLabel(a.channel), campaign: a.campaign, campaign_source: a.source, campaign_medium: a.medium, email_content: a.content, outreach_id: a.oid };
+  });
+}
+
 export function AdminDashboard() {
   const [ok, setOk] = useState(false);
   const [tab, setTab] = useState<Tab>("leads");
@@ -152,6 +166,8 @@ export function AdminDashboard() {
   const [applications, setApplications] = useState<Application[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [channel, setChannel] = useState("all");
+  const [campaign, setCampaign] = useState("all");
 
   // The server decides: a 200 means authenticated and the data is in the reply.
   const load = async (credential: { password: string } | { token: string }) => {
@@ -195,32 +211,46 @@ export function AdminDashboard() {
     if (token) void load({ token });
   }, []);
 
-  const stats = useMemo(() => {
+  const campaigns = useMemo(() => Array.from(new Set([
+    "daily_d2c_outreach", "daily_manufacturer_outreach", "foreign_clients_outreach",
+    ...[...visitors, ...leads, ...orders, ...applications].map((row) => attributionFromRecord(row).campaign).filter((value): value is string => Boolean(value)),
+  ])), [visitors, leads, orders, applications]);
+
+  const matches = (row: { page_path?: string | null; referrer?: string | null }) => {
+    const a = attributionFromRecord(row);
+    return (channel === "all" || a.channel === channel) && (campaign === "all" || a.campaign === campaign);
+  };
+  const shownLeads = leads.filter(matches);
+  const shownVisitors = visitors.filter(matches);
+  const shownOrders = orders.filter(matches);
+  const shownApplications = applications.filter(matches);
+
+  const stats = (() => {
     const now = Date.now();
     const day = 24 * 60 * 60 * 1000;
-    const leads24 = leads.filter(
+    const leads24 = shownLeads.filter(
       (l) => now - new Date(l.created_at).getTime() < day,
     ).length;
-    const visits24 = visitors.filter(
+    const visits24 = shownVisitors.filter(
       (v) => now - new Date(v.created_at).getTime() < day,
     ).length;
     const uniqueSessions = new Set(
-      visitors.map((v) => v.session_id).filter(Boolean),
+      shownVisitors.map((v) => v.session_id).filter(Boolean),
     ).size;
-    const orders24 = orders.filter(
+    const orders24 = shownOrders.filter(
       (o) => now - new Date(o.created_at).getTime() < day,
     ).length;
     return {
-      totalApplications: applications.length,
-      totalOrders: orders.length,
+      totalApplications: shownApplications.length,
+      totalOrders: shownOrders.length,
       orders24,
-      totalLeads: leads.length,
+      totalLeads: shownLeads.length,
       leads24,
-      totalVisits: visitors.length,
+      totalVisits: shownVisitors.length,
       visits24,
       uniqueSessions,
     };
-  }, [leads, visitors, orders, applications]);
+  })();
 
   if (!ok) return <LoginGate onSubmit={authenticate} />;
 
@@ -250,13 +280,35 @@ export function AdminDashboard() {
         </div>
       </header>
 
+      <section aria-label="Traffic attribution">
+        <h2>Where enquiries come from</h2>
+        <p>Email campaigns and organic search are recorded separately. Filters apply to every view and its CSV export.</p>
+        <div className="gs-admin__topbar-actions">
+          <label className="gs-field">
+            <span className="gs-field__label">Traffic source</span>
+            <select className="gs-field__input" value={channel} onChange={(e) => setChannel(e.target.value)}>
+              <option value="all">All sources</option>
+              {CHANNELS.map((value) => <option key={value} value={value}>{channelLabel(value)}</option>)}
+            </select>
+          </label>
+          <label className="gs-field">
+            <span className="gs-field__label">Email campaign</span>
+            <select className="gs-field__input" value={campaign} onChange={(e) => setCampaign(e.target.value)}>
+              <option value="all">All campaigns</option>
+              {campaigns.map((value) => <option key={value} value={value}>{campaignLabel(value)}</option>)}
+            </select>
+          </label>
+        </div>
+        <p className="gs-admin__muted">This view uses the latest 1,000 records from each data view. A visit identifies a campaign, not a person. Customer details come from submitted forms; an optional random outreach ID can be matched to your private send list. Email security scanners and bots can also generate visits. Older records may have unknown attribution.</p>
+      </section>
+
       <section className="gs-admin__stats" aria-label="Snapshot">
-        <StatCard label="Leads (total)" value={stats.totalLeads} />
+        <StatCard label="Leads (loaded)" value={stats.totalLeads} />
         <StatCard label="Leads (24h)" value={stats.leads24} />
         <StatCard label="Applications" value={stats.totalApplications} />
         <StatCard label="Build requests" value={stats.totalOrders} />
-        <StatCard label="Page views (total)" value={stats.totalVisits} />
-        <StatCard label="Page views (24h)" value={stats.visits24} />
+        <StatCard label="Recorded page visits" value={stats.totalVisits} />
+        <StatCard label="Page visits (24h)" value={stats.visits24} />
         <StatCard label="Unique sessions" value={stats.uniqueSessions} />
       </section>
 
@@ -266,28 +318,28 @@ export function AdminDashboard() {
           type="button"
           onClick={() => setTab("leads")}
         >
-          Leads ({leads.length})
+          Leads ({shownLeads.length})
         </button>
         <button
           className={`gs-admin__tab${tab === "applications" ? " gs-admin__tab--active" : ""}`}
           type="button"
           onClick={() => setTab("applications")}
         >
-          Applications ({applications.length})
+          Applications ({shownApplications.length})
         </button>
         <button
           className={`gs-admin__tab${tab === "orders" ? " gs-admin__tab--active" : ""}`}
           type="button"
           onClick={() => setTab("orders")}
         >
-          Build requests ({orders.length})
+          Build requests ({shownOrders.length})
         </button>
         <button
           className={`gs-admin__tab${tab === "visitors" ? " gs-admin__tab--active" : ""}`}
           type="button"
           onClick={() => setTab("visitors")}
         >
-          Visitors ({visitors.length})
+          Visitors ({shownVisitors.length})
         </button>
         <div className="gs-admin__tab-spacer" />
         <button
@@ -295,12 +347,12 @@ export function AdminDashboard() {
           type="button"
           onClick={() =>
             tab === "leads"
-              ? downloadCsv("growwstack-leads.csv", leads)
+              ? downloadCsv("growwstack-leads.csv", exportAttribution(shownLeads))
               : tab === "applications"
-                ? downloadCsv("growwstack-applications.csv", applications)
+                ? downloadCsv("growwstack-applications.csv", exportAttribution(shownApplications))
                 : tab === "orders"
-                ? downloadCsv("growwstack-website-orders.csv", orders)
-                : downloadCsv("growwstack-visitors.csv", visitors)
+                ? downloadCsv("growwstack-website-orders.csv", exportAttribution(shownOrders))
+                : downloadCsv("growwstack-visitors.csv", exportAttribution(shownVisitors))
           }
         >
           Export CSV
@@ -310,13 +362,13 @@ export function AdminDashboard() {
       {error && <p className="gs-admin__error">{error}</p>}
 
       {tab === "leads" ? (
-        <LeadsTable leads={leads} />
+        <LeadsTable leads={shownLeads} />
       ) : tab === "applications" ? (
-        <ApplicationsTable applications={applications} />
+        <ApplicationsTable applications={shownApplications} />
       ) : tab === "orders" ? (
-        <OrdersTable orders={orders} />
+        <OrdersTable orders={shownOrders} />
       ) : (
-        <VisitorsTable visitors={visitors} />
+        <VisitorsTable visitors={shownVisitors} />
       )}
 
       <footer className="gs-admin__foot">
@@ -339,11 +391,22 @@ function StatCard({ label, value }: { label: string; value: number }) {
   );
 }
 
+function AttributionCell({ row }: { row: { page_path?: string | null; referrer?: string | null } }) {
+  const a = attributionFromRecord(row);
+  return <td>
+    <span className="gs-admin__badge">{channelLabel(a.channel)}</span>
+    {a.campaign && <div>{campaignLabel(a.campaign)}</div>}
+    {a.source && <div className="gs-admin__muted">{a.source}{a.medium ? ` / ${a.medium}` : ""}</div>}
+    {a.content && <div className="gs-admin__muted">Email: {a.content.replace(/_/g, " ")}</div>}
+    {a.oid && <div className="gs-admin__cell-ref" title="Match this random ID to your private outreach send list">Outreach ID: {a.oid}</div>}
+  </td>;
+}
+
 function OrdersTable({ orders }: { orders: Order[] }) {
   if (!orders.length) {
     return (
       <p className="gs-admin__empty">
-        No build requests yet. They will appear here as soon as someone submits the website form.
+        No build requests match the current filters.
       </p>
     );
   }
@@ -362,6 +425,7 @@ function OrdersTable({ orders }: { orders: Order[] }) {
             <th>Timeline</th>
             <th>Current site</th>
             <th>Notes</th>
+            <th>Traffic source</th>
             <th>Actions</th>
           </tr>
         </thead>
@@ -404,6 +468,7 @@ function OrdersTable({ orders }: { orders: Order[] }) {
                   )}
                 </td>
                 <td>{o.message ?? "—"}</td>
+                <AttributionCell row={o} />
                 <td>{wa && <a href={wa} target="_blank" rel="noopener noreferrer">WhatsApp</a>}</td>
               </tr>
             );
@@ -418,7 +483,7 @@ function ApplicationsTable({ applications }: { applications: Application[] }) {
   if (!applications.length) {
     return (
       <p className="gs-admin__empty">
-        No partnership applications yet. They will appear here as soon as someone submits the form.
+        No partnership applications match the current filters.
       </p>
     );
   }
@@ -435,6 +500,7 @@ function ApplicationsTable({ applications }: { applications: Application[] }) {
             <th>Industry</th>
             <th>Revenue</th>
             <th>Biggest blocker</th>
+            <th>Traffic source</th>
             <th>Actions</th>
           </tr>
         </thead>
@@ -461,6 +527,7 @@ function ApplicationsTable({ applications }: { applications: Application[] }) {
                 <td>{a.industry ?? "—"}</td>
                 <td>{a.monthly_revenue_range ?? "—"}</td>
                 <td className="gs-admin__cell-message">{a.scaling_blocker ?? "—"}</td>
+                <AttributionCell row={a} />
                 <td>{wa && <a href={wa} target="_blank" rel="noopener noreferrer">WhatsApp</a>}</td>
               </tr>
             );
@@ -473,7 +540,7 @@ function ApplicationsTable({ applications }: { applications: Application[] }) {
 
 function LeadsTable({ leads }: { leads: Lead[] }) {
   if (!leads.length) {
-    return <p className="gs-admin__empty">No leads yet. They'll appear here as soon as someone submits the form.</p>;
+    return <p className="gs-admin__empty">No leads match the current filters.</p>;
   }
 
   return (
@@ -487,6 +554,7 @@ function LeadsTable({ leads }: { leads: Lead[] }) {
             <th>Contact</th>
             <th>Message</th>
             <th>Source</th>
+            <th>Traffic source</th>
             <th>Actions</th>
           </tr>
         </thead>
@@ -515,6 +583,7 @@ function LeadsTable({ leads }: { leads: Lead[] }) {
                     <span className="gs-admin__badge gs-admin__badge--quiet">unknown</span>
                   )}
                 </td>
+                <AttributionCell row={l} />
                 <td>
                   {wa ? (
                     <a
@@ -540,7 +609,7 @@ function LeadsTable({ leads }: { leads: Lead[] }) {
 
 function VisitorsTable({ visitors }: { visitors: Visitor[] }) {
   if (!visitors.length) {
-    return <p className="gs-admin__empty">No page views recorded yet.</p>;
+    return <p className="gs-admin__empty">No recorded page visits match the current filters.</p>;
   }
 
   return (
@@ -553,7 +622,7 @@ function VisitorsTable({ visitors }: { visitors: Visitor[] }) {
             <th>Referrer</th>
             <th>Session</th>
             <th>Locale</th>
-            <th>UTM</th>
+            <th>Traffic source</th>
           </tr>
         </thead>
         <tbody>
@@ -569,11 +638,7 @@ function VisitorsTable({ visitors }: { visitors: Visitor[] }) {
                 {v.language ?? "—"}
                 {v.timezone ? ` · ${v.timezone}` : ""}
               </td>
-              <td>
-                {[v.utm_source, v.utm_medium, v.utm_campaign]
-                  .filter(Boolean)
-                  .join(" · ") || "—"}
-              </td>
+              <AttributionCell row={v} />
             </tr>
           ))}
         </tbody>

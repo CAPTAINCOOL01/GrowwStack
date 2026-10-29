@@ -1,5 +1,6 @@
 import { sbInsert } from "./supabase";
 import { isOptedOut } from "./optOut";
+import { attributionRuntime } from "./attribution.mjs";
 
 /**
  * Outbound and CTA click tracking.
@@ -33,13 +34,7 @@ function classify(href: string): EventName | null {
 /** First-party record only, for the admin dashboard's event history. */
 function recordEvent(name: EventName, label?: string): void {
   sbInsert("gs_events", {
-    session_id: (() => {
-      try {
-        return sessionStorage.getItem("gs_session_id") ?? "anon";
-      } catch {
-        return "anon";
-      }
-    })(),
+    session_id: attributionRuntime()?.capture().session_id ?? "anon",
     event_name: name,
     label: label ? label.slice(0, 200) : null,
     page_path: window.location.pathname,

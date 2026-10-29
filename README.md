@@ -73,6 +73,28 @@ The three advertising signals stay denied even after acceptance.
 The Supabase `gs_visitors` ping in `src/lib/tracking.ts` is separate and is
 **not** gated by that banner.
 
+Email outreach uses `utm_source=growwstack_outreach`, `utm_medium=email`, and
+campaigns `daily_d2c_outreach`, `daily_manufacturer_outreach`, or
+`foreign_clients_outreach`. GA4's Traffic acquisition report can separate
+Session campaign and Session source / medium from Organic Search.
+
+`tools/outreach-link.mjs --campaign d2c|manufacturer|foreign` generates a
+campaign URL. Adding `--recipient`, `--company`, and an absolute private
+`--ledger` directory creates a stable random recipient-link ID. Keep that
+mapping outside this public repository. Activate recipient IDs only after
+the updated attribution runtime is verified live; it excludes `oid` from
+GA4 while retaining it in first-party records. Forwarding and mail scanners
+mean a link match does not prove the intended person visited.
+
+The shared `src/lib/attribution.mjs` runtime preserves campaign data through
+internal navigation into existing form records without a database migration.
+The admin dashboard filters and exports loaded records by channel/campaign;
+it is limited to the latest 1,000 rows per table. Historical untagged records
+remain unknown. Campaign-level reporting, identified form enquiries, and
+private recipient-link matches are separate measurements.
+
+Run the focused attribution checks with `node --test tools/attribution.test.mjs`.
+
 ## Deploys
 
 Pushing to `master` deploys via the GitHub integration. Vercel builds only

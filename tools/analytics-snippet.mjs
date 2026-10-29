@@ -12,6 +12,7 @@
  *
  * Config is read at build time. With VITE_GA_ID unset, no GA code runs at all.
  */
+import { createAttributionRuntime } from "../src/lib/attribution.mjs";
 
 function body(gaId, sbUrl, sbKey) {
   return `(function () {
@@ -23,33 +24,28 @@ function body(gaId, sbUrl, sbKey) {
   else if (q === "on") ls(function () { localStorage.removeItem("gs_optout"); });
   if (ls(function () { return localStorage.getItem("gs_optout"); }) === "1") return;
 
+  var attribution = (${createAttributionRuntime.toString()})(window);
+  var visit = attribution.capture();
+
   if (SBU && SBK) {
-    var last = Number(ls(function () { return localStorage.getItem("gs_last_ping"); }, 0) || 0);
-    if (!(last && Date.now() - last < 1800000)) {
-      ls(function () { localStorage.setItem("gs_last_ping", String(Date.now())); });
-      var sid = ls(function () {
-        var v = sessionStorage.getItem("gs_session_id");
-        if (!v) { v = crypto.randomUUID ? crypto.randomUUID() : String(Date.now()); sessionStorage.setItem("gs_session_id", v); }
-        return v;
-      }, "anon");
-      var pr = new URLSearchParams(location.search);
+    if (attribution.shouldRecordPage()) {
       fetch(SBU + "/rest/v1/gs_visitors", {
         method: "POST", keepalive: true,
         headers: { apikey: SBK, Authorization: "Bearer " + SBK, "Content-Type": "application/json", Prefer: "return=minimal" },
         body: JSON.stringify({
-          session_id: sid,
-          page_path: location.pathname + location.search,
-          referrer: document.referrer || null,
+          session_id: visit.session_id,
+          page_path: attribution.pagePath(),
+          referrer: visit.referrer,
           user_agent: navigator.userAgent,
           screen_width: screen.width,
           screen_height: screen.height,
           language: navigator.language || null,
           timezone: Intl.DateTimeFormat().resolvedOptions().timeZone || null,
-          utm_source: pr.get("utm_source"),
-          utm_medium: pr.get("utm_medium"),
-          utm_campaign: pr.get("utm_campaign")
+          utm_source: visit.utm_source || null,
+          utm_medium: visit.utm_medium || null,
+          utm_campaign: visit.utm_campaign || null
         })
-      }).catch(function () {});
+      }).then(function (response) { if (response.ok) attribution.markPageRecorded(); }).catch(function () {});
     }
   }
 
@@ -70,7 +66,7 @@ function body(gaId, sbUrl, sbKey) {
     if (SBU && SBK) fetch(SBU + "/rest/v1/gs_events", {
       method: "POST", keepalive: true,
       headers: { apikey: SBK, Authorization: "Bearer " + SBK, "Content-Type": "application/json", Prefer: "return=minimal" },
-      body: JSON.stringify({ session_id: ls(function () { return sessionStorage.getItem("gs_session_id"); }, "anon") || "anon", event_name: name, label: label, page_path: location.pathname, referrer: document.referrer || null })
+      body: JSON.stringify({ session_id: attribution.capture().session_id, event_name: name, label: label, page_path: attribution.pagePath(), referrer: attribution.capture().referrer })
     }).catch(function () {});
   }, { capture: true, passive: true });
 
@@ -90,7 +86,7 @@ function body(gaId, sbUrl, sbKey) {
     gtag("consent", "update", { ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied", analytics_storage: "granted" });
   }
   gtag("js", new Date());
-  gtag("config", GA, { anonymize_ip: true });
+  gtag("config", GA, Object.assign({ anonymize_ip: true }, attribution.gaConfig()));
 
   var sc = document.createElement("script");
   sc.async = true; sc.id = "ga-src";
@@ -105,7 +101,7 @@ function body(gaId, sbUrl, sbKey) {
     b.setAttribute("role", "dialog");
     b.innerHTML = '<div class="gs-consent__inner"><div class="gs-consent__copy">' +
       '<p class="gs-consent__title">Analytics cookies</p>' +
-      '<p>We use Google Analytics to see which pages bring partners in. Nothing is stored on your device until you accept, and we never use it for advertising.</p>' +
+      '<p>We use Google Analytics to measure visits, enquiries and campaign performance. Analytics cookies are stored only when you accept. We do not use Analytics for personalised advertising.</p>' +
       '</div><div class="gs-consent__actions">' +
       '<button type="button" class="gs-consent__button" data-c="denied">Decline</button>' +
       '<button type="button" class="gs-consent__button gs-consent__button--primary" data-c="granted">Accept</button>' +

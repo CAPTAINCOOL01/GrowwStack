@@ -1,0 +1,21 @@
+node_modules/
+dist/
+dist-ssr/
+.git/
+.agents/
+.claude/
+.codex/
+.env*
+!.env.example
+growth/
+output/
+tmp/
+demos/
+Claude outputs/
+CLIENT-SEO-REPORTING.md
+decision-maker.skill.md
+guidelines/
+*.zip
+*.pdf
+*.png
+!public/**

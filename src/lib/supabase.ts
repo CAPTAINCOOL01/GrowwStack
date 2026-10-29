@@ -1,4 +1,6 @@
 import { SUPABASE_ANON_KEY, SUPABASE_URL } from "./config";
+import { attributionRuntime } from "./attribution.mjs";
+import { isOptedOut } from "./optOut";
 
 const restUrl = `${SUPABASE_URL}/rest/v1`;
 
@@ -23,11 +25,18 @@ export async function sbInsert<T extends Record<string, unknown>>(
   const unsaved = (cause: unknown) =>
     new Error("We could not save your details just now. Please try again.", { cause });
   let res: Response;
+  // Reuse existing columns so attribution cannot break forms on an older DB.
+  // Retain the form's source (quick_contact, website_build, etc.) separately.
+  let payload: Record<string, unknown> = row;
+  if (["gs_leads", "gs_applications", "gs_website_orders", "gs_events"].includes(table) && !isOptedOut()) {
+    const runtime = attributionRuntime();
+    if (runtime) payload = { ...row, page_path: runtime.pagePath(typeof row.page_path === "string" ? row.page_path : undefined), referrer: runtime.capture().referrer };
+  }
   try {
     res = await fetch(`${restUrl}/${table}`, {
       method: "POST",
       headers: headers({ Prefer: "return=minimal" }),
-      body: JSON.stringify(row),
+      body: JSON.stringify(payload),
       keepalive: true,
     });
   } catch (err) {

@@ -1,5 +1,6 @@
 import { GA_ID } from "./config";
 import { isOptedOut } from "./optOut";
+import { attributionRuntime } from "./attribution.mjs";
 
 const CONSENT_KEY = "gs_consent";
 
@@ -75,7 +76,7 @@ export function initAnalytics(): void {
   if (stored === "granted") gtag("consent", "update", stateFor("granted"));
 
   gtag("js", new Date());
-  gtag("config", GA_ID, { anonymize_ip: true });
+  gtag("config", GA_ID, { anonymize_ip: true, ...attributionRuntime()?.gaConfig() });
 
   const script = document.createElement("script");
   script.id = "ga-src";
