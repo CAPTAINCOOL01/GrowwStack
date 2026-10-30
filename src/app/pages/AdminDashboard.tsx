@@ -629,8 +629,8 @@ function VisitorsTable({ visitors }: { visitors: Visitor[] }) {
           {visitors.map((v) => (
             <tr key={v.id}>
               <td>{formatDate(v.created_at)}</td>
-              <td>{v.page_path ?? "—"}</td>
-              <td className="gs-admin__cell-ref">{v.referrer ?? "direct"}</td>
+              <td title={v.page_path ?? undefined}>{v.page_path?.split(/[?#]/, 1)[0] || "—"}</td>
+              <td className="gs-admin__cell-ref">{v.referrer ?? "—"}</td>
               <td className="gs-admin__cell-ref">
                 {v.session_id ? v.session_id.slice(0, 8) : "—"}
               </td>
