@@ -78,7 +78,9 @@ export function createAttributionRuntime(env) {
     // GA's native campaign fields keep attribution across an internal redirect.
     var names = { utm_source: "campaign_source", utm_medium: "campaign_medium", utm_campaign: "campaign_name", utm_id: "campaign_id", utm_content: "campaign_content", utm_term: "campaign_term" };
     fields.forEach(function (field) { if (a[field]) config[names[field]] = a[field]; });
-    if (a.referrer) config.page_referrer = a.referrer;
+    // An omitted value falls back to document.referrer in gtag. That can be an
+    // internal landing URL containing oid, so always override it explicitly.
+    config.page_referrer = a.referrer || "";
     return config;
   }
   function pingKey() { return capture().session_id + ":" + pagePath(); }

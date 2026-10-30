@@ -27,6 +27,8 @@ test("email entry survives static blog to internal form, without schema changes"
   assert.equal(new URL(form.pagePath(), origin).searchParams.get("utm_id"), "daily_d2c_outreach");
   assert.equal(form.gaConfig().campaign_id, "daily_d2c_outreach");
   assert.equal(new URL(form.gaConfig().page_location).searchParams.get("utm_id"), "daily_d2c_outreach");
+  assert.equal(form.gaConfig().page_referrer, "", "internal raw referrer must never be used as GA's fallback");
+  assert(!JSON.stringify(form.gaConfig()).includes("aa11bb22cc33dd44"));
   assert.equal(form.shouldRecordPage(), true);
   assert.equal(campaignLabel(row.campaign), "D2C daily outreach");
 });
@@ -54,6 +56,7 @@ test("new external organic referral replaces stale email attribution", () => {
   assert.equal(google.capture().utm_campaign, null);
   assert.equal(google.capture().oid, null);
   assert.equal(google.capture().referrer, "https://www.google.co.in/search");
+  assert.equal(google.gaConfig().page_referrer, "https://www.google.co.in/search");
 });
 
 test("opaque recipient ID stays first party, GA sees only approved campaign fields", () => {
@@ -62,6 +65,7 @@ test("opaque recipient ID stays first party, GA sees only approved campaign fiel
   assert.equal(ga.campaign_name, "daily_d2c_outreach");
   assert.equal(ga.campaign_source, "growwstack_outreach");
   assert.equal(ga.campaign_id, "daily_d2c_outreach");
+  assert.equal(ga.page_referrer, "", "no-referrer visits explicitly suppress the document.referrer fallback");
   assert(!JSON.stringify(ga).includes("aa11bb22cc33dd44"));
   assert(!JSON.stringify(ga).includes("private"));
   assert(!runtime.pagePath().includes("private"));
@@ -122,5 +126,6 @@ test("generated HTML embeds the same attribution and preserves denied consent", 
   const calls = context.dataLayer.map(args => Array.from(args));
   assert.equal(calls.find(args => args[0] === "consent")[2].analytics_storage, "denied");
   assert.equal(calls.find(args => args[0] === "config")[2].campaign_id, "daily_d2c_outreach");
+  assert.equal(calls.find(args => args[0] === "config")[2].page_referrer, "");
   assert(!JSON.stringify(calls).includes("aa11bb22cc33dd44"));
 });
