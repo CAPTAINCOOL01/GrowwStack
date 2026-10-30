@@ -2649,6 +2649,10 @@ a {
   flex: 1;
 }
 
+.gs-admin .gs-field__label {
+  color: var(--ad-dim);
+}
+
 /* Table */
 .gs-admin__table-wrap {
   overflow-x: auto;
