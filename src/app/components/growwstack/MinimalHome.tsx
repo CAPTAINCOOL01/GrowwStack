@@ -2,7 +2,7 @@ import { useState } from "react";
 import { brandId, partnerBrands, ndaNote } from "../../../content/company";
 
 const services = [
-  { title: "Get discovered", copy: "SEO, AEO and GEO, backed by sitemaps, indexing and technical fixes. Build your presence across search and AI answers.", href: "/services#growth-stack", link: "Explore digital presence" },
+  { title: "Get discovered", copy: "SEO, AEO and GEO, backed by useful buyer content, internal links and technical fixes. Build organic discovery through a revenue-share partnership with no upfront agency fee.", href: "/partnership#organic-growth", link: "Explore revenue-share SEO" },
   { title: "Turn visits into leads", copy: "Customer acquisition tools, landing pages and product planners that turn interest into qualified enquiries and sales.", href: "/services#growth-stack", link: "Explore acquisition tools" },
   { title: "Build systems that scale", copy: "Custom SaaS products, CRM, WhatsApp automation and analytics to capture leads, follow up and measure revenue.", href: "/services#growth-stack", link: "Explore growth systems" },
 ];

@@ -9,7 +9,7 @@ const comparison = [
 ];
 
 const qualifiers = [
-  "A product customers already pay for.",
+  "A clear customer need and an offer ready to deliver.",
   "Healthy margins and reliable delivery.",
   "An involved founder or decision-maker.",
 ];

@@ -1,14 +1,16 @@
 # GrowwStack
 
-> GrowwStack is a founder-led growth partner for Indian businesses, connecting websites, customer acquisition, CRM, automation and sales systems.
+> GrowwStack is an India-based organic growth partner offering SEO, AEO and GEO through a revenue-share partnership with no upfront agency fee or monthly retainer, alongside websites, enquiry systems and sales operations.
 
-Some businesses may qualify for a revenue-share partnership after evaluation. Terms and scope are agreed individually. The website is the source of current service and partnership details. This optional discovery file is not an indexing instruction or a guarantee of AI citations.
+GrowwStack earns an agreed percentage when its work produces revenue. Scope, revenue definition, baseline, payment timing and any separate business costs are agreed before work begins. Launch-ready brands with zero organic traffic or online sales and established businesses can be evaluated. Acceptance depends on fit. The website is the source of current details. This optional discovery file is not an indexing instruction or a guarantee of AI citations.
 
 ## Company and contact
 - [GrowwStack](https://growwstack.in/): Services, founder background, partnership process and contact options.
 - [Business growth articles](https://growwstack.in/blog): Practical guidance on websites, acquisition, measurement and revenue operations.
 
 ## Partnership and measurement
+- [SEO, AEO and GEO with no upfront agency fee](https://growwstack.in/partnership): Revenue-share search work, starting from zero online sales, scope, payment questions and application.
+- [Organic search services](https://growwstack.in/services#search-visibility): Technical SEO, buyer-focused content, AI search visibility and enquiry systems.
 - [How a revenue-share marketing partnership works](https://growwstack.in/blog/performance-based-marketing-agency-india): Business fit, baseline and measurement considerations.
 - [Revenue-share attribution checklist](https://growwstack.in/blog/revenue-share-marketing-attribution-checklist): Agree attribution and revenue scope before starting.
 - [GA4 lead tracking](https://growwstack.in/blog/ga4-lead-generation-tracking): Distinguish contact clicks, saved enquiries and qualified opportunities.

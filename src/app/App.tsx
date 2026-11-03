@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router";
 import { PageIntro } from "./components/growwstack/PageIntro";
 import { SearchServices } from "./components/growwstack/SearchServices";
+import { OrganicPartnership } from "./components/growwstack/OrganicPartnership";
 import { MinimalHome } from "./components/growwstack/MinimalHome";
 import { FounderSection } from "./components/growwstack/FounderAndPartnerships";
 import { WorkSection } from "./components/growwstack/WorkSection";
@@ -75,7 +76,7 @@ export default function App() {
         {pathname === "/services" ? <><GrowthStackSection /><SearchServices /></> :
          pathname === "/work" ? <WorkSection /> :
          pathname === "/about" ? <FounderSection /> :
-         pathname === "/partnership" ? <><FreeBuildOffer /><PartnershipProcessSection /><WebsiteBuildSection /><ApplicationSection /></> :
+         pathname === "/partnership" ? <><FreeBuildOffer /><OrganicPartnership /><PartnershipProcessSection /><WebsiteBuildSection /><ApplicationSection /></> :
          pathname === "/contact" ? <QuickContactSection /> : <MinimalHome />}
       </main>
       <SiteFooter />
