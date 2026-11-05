@@ -116,6 +116,7 @@ ${ld.map((b) => `    <script type="application/ld+json">${JSON.stringify(b)}</sc
           <a class="gs-case__back" href="/">&larr; GrowwStack</a>
           <nav class="gs-case__nav" aria-label="${ui.navigation}">
             <button class="gs-theme-toggle" type="button" data-theme-toggle title="${ui.theme}"><svg class="gs-theme-toggle__sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg><svg class="gs-theme-toggle__moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20.8 13a9 9 0 0 1-9.8-9.8A9 9 0 1 0 20.8 13Z"/></svg><span class="gs-theme-toggle__light-label gs-visually-hidden">${ui.light}</span><span class="gs-theme-toggle__dark-label gs-visually-hidden">${ui.dark}</span></button>
+            <a href="/services">Services</a>
             <a href="/blog">${ui.blog}</a>
             <a class="gs-button gs-button--small gs-button--dark" href="/partnership#apply">${ui.partner}</a>
           </nav>
@@ -127,7 +128,17 @@ ${body}
       <footer class="gs-case__foot">
         <div class="gs-shell gs-case__foot-inner">
           <p>${ui.footer}</p>
-          <a href="mailto:ceo-office@growwstack.in">ceo-office@growwstack.in</a>
+          <nav class="gs-case__foot-links" aria-label="Footer">
+            <a href="/">GrowwStack: SEO, AEO &amp; GEO agency</a>
+            <a href="/services">SEO services</a>
+            <a href="/services#search-visibility">AEO &amp; GEO</a>
+            <a href="/partnership">No-upfront revenue share</a>
+            <a href="/work">Our work</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+            <a href="/blog">All guides</a>
+            <a href="mailto:ceo-office@growwstack.in">ceo-office@growwstack.in</a>
+          </nav>
         </div>
       </footer>
     </div>
@@ -497,8 +508,8 @@ function writeBlogIndex(language) {
     language ? path.join(dist, "blog", `${ui.slug}.html`) : path.join(dist, "blog.html"),
     shell({
       url,
-      metaTitle: language ? ui.metaTitle : "Blog — Business Growth in English, Hindi, Gujarati & Bengali | GrowwStack",
-      metaDescription: language ? ui.metaDescription : ui.summary,
+      metaTitle: language ? ui.metaTitle : "SEO, AEO & GEO Guides: Grow Organic Traffic | GrowwStack Blog",
+      metaDescription: language ? ui.metaDescription : "Free guides to growing organic traffic in India: SEO, AEO, GEO, technical SEO, D2C and manufacturer lead generation, in English, Hindi, Gujarati and Bengali.",
       css,
       language: language || "en-IN",
       multilingual: true,

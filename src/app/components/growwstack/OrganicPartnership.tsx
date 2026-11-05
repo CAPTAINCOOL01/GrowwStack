@@ -37,5 +37,11 @@ export function OrganicPartnership() {
       <p><a href="/blog/pay-after-results-seo-india">Compare pay-after-results SEO with revenue share →</a></p>
     </section>
     <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(service).replace(/</g, '\\u003c')}} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      '@id': `${origin}/partnership#faq`,
+      mainEntity: questions.map(item => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })),
+    }).replace(/</g, '\\u003c')}} />
   </div>;
 }

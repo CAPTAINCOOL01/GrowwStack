@@ -2,7 +2,7 @@
 .gs-minimal a:not(.gs-button) { color: var(--site-link); text-underline-offset: 5px; }
 .gs-minimal a:not(.gs-button):hover { text-decoration: underline; }
 .gs-minimal__hero { padding-top: 100px; padding-bottom: 72px; }
-.gs-minimal__hero h1 { max-width: 850px; margin: 22px 0; font-size: clamp(48px, 7.2vw, 88px); line-height: 1.04; letter-spacing: -.055em; font-weight: 600; }
+.gs-minimal__hero h1 { max-width: 900px; margin: 22px 0; font-size: clamp(38px, 6.2vw, 78px); line-height: 1.04; letter-spacing: -.055em; font-weight: 600; }
 .gs-minimal__hero h1 span { color: var(--site-accent); }
 .gs-minimal__lede { max-width: 640px; color: var(--site-muted); font-size: clamp(18px, 2vw, 22px); line-height: 1.65; }
 .gs-minimal__actions { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; margin-top: 28px; }
@@ -75,6 +75,14 @@
 .gs-brand-strip__note { font-size: 11px; line-height: 1.6; color: var(--site-muted); margin: 7px 0 0; }
 .gs-work-grid--anonymous { grid-template-columns: 1fr 1fr; padding: 18px 0; margin-top: 18px; }
 #other-brands { scroll-margin-top: 100px; }
+/* Answer-first definition, guide links and FAQ on the homepage. */
+.gs-minimal .gs-minimal__answer { max-width: 820px; margin: 18px 0 0; color: var(--site-text); font-size: clamp(17px, 1.7vw, 19px); line-height: 1.75; }
+.gs-minimal__guides { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px 36px; }
+.gs-minimal__guides li { border-top: 1px solid var(--site-line); padding-top: 12px; font-size: 15px; line-height: 1.55; }
+.gs-minimal__faq { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 48px; margin-top: 18px; }
+.gs-minimal__faq article p { max-width: none; }
+@media(max-width: 850px) { .gs-minimal__guides { grid-template-columns: 1fr 1fr; } }
+@media(max-width: 700px) { .gs-minimal__guides, .gs-minimal__faq { grid-template-columns: 1fr; } }
 @keyframes gs-brand-flow { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @media(prefers-reduced-motion: reduce) { .gs-brand-strip__track { animation: none; } .gs-brand-strip__window { overflow-x: auto; } .gs-brand-strip__group[aria-hidden="true"] { display: none; } .gs-brand-strip__header button { display: none; } }
 @media(max-width: 700px) { .gs-zero-offer { padding: 16px; } .gs-brand-strip__group { gap: 32px; padding-right: 32px; } .gs-work-grid--anonymous { grid-template-columns: 1fr; } }

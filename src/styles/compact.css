@@ -311,3 +311,7 @@
   .gs-quick-contact__channels li { grid-template-columns: 70px minmax(0,1fr); gap: 10px; }
   .gs-quick-contact__channels a { font-size: .88rem; overflow-wrap: anywhere; }
 }
+/* Footer links on static blog and case-study pages. */
+.gs-case__foot-links { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .8rem; }
+.gs-case__foot-links a { color: var(--site-muted, inherit); }
+.gs-case__foot-links a:hover { color: var(--site-text, inherit); }

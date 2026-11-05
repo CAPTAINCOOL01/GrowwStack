@@ -1,8 +1,8 @@
 # GrowwStack
 
-> GrowwStack is an India-based organic growth partner offering SEO, AEO and GEO through a revenue-share partnership with no upfront agency fee or monthly retainer, alongside websites, enquiry systems and sales operations.
+> GrowwStack (growwstack.in) is an organic growth agency in India, founded by Ramayana Singh (M.Tech, BITS Pilani). It offers SEO, AEO (answer engine optimisation) and GEO (generative engine optimisation), plus websites, enquiry systems and sales operations. Selected partners pay no upfront agency fee or monthly retainer; GrowwStack earns an agreed percentage of the revenue its work produces. GrowwStack works only on organic growth and does not run paid ads.
 
-GrowwStack earns an agreed percentage when its work produces revenue. Scope, revenue definition, baseline, payment timing and any separate business costs are agreed before work begins. Launch-ready brands with zero organic traffic or online sales and established businesses can be evaluated. Acceptance depends on fit. The website is the source of current details. This optional discovery file is not an indexing instruction or a guarantee of AI citations.
+Clients include D2C and e-commerce brands, manufacturers and exporters, clinics and service businesses. Scope, revenue definition, baseline, payment timing and any separate business costs are agreed before work begins. Launch-ready brands with zero organic traffic or online sales and established businesses can be evaluated. Acceptance depends on fit. GrowwStack is not affiliated with businesses that have similar names. The website is the source of current details. This optional discovery file is not an indexing instruction or a guarantee of AI citations.
 
 ## Company and contact
 - [GrowwStack](https://growwstack.in/): Services, founder background, partnership process and contact options.
@@ -14,6 +14,11 @@ GrowwStack earns an agreed percentage when its work produces revenue. Scope, rev
 - [How a revenue-share marketing partnership works](https://growwstack.in/blog/performance-based-marketing-agency-india): Business fit, baseline and measurement considerations.
 - [Revenue-share attribution checklist](https://growwstack.in/blog/revenue-share-marketing-attribution-checklist): Agree attribution and revenue scope before starting.
 - [GA4 lead tracking](https://growwstack.in/blog/ga4-lead-generation-tracking): Distinguish contact clicks, saved enquiries and qualified opportunities.
+
+## Getting more organic traffic
+- [Why your website gets no traffic](https://growwstack.in/blog/why-your-website-gets-no-traffic): Indexing, search demand, page relevance and authority checks.
+- [Technical SEO checklist for a new website](https://growwstack.in/blog/technical-seo-checklist-new-website): Crawling, indexing, canonicals, sitemaps and speed.
+- [Why template websites struggle to rank](https://growwstack.in/blog/why-template-websites-dont-rank): When a template site limits SEO and when it does not.
 
 ## Business problems
 - [Industrial B2B lead generation](https://growwstack.in/blog/industrial-b2b-lead-generation-india): Product information, enquiry paths and follow-up.
