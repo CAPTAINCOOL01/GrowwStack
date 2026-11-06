@@ -172,12 +172,29 @@ function postBody(post) {
           .map((i) => `                <li>${inline(i)}</li>`)
           .join("\n")}\n              </${tag}>`;
       }
+      let table = "";
+      if (s.table && s.table.head && s.table.rows) {
+        table = `\n              <div class="gs-post__table-wrap"><table class="gs-post__table">${s.table.caption ? `<caption>${esc(s.table.caption)}</caption>` : ""}
+                <thead><tr>${s.table.head.map((h) => `<th scope="col">${esc(h)}</th>`).join("")}</tr></thead>
+                <tbody>
+${s.table.rows.map((r) => `                  <tr>${r.map((c, i) => (i === 0 ? `<th scope="row">${inline(c)}</th>` : `<td>${inline(c)}</td>`)).join("")}</tr>`).join("\n")}
+                </tbody>
+              </table></div>`;
+      }
+      const after = (s.after || []).map((p) => `              <p>${inline(p)}</p>`).join("\n");
       return `            <section class="gs-post__section">
               <h2>${esc(s.heading)}</h2>
-${paras}${list}
+${paras}${list}${table}${after ? "\n" + after : ""}
             </section>`;
     })
     .join("\n\n");
+
+  const faq = post.faq && post.faq.length
+    ? `            <section class="gs-post__section gs-post__faq" aria-label="${esc(post.faqHeading || "Frequently asked questions")}">
+              <h2>${esc(post.faqHeading || "Frequently asked questions")}</h2>
+${post.faq.map((f) => `              <h3>${esc(f.q)}</h3>\n              <p>${inline(f.a)}</p>`).join("\n")}
+            </section>`
+    : "";
 
   const sources = (post.sources || []).map((source) => {
     const url = new URL(source.url);
@@ -221,6 +238,8 @@ ${(post.intro || []).map((p) => `            <p class="gs-post__intro">${inline(
 
 ${sections}
 
+${faq}
+
             <aside class="gs-post__takeaway">
               <p class="gs-post__takeaway-label">${ui.takeaway}</p>
               <p>${inline(post.takeaway)}</p>
@@ -255,7 +274,22 @@ function formatDate(iso, language = "en-IN") {
 function postLd(post) {
   const url = `${ORIGIN}/blog/${post.slug}`;
   const ui = blogLocales[postLanguage(post)];
+  // FAQPage is built from the same post.faq array that renders the visible FAQ.
+  const plain = (t) => String(t).replace(/\[([^\]]+)\]\([^)]+\)/g, "$1");
+  const faqLd = post.faq && post.faq.length
+    ? [{
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": `${url}#faq`,
+        mainEntity: post.faq.map((f) => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: { "@type": "Answer", text: plain(f.a) },
+        })),
+      }]
+    : [];
   return [
+    ...faqLd,
     {
       "@context": "https://schema.org",
       "@type": "BlogPosting",

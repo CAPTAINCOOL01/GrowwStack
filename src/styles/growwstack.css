@@ -3327,6 +3327,57 @@ body.gs-content-page { min-width: 0; }
   counter-reset: pstep;
 }
 
+.gs-post__table-wrap {
+  overflow-x: auto;
+  margin: 18px 0 16px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gs-post__table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.gs-post__table caption {
+  text-align: left;
+  font-size: 0.82rem;
+  color: var(--gs-muted);
+  padding-bottom: 8px;
+}
+
+.gs-post__table th,
+.gs-post__table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 10px 12px;
+  border-top: 1px solid var(--gs-line);
+}
+
+.gs-post__table thead th {
+  font-weight: 700;
+  color: inherit;
+  border-top: 0;
+  border-bottom: 2px solid var(--gs-line);
+}
+
+.gs-post__table tbody th {
+  font-weight: 600;
+  color: inherit;
+}
+
+.gs-post__table td {
+  color: var(--gs-muted);
+}
+
+.gs-post__faq h3 {
+  font-size: 1.02rem;
+  margin: 22px 0 8px;
+  color: inherit;
+}
+
 .gs-post__steps li::before {
   counter-increment: pstep;
   content: counter(pstep);
