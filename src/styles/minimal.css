@@ -86,3 +86,12 @@
 @keyframes gs-brand-flow { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @media(prefers-reduced-motion: reduce) { .gs-brand-strip__track { animation: none; } .gs-brand-strip__window { overflow-x: auto; } .gs-brand-strip__group[aria-hidden="true"] { display: none; } .gs-brand-strip__header button { display: none; } }
 @media(max-width: 700px) { .gs-zero-offer { padding: 16px; } .gs-brand-strip__group { gap: 32px; padding-right: 32px; } .gs-work-grid--anonymous { grid-template-columns: 1fr; } }
+
+/* /services: process steps and pricing table */
+.gs-minimal__steps { margin: 18px 0 0; padding-left: 22px; display: grid; gap: 10px; max-width: 72ch; }
+.gs-minimal__steps li { line-height: 1.6; padding-left: 4px; }
+.gs-minimal__table-wrap { overflow-x: auto; margin-top: 18px; -webkit-overflow-scrolling: touch; }
+.gs-minimal__table { width: 100%; min-width: 520px; border-collapse: collapse; font-size: 0.95rem; line-height: 1.5; }
+.gs-minimal__table th, .gs-minimal__table td { text-align: left; vertical-align: top; padding: 12px 14px; border-top: 1px solid currentColor; border-top-color: color-mix(in srgb, currentColor 18%, transparent); color: inherit; }
+.gs-minimal__table thead th { border-top: 0; font-weight: 700; }
+.gs-minimal__table tbody th { font-weight: 600; white-space: nowrap; }

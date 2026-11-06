@@ -1,0 +1,153 @@
+{
+  "slug": "seo-cost-in-india",
+  "category": "SEO",
+  "publishedAt": "2026-11-06",
+  "updatedAt": "2026-11-06",
+  "readingTime": "9 min read",
+  "metaTitle": "SEO Cost in India: Pricing Models and How to Compare Quotes",
+  "metaDescription": "How much SEO costs in India, how agencies price it (retainer, project, revenue share), what drives the price, hidden costs and how to compare quotes.",
+  "title": "SEO cost in India: how pricing works and how to compare quotes",
+  "excerpt": "What Indian agencies publicly quote for SEO, the three pricing models, what really drives the cost, the costs that are not in the quote, and a checklist for comparing proposals.",
+  "intro": [
+    "SEO in India is usually sold as a monthly retainer, a one-time project fee or, less often, a revenue share. Price pages from ten Indian agencies in the top search results for \"seo cost in india\" on 6 November 2026 quoted anything from about ₹3,000 to ₹5,00,000 a month, and most gave typical ranges somewhere between ₹5,000 and ₹60,000 a month. That range tells you very little on its own: what matters is the scope, who does the work and how results are measured.",
+    "This guide explains the pricing models, what actually drives the cost, the costs that are often left out of a quote, and how to compare proposals so you pay for work that can grow traffic and enquiries."
+  ],
+  "sections": [
+    {
+      "heading": "The three ways SEO is priced in India",
+      "paragraphs": [
+        "Almost every quote you receive will be one of these, or a mix."
+      ],
+      "table": {
+        "caption": "SEO pricing models compared",
+        "head": ["Model", "How you pay", "Works well when", "Watch out for"],
+        "rows": [
+          ["Monthly retainer", "A fixed fee every month for an agreed scope", "You want steady, ongoing work and can fund it before results arrive", "Vague scope (\"on-page + off-page\") that hides how little is done each month"],
+          ["Project fee", "A one-time fee for a defined job: audit, migration, set of pages", "You have a specific problem with a clear end point", "An audit that lists problems but does not fix them"],
+          ["Keyword package", "A price per set of keywords, often with a ranking promise", "Rarely; it suits the seller more than the buyer", "Low-value keywords chosen because they are easy to rank"],
+          ["Revenue share", "No upfront agency fee; an agreed share of revenue the work produces", "The agency is selective and your margins and fulfilment can support it", "Unclear revenue definitions, baselines and attribution"]
+        ]
+      },
+      "after": [
+        "Our article on [retainer versus revenue share](/blog/marketing-retainer-vs-revenue-share-cost) compares the two main models with a worked example, and [pay-after-results SEO](/blog/pay-after-results-seo-india) explains how results-linked deals are structured."
+      ]
+    },
+    {
+      "heading": "What actually drives the cost of SEO",
+      "paragraphs": [
+        "Two quotes can differ by ten times and both be fair, because they describe different amounts of work. These are the factors that move the price."
+      ],
+      "list": [
+        "Size of the site: a 10-page service site and a 5,000-product store need very different amounts of technical and page work.",
+        "Competition: ranking nationally for \"seo agency in india\" is harder than ranking for a niche product in one city.",
+        "Content volume: writing and updating useful pages and guides is usually the largest share of real SEO work.",
+        "Technical state: a slow site, broken redirects or pages Google has not indexed must be fixed before anything else pays off.",
+        "Who does the work: senior strategists and writers who understand your products cost more than templated reports.",
+        "Development access: if every change needs your developer, the agency's time goes into tickets and waiting.",
+        "Languages and markets: Hindi, Gujarati or Bengali pages, or several countries, add research and writing.",
+        "Measurement: setting up Search Console, analytics and enquiry tracking properly takes time but makes everything else accountable."
+      ]
+    },
+    {
+      "heading": "Costs that are often not in the SEO quote",
+      "paragraphs": [
+        "Ask about these before you compare monthly numbers, because they decide what you will really spend."
+      ],
+      "list": [
+        "Content writing, if the retainer covers only \"optimisation\" of pages you write yourself.",
+        "Website development time for technical fixes, new templates or page-speed work.",
+        "Paid tools such as rank trackers or keyword databases, if they are billed to you.",
+        "Photography, product data or specifications your team has to produce.",
+        "Link building: genuine mentions take time; paid links break Google's spam policies and can cost you more than they earn."
+      ]
+    },
+    {
+      "heading": "Red flags in cheap SEO packages",
+      "paragraphs": [
+        "Low prices are not wrong in themselves, but some patterns signal that little real work will happen."
+      ],
+      "list": [
+        "Guaranteed first-page or number-one rankings. Google says no one can guarantee a ranking.",
+        "A fixed number of backlinks a month, especially from unrelated sites or \"directories\" nobody visits.",
+        "Keywords chosen by the agency with no search demand or commercial value.",
+        "Reports full of rankings and \"visibility scores\" but no Search Console clicks, enquiries or sales.",
+        "No access to your own Search Console or analytics, or accounts created in the agency's name."
+      ]
+    },
+    {
+      "heading": "How to compare SEO quotes: a checklist",
+      "paragraphs": [
+        "Put each proposal through the same questions. The best quote is the one with the clearest link between work, measurement and your revenue, not the lowest monthly figure."
+      ],
+      "list": [
+        "What exactly happens in the first 30, 60 and 90 days, page by page?",
+        "Which searches and buyer questions are targeted, and why those?",
+        "How many pages will be created or improved each month, and who writes them?",
+        "Who fixes technical issues, and is development time included?",
+        "How will clicks, rankings, enquiries and revenue be reported, and from which tools?",
+        "Who owns the content, accounts and data if you stop working together?",
+        "What is the notice period, and what happens to the work if you leave?"
+      ],
+      "listType": "number"
+    },
+    {
+      "heading": "How to work out what you can afford to spend",
+      "paragraphs": [
+        "Start from the value of a customer, not from an agency's price list. Estimate the gross margin on an average order or contract and how many extra orders or enquiries a month organic search would need to bring to cover the fee. If that number is unrealistic for your market in the first year, a smaller scope, a project fee or a results-linked model may fit better.",
+        "As an illustration only: if each extra order earns ₹2,000 of margin and SEO costs ₹30,000 a month, you need about 15 extra orders a month from organic search to break even on the fee. Use your own numbers, and remember that SEO usually takes several months to build, so the first months cost more than they return.",
+        "Many businesses, especially new D2C brands and manufacturers, cannot justify a large retainer before they have traffic. That is why some agencies, including GrowwStack, offer selected partners [SEO with no upfront fee](/partnership), paid through an agreed share of the revenue the work produces, with scope, baseline and revenue definition written down first."
+      ]
+    },
+    {
+      "heading": "Does AEO and GEO cost extra?",
+      "paragraphs": [
+        "Optimising for AI answers from Google, ChatGPT and Perplexity mostly uses the same work as SEO: indexable pages, clear answers and authority. Expect it to be part of a good SEO scope rather than a separate large fee. If a quote charges heavily for \"AI files\" or special schema, read our [GEO guide](/blog/generative-engine-optimization-geo) first: Google says it does not need special AI files or markup for its AI features.",
+        "To see how we scope SEO, AEO and GEO together, read our [SEO services](/services) page."
+      ]
+    }
+  ],
+  "faqHeading": "SEO cost in India: frequently asked questions",
+  "faq": [
+    {
+      "q": "How much does SEO cost per month in India?",
+      "a": "Ten Indian agency price pages checked on 6 November 2026 quoted from about ₹3,000 to ₹5,00,000 a month, and most gave typical ranges between ₹5,000 and ₹60,000. The right figure depends on site size, competition, content volume and who does the work, so compare scopes, not just prices."
+    },
+    {
+      "q": "Is cheap SEO worth it?",
+      "a": "Sometimes, for a small local business with a simple site. But very low prices usually mean templated work, keyword packages or low-quality links. Check what is done each month and whether you will see Search Console clicks and enquiries in the reports."
+    },
+    {
+      "q": "Is it better to hire an SEO freelancer or an agency?",
+      "a": "A skilled freelancer can be good value for a focused job. An agency is usually better when you need technical work, content, development and reporting together. In both cases, ask for the same written scope and measurement."
+    },
+    {
+      "q": "Can I pay for SEO only when it produces results?",
+      "a": "Some agencies offer results-linked or revenue-share models. They work when the revenue definition, baseline, attribution and timing are agreed in writing first. GrowwStack offers a no-upfront revenue-share model to selected partners; see the [partnership page](/partnership)."
+    },
+    {
+      "q": "How long before SEO pays for itself?",
+      "a": "It depends on your margins and market. Improvements to pages already near the first page can bring clicks within weeks; new pages and competitive terms usually take several months. Plan the budget so you can keep going long enough to see the results."
+    }
+  ],
+  "takeaway": "Do not compare SEO quotes by the monthly number alone. Compare the written scope, who does the work, what is excluded and how clicks, enquiries and revenue will be reported, then choose the pricing model your margins can support.",
+  "related": [
+    "marketing-retainer-vs-revenue-share-cost",
+    "pay-after-results-seo-india",
+    "questions-to-ask-marketing-agency-india",
+    "seo-aeo-geo-audit-brief-india"
+  ],
+  "sources": [
+    {
+      "title": "Google Search Central: Do you need an SEO?",
+      "url": "https://developers.google.com/search/docs/fundamentals/do-i-need-seo"
+    },
+    {
+      "title": "Google Search Central: Spam policies for Google web search (link spam)",
+      "url": "https://developers.google.com/search/docs/essentials/spam-policies"
+    },
+    {
+      "title": "Google Search Central: Optimizing your website for generative AI features",
+      "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide"
+    }
+  ]
+}
