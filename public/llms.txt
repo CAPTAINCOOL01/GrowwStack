@@ -33,6 +33,8 @@ Clients include D2C and e-commerce brands, manufacturers and exporters, clinics 
 ## Search and answer engines
 - [Answer engine optimization](https://growwstack.in/blog/answer-engine-optimization-aeo)
 - [Generative engine optimization](https://growwstack.in/blog/generative-engine-optimization-geo)
+- [E-commerce SEO services in India](https://growwstack.in/blog/ecommerce-seo-services-india): What store SEO should include for Shopify and WooCommerce, the process, and how to choose an agency.
+- [SEO cost in India](https://growwstack.in/blog/seo-cost-in-india): Pricing models, cost drivers and how to compare SEO quotes.
 
 ## Evaluating agency payment models
 - [Retainer versus revenue share](https://growwstack.in/blog/marketing-retainer-vs-revenue-share-cost): Compare fixed agency fees, pay-per-result units and a share of agreed growth.

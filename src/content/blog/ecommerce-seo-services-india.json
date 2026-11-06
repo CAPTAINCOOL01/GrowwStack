@@ -1,0 +1,199 @@
+{
+  "slug": "ecommerce-seo-services-india",
+  "title": "E-commerce SEO services in India: what they include and how to choose",
+  "metaTitle": "E-commerce SEO Services in India: Scope, Process, Choosing",
+  "metaDescription": "What e-commerce SEO services in India should include for Shopify and WooCommerce stores, the process, how to judge an agency, and what results look like.",
+  "excerpt": "A plain guide for D2C founders and e-commerce heads: what an e-commerce SEO service should actually do, how Shopify and WooCommerce change the work, a six-step process, and the questions that separate a real partner from a keyword package.",
+  "category": "E-commerce",
+  "publishedAt": "2026-11-07",
+  "updatedAt": "2026-11-07",
+  "readingTime": "10 min read",
+  "intro": [
+    "E-commerce SEO services help an online store earn sales from Google and AI search without paying for each click. A good service fixes how search engines crawl and understand the store, makes category and product pages match what buyers search for, and connects that traffic to a checkout and follow-up that turn visits into orders. For an Indian D2C brand, the test is simple: organic revenue should rise, not just rankings.",
+    "This guide explains what the work should include, how it differs on Shopify and WooCommerce, a realistic process, how to compare agencies, and the proof to ask for before you sign. It is written by [GrowwStack](/services), an organic-only growth agency, so we also say where our own model fits and where it does not."
+  ],
+  "sections": [
+    {
+      "heading": "What e-commerce SEO services should include",
+      "paragraphs": [
+        "Store SEO is different from blog or service-business SEO. Most of the traffic that buys lands on category and product pages, and a store can have thousands of URLs created by filters, variants and sorting. The scope of an e-commerce SEO service should reflect that."
+      ],
+      "table": {
+        "caption": "The parts of e-commerce SEO and what each one fixes",
+        "head": [
+          "Area",
+          "What the work covers",
+          "What it fixes"
+        ],
+        "rows": [
+          [
+            "Technical SEO",
+            "Crawlability, indexing rules for filters and variants, canonical tags, pagination, site speed, mobile layout",
+            "Google wasting crawl time on duplicate URLs and missing the pages that sell"
+          ],
+          [
+            "Keyword and category mapping",
+            "Matching each category, collection and product page to the searches buyers use, one page per intent",
+            "Pages competing with each other, or no page at all for a high-demand search"
+          ],
+          [
+            "Category page content",
+            "Useful copy, buying guidance, internal links and FAQs on collection pages",
+            "Thin category pages that cannot rank for broad product searches"
+          ],
+          [
+            "Product page optimisation",
+            "Titles, specs, images with alt text, reviews, availability, price and Product structured data",
+            "Product pages that rank but do not earn the click or the sale"
+          ],
+          [
+            "Structured data",
+            "Product, Offer, Review, BreadcrumbList and Organization markup that matches what is visible on the page",
+            "Missing price, stock and rating details in search results"
+          ],
+          [
+            "Content for problem searches",
+            "Guides that answer the questions buyers ask before they choose a product",
+            "No visibility until the buyer already knows your brand"
+          ],
+          [
+            "AEO and GEO",
+            "Clear, citable answers and consistent brand facts so AI answers can understand and mention the store",
+            "Being absent when buyers ask ChatGPT, Perplexity or Google's AI features"
+          ],
+          [
+            "Conversion and tracking",
+            "Checkout friction, follow-up on abandoned carts, and analytics that tie organic visits to orders",
+            "Traffic that grows while revenue does not"
+          ]
+        ]
+      },
+      "after": [
+        "If a proposal only lists \"on-page, off-page and 20 keywords\", ask which of these areas it covers and who does each one."
+      ]
+    },
+    {
+      "heading": "Shopify and WooCommerce: what changes",
+      "paragraphs": [
+        "Most Indian D2C stores run on Shopify or WooCommerce. Both can rank well, but each has its own common problems."
+      ],
+      "list": [
+        "Shopify: products are reachable through both /products/ and /collections/.../products/ paths, so internal links should point to the canonical product URL. Theme apps can add heavy scripts that slow mobile pages. Collection filters and tags can create many thin URLs if they are linked and indexable.",
+        "WooCommerce: plugins decide much of the SEO setup, and conflicting plugins can output duplicate or broken structured data. Faceted filters, tag archives and attribute pages often need indexing rules. Hosting quality has a direct effect on speed.",
+        "Both: variant pages (size, colour), out-of-stock products, discontinued items and seasonal collections need a clear rule: keep, redirect or remove. Product feeds for Google Merchant Center should match the prices and stock shown on the page."
+      ],
+      "listType": "unordered"
+    },
+    {
+      "heading": "How the work runs: a six-step process",
+      "paragraphs": [
+        "A sensible engagement moves from diagnosis to fixes to growth, and measures revenue throughout."
+      ],
+      "list": [
+        "Baseline: record organic sessions, orders, revenue and Search Console clicks before any work starts, so later results can be judged fairly.",
+        "Audit: crawl the store, check what Google has indexed, find duplicate and thin URLs, test speed on mobile, and review structured data.",
+        "Map demand: group buyer searches by intent and assign each group to one page: a category, a product or a guide. Find the high-demand searches with no page.",
+        "Fix and build: resolve technical problems first, then improve the category pages with the most demand, then product pages, then new guides.",
+        "Connect to sales: remove checkout friction, set up follow-up for abandoned carts and enquiries, and make sure analytics shows which organic pages lead to orders.",
+        "Review monthly: report clicks, orders and revenue from organic search, what was shipped, and what comes next. Drop work that is not moving revenue."
+      ],
+      "listType": "ordered"
+    },
+    {
+      "heading": "What results look like, and how long they take",
+      "paragraphs": [
+        "No honest agency can promise a ranking or a revenue figure, because Google decides rankings and many factors outside SEO affect sales. What you can expect is a clear plan, visible work every month and reporting that ties organic traffic to orders.",
+        "Technical fixes and better product pages can show changes within weeks if the pages already have impressions. New category content and guides usually take a few months to earn steady traffic, and competitive head terms take longer, especially for a young domain with few links.",
+        "For one of our partners, a sports-equipment manufacturer, we rebuilt the storefront, product presentation, checkout path, analytics and WhatsApp follow-up. Its e-commerce revenue grew from ₹0 to over ₹2.2 crore with no paid ads. The full story is in the [sports-equipment case study](/case-studies/ecommerce-sports-equipment). Results depend on the product, the market and the starting point, so treat this as proof of method, not a forecast."
+      ]
+    },
+    {
+      "heading": "How to choose an e-commerce SEO agency in India",
+      "paragraphs": [
+        "Ask these questions before you sign. A good partner answers them in writing."
+      ],
+      "list": [
+        "Which pages on our store will you work on first, and why those?",
+        "How will you handle filters, variants and out-of-stock products?",
+        "Who does the work each month, and how many hours or deliverables does the fee buy?",
+        "How will you report organic orders and revenue, not just rankings?",
+        "Can you show a live store you have grown, with the client's permission?",
+        "What will you not do? (For example: no paid links, no fake reviews, no doorway pages.)"
+      ],
+      "listType": "unordered"
+    },
+    {
+      "heading": "Red flags in e-commerce SEO packages",
+      "paragraphs": [
+        "Some offers look cheap because they leave out the work that moves revenue."
+      ],
+      "list": [
+        "A guarantee of first-page or number-one rankings.",
+        "A fixed list of easy, low-volume keywords chosen by the agency.",
+        "Large numbers of backlinks for a small fee, which risks breaking Google's spam policies.",
+        "Bulk AI-written product descriptions with no editing or product knowledge.",
+        "Reports that show rankings and traffic but never orders or revenue."
+      ],
+      "listType": "unordered"
+    },
+    {
+      "heading": "Pricing: retainer, project or revenue share",
+      "paragraphs": [
+        "E-commerce SEO in India is usually sold as a monthly retainer or a one-time project such as an audit or a migration. Our guide to [SEO cost in India](/blog/seo-cost-in-india) explains what drives the price and how to compare quotes.",
+        "GrowwStack works differently with selected partners: no upfront agency fee or monthly retainer, and an agreed share of the revenue the work produces, with the scope, baseline and revenue definition agreed in writing first. It suits stores with a product people already buy and margins that can support a share. See [how the partnership works](/partnership)."
+      ]
+    }
+  ],
+  "faqHeading": "E-commerce SEO services: frequently asked questions",
+  "faq": [
+    {
+      "q": "What are e-commerce SEO services?",
+      "a": "E-commerce SEO services improve how an online store is found in Google and AI search. They cover technical fixes such as indexing and speed, matching category and product pages to buyer searches, product structured data, helpful content and the tracking that ties organic visits to orders."
+    },
+    {
+      "q": "Is SEO different for Shopify and WooCommerce stores?",
+      "a": "The principles are the same, but the common problems differ. Shopify stores often need canonical product links and lighter theme apps, while WooCommerce stores often need plugin clean-up, indexing rules for filters and better hosting. Both need rules for variants and out-of-stock products."
+    },
+    {
+      "q": "How long does e-commerce SEO take to show results?",
+      "a": "Fixes to pages that already have impressions can show within weeks. New category content and guides usually take a few months, and competitive head terms take longer, especially for new domains with few links. Anyone promising guaranteed rankings by a date is guessing."
+    },
+    {
+      "q": "Should a D2C brand do SEO or run ads first?",
+      "a": "Ads buy traffic immediately but stop when spending stops. SEO builds traffic that compounds but takes time. Many brands use both; GrowwStack works only on organic growth, so we focus on making search, content and conversion pay for themselves."
+    },
+    {
+      "q": "What should an e-commerce SEO report show?",
+      "a": "Organic clicks and impressions from Search Console, organic sessions, orders and revenue from analytics, the pages that improved, what was shipped that month and the plan for next month. Rankings alone are not enough."
+    },
+    {
+      "q": "Does GrowwStack offer e-commerce SEO on revenue share?",
+      "a": "For selected partners, yes: no upfront agency fee or retainer, and an agreed share of the revenue the work produces. Scope, baseline, revenue definition and timing are agreed in writing first, and acceptance depends on fit."
+    }
+  ],
+  "takeaway": "Judge e-commerce SEO by organic orders and revenue, not rankings. Fix crawling and duplicate URLs first, then the category and product pages buyers search for, then content and AI-search visibility, and make sure the checkout and follow-up can turn the extra traffic into sales.",
+  "related": [
+    "ecommerce-category-page-seo-checklist",
+    "d2c-seo-product-prioritization",
+    "d2c-store-traffic-no-sales",
+    "seo-cost-in-india"
+  ],
+  "sources": [
+    {
+      "title": "Google Search Central: E-commerce SEO best practices",
+      "url": "https://developers.google.com/search/docs/specialty/ecommerce"
+    },
+    {
+      "title": "Google Search Central: Product structured data",
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/product"
+    },
+    {
+      "title": "Google Search Central: Designing a URL structure for e-commerce sites",
+      "url": "https://developers.google.com/search/docs/specialty/ecommerce/designing-a-url-structure-for-ecommerce-sites"
+    },
+    {
+      "title": "Google Search Central: Spam policies for Google web search",
+      "url": "https://developers.google.com/search/docs/essentials/spam-policies"
+    }
+  ]
+}
