@@ -69,5 +69,9 @@
     }
   ],
   "takeaway": "Add Organization, WebSite, Article and BreadcrumbList, connect them in one graph with resolving @id references, and validate after every change. Skip AggregateRating unless the reviews are real and shown on the page.",
-  "related": ["generative-engine-optimization-geo", "technical-seo-checklist-new-website"]
+  "related": [
+    "generative-engine-optimization-geo",
+    "answer-engine-optimization-aeo",
+    "technical-seo-checklist-new-website"
+  ]
 }

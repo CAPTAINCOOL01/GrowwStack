@@ -82,5 +82,9 @@
     }
   ],
   "takeaway": "A site with no traffic is not a mystery. It is usually unindexed, too small, too slow, or answering nothing. Diagnose in that order, because fixing step four before step one produces nothing at all.",
-  "related": ["website-builder-vs-custom-code", "technical-seo-checklist-new-website"]
+  "related": [
+    "website-builder-vs-custom-code",
+    "technical-seo-checklist-new-website",
+    "answer-engine-optimization-aeo"
+  ]
 }
