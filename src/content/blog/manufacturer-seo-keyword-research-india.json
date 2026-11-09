@@ -2,13 +2,13 @@
   "slug": "manufacturer-seo-keyword-research-india",
   "category": "Organic growth",
   "publishedAt": "2026-10-24",
-  "readingTime": "7 min read",
-  "metaTitle": "SEO Keyword Research for Indian Manufacturers: A Practical Map",
-  "metaDescription": "Map industrial buyer searches to capability, product and application pages. Use an RFQ worksheet to choose useful manufacturing SEO topics.",
-  "title": "SEO Keyword Research for Indian Manufacturers: A Practical Map",
-  "excerpt": "Map industrial buyer searches to capability, product and application pages. Use an RFQ worksheet to choose useful manufacturing SEO topics.",
+  "readingTime": "11 min read",
+  "metaTitle": "SEO for Manufacturers in India: Keyword and Page Map",
+  "metaDescription": "SEO for manufacturers in India: which buyer searches to target, which pages to build, how to reduce marketplace dependence and how to measure RFQs.",
+  "title": "SEO for manufacturers in India: a keyword and page map",
+  "excerpt": "How Indian manufacturers can match buyer searches to product, capability and application pages, and measure RFQs rather than traffic.",
   "intro": [
-    "For a manufacturer, keyword research should connect what the factory can supply with what a buyer needs to evaluate. Start with products, processes, materials and quotation requirements, then validate the language against real enquiries and Search Console. A long list of generic manufacturing phrases is not a search strategy.",
+    "SEO for manufacturers in India means making sure a procurement manager, engineer or importer finds a page that shows you can supply what they need, then sends a usable RFQ. Start with products, processes, materials and quotation requirements, give each buying question one page, and measure enquiries. A long list of generic manufacturing phrases is not a search strategy.",
     "This guide is a worksheet for an Indian manufacturer planning its own website. The industrial examples are hypothetical, not claims about GrowwStack clients or measured keyword volumes. A technical or sales owner must review every specification before it appears online."
   ],
   "sections": [
@@ -33,6 +33,50 @@
       ]
     },
     {
+      "heading": "Which pages SEO for manufacturers in India depends on",
+      "paragraphs": [
+        "Most factory websites put the whole range on one Products page or in a PDF catalogue. Google then has no separate page to show for a specific search. Build these page types first, starting with the product families you most want to sell."
+      ],
+      "table": {
+        "caption": "Manufacturing website page types and the searches they serve",
+        "head": [
+          "Page type",
+          "Typical search pattern",
+          "What the page must show"
+        ],
+        "rows": [
+          [
+            "Product family",
+            "Product + manufacturer, supplier or exporter",
+            "The range, who it suits, and a clear route to request a quotation"
+          ],
+          [
+            "Individual product",
+            "Product + specification or model",
+            "Specifications as text, variants, materials, standards you actually meet"
+          ],
+          [
+            "Capability",
+            "Process + material or constraint",
+            "What you can and cannot do, inspection and documents available"
+          ],
+          [
+            "Application or industry",
+            "Product + use or buyer's sector",
+            "The operating problem, suitable options and their limits"
+          ],
+          [
+            "Selection guide",
+            "How to choose, or one option versus another",
+            "A balanced answer your sales engineer would give on a call"
+          ]
+        ]
+      },
+      "after": [
+        "A quick test: take your five most important products and check whether each has its own indexable page with real specifications in the text. If not, do that before writing any blog content. The [product-page and RFQ checklist](/blog/manufacturer-product-page-rfq-checklist) lists what each one needs."
+      ]
+    },
+    {
       "heading": "Use a page-mapping worksheet before writing",
       "paragraphs": [
         "For a hypothetical precision-components supplier, custom stainless steel shaft manufacturing could map to a capability page. Shaft material selection for a corrosive environment could map to an application guide. A particular shaft model belongs on its product page. The factory must confirm that it genuinely offers the material and process; these examples are not recommendations to claim every capability.",
@@ -54,10 +98,70 @@
       ]
     },
     {
+      "heading": "Marketplaces or your own website?",
+      "paragraphs": [
+        "Many Indian manufacturers rely on B2B marketplaces for online enquiries. These can be useful, and there is no need to leave them just to start SEO. The two channels do different jobs."
+      ],
+      "table": {
+        "caption": "B2B marketplaces compared with your own website",
+        "head": [
+          "Question",
+          "B2B marketplace",
+          "Your own website"
+        ],
+        "rows": [
+          [
+            "Who controls the page?",
+            "The platform, within its template",
+            "You, including specifications and proof"
+          ],
+          [
+            "Who sits beside you?",
+            "Other suppliers on the same screen",
+            "Only you, once the buyer has clicked"
+          ],
+          [
+            "What happens when you stop paying?",
+            "Depends on your plan and the platform's rules",
+            "The pages remain, though rankings still need upkeep"
+          ],
+          [
+            "How soon can it produce enquiries?",
+            "Often sooner, because the platform already has buyers",
+            "Usually months, depending on competition and site health"
+          ]
+        ]
+      },
+      "after": [
+        "Compare the two using your own records: enquiries received, how many sales accepted, and how many became quotations. Avoid judging either channel by enquiry count alone."
+      ]
+    },
+    {
+      "heading": "What changes when you sell to export buyers",
+      "paragraphs": [
+        "An overseas buyer usually cannot visit before shortlisting, so the page has to answer more of the risk questions. State which markets you actually serve, the documents you can provide, your capacity for repeat orders and how a buyer reaches a named function in your company. Use only facts you can support with paperwork.",
+        "If you publish separate pages for different countries or languages, make each one genuinely useful for that market. A page that only swaps the country name adds little. Google's [localized versions guidance](https://developers.google.com/search/docs/specialty/international/localized-versions) explains how to mark real variants."
+      ]
+    },
+    {
       "heading": "Decide which topic deserves the first pilot",
       "paragraphs": [
         "Choose a product family the business wants and can fulfil, where buyers need information the current page does not provide. A small pilot could include one capability page, one real selection question and a working RFQ handoff. This is an illustrative scope, not a promise of traffic or a required package.",
         "Defer broad glossaries that attract students when the sales team needs procurement enquiries. Defer city variants unless the business has distinct, useful local information. A national supplier does not need a near-identical page for every industrial city. The [industrial lead-generation guide](/blog/industrial-b2b-lead-generation-india) connects content with follow-up."
+      ]
+    },
+    {
+      "heading": "A sensible 90-day order of work",
+      "paragraphs": [
+        "This sequence suits a manufacturer starting from a brochure website. It is a planning aid, not a promise of rankings or enquiries in 90 days."
+      ],
+      "list": [
+        "Days 1 to 30: check what Google has indexed, fix crawling and mobile problems, complete this worksheet and rewrite the pages for your five priority products.",
+        "Days 31 to 60: add capability and application pages, link them to related products, and publish two or three selection guides based on real sales questions.",
+        "Days 61 to 90: tidy the RFQ route, add proof you can verify, seek listings in relevant trade bodies, then review Search Console and expand what is gaining impressions."
+      ],
+      "after": [
+        "If nobody in the company has the time to run this for at least six months, compare in-house and external options using our guide to [SEO services in India](/services), and judge any provider on scope and reporting."
       ]
     },
     {
@@ -81,7 +185,43 @@
     {
       "title": "Search Console: Performance report",
       "url": "https://support.google.com/webmasters/answer/7576553"
+    },
+    {
+      "title": "Google Search Central: Product structured data",
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/product"
+    },
+    {
+      "title": "Google Search Central: Creating helpful, reliable, people-first content",
+      "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+    },
+    {
+      "title": "Google Search Central: Localized versions of your pages",
+      "url": "https://developers.google.com/search/docs/specialty/international/localized-versions"
     }
   ],
-  "takeaway": "Use the worksheet with your own business facts and search data. For help connecting search visibility with qualified enquiries, [describe your business to GrowwStack](/contact)."
+  "takeaway": "Use the worksheet with your own business facts and search data. For help connecting search visibility with qualified enquiries, [describe your business to GrowwStack](/contact).",
+  "updatedAt": "2026-11-09",
+  "faqHeading": "SEO for manufacturers in India: frequently asked questions",
+  "faq": [
+    {
+      "q": "How long does SEO take for a manufacturing company?",
+      "a": "Usually months rather than weeks, and it varies with competition, site condition and how many useful product pages exist. Specific technical searches can show impressions earlier than broad product terms. Judge progress by relevant impressions first, then RFQs that sales accepts."
+    },
+    {
+      "q": "Is SEO better than IndiaMART or other B2B marketplaces?",
+      "a": "They do different jobs. A marketplace already has buyers but places you beside other suppliers. Your own website takes longer to build and gives you control of the page and the enquiry. Many manufacturers use both and compare accepted enquiries from each."
+    },
+    {
+      "q": "Do manufacturers need a Google Business Profile?",
+      "a": "Only if the business is eligible under Google's rules, which centre on in-person contact with customers. If buyers visit your premises, a profile can help regional searches. If you sell nationally or abroad without that contact, product and capability pages matter more."
+    },
+    {
+      "q": "Should every product have its own page?",
+      "a": "Give a product its own page when buyers search for it differently or need different specifications. Very similar variants can share one page with a clear specification table. The aim is one useful destination per buying question."
+    },
+    {
+      "q": "Can AI search tools recommend a manufacturer?",
+      "a": "They can, but nobody can guarantee it. Clear pages that state what you make, for whom and to what specification are easier for search and AI systems to understand than general marketing copy. Our [generative engine optimization guide](/blog/generative-engine-optimization-geo) explains the wider approach."
+    }
+  ]
 }

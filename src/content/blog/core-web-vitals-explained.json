@@ -3,12 +3,12 @@
   "category": "Performance",
   "publishedAt": "2026-08-31",
   "readingTime": "6 min read",
-  "metaTitle": "Core Web Vitals Explained: Why Speed Decides More Than Rankings",
-  "metaDescription": "What LCP, INP and CLS actually measure, why they matter on Indian mobile connections, and the fixes that produce most of the improvement.",
+  "metaTitle": "Are Core Web Vitals a Ranking Factor? LCP, INP and CLS",
+  "metaDescription": "Are Core Web Vitals a ranking factor? What Google says, what LCP, INP and CLS measure, and the fixes that matter most on Indian mobile connections.",
   "title": "Core Web Vitals, and why speed decides more than rankings",
   "excerpt": "Speed is a modest ranking factor and a huge behavioural one. Most visitors who leave a slow page never appear in any report.",
   "intro": [
-    "Core Web Vitals are Google's attempt to measure how a page feels to use, rather than how fast a server responds.",
+    "Are Core Web Vitals a ranking factor? Google says good Core Web Vitals align with what its core ranking systems seek to reward, so they matter, but they do not replace relevant content. They measure how a page feels to use: loading (LCP), responsiveness (INP) and visual stability (CLS).",
     "They are a ranking factor, though a modest one — content and links matter more. The larger effect is behavioural: people abandon slow pages, and abandonment is invisible in most reports because those visitors never reach anything you measure."
   ],
   "sections": [
@@ -66,5 +66,15 @@
     }
   ],
   "takeaway": "LCP, INP and CLS measure how a page feels rather than how fast it responds. Fix images and layout shift first, test on a mid-range phone on mobile data, and stop once the page feels fast — the next gain is in content.",
-  "related": ["technical-seo-checklist-new-website", "why-template-websites-dont-rank"]
+  "related": [
+    "technical-seo-checklist-new-website",
+    "why-template-websites-dont-rank"
+  ],
+  "updatedAt": "2026-11-09",
+  "sources": [
+    {
+      "title": "Google Search Central: Understanding Core Web Vitals and Google search results",
+      "url": "https://developers.google.com/search/docs/appearance/core-web-vitals"
+    }
+  ]
 }
