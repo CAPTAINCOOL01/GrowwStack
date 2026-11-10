@@ -2,22 +2,45 @@
   "slug": "technical-seo-checklist-new-website",
   "category": "SEO",
   "publishedAt": "2026-08-31",
-  "readingTime": "7 min read",
-  "metaTitle": "Technical SEO Checklist for a New Website",
-  "metaDescription": "The technical work that has to be right before content can rank — indexing, rendering, canonicals, structured data — in the order it actually matters.",
+  "updatedAt": "2026-11-10",
+  "readingTime": "9 min read",
+  "metaTitle": "Technical SEO Checklist for a New Website (2026)",
+  "metaDescription": "A launch-order technical SEO checklist for a new website: indexing, rendering, canonicals, sitemaps, structured data, speed, AI crawlers and how to verify each.",
   "title": "Technical SEO checklist for a new website",
-  "excerpt": "Technical SEO does not make a site rank. It removes the reasons a site cannot. Here is the order that matters.",
+  "excerpt": "Technical SEO does not make a site rank. It removes the reasons a site cannot. Here are the ten checks for a new website, in the order that matters, with how to verify each one.",
   "intro": [
-    "Technical SEO does not make a website rank. Content and links do that. What technical work does is remove the reasons a site cannot rank, which is a different and more boring job.",
-    "It is also finite. Unlike content, this is a list you can genuinely finish. Here it is, in the order that matters — because fixing item eight before item one is wasted effort."
+    "A technical SEO checklist for a new website comes down to ten checks: make sure pages can be indexed, that crawlers receive real text, that each page has one canonical URL, a unique title and description, a clean heading structure, valid structured data, fast mobile pages, internal links, a submitted sitemap and open access for search and AI crawlers. Do them in that order, and verify each one rather than assuming it.",
+    "Technical SEO does not make a website rank. Content and links do that. What technical work does is remove the reasons a site cannot rank, which is a different and more boring job. It is also finite: unlike content, this is a list you can genuinely finish."
   ],
   "sections": [
+    {
+      "heading": "The checklist at a glance",
+      "paragraphs": [
+        "Each item below has a section of its own further down. The last column is the part most checklists skip: how to prove the item is done."
+      ],
+      "table": {
+        "caption": "Technical SEO checklist for a new website",
+        "head": ["Check", "What good looks like", "How to verify"],
+        "rows": [
+          ["1. Indexable", "No stray noindex; robots.txt allows the pages that matter", "Search Console URL Inspection and Pages report"],
+          ["2. Real text in the HTML", "Headline and body copy present before JavaScript runs", "View source (not the inspector) on key pages"],
+          ["3. One canonical URL", "https, one host, permanent redirects, self-referencing canonical", "Open the http and www versions; check the canonical tag"],
+          ["4. Unique titles and descriptions", "Every route serves its own title and meta description", "View source on several routes; site crawl"],
+          ["5. Heading structure", "One H1 per page, H2s and H3s in order", "Page outline or a crawl report"],
+          ["6. Structured data", "Organization, BlogPosting, BreadcrumbList where true", "Rich Results Test; Search Console Enhancements"],
+          ["7. Mobile speed", "Pages feel fast on a mid-range phone on mobile data", "PageSpeed Insights field data; a real phone"],
+          ["8. Internal links", "Every important page linked from at least one other page", "URL Inspection \"Referring page\"; site crawl"],
+          ["9. Sitemap submitted", "XML sitemap lists only canonical, indexable URLs", "Search Console Sitemaps report: Success"],
+          ["10. Search and AI crawler access", "Googlebot, Bingbot and AI search crawlers not blocked", "Read robots.txt; Bing Webmaster Tools"]
+        ]
+      }
+    },
     {
       "heading": "1. Confirm the site can be indexed",
       "paragraphs": [
         "Everything else is irrelevant if pages are not in the index. Two things block this more often than any other cause.",
         "First, a stray noindex tag left over from staging. It is startlingly common for a site to launch still telling search engines to ignore it. Second, a robots.txt that disallows more than intended.",
-        "Verify in Search Console rather than assuming. The Pages report shows what is indexed and, more usefully, why things are not."
+        "Verify in Search Console rather than assuming. The Pages report shows what is indexed and, more usefully, why things are not. On a new domain, \"Discovered – currently not indexed\" is normal for a while; it usually means Google has not crawled the page yet, not that something is broken."
       ],
       "list": [
         "No unintended noindex on production pages",
@@ -30,62 +53,108 @@
     {
       "heading": "2. Check what the crawler actually receives",
       "paragraphs": [
-        "View source — not the browser inspector, which shows the page after JavaScript has run. Look for your headline and body copy as literal text.",
-        "If the source is essentially an empty div, your content depends entirely on the crawler executing JavaScript. Google usually manages this, on a delay. AI crawlers frequently do not.",
+        "View source, not the browser inspector, which shows the page after JavaScript has run. Look for your headline and body copy as literal text.",
+        "If the source is essentially an empty div, your content depends entirely on the crawler executing JavaScript. Google can render JavaScript, but it may happen later than the first crawl. Many AI crawlers do not run JavaScript at all, so a client-rendered page can be invisible to them.",
         "This single check catches more real problems than any other on this list, and almost nobody performs it."
       ]
     },
     {
       "heading": "3. One canonical version of the site",
       "paragraphs": [
-        "A site can be reachable at http and https, with and without www, with and without a trailing slash. To a search engine those can look like separate sites competing with each other.",
-        "Pick one, redirect everything else to it permanently, and set a self-referencing canonical tag on every page. This is unglamorous and takes twenty minutes."
+        "A site can be reachable at http and https, with and without www, with and without a trailing slash. To a search engine those can look like separate pages competing with each other.",
+        "Pick one, redirect everything else to it permanently (301), and set a self-referencing canonical tag on every page. This is unglamorous and takes twenty minutes."
       ]
     },
     {
       "heading": "4. Unique titles and descriptions",
       "paragraphs": [
         "Every page needs its own title and meta description. Duplicates across pages are a strong signal that the pages are interchangeable.",
-        "This is a specific and frequent failure in single-page applications, where every route can end up serving the same static tags from one HTML file. If you are running an SPA, verify that each route genuinely serves distinct metadata in its initial response rather than setting it with JavaScript afterwards."
+        "This is a specific and frequent failure in single-page applications, where every route can end up serving the same tags from one HTML file. If you run an SPA, verify that each route serves distinct metadata in its initial response rather than setting it with JavaScript afterwards.",
+        "Keep titles specific to the page's main search term and descriptions short enough not to be cut off; around 155 characters is a safe limit."
       ]
     },
     {
       "heading": "5. Sensible heading structure",
       "paragraphs": [
         "One H1 per page, describing what the page is about. H2s for main sections, H3s beneath them. Do not skip levels to get a font size you like.",
-        "This matters for accessibility as much as for search, and increasingly for extraction — assistants use heading structure to work out which passage answers which question."
+        "This matters for accessibility as much as for search, and increasingly for extraction: answer engines use heading structure to work out which passage answers which question."
       ]
     },
     {
       "heading": "6. Structured data where it applies",
       "paragraphs": [
-        "Add Organization markup identifying the business, and Article or BlogPosting on content pages. Use BreadcrumbList where you have a hierarchy.",
-        "Only mark up things genuinely present on the page. Marking up reviews you do not display or questions you do not answer risks a manual action, and the upside was never large.",
+        "Add Organization markup identifying the business, and Article or BlogPosting on content pages. Use BreadcrumbList where you have a hierarchy. Our guide to [structured data for business websites](/blog/structured-data-for-business-websites) covers which types are worth adding.",
+        "Only mark up things genuinely present on the page. Marking up reviews you do not display or questions you do not answer breaks Google's guidelines and can cost you rich results.",
         "Validate with the Rich Results Test before assuming it works. Malformed JSON-LD fails silently."
       ]
     },
     {
       "heading": "7. Performance on a real device",
       "paragraphs": [
-        "Test on a mid-range Android phone on mobile data. Not on your laptop, and not only in Lighthouse.",
-        "Chase the large wins — oversized images, render-blocking resources, oversized JavaScript bundles — and stop when the page feels fast. Perfect scores are not a commercial objective."
+        "Test on a mid-range Android phone on mobile data, not on your laptop, and not only in Lighthouse. Most Indian visitors arrive on phones.",
+        "Chase the large wins: oversized images, render-blocking resources, oversized JavaScript bundles. Stop when the page feels fast; perfect scores are not a commercial objective. If you want to know how much speed affects rankings, see [are Core Web Vitals a ranking factor?](/blog/core-web-vitals-explained)"
       ]
     },
     {
       "heading": "8. Internal links",
       "paragraphs": [
         "A page with no links pointing at it is nearly invisible, regardless of quality. Crawlers find pages by following links, and a page reachable only from the sitemap gets treated as marginal.",
-        "Every page you care about should be reachable from at least one other page, ideally with link text that describes what it is about. Publishing a page and linking to it from nowhere is the most common way good content goes unread."
+        "Every page you care about should be reachable from at least one other page, ideally with link text that describes what it is about. In Search Console's URL Inspection, \"Referring page: None detected\" on an unindexed page is the clearest sign it needs a link. Publishing a page and linking to it from nowhere is the most common way good content goes unread."
+      ]
+    },
+    {
+      "heading": "9. Sitemap and faster discovery",
+      "paragraphs": [
+        "Generate an XML sitemap that lists only canonical, indexable URLs, reference it in robots.txt and submit it in Search Console. Regenerate it automatically when pages change, with accurate last-modified dates.",
+        "Google and Bing are separate. Add the site to Bing Webmaster Tools as well (it can import from Search Console), and consider IndexNow, which lets you tell Bing and other participating engines about changed URLs straight away. Bing's index also feeds several AI search products."
+      ]
+    },
+    {
+      "heading": "10. Let search and AI crawlers in",
+      "paragraphs": [
+        "If you want to appear in AI answers as well as search results, check that robots.txt does not block the crawlers those products use. OpenAI, for example, documents OAI-SearchBot as the crawler for ChatGPT search, separate from the crawler it uses for model training, so you can allow one and block the other.",
+        "An llms.txt file is optional: Google has said it does not use one for Search. Treat it as a tidy summary for other tools, not as a ranking lever. For the wider picture, see our guide to [generative engine optimization (GEO)](/blog/generative-engine-optimization-geo)."
       ]
     },
     {
       "heading": "What is not on this list",
       "paragraphs": [
         "Keyword density, meta keywords, and most of what SEO tools flag as issues. Tools generate long lists because long lists justify subscriptions, not because every item matters.",
-        "If the eight items above are done, the technical work is essentially complete. Everything after that is content and links, which is where the actual competition happens — and where the effort should go."
+        "If the ten items above are done, the technical work is essentially complete. Everything after that is content and links, which is where the real competition happens and where the effort should go. If the site is done and still gets no visitors, read [why your website gets no traffic](/blog/why-your-website-gets-no-traffic), or see how our [SEO services in India](/services) handle both the technical and the content side."
       ]
     }
   ],
-  "takeaway": "Technical SEO is a finite list, and most of it is done in a day. Confirm indexing, check what the crawler receives, canonicalise, give every page unique metadata, and link pages to each other. Then stop and write.",
-  "related": ["why-your-website-gets-no-traffic", "structured-data-for-business-websites"]
+  "faqHeading": "Technical SEO for new websites: common questions",
+  "faq": [
+    {
+      "q": "What should a technical SEO checklist for a new website include?",
+      "a": "Indexing (no stray noindex, robots.txt correct), real text in the HTML, one canonical URL per page, unique titles and descriptions, one H1 with ordered headings, valid structured data, fast mobile pages, internal links to every important page, a submitted XML sitemap and open access for search and AI crawlers."
+    },
+    {
+      "q": "How long does it take a new website to get indexed?",
+      "a": "It varies from days to weeks. Pages linked from other indexed pages and listed in a submitted sitemap are usually discovered sooner. Use URL Inspection in Search Console to check a page and request indexing once it is ready."
+    },
+    {
+      "q": "Do I need Bing Webmaster Tools if I already use Google Search Console?",
+      "a": "It is worth adding. Bing is a separate index, it supports IndexNow for faster discovery of changed pages, and its results are used by several AI search products. You can import your sites from Search Console."
+    },
+    {
+      "q": "Is technical SEO a one-time job?",
+      "a": "Mostly. The checklist can be finished at launch, then re-checked after redesigns, platform changes or large content additions. Ongoing growth comes from content and links, not from repeating technical audits."
+    },
+    {
+      "q": "Should I block AI crawlers in robots.txt?",
+      "a": "Only if you do not want to appear in AI answers. Several AI companies document separate crawlers for search and for training, so you can allow the search crawler and block the training one if you prefer."
+    }
+  ],
+  "takeaway": "Technical SEO is a finite list, and most of it is done in a day. Confirm indexing, check what the crawler receives, canonicalise, give every page unique metadata, link pages to each other, submit a sitemap to Google and Bing, and let search crawlers in. Then stop and write.",
+  "related": ["why-your-website-gets-no-traffic", "structured-data-for-business-websites", "core-web-vitals-explained", "seo-aeo-geo-audit-brief-india"],
+  "sources": [
+    { "title": "Google Search Central: Robots meta tag specifications", "url": "https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag" },
+    { "title": "Google Search Central: JavaScript SEO basics", "url": "https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics" },
+    { "title": "Google Search Central: Consolidate duplicate URLs", "url": "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls" },
+    { "title": "Google Search Central: Build and submit a sitemap", "url": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap" },
+    { "title": "IndexNow (Bing and participating search engines)", "url": "https://www.indexnow.org/" },
+    { "title": "OpenAI: Overview of OpenAI crawlers", "url": "https://platform.openai.com/docs/bots" }
+  ]
 }

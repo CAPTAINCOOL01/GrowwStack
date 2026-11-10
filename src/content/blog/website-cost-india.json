@@ -2,35 +2,53 @@
   "slug": "website-cost-india",
   "category": "Pricing",
   "publishedAt": "2026-08-31",
-  "readingTime": "7 min read",
-  "metaTitle": "What Should a Website Cost in India? An Honest Breakdown",
-  "metaDescription": "Website quotes in India range from a few thousand rupees to several lakh for work that sounds identical. Here is what actually drives the difference.",
-  "title": "What should a website cost in India?",
-  "excerpt": "Quotes range from ₹5,000 to ₹5,00,000 for work described in the same words. The difference is real, and it is knowable.",
+  "updatedAt": "2026-11-10",
+  "readingTime": "9 min read",
+  "metaTitle": "Website Development Cost in India (2026): Honest Breakdown",
+  "metaDescription": "What a website costs in India by type, from template sites to custom builds, what drives the price, the costs left out of quotes and how to compare them.",
+  "title": "Website development cost in India: what you should pay and why",
+  "excerpt": "Website quotes in India run from about ₹10,000 to more than ₹10 lakh. Here is what each tier buys, what drives the price, the costs nobody quotes and how to compare proposals.",
   "intro": [
-    "Ask three suppliers to quote for a business website in India and you may get ₹8,000, ₹80,000 and ₹8,00,000. All three will describe the work in similar language.",
-    "The spread is not arbitrary, and the expensive quote is not automatically the honest one. What follows is what actually drives cost, so you can tell which quote matches what you need."
+    "Website development cost in India usually runs from about ₹10,000–₹15,000 for a basic template site to ₹1–5 lakh for a custom-designed business site and ₹10 lakh or more for a custom platform. Those are the ranges Indian web agencies publish on the pages that rank for this search (checked 10 November 2026). The price that is right for you depends on scope, who writes the content and whether anyone runs the site after launch.",
+    "Ask three suppliers to quote for the same business website and you may get ₹8,000, ₹80,000 and ₹8,00,000, all describing the work in similar words. The spread is not arbitrary, and the expensive quote is not automatically the honest one. This guide explains what each tier buys, so you can tell which quote matches what you need."
   ],
   "sections": [
     {
+      "heading": "Website cost in India by type of website",
+      "paragraphs": [
+        "The table below groups the ranges that Indian web agencies and hosting companies publish on the pages that rank for \"website development cost in India\". Treat it as a map of the market, not a price list: every supplier defines \"basic\" and \"custom\" a little differently."
+      ],
+      "table": {
+        "caption": "Published website price ranges in India (pages checked 10 Nov 2026)",
+        "head": ["Type of website", "What you usually get", "Published ranges", "Good fit when"],
+        "rows": [
+          ["Template or basic business site", "A ready theme with your text, images and a contact form; usually 5–10 pages", "From about ₹10,000–₹15,000; small-business ranges up to about ₹1,00,000", "You need credibility: somewhere to send people who already know you"],
+          ["Custom-designed business site", "Designed pages for your offer, written content, basic SEO and analytics", "About ₹1,00,000–₹5,00,000 or more", "The site must win enquiries from people who do not know you yet"],
+          ["Custom platform or web application", "Accounts, dashboards, bookings, complex catalogues or integrations built to your process", "Top of the published ranges: ₹10,00,000 or more", "The website is part of how the business runs, not only how it is found"],
+          ["Freelancer by the hour", "Time on a defined task: a fix, a page, a migration", "About ₹1,000–₹3,000 an hour for independent designers", "The job is small and you can brief it precisely"]
+        ]
+      }
+    },
+    {
       "heading": "What the cheapest tier really is",
       "paragraphs": [
-        "At the bottom of the market you are buying a template installation. Someone picks a theme, replaces the placeholder text with yours, swaps the images, and hands it over.",
+        "At the bottom of the market you are buying a template installation. Someone picks a theme, replaces the placeholder text with yours, swaps the images and hands it over.",
         "This is a legitimate product at a legitimate price, and for some businesses it is the correct purchase. What you are not buying is any thought about what the site should say, who it is for, or what it should cause to happen.",
-        "The failure mode is not that the site looks bad. It usually looks fine. The failure mode is that it produces nothing, and nobody involved ever intended it to."
+        "The failure mode is not that the site looks bad. It usually looks fine. The failure mode is that it produces nothing, and nobody involved ever intended it to. If the site is meant to bring in customers, read [why template websites struggle to rank](/blog/why-template-websites-dont-rank) before choosing this tier."
       ]
     },
     {
-      "heading": "What actually drives cost upward",
+      "heading": "What actually drives website development cost",
       "paragraphs": [
-        "Five things account for most of the variation between a low quote and a high one:"
+        "Six things account for most of the gap between a low quote and a high one:"
       ],
       "list": [
-        "Number of distinct pages and page types — each real template is design and build work",
-        "Whether content is written for you or supplied by you, which is often the largest hidden cost",
-        "Integrations: CRM, payments, WhatsApp, inventory, booking, each with real edge cases",
-        "Whether anyone is doing SEO, analytics and conversion work rather than only building",
-        "Ongoing operation — a site that is improved monthly is a service, not a purchase"
+        "Number of distinct page types: each real template is design and build work, while extra pages of the same type are cheap",
+        "Content: whether the words are written for you or supplied by you, which is often the largest hidden cost",
+        "Platform: a website builder, WordPress, Shopify or custom code each change both the build price and the running cost",
+        "Integrations: CRM, payment gateway, WhatsApp, inventory or booking, each with real edge cases to test",
+        "Search and measurement: whether anyone sets up SEO, analytics and conversion tracking rather than only building pages",
+        "Ongoing operation: a site that is improved every month is a service, not a one-time purchase"
       ],
       "listType": "bullet"
     },
@@ -39,49 +57,110 @@
       "paragraphs": [
         "A large share of website projects stall not in development but at content. The build is finished and waiting on copy that nobody has time to write.",
         "When a quote is silent on content, it almost always means you are supplying it. That is fine if you have someone who can write, and a serious problem if you do not, because the project will sit unfinished for months.",
-        "Ask explicitly. \"Who writes the words?\" separates quotes that look comparable more effectively than almost any other question."
+        "Ask explicitly. \"Who writes the words, and how many pages of them?\" separates quotes that look comparable better than almost any other question."
       ]
     },
     {
-      "heading": "Ongoing costs are not optional",
+      "heading": "Yearly running costs after launch",
       "paragraphs": [
-        "Domain and hosting are small and predictable. The real ongoing cost is whether anyone is responsible for the site after launch.",
-        "A website that is never touched again decays. Content goes stale, competitors publish more, technical debt accumulates, and performance drifts. The site that produced enquiries in year one produces fewer in year two for no visible reason.",
-        "Budget for someone owning it, or accept that the asset depreciates."
+        "The build price is only the first bill. Every website also carries costs that repeat, and quotes often leave them out:"
+      ],
+      "table": {
+        "caption": "Recurring website costs to ask about",
+        "head": ["Cost", "What it covers", "Question to ask"],
+        "rows": [
+          ["Domain renewal", "Your web address, renewed every year", "Is the domain registered in my name?"],
+          ["Hosting", "The server or platform the site runs on", "Is hosting included, and what does it cost from year two?"],
+          ["Platform and plugin fees", "Builder plans, Shopify apps, paid themes or plugins", "Which subscriptions will I be paying, and to whom?"],
+          ["Maintenance and security", "Updates, backups, fixing what breaks", "Who updates the site, and how fast are problems fixed?"],
+          ["Content and SEO", "New pages, guides and improvements that bring visitors", "Is anyone responsible for traffic after launch?"]
+        ]
+      }
+    },
+    {
+      "heading": "Why a website that is never touched again loses value",
+      "paragraphs": [
+        "A website that nobody owns after launch decays. Content goes stale, competitors publish more, technical debt builds up and performance drifts. The site that produced enquiries in year one produces fewer in year two for no visible reason.",
+        "Budget for someone owning it, or accept that the asset depreciates. If the site gets visitors but no enquiries, the problem is usually [what happens after someone fills your form](/blog/crm-and-follow-up-systems) or the pages themselves, not the price you paid."
       ]
     },
     {
-      "heading": "How to compare quotes that look identical",
+      "heading": "How to compare website quotes that look identical",
       "paragraphs": [
         "Most quotes are written to be hard to compare. These questions make them comparable:"
       ],
       "list": [
         "How many distinct page designs, and how many pages in total?",
         "Who writes the content, and is it included in this price?",
-        "Is the site server-rendered, and what is the expected mobile load time?",
+        "Which platform will it be built on, and why that one for my business?",
+        "Will each page serve its own title, description and text in the HTML that search engines receive?",
         "What happens to an enquiry after the form is submitted?",
         "What is included after launch, for how long, and at what cost?",
-        "Do I own the code and the domain outright?"
+        "Do I own the code, the content and the domain outright?"
       ],
       "listType": "number"
     },
     {
+      "heading": "Red flags in a website quote",
+      "paragraphs": [
+        "A low price is not a red flag on its own. These are:"
+      ],
+      "list": [
+        "The domain or hosting will be registered in the supplier's name, not yours",
+        "No mention of mobile speed, page titles or analytics anywhere in the proposal",
+        "\"Unlimited pages\" with no word on who writes them",
+        "A promise of first-page rankings or a fixed number of leads; nobody can guarantee either",
+        "No written scope of what happens after launch"
+      ],
+      "listType": "bullet"
+    },
+    {
       "heading": "The question behind the question",
       "paragraphs": [
-        "Asking what a website should cost is usually a proxy for a harder question: what is a website worth to this business.",
-        "If the site is a credibility asset — somewhere to point people who already found you — spending heavily is poor allocation. A modest template site does that job.",
-        "If the site is supposed to be a channel, generating enquiries at a measurable cost, then it is not a purchase at all. It is an investment judged on return, and the right amount to spend is whatever produces a return you can measure."
+        "Asking what a website should cost is usually a proxy for a harder question: what is a website worth to this business?",
+        "If the site is a credibility asset, somewhere to point people who already found you, spending heavily is poor allocation. A modest template site does that job.",
+        "If the site is supposed to be a channel, generating enquiries or sales at a measurable cost, then it is not a purchase at all. It is an investment judged on return, and the right amount to spend is whatever produces a return you can measure. That usually means paying for content and SEO, not only design; our guide to [SEO cost in India](/blog/seo-cost-in-india) covers that side of the budget."
       ]
     },
     {
-      "heading": "Why we do not quote upfront",
+      "heading": "Why GrowwStack does not quote upfront for selected partners",
       "paragraphs": [
-        "We build without an upfront agency fee and are paid from the growth the work produces. That is not generosity — it is a filter in both directions.",
-        "It means we only take on businesses where we believe the work will generate enough to pay for itself, and it means the client is not gambling capital on a promise. If we are wrong about the growth, we carry that.",
-        "It also constrains us to a small number of engagements at a time, which is why we say no more often than yes."
+        "For selected partners, GrowwStack builds the website and runs organic growth with no upfront agency fee or monthly retainer, and is paid an agreed share of the revenue the work produces. Scope, baseline, revenue definition and timing are agreed in writing first, and other business costs such as domain, hosting and paid tools are listed separately.",
+        "It is a filter in both directions. We only take on businesses where we believe the work can pay for itself, and the client is not gambling capital on a promise. It also limits us to a small number of partners at a time, which is why we say no more often than yes. The full arrangement is in [how the free website on revenue share works](/blog/free-website-revenue-share-india) and on the [growth partnership page](/partnership)."
       ]
     }
   ],
-  "takeaway": "Cost tracks scope, content ownership, integrations and whether anyone operates the site after launch. Decide first whether the site is a credibility asset or a revenue channel — the honest budget follows from that answer.",
-  "related": ["website-builder-vs-custom-code", "website-lead-generation-system"]
+  "faqHeading": "Website cost in India: common questions",
+  "faq": [
+    {
+      "q": "How much does a website cost in India?",
+      "a": "Pages from Indian web agencies that rank for this question (checked 10 November 2026) publish ranges from about ₹10,000–₹15,000 for a basic template site, about ₹1–5 lakh for a custom-designed business site and ₹10 lakh or more for a custom platform. Scope, content and after-launch work explain most of the difference."
+    },
+    {
+      "q": "How much does a small business website cost in India?",
+      "a": "The small-business ranges published on those pages mostly fall between about ₹15,000 and ₹1,00,000. A site that only needs to look credible can sit at the lower end; a site that must bring in new enquiries needs written content, SEO and tracking, which pushes the cost up."
+    },
+    {
+      "q": "Why do website quotes in India vary so much?",
+      "a": "Because the same words describe different work. A low quote is often a template with your text pasted in; a high quote may include design per page type, written content, integrations, SEO and support after launch. Ask each supplier the same seven questions above to compare them fairly."
+    },
+    {
+      "q": "What are the yearly costs of running a website?",
+      "a": "Expect domain renewal, hosting, any platform or plugin subscriptions, maintenance and security updates, and new content if you want traffic to grow. Ask for each one in writing, and make sure the domain is registered in your name."
+    },
+    {
+      "q": "Is a cheap website a bad idea?",
+      "a": "Not always. If people already know you and only need to check you exist, a well-made template site is enough. It becomes a bad idea when the site is meant to bring in customers but nobody is paid to make that happen."
+    }
+  ],
+  "takeaway": "Website cost in India tracks scope, content ownership, platform, integrations and whether anyone runs the site after launch. Decide first whether the site is a credibility asset or a revenue channel; the honest budget follows from that answer.",
+  "related": ["website-builder-vs-custom-code", "free-website-revenue-share-india", "seo-cost-in-india", "website-lead-generation-system"],
+  "sources": [
+    { "title": "GoDaddy India: How much does it cost to build a website in India", "url": "https://www.godaddy.com/resources/in/skills/cost-to-build-a-website-in-india" },
+    { "title": "Akoode: Website development cost in India", "url": "https://www.akoode.com/blog/website-development-cost-in-india" },
+    { "title": "Secuodsoft: Website development cost in India", "url": "https://www.secuodsoft.com/blog/web-development/website-development-cost-in-india.php" },
+    { "title": "Zethic: Website development cost in India 2026", "url": "https://zethic.com/website-development-cost-in-india-2026-full-price-breakdown/" },
+    { "title": "OrangeMantra: Website development cost in India", "url": "https://www.orangemantra.com/blog/guide-on-determining-website-development-cost/" },
+    { "title": "Google Search Central: SEO starter guide", "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide" }
+  ]
 }
