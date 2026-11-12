@@ -1,0 +1,191 @@
+{
+ "slug": "aeo-geo-services-india",
+ "category": "AEO",
+ "publishedAt": "2026-11-12",
+ "updatedAt": "2026-11-12",
+ "readingTime": "9 min read",
+ "metaTitle": "AEO & GEO Services in India: What an Agency Should Deliver",
+ "metaDescription": "What AEO and GEO services include, how an AI search agency in India should measure them, a 90-day plan, red flags and the questions to ask before you hire.",
+ "title": "AEO and GEO services in India: what an AI search agency should deliver",
+ "excerpt": "A buyer's guide to AEO and GEO services in India: the deliverables, a 90-day engagement plan, how results are measured, red flags and questions to ask an agency.",
+ "intro": [
+  "AEO and GEO services help a business appear as the answer, or as a cited source, when buyers ask Google AI Overviews, AI Mode, ChatGPT, Perplexity or Copilot a question. Answer engine optimization (AEO) works on the questions and the answer passages on your own pages. Generative engine optimization (GEO) works on your business as an entity: consistent facts, third-party mentions and pages that AI systems can retrieve and trust. A good engagement does both on top of normal SEO, because AI answers are built from pages that search engines have already crawled and indexed.",
+  "This guide explains what an Indian business should expect an AEO and GEO agency to deliver, how the work should be measured without inflated claims, and how to compare proposals. If you want the concepts first, read our [AEO guide](/blog/answer-engine-optimization-aeo) and [GEO guide](/blog/generative-engine-optimization-geo)."
+ ],
+ "sections": [
+  {
+   "heading": "What do AEO and GEO services include?",
+   "paragraphs": [
+    "Agencies package the work differently, but a complete service covers six areas. If a proposal leaves one out, ask why."
+   ],
+   "table": {
+    "caption": "Core deliverables of an AEO and GEO engagement",
+    "head": [
+     "Deliverable",
+     "What you should receive",
+     "Why it matters"
+    ],
+    "rows": [
+     [
+      "Question map",
+      "A list of the questions your buyers ask, grouped by intent and mapped to one owner page each",
+      "AI answers are assembled from answers to specific questions; unmapped questions go to competitors"
+     ],
+     [
+      "Technical eligibility",
+      "Crawl, index and snippet checks; robots.txt rules for Googlebot, Bingbot and AI crawlers; sitemap and IndexNow set-up",
+      "A page that is not indexed, or blocks the crawler, cannot be used as a source"
+     ],
+     [
+      "Answer-first pages",
+      "Rewrites or new pages with a direct answer under each heading, tables where comparisons help, and a visible FAQ",
+      "Direct, complete passages are easier for answer engines to quote and cite"
+     ],
+     [
+      "Entity consistency",
+      "One fact set (name, services, location, founders, offer) applied to your site, Organization schema and business profiles",
+      "Conflicting facts across sites make AI systems hedge or pick another business"
+     ],
+     [
+      "Mentions and citations",
+      "A plan for genuine third-party mentions: directories, industry publications, partner and client sites",
+      "AI answers lean on what other sources say about you, not only on your own site"
+     ],
+     [
+      "Measurement",
+      "Search Console Performance and Generative AI reports, a fixed prompt panel tested on a schedule, and AI-assistant referrals in analytics",
+      "Without a baseline, nobody can tell whether the work changed anything"
+     ]
+    ]
+   }
+  },
+  {
+   "heading": "AEO vs GEO: who does which work?",
+   "paragraphs": [
+    "In practice one team should do both, but it helps to know which activity serves which goal. AEO is page-level work: choosing the question, writing the answer, structuring the page and marking it up. GEO is business-level work: making sure the facts about your company are the same everywhere, earning mentions on sites AI systems already trust, and checking what AI answers currently say about you.",
+    "Google's guidance on AI features says the same SEO fundamentals apply and that no special markup or file is required to appear in AI Overviews or AI Mode. So be cautious of any service built mainly on new file formats or \"AI schema\". Structured data still helps search engines understand a page, but it does not replace a clear answer and a trusted source."
+   ],
+   "list": [
+    "AEO: question research, answer passages, headings, tables, FAQs, featured-snippet and People Also Ask targets.",
+    "GEO: entity facts, Organization schema, directory and profile consistency, third-party mentions, AI answer audits.",
+    "Shared: crawlability, indexing, internal links to owner pages, and one measurement plan."
+   ]
+  },
+  {
+   "heading": "A 90-day AEO and GEO engagement, step by step",
+   "paragraphs": [
+    "A first engagement should produce visible changes within weeks and a measured read at 90 days. This is the order we follow, and the order we would expect from any agency."
+   ],
+   "list": [
+    "Weeks 1–2: baseline. Export Search Console queries and pages, run the prompt panel (15–30 buyer questions) on the main AI engines, and record which sources each answer cites today.",
+    "Weeks 1–2: eligibility fixes. Index status of every money page, robots.txt rules, canonical tags, sitemap, IndexNow and page speed problems that stop crawling.",
+    "Weeks 2–4: question map and owner pages. One page per intent; no two pages competing for the same question.",
+    "Weeks 3–8: answer-first upgrades of the pages that already have impressions, then new pages only for questions no page answers.",
+    "Weeks 4–12: entity and mentions. Align facts across the site and profiles; pursue genuine listings, client credits and expert contributions.",
+    "Week 12: measured review against the baseline, with what moved, what did not, and the next quarter's plan."
+   ],
+   "listType": "ordered"
+  },
+  {
+   "heading": "How should AEO and GEO results be measured?",
+   "paragraphs": [
+    "Measure three things separately, and do not let an agency merge them into one score you cannot check.",
+    "First, search visibility: Search Console clicks, impressions and average position for the question map, by page. Google's Generative AI performance report in Search Console shows impressions of your URLs inside AI Overviews and AI Mode; it has no click data, so read it as visibility, not traffic. Second, answer share: the same prompt panel, run on the same engines on a fixed schedule, logging whether your business is named and whether your URL is cited. AI answers vary between runs and users, so look at the trend across the panel, not a single screenshot. Third, business outcome: enquiries or orders from organic search and AI-assistant referrals, counted in your CRM or order system, not only in analytics."
+   ]
+  },
+  {
+   "heading": "Red flags when hiring an AEO or GEO agency",
+   "paragraphs": [
+    "AI search is new enough that some offers are mostly relabelled SEO, and some promise what nobody controls. Walk away from these."
+   ],
+   "list": [
+    "A guarantee that ChatGPT, Gemini or Google will cite or recommend you. No agency controls that.",
+    "Reports built only on screenshots of single AI answers, with no baseline and no repeated panel.",
+    "Bulk AI-written pages, one per city or synonym, with no new information. Google treats scaled thin content as spam.",
+    "Paid links, fake reviews or invented statistics presented as \"authority building\".",
+    "No access for you to Search Console, analytics or the prompt panel results."
+   ]
+  },
+  {
+   "heading": "Questions to ask before you sign",
+   "paragraphs": [
+    "Use these in the proposal call. A clear agency answers each one in a sentence."
+   ],
+   "list": [
+    "Which questions and pages will you own first, and why those?",
+    "What is the baseline, and who keeps the raw data?",
+    "Which AI engines are in the prompt panel, how often is it run, and can I see every result?",
+    "What will you change on my site in the first 30 days?",
+    "How will you earn third-party mentions without paid links?",
+    "What happens to the pages, content and accounts if we stop working together?"
+   ],
+   "listType": "ordered"
+  },
+  {
+   "heading": "How GrowwStack delivers AEO and GEO",
+   "paragraphs": [
+    "GrowwStack is an organic growth agency in India. We run SEO, AEO and GEO as one programme, and we build the website and sales follow-up that turn the visits into revenue. We work on organic search only and do not run paid ads. The engagement follows the 90-day plan above, and you keep access to every account and report. See our [SEO services](/services) for the full scope and our [SEO, AEO and GEO audit brief](/blog/seo-aeo-geo-audit-brief-india) for what the first audit covers.",
+    "For selected partners, we work without an upfront agency fee or monthly retainer and are paid an agreed share of the revenue the work produces. Scope, baseline, the revenue definition and payment timing are agreed in writing before work starts, and other business costs are listed separately. Read how the [revenue-share growth partnership](/partnership) works."
+   ]
+  }
+ ],
+ "faqHeading": "AEO and GEO services: frequently asked questions",
+ "faq": [
+  {
+   "q": "What is the difference between AEO services and GEO services?",
+   "a": "AEO services work on your pages so they directly answer the questions buyers ask, for featured snippets, People Also Ask and AI answers. GEO services work on how AI systems understand and cite your business as a whole: consistent facts, Organization schema and genuine third-party mentions. Most businesses need both, on top of normal SEO."
+  },
+  {
+   "q": "Do I still need SEO if I invest in AEO and GEO?",
+   "a": "Yes. Google says its AI features draw on pages from its search index, and other AI search tools also rely on crawled, indexed pages. If a page cannot be crawled, indexed and trusted, AEO and GEO work on it has little effect."
+  },
+  {
+   "q": "Can an agency guarantee that ChatGPT or Google AI Overviews will cite my business?",
+   "a": "No. AI answers are generated by the platform and change between queries and users. An honest agency measures your answer share across a fixed set of prompts over time and reports the trend; it does not guarantee citations."
+  },
+  {
+   "q": "How long do AEO and GEO take to show results?",
+   "a": "Fixes to eligibility and answer-first upgrades of pages that already rank can show in Search Console within weeks. Being named in AI answers usually depends on authority and third-party mentions, which take months. Judge a first engagement at about 90 days against a written baseline."
+  },
+  {
+   "q": "Is llms.txt or special AI schema required to appear in AI answers?",
+   "a": "Google's guidance says no special file or markup is needed to appear in its AI features. Keeping your normal structured data accurate is still useful, and an llms.txt file does no harm, but neither replaces clear answers on indexed pages."
+  },
+  {
+   "q": "How should I compare AEO and GEO proposals from different agencies?",
+   "a": "Compare the question map, the baseline, the prompt panel and the first 30 days of site changes, not the number of deliverables. Ask who owns the data and accounts, and reject any proposal that guarantees rankings or AI citations."
+  }
+ ],
+ "takeaway": "Buy AEO and GEO as measured SEO work: a question map, answer-first owner pages, consistent entity facts, genuine mentions and a baseline you can check. Avoid guarantees of AI citations and anything that relies on scaled thin pages or paid links.",
+ "related": [
+  "answer-engine-optimization-aeo",
+  "generative-engine-optimization-geo",
+  "seo-aeo-geo-audit-brief-india"
+ ],
+ "sources": [
+  {
+   "title": "Google Search Central: AI features and your website",
+   "url": "https://developers.google.com/search/docs/appearance/ai-features"
+  },
+  {
+   "title": "Google Search Central: Optimizing your website for generative AI features on Google Search",
+   "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide"
+  },
+  {
+   "title": "Google Search Console Help: Generative AI performance report",
+   "url": "https://support.google.com/webmasters/answer/16984139?hl=en"
+  },
+  {
+   "title": "Google Search Central: Spam policies (scaled content abuse)",
+   "url": "https://developers.google.com/search/docs/essentials/spam-policies"
+  },
+  {
+   "title": "OpenAI: Overview of OpenAI crawlers",
+   "url": "https://developers.openai.com/api/docs/bots"
+  },
+  {
+   "title": "IndexNow (Bing and participating search engines)",
+   "url": "https://www.indexnow.org/"
+  }
+ ]
+}

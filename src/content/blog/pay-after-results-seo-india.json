@@ -2,7 +2,7 @@
   "slug": "pay-after-results-seo-india",
   "category": "Agency selection",
   "publishedAt": "2026-10-24",
-  "updatedAt": "2026-11-03",
+  "updatedAt": "2026-11-12",
   "readingTime": "7 min read",
   "metaTitle": "Pay After Results SEO in India: What Should You Agree?",
   "metaDescription": "Compare pay-after-ranking SEO, pay-per-lead fees and revenue-share growth. Define results, scope and measurement before choosing an agency in India.",
@@ -52,7 +52,7 @@
     {
       "heading": "Does pay after results include SEO, AEO and GEO?",
       "paragraphs": [
-        "Only if the agreed scope says so. Some providers use AEO for answer-focused content and GEO or LLM SEO for visibility in AI-generated responses. Ask which pages, question set, technical work and measurement are included rather than treating each acronym as another guaranteed placement.",
+        "Only if the agreed scope says so. Some providers use AEO for answer-focused content and GEO or LLM SEO for visibility in AI-generated responses. Ask which pages, question set, technical work and measurement are included rather than treating each acronym as another guaranteed placement. Our guide to [AEO and GEO services in India](/blog/aeo-geo-services-india) lists the deliverables and measurement to ask for.",
         "For Google’s AI features, the official guidance says foundational SEO practices remain relevant and no special optimization is required. Useful content, crawl access, internal discovery and credible evidence still matter. A special LLM tag or an llms.txt file does not establish that the page will be cited."
       ]
     },
@@ -96,8 +96,8 @@
     }
   ],
   "related": [
+    "aeo-geo-services-india",
     "performance-based-marketing-agency-india",
-    "marketing-retainer-vs-revenue-share-cost",
-    "revenue-share-marketing-attribution-checklist"
+    "marketing-retainer-vs-revenue-share-cost"
   ]
 }
