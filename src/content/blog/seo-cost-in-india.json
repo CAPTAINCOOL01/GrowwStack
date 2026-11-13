@@ -2,11 +2,11 @@
   "slug": "seo-cost-in-india",
   "category": "SEO",
   "publishedAt": "2026-11-06",
-  "updatedAt": "2026-11-06",
-  "readingTime": "9 min read",
-  "metaTitle": "SEO Cost in India: Pricing Models and How to Compare Quotes",
-  "metaDescription": "How much SEO costs in India, how agencies price it (retainer, project, revenue share), what drives the price, hidden costs and how to compare quotes.",
-  "title": "SEO cost in India: how pricing works and how to compare quotes",
+  "updatedAt": "2026-11-13",
+  "readingTime": "10 min read",
+  "metaTitle": "SEO Cost in India: Monthly Pricing, Charges and Quotes",
+  "metaDescription": "SEO cost per month in India: published agency price ranges, pricing models, what each business type needs, hidden charges and how to compare SEO quotes.",
+  "title": "SEO cost in India: monthly pricing, charges and how to compare quotes",
   "excerpt": "What Indian agencies publicly quote for SEO, the three pricing models, what really drives the cost, the costs that are not in the quote, and a checklist for comparing proposals.",
   "intro": [
     "SEO in India is usually sold as a monthly retainer, a one-time project fee or, less often, a revenue share. Price pages from ten Indian agencies in the top search results for \"seo cost in india\" on 6 November 2026 quoted anything from about ₹3,000 to ₹5,00,000 a month, and most gave typical ranges somewhere between ₹5,000 and ₹60,000 a month. That range tells you very little on its own: what matters is the scope, who does the work and how results are measured.",
@@ -20,16 +20,80 @@
       ],
       "table": {
         "caption": "SEO pricing models compared",
-        "head": ["Model", "How you pay", "Works well when", "Watch out for"],
+        "head": [
+          "Model",
+          "How you pay",
+          "Works well when",
+          "Watch out for"
+        ],
         "rows": [
-          ["Monthly retainer", "A fixed fee every month for an agreed scope", "You want steady, ongoing work and can fund it before results arrive", "Vague scope (\"on-page + off-page\") that hides how little is done each month"],
-          ["Project fee", "A one-time fee for a defined job: audit, migration, set of pages", "You have a specific problem with a clear end point", "An audit that lists problems but does not fix them"],
-          ["Keyword package", "A price per set of keywords, often with a ranking promise", "Rarely; it suits the seller more than the buyer", "Low-value keywords chosen because they are easy to rank"],
-          ["Revenue share", "No upfront agency fee; an agreed share of revenue the work produces", "The agency is selective and your margins and fulfilment can support it", "Unclear revenue definitions, baselines and attribution"]
+          [
+            "Monthly retainer",
+            "A fixed fee every month for an agreed scope",
+            "You want steady, ongoing work and can fund it before results arrive",
+            "Vague scope (\"on-page + off-page\") that hides how little is done each month"
+          ],
+          [
+            "Project fee",
+            "A one-time fee for a defined job: audit, migration, set of pages",
+            "You have a specific problem with a clear end point",
+            "An audit that lists problems but does not fix them"
+          ],
+          [
+            "Keyword package",
+            "A price per set of keywords, often with a ranking promise",
+            "Rarely; it suits the seller more than the buyer",
+            "Low-value keywords chosen because they are easy to rank"
+          ],
+          [
+            "Revenue share",
+            "No upfront agency fee; an agreed share of revenue the work produces",
+            "The agency is selective and your margins and fulfilment can support it",
+            "Unclear revenue definitions, baselines and attribution"
+          ]
         ]
       },
       "after": [
         "Our article on [retainer versus revenue share](/blog/marketing-retainer-vs-revenue-share-cost) compares the two main models with a worked example, and [pay-after-results SEO](/blog/pay-after-results-seo-india) explains how results-linked deals are structured."
+      ]
+    },
+    {
+      "heading": "SEO cost per month in India: what each type of business needs",
+      "paragraphs": [
+        "Most SEO in India is priced per month. The published ranges above are wide because a month of SEO means very different amounts of work for different businesses. Use this table to judge how much monthly work your site really needs before you compare charges."
+      ],
+      "table": {
+        "caption": "Monthly SEO scope by type of business",
+        "head": [
+          "Type of business",
+          "What a month of SEO should include",
+          "Work needed each month"
+        ],
+        "rows": [
+          [
+            "Local service business (clinic, salon, coaching centre)",
+            "Google Business Profile, 1–3 service or location-relevant pages or updates, reviews process, basic tracking",
+            "Low"
+          ],
+          [
+            "B2B service or manufacturer with 10–50 pages",
+            "Product and application pages, 2–4 buyer guides, technical fixes, enquiry tracking, some link outreach",
+            "Medium"
+          ],
+          [
+            "D2C brand or e-commerce store with 50–5,000 products",
+            "Category and product page work, technical and speed fixes, 4+ guides, structured data, merchant feeds, link outreach",
+            "High"
+          ],
+          [
+            "Competitive national service (finance, education, SaaS)",
+            "Large content programme, technical work, digital PR and links, conversion tracking",
+            "High"
+          ]
+        ]
+      },
+      "after": [
+        "Ask each agency which row it thinks you are in and what it will deliver every month. If two quotes for the same row differ a lot in price, the difference should show up in the written scope."
       ]
     },
     {
@@ -111,6 +175,10 @@
     {
       "q": "How much does SEO cost per month in India?",
       "a": "Ten Indian agency price pages checked on 6 November 2026 quoted from about ₹3,000 to ₹5,00,000 a month, and most gave typical ranges between ₹5,000 and ₹60,000. The right figure depends on site size, competition, content volume and who does the work, so compare scopes, not just prices."
+    },
+    {
+      "q": "What are typical SEO charges for a small business in India?",
+      "a": "A small local business usually needs less monthly work than a large store, so it tends to sit at the lower end of the published ranges. Ask for a written list of what will be done each month and judge the charge against that, not against another agency’s headline price."
     },
     {
       "q": "Is cheap SEO worth it?",

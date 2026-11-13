@@ -11,18 +11,18 @@ const services = [
 
 // Guides linked from the homepage so crawlers and buyers reach them in one click.
 const guides = [
-  { href: "/blog/why-your-website-gets-no-traffic", label: "Why your website gets no traffic, and what fixes it" },
+  { href: "/blog/why-your-website-gets-no-traffic", label: "How to increase website traffic (and why you get none)" },
+  { href: "/blog/aeo-geo-services-india", label: "AEO and GEO services in India: what you should get" },
+  { href: "/blog/seo-cost-in-india", label: "SEO cost in India: monthly pricing explained" },
+  { href: "/blog/ecommerce-seo-services-india", label: "E-commerce SEO services for Indian stores" },
   { href: "/blog/generative-engine-optimization-geo", label: "GEO: how to get your business into AI answers" },
   { href: "/blog/answer-engine-optimization-aeo", label: "AEO: answer engine optimisation for business websites" },
   { href: "/blog/seo-aeo-geo-audit-brief-india", label: "What an SEO, AEO and GEO audit should deliver" },
   { href: "/blog/technical-seo-checklist-new-website", label: "Technical SEO checklist for a new website" },
   { href: "/blog/d2c-store-traffic-no-sales", label: "Traffic but no sales? A D2C store diagnostic" },
   { href: "/blog/industrial-b2b-lead-generation-india", label: "Manufacturing SEO and industrial B2B leads" },
-  { href: "/blog/industrial-exporter-enquiry-system-india", label: "Getting export enquiries as an Indian manufacturer" },
-  { href: "/blog/clinic-patient-acquisition-india", label: "How Indian clinics get patients online" },
   { href: "/blog/google-business-profile-clinic-india", label: "Google Business Profile settings for clinics" },
   { href: "/blog/questions-to-ask-marketing-agency-india", label: "Nine questions to ask an agency before you sign" },
-  { href: "/blog/free-website-revenue-share-india", label: "Websites on revenue share: how it works" },
 ];
 
 export const homeFaqs = [

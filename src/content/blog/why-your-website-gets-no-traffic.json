@@ -2,16 +2,35 @@
   "slug": "why-your-website-gets-no-traffic",
   "category": "Traffic",
   "publishedAt": "2026-08-31",
-  "readingTime": "7 min read",
-  "metaTitle": "Why Your Website Gets No Traffic (And What Actually Fixes It)",
-  "metaDescription": "Most business websites get almost no visitors. The reasons are specific and fixable. Here is what actually causes the silence, in the order it usually matters.",
-  "title": "Why your website gets no traffic",
-  "excerpt": "A site can be finished, live and completely invisible. The causes are specific, and they are almost never the ones people assume.",
+  "updatedAt": "2026-11-13",
+  "readingTime": "10 min read",
+  "metaTitle": "How to Increase Website Traffic: Why You Get None and Fixes",
+  "metaDescription": "Why a business website gets no traffic and how to increase it: check indexing, fix speed, target real searches, answer questions and earn links, in order.",
+  "title": "How to increase website traffic: why your site gets none, and what fixes it",
+  "excerpt": "A site can be finished, live and completely invisible. The causes are specific and fixable, and the order you fix them in decides whether traffic grows.",
   "intro": [
-    "A website can be finished, live, and completely invisible. The business owner refreshes the analytics, sees single digits, and concludes that SEO is a scam or that they need to spend on ads.",
-    "Usually neither is true. A site with no traffic almost always has a specific, identifiable reason — and in our experience the reason is rarely the one the owner suspects."
+    "To increase website traffic from Google and AI search, first make sure your pages are indexed, then make them load fast with their text in the HTML, then build one page for each thing your buyers search, answer their questions plainly, and earn links and mentions from other sites. Most business websites get no traffic because one of these steps is missing, and fixing them out of order wastes months.",
+    "A website can be finished, live and completely invisible. The owner refreshes the analytics, sees single digits, and concludes that SEO does not work or that they need to spend on ads. Usually neither is true. A site with no traffic almost always has a specific, identifiable reason, and in our experience it is rarely the one the owner suspects."
   ],
   "sections": [
+    {
+      "heading": "Why your website gets no traffic: the six usual causes",
+      "paragraphs": [
+        "Each cause has a quick check you can run yourself. Start at the top: a problem higher in the table makes the ones below it irrelevant."
+      ],
+      "table": {
+        "caption": "Causes of low website traffic, how to check and what fixes them",
+        "head": ["Cause", "How to check", "What fixes it"],
+        "rows": [
+          ["Google does not know the pages exist", "Search Console → Pages report, or URL Inspection for one page", "Submit a sitemap, link new pages from pages Google already knows, request indexing"],
+          ["Content only appears after JavaScript runs", "View page source (not the inspector) and look for your headline and body text", "Server-render or prerender the pages so the text is in the HTML"],
+          ["The site is slow on mobile", "PageSpeed Insights on your key pages, mobile tab", "Lighter pages: compress images, remove unused scripts and heavy builders"],
+          ["The site is one or two pages", "Count the pages that each answer a different buyer search", "One page per service, product type, problem and buyer question"],
+          ["Pages use your words, not your buyers' words", "Search Console → Performance → Queries, and Google's autocomplete", "Lead titles, headings and first sentences with the words buyers type"],
+          ["No other site links to or mentions you", "Search Console → Links → Top linking sites", "Directory listings, client credits, partner pages, useful guides people cite"]
+        ]
+      }
+    },
     {
       "heading": "Nobody told Google the site exists",
       "paragraphs": [
@@ -19,9 +38,9 @@
         "A brand-new domain with no inbound links and no submitted sitemap can sit unindexed for months. The site is live. It is simply not in the index, and a page that is not in the index cannot rank for anything."
       ],
       "list": [
-        "Verify the domain in Google Search Console",
+        "Verify the domain in Google Search Console and Bing Webmaster Tools",
         "Submit an XML sitemap listing every page you want indexed",
-        "Check Search Console's Pages report for what Google has actually crawled"
+        "Check Search Console's Pages report for what Google has actually indexed, and link any 'Discovered – currently not indexed' page from a page that is already indexed"
       ],
       "listType": "bullet"
     },
@@ -45,16 +64,15 @@
       "heading": "The content answers nothing",
       "paragraphs": [
         "Most business websites are brochures. They describe the company, list services, and invite contact. Every competitor's site says approximately the same thing in approximately the same words.",
-        "Search engines rank pages that answer questions. If your site contains no answers — only claims — there is nothing for a search engine to match a query against. The page is not competing badly; it is not competing at all.",
-        "This is why a genuinely useful article often outranks a polished homepage. The article answers something. The homepage asserts something."
+        "Search engines rank pages that answer questions. If your site contains no answers, only claims, there is nothing for a search engine to match a query against. The page is not competing badly; it is not competing at all.",
+        "This is also why AI answers from Google, ChatGPT and Perplexity skip most business sites: they quote pages that state a clear answer. Our guide to [answer engine optimisation](/blog/answer-engine-optimization-aeo) shows how to write for them."
       ]
     },
     {
       "heading": "The site is too slow to compete",
       "paragraphs": [
-        "Page speed is a ranking factor, but the larger effect is behavioural. Visitors leave slow pages, and search engines observe that they left.",
-        "Template platforms and heavy page builders often ship several hundred kilobytes of JavaScript to render what is essentially text and images. On a mid-range Android phone on Indian mobile data, that is the difference between a page that appears instantly and one that takes four seconds.",
-        "Most visitors will not wait four seconds, and the ones who leave take your rankings down with them."
+        "Page experience is one of many signals Google uses, but the larger effect is behavioural. Visitors leave slow pages before they read anything.",
+        "Template platforms and heavy page builders often ship several hundred kilobytes of JavaScript to render what is essentially text and images. On a mid-range Android phone on Indian mobile data, that is the difference between a page that appears instantly and one that takes four seconds. Our [Core Web Vitals guide](/blog/core-web-vitals-explained) explains what to measure."
       ]
     },
     {
@@ -66,25 +84,81 @@
       ]
     },
     {
-      "heading": "The order in which to fix things",
+      "heading": "How to increase website traffic: 10 steps in order",
       "paragraphs": [
-        "These causes are not equally weighted, and fixing them out of order wastes effort. Indexing problems make everything else irrelevant — there is no point optimising a page that is not in the index.",
-        "Work through them in this sequence:"
+        "These are the steps we follow on partner sites. They are ordered so that each one builds on the last; the first four usually take days, the rest take weeks to months."
       ],
       "list": [
-        "Confirm the site is indexed at all, via Search Console",
-        "Ensure content is present in the raw HTML, not only after JavaScript runs",
-        "Fix load speed, particularly on mobile",
-        "Build pages that target the language buyers actually use",
-        "Publish content that answers real questions rather than describing the company"
+        "Confirm indexing in Search Console and Bing Webmaster Tools, and fix any page Google has not indexed.",
+        "Make sure each page's main text is in the raw HTML and the page loads quickly on a phone.",
+        "Fix titles and descriptions on pages that already get impressions at positions 1–10 but few clicks: this is the fastest source of extra visitors.",
+        "Strengthen pages ranking 8–20 for real searches: answer the question in the first paragraph and cover what the top results cover.",
+        "List what your buyers search (Search Console queries, Google autocomplete, People Also Ask) and give each distinct need its own page.",
+        "Write guides that answer the questions buyers ask before they buy, and link each guide to the service or product page it supports.",
+        "Link new pages from your homepage or a strong guide so Google finds them quickly.",
+        "Add structured data that matches what is visible on the page (Organization, Product, FAQ where it fits).",
+        "Earn links and mentions: Google Business Profile, relevant directories, suppliers, clients and partners who can credit you.",
+        "Measure clicks, enquiries and sales every week, and keep what works."
       ],
-      "listType": "number"
+      "listType": "number",
+      "after": [
+        "If you would rather have this done for you, our [SEO services](/services) cover these steps, and selected partners can work with us on a [no-upfront revenue-share basis](/partnership), with scope and baseline agreed in writing first."
+      ]
+    },
+    {
+      "heading": "Should you run ads to get traffic instead?",
+      "paragraphs": [
+        "Ads buy visits for as long as you pay. Organic search builds an asset: a page that ranks keeps bringing visitors without a cost per click. Ads can be useful to test which offers sell, but they do not fix an unindexed, slow or thin website, and the visits stop when the budget does.",
+        "For most small Indian businesses the cheapest extra visitors come from fixing the first four steps above, because they unlock traffic the site is already close to earning."
+      ]
     }
   ],
-  "takeaway": "A site with no traffic is not a mystery. It is usually unindexed, too small, too slow, or answering nothing. Diagnose in that order, because fixing step four before step one produces nothing at all.",
+  "faqHeading": "Increasing website traffic: frequently asked questions",
+  "faq": [
+    {
+      "q": "Why is my website not getting any traffic?",
+      "a": "Usually because Google has not indexed the pages, the text only loads through JavaScript, the site is slow, it has too few pages, or the pages use words buyers do not search. Check them in that order in Google Search Console."
+    },
+    {
+      "q": "How long does it take to increase website traffic with SEO?",
+      "a": "Fixes to indexing and to pages already near the first page can bring clicks within weeks. New pages and competitive searches usually take several months, and faster on a site that already has some authority."
+    },
+    {
+      "q": "How can I increase website traffic for free?",
+      "a": "Verify the site in Google Search Console and Bing Webmaster Tools, submit a sitemap, improve titles on pages that get impressions, write pages that answer buyer questions, and create a Google Business Profile. All of these cost time, not money."
+    },
+    {
+      "q": "Does posting on social media increase website traffic?",
+      "a": "It can send visits when people click your posts, but it does not by itself make your pages rank on Google. Treat it as a separate channel; search traffic depends on indexed, useful pages and links from other sites."
+    },
+    {
+      "q": "How do I check how many visitors my website gets from Google?",
+      "a": "Use the Performance report in Google Search Console: it shows clicks, impressions and average position by search query and by page. Analytics tools that need cookie consent may under-count visitors."
+    }
+  ],
+  "takeaway": "A site with no traffic is not a mystery. It is usually unindexed, too slow, too small or answering nothing. Fix it in that order, then add pages for what buyers search and earn links, and traffic follows.",
   "related": [
-    "website-builder-vs-custom-code",
     "technical-seo-checklist-new-website",
-    "answer-engine-optimization-aeo"
+    "answer-engine-optimization-aeo",
+    "seo-cost-in-india",
+    "website-builder-vs-custom-code"
+  ],
+  "sources": [
+    {
+      "title": "Google Search Central: SEO Starter Guide",
+      "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+    },
+    {
+      "title": "Google Search Central: Page indexing report (Search Console Help)",
+      "url": "https://support.google.com/webmasters/answer/7440203"
+    },
+    {
+      "title": "Google Search Central: Understand JavaScript SEO basics",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics"
+    },
+    {
+      "title": "Bing Webmaster Guidelines",
+      "url": "https://www.bing.com/webmasters/help/webmasters-guidelines-30fba23a"
+    }
   ]
 }
