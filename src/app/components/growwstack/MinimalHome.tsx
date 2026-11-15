@@ -51,7 +51,7 @@ export function MinimalHome() {
       <p className="gs-minimal__lede">We grow your organic traffic from Google and AI answers, then build the websites and systems that turn it into customers. Organic only, no paid ads.</p>
       <div className="gs-zero-offer"><strong>Get onboarded at <span>₹0 upfront fees.</span></strong><p>We charge nothing until you earn revenue from our work.</p><small>For selected partners. Revenue share and measurement agreed before we begin.</small></div>
       <div className="gs-minimal__actions"><a className="gs-button gs-button--signal" href="/contact">Start at ₹0 upfront ↗</a><a href="/partnership">How it works →</a></div>
-      <p className="gs-minimal__proof"><strong>₹2.5 Cr+</strong> in revenue across partner brands · 5 months · ₹0 ad spend</p>
+      <p className="gs-minimal__proof"><strong>₹3.5 Cr+</strong> in revenue across partner brands · 5 months · ₹0 ad spend</p>
     </section>
     <section className="gs-container gs-brand-strip" id="partnerships" aria-labelledby="minimal-brands">
       <div className="gs-brand-strip__header"><h2 id="minimal-brands">Brands we’ve worked with</h2><a href="/work">Our work →</a><button type="button" aria-pressed={brandsPaused} onClick={() => setBrandsPaused(!brandsPaused)} aria-label={brandsPaused ? "Play brand scrolling" : "Pause brand scrolling"}>{brandsPaused ? "Play" : "Pause"}</button></div>
