@@ -45,9 +45,9 @@ const growthLayers = [
 
 const results = [
   {
-    value: "₹2.2 Cr+",
+    value: "₹2.8 Cr+",
     label: "Organic e-commerce revenue",
-    description: "Our sports-equipment partner's e-commerce revenue grew from ₹0 to over ₹2.2 crore, the first ₹1.5 crore in 110 days, without any paid ads.",
+    description: "Our sports-equipment partner's e-commerce revenue grew from ₹0 to over ₹2.8 crore, the first ₹1.5 crore in 110 days, without any paid ads.",
   },
   {
     value: "4",

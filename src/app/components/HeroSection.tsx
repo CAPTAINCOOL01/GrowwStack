@@ -2,7 +2,7 @@ import { BrandExplorer } from "./growwstack/BrandExplorer";
 
 const proofPoints = [
   { value: "5", label: "Active partner brands" },
-  { value: "₹2.2 Cr+", label: "E-commerce revenue · from ₹0, no ads" },
+  { value: "₹2.8 Cr+", label: "E-commerce revenue · from ₹0, no ads" },
   { value: "100%", label: "Organic growth · ₹0 spent on ads" },
   { value: "₹0", label: "Upfront agency fee · selected partners" },
 ];
@@ -22,7 +22,7 @@ export function HeroSection() {
             together. One partner, from first visit to repeat revenue.
           </p>
           <p className="gs-hero__organic">
-            <strong>₹2.2 Cr+ in e-commerce revenue, purely organic.</strong> <span>₹0 spent on ads.</span>
+            <strong>₹2.8 Cr+ in e-commerce revenue, purely organic.</strong> <span>₹0 spent on ads.</span>
           </p>
           <div className="gs-hero__actions">
             <a className="gs-button gs-button--signal" href="#contact">
