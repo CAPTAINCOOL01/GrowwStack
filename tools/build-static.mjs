@@ -543,7 +543,7 @@ function writeBlogIndex(language) {
     shell({
       url,
       metaTitle: language ? ui.metaTitle : "SEO, AEO & GEO Guides: Grow Organic Traffic | GrowwStack Blog",
-      metaDescription: language ? ui.metaDescription : "Free guides to growing organic traffic in India: SEO, AEO, GEO, technical SEO, D2C and manufacturer lead generation, in English, Hindi, Gujarati and Bengali.",
+      metaDescription: language ? ui.metaDescription : "Free guides to growing organic traffic in India: SEO, AEO, GEO, technical SEO, D2C and manufacturer leads, in English, Hindi, Gujarati and Bengali.",
       css,
       language: language || "en-IN",
       multilingual: true,
