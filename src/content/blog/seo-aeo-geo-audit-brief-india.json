@@ -2,16 +2,77 @@
   "slug": "seo-aeo-geo-audit-brief-india",
   "category": "Organic growth",
   "publishedAt": "2026-10-24",
-  "readingTime": "7 min read",
-  "metaTitle": "SEO, AEO and GEO Audit Brief: What Should an Agency Deliver?",
-  "metaDescription": "Use a concrete audit brief to compare SEO, AEO and GEO proposals: evidence, page ownership, acceptance checks, costs and measurement.",
-  "title": "SEO, AEO and GEO Audit Brief: What Should an Agency Deliver?",
-  "excerpt": "Use a concrete audit brief to compare SEO, AEO and GEO proposals: evidence, page ownership, acceptance checks, costs and measurement.",
+  "readingTime": "9 min read",
+  "metaTitle": "SEO, AEO and GEO Audit Checklist: What an Audit Should Check",
+  "metaDescription": "An SEO, AEO and GEO audit checklist for Indian businesses: what each audit checks, the evidence to ask for, acceptance checks and a fair agency brief.",
+  "title": "SEO, AEO and GEO Audit: Checklist and What an Agency Should Deliver",
+  "excerpt": "An SEO, AEO and GEO audit checklist for Indian businesses: what each audit checks, the evidence to ask for, acceptance checks and a fair agency brief.",
   "intro": [
-    "A useful SEO, AEO or GEO audit should name the problem, show the evidence, identify the affected pages and explain how the fix will be checked. Ask an agency for that chain before comparing a page count or a promise of AI visibility. The same brief can help your internal team decide what to implement first.",
-    "This is a practical procurement and delivery worksheet for an Indian business. It is not a quotation, contract template or promise of a particular search result. GrowwStack offers selected businesses individually agreed growth work; the scope and commercial arrangement require evaluation."
+    "An SEO, AEO and GEO audit checks three things on the same website: whether search engines can crawl, index and rank your pages (SEO), whether those pages give clear, extractable answers to the questions buyers ask (AEO), and whether AI systems can identify, trust and cite your business accurately (GEO). A useful audit names each problem, shows the evidence, lists the affected URLs and says how the fix will be checked.",
+    "This guide gives you the checklist for all three and a brief you can hand to an agency or your own team. It is a practical worksheet for an Indian business, not a quotation, contract template or promise of a particular search result or AI citation. GrowwStack offers selected businesses individually agreed growth work; the scope and commercial arrangement require evaluation."
   ],
   "sections": [
+    {
+      "heading": "SEO, AEO and GEO audit checklist: what each audit checks",
+      "paragraphs": [
+        "The three audits overlap, because answer engines and AI systems mostly reuse pages that are already crawlable and indexed. Google says its AI features need no special markup beyond normal Search eligibility, so the SEO layer comes first. Use the table to see what each layer adds and what evidence to ask for."
+      ],
+      "table": {
+        "caption": "What an SEO, AEO and GEO audit should check",
+        "head": [
+          "Audit layer",
+          "What it checks",
+          "Evidence to ask for"
+        ],
+        "rows": [
+          [
+            "SEO: access and indexing",
+            "Robots rules, canonicals, noindex, sitemap, status codes, internal links to money pages",
+            "Search Console Pages report and URL Inspection results with dates"
+          ],
+          [
+            "SEO: intent and pages",
+            "One owner page per search intent, titles and H1s that match the query, duplicate or thin pages",
+            "Query-to-page map from Search Console, with impressions and average position"
+          ],
+          [
+            "SEO: performance and mobile",
+            "Core Web Vitals, mobile layout, render-blocking scripts",
+            "PageSpeed Insights or field data for named URLs"
+          ],
+          [
+            "AEO: answer quality",
+            "A direct 40-70 word answer under the heading, clear H2 questions, tables or steps where the topic suits them",
+            "List of buyer questions and the URL that answers each one"
+          ],
+          [
+            "AEO: structured data",
+            "FAQPage, Article, Product or Organization markup that matches visible content",
+            "Rich Results Test or Search Console Enhancements report"
+          ],
+          [
+            "GEO: entity and facts",
+            "One consistent fact set (name, what you do, where, founder) across the site, profiles and directories",
+            "A table of the facts as they appear on each source, with mismatches marked"
+          ],
+          [
+            "GEO: AI crawler access and citations",
+            "Bot access for search and AI crawlers, and whether AI answers cite or describe you correctly",
+            "Dated prompt checks per engine, separating a mention, a citation and a referred visit"
+          ]
+        ]
+      },
+      "list": [
+        "Important pages return 200, are canonical to themselves and are not blocked or noindexed.",
+        "Each important query has one owner page; no two pages compete for the same term.",
+        "Each owner page answers its main question in the first paragraph.",
+        "Structured data parses and matches what a reader sees on the page.",
+        "Business facts are identical on the site, in profiles and in directory listings.",
+        "Reports use fixed date ranges, a fixed query cohort and separate brand from non-brand.",
+        "Every fix has an acceptance check and a date on which it will be reviewed."
+      ],
+      "listType": "ordered"
+    },
     {
       "heading": "Write the business problem in one paragraph",
       "paragraphs": [
@@ -37,7 +98,8 @@
       "heading": "Make AEO and GEO deliverables inspectable",
       "paragraphs": [
         "Ask which buyer questions the work will answer and which pages will answer them. Require the factual reviewer, source requirements and publication checks. If the proposal includes AI visibility monitoring, define platforms, prompts, geography where observable, capture dates and the difference between a mention, a citation and a referred visit.",
-        "For Google AI features, the official guidance does not require special AI markup. That does not make content quality or technical access optional. Treat llms.txt as supplementary experimentation rather than a deliverable that establishes placement. The [AEO guide](/blog/answer-engine-optimization-aeo) and [GEO guide](/blog/generative-engine-optimization-geo) explain the boundaries."
+        "For Google AI features, the official guidance does not require special AI markup. That does not make content quality or technical access optional. Treat llms.txt as supplementary experimentation rather than a deliverable that establishes placement. The [AEO guide](/blog/answer-engine-optimization-aeo) and [GEO guide](/blog/generative-engine-optimization-geo) explain the boundaries.",
+        "If you are comparing providers for this work, the [AEO and GEO services guide](/blog/aeo-geo-services-india) lists the deliverables to expect, and [GrowwStack's SEO services](/services) shows how the audit feeds an ongoing programme."
       ]
     },
     {
@@ -70,10 +132,11 @@
     }
   ],
   "related": [
-    "generative-engine-optimization-geo",
+    "aeo-geo-services-india",
     "answer-engine-optimization-aeo",
-    "questions-to-ask-marketing-agency-india",
-    "pay-after-results-seo-india"
+    "generative-engine-optimization-geo",
+    "technical-seo-checklist-new-website",
+    "questions-to-ask-marketing-agency-india"
   ],
   "sources": [
     {
@@ -87,7 +150,39 @@
     {
       "title": "Search Console: Performance report",
       "url": "https://support.google.com/webmasters/answer/7576553"
+    },
+    {
+      "title": "Google Search Central: Introduction to structured data",
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data"
+    },
+    {
+      "title": "Google Search Central: Page indexing report",
+      "url": "https://support.google.com/webmasters/answer/7440203"
     }
   ],
-  "takeaway": "Use the worksheet with your own business facts and search data. For help connecting search visibility with qualified enquiries, [describe your business to GrowwStack](/contact)."
+  "takeaway": "Use the worksheet with your own business facts and search data. For help connecting search visibility with qualified enquiries, [describe your business to GrowwStack](/contact).",
+  "updatedAt": "2026-11-20",
+  "faqHeading": "SEO, AEO and GEO audit: common questions",
+  "faq": [
+    {
+      "q": "What is the difference between an SEO audit, an AEO audit and a GEO audit?",
+      "a": "An SEO audit checks whether search engines can crawl, index and rank your pages. An AEO audit checks whether those pages give clear answers that can be shown as snippets or in AI answers. A GEO audit checks whether AI systems can identify your business and describe it correctly, which depends on consistent facts across your site and other sources."
+    },
+    {
+      "q": "Do I need a separate AEO or GEO audit if I already have an SEO audit?",
+      "a": "Usually not a separate project. Google says its AI features use the same Search eligibility as normal results, so the SEO checks come first. AEO and GEO add checks on answer quality, structured data and entity facts; a good audit covers all three in one issue register."
+    },
+    {
+      "q": "How long should an SEO, AEO and GEO audit take?",
+      "a": "It depends on the number of pages and the access you can give. For a small business site, the useful output is a page-level issue list with evidence and acceptance checks, not a long PDF. Ask the provider to state the time and the access they need before they start."
+    },
+    {
+      "q": "Can an audit guarantee that ChatGPT or Google's AI Overviews will cite my business?",
+      "a": "No. No provider controls which sources an AI system cites. An audit can remove technical barriers, improve answers and fix inconsistent facts, and it can measure citations with dated prompt checks, but it should never promise placement."
+    },
+    {
+      "q": "What should I share with an agency for the audit?",
+      "a": "Read access to your own Search Console property and analytics, the list of products or services that matter most, and examples of good enquiries or orders. Keep ownership of the domain and accounts with your business and give only the access the work needs."
+    }
+  ]
 }
