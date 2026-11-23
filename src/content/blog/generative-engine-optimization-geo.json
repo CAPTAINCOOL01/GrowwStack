@@ -2,7 +2,7 @@
   "slug": "generative-engine-optimization-geo",
   "category": "GEO",
   "publishedAt": "2026-08-31",
-  "updatedAt": "2026-11-06",
+  "updatedAt": "2026-11-23",
   "readingTime": "11 min read",
   "metaTitle": "Generative Engine Optimization (GEO): A Guide for India",
   "metaDescription": "What generative engine optimization (GEO) is, how AI answers pick sources, GEO vs SEO vs AEO, a 10-step checklist and how to measure AI visibility.",
@@ -119,6 +119,9 @@
       "q": "Is GEO different from SEO?",
       "a": "Mostly no. AI answers retrieve pages from search indexes, so indexing, useful content and authority still decide most of the outcome. GEO adds a focus on entity consistency, third-party mentions and measuring AI visibility separately from ordinary rankings."
     },
+    { "q": "Why does GEO matter for businesses?", "a": "Buyers now ask full questions and often read an AI-generated answer before any list of links. If that answer names your competitors, or states wrong facts about you, you lose the enquiry before a click happens. Google now reports how often your pages appear in AI Overviews and AI Mode in Search Console's Generative AI report, so this visibility can be measured like ordinary search." },
+    { "q": "Is generative engine optimization worth it, or is it too early?", "a": "It is not too early for the low-cost parts: making sure your key pages are indexed, your business facts are the same everywhere, and your pages answer the questions buyers ask. That work also helps normal Google and Bing rankings, so little is wasted. Be careful with spending on tools or services that promise AI rankings; start with a fixed list of 10 to 20 buyer questions, record today's answers, and judge any work against that baseline." },
+    { "q": "Which GEO platform is best for Indian e-commerce brands?", "a": "There is no single GEO platform that makes AI answers cite a store. Start with the free sources Google and Bing provide: Search Console (including the Generative AI report), Merchant Center product data, which Google says can help products appear in AI responses, and Bing Webmaster Tools. Paid AI-visibility trackers only sample answers to the prompts you give them, so choose one only if it tracks your own buyer questions for India. For the work itself, see [e-commerce SEO services](/blog/ecommerce-seo-services-india)." },
     {
       "q": "What is the difference between GEO and AEO?",
       "a": "AEO (answer engine optimization) usually means structuring content so it becomes the direct answer to a specific question. GEO usually means how your business is represented across AI-generated answers. The same accurate, well-structured page supports both. See the [AEO guide](/blog/answer-engine-optimization-aeo)."
