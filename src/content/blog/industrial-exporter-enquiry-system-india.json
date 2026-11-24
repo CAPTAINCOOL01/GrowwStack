@@ -2,16 +2,67 @@
   "slug": "industrial-exporter-enquiry-system-india",
   "category": "B2B",
   "publishedAt": "2026-09-12",
-  "readingTime": "8 min read",
-  "metaTitle": "Getting Export Enquiries for an Indian Manufacturer",
-  "metaDescription": "Buyers who cannot visit your factory need trust artefacts before enquiring: certification pages, named installations, stated capacity, a reply commitment.",
-  "title": "Getting export and out-of-state enquiries for an Indian manufacturer",
+  "readingTime": "10 min read",
+  "metaTitle": "Export Enquiries: How Indian Manufacturers Get and Reply",
+  "metaDescription": "What an export enquiry is, how to check if it is genuine, what to send in the first reply, and the website facts overseas buyers need before they enquire.",
+  "title": "Export enquiries for Indian manufacturers: how to get them and how to reply",
   "excerpt": "A buyer three time zones away cannot visit your factory. Everything they need in order to risk an enquiry has to exist on your website.",
   "intro": [
-    "Selling to a buyer in the next state is mostly relationships and references. Selling to one who cannot visit the factory is a different problem: every reason to trust you has to be visible before they contact you.",
-    "Most Indian manufacturer websites are built for buyers who already know the company. This is what has to change for the ones who do not."
+    "An export enquiry is a message from a buyer in another country asking about your product, price, minimum order, lead time or terms. For an Indian manufacturer it is the first step of an export sale, but it is only an opportunity once you have checked who is asking, what they need and whether you can supply it, and replied clearly and fast.",
+    "Selling to a buyer in the next state is mostly relationships and references. Selling to one who cannot visit the factory is a different problem: every reason to trust you has to be visible before they contact you, and the first reply decides whether the conversation continues. This guide covers both: how to qualify and answer an export enquiry, and what your website must show so the right buyers enquire in the first place."
   ],
   "sections": [
+    {
+      "heading": "How to check and answer an export enquiry",
+      "paragraphs": [
+        "Treat every export enquiry as unqualified until you know four things: who the buyer is, what exactly they want, how much and when, and how they intend to pay and ship. Official export-promotion bodies give the same advice: reply promptly, completely and clearly, and ask the buyer about their business before you commit to terms ([export.gov](https://legacy.export.gov/article?id=Responding-to-Enquiries), [Austrade](https://export.business.gov.au/find-buyers-and-sales-partners/respond-to-sales-enquiries)).",
+        "Some enquiries are not genuine. Common warning signs are a free email address with no company website, a request for samples or documents to be sent before any specification is discussed, pressure to pay a registration or certification fee to the buyer's side, or payment terms that move all the risk to you. None of these proves fraud on its own, so verify before you spend money or share pricing files."
+      ],
+      "table": {
+        "caption": "Qualifying an export enquiry",
+        "head": [
+          "Check",
+          "What to look for",
+          "What to ask or do"
+        ],
+        "rows": [
+          [
+            "Buyer identity",
+            "Company name, website, address and a business email domain that match",
+            "Ask for the company profile; look up the website and any public company register for that country"
+          ],
+          [
+            "Requirement",
+            "A named product, specification or standard, not just \"send your catalogue\"",
+            "Ask for the specification, drawing or standard and the end use"
+          ],
+          [
+            "Quantity and timing",
+            "Order size, one-off or recurring, target delivery date",
+            "Confirm you can meet the quantity and lead time before quoting"
+          ],
+          [
+            "Terms",
+            "Incoterm (for example FOB or CIF), destination port, payment method",
+            "State your preferred terms; secure methods such as a letter of credit or advance payment reduce risk"
+          ],
+          [
+            "Documents",
+            "Certificates or test reports the buyer's market requires",
+            "Offer only documents you actually hold; never promise a certificate you do not have"
+          ]
+        ]
+      },
+      "list": [
+        "Acknowledge within one working day, even if the full quotation takes longer, and say when it will arrive",
+        "Restate the requirement in your own words so both sides agree on the specification",
+        "Quote with currency, Incoterm, validity period, minimum order and lead time",
+        "Ask the qualifying questions from the table in the same reply",
+        "Attach a short company profile and link to the product and certification pages on your website",
+        "Log the enquiry with its source and next follow-up date, so it is not forgotten during a long export cycle"
+      ],
+      "listType": "number"
+    },
     {
       "heading": "The buyer's actual question",
       "paragraphs": [
@@ -94,7 +145,42 @@
   "takeaway": "Publish certifications as pages, describe real installations even if you cannot name the customer, state capacity and lead time as numbers, organise products by specification, and commit to a response time you actually meet. A buyer who cannot visit your factory needs all of it before they will risk an enquiry.",
   "related": [
     "industrial-b2b-lead-generation-india",
+    "manufacturer-seo-keyword-research-india",
+    "manufacturer-product-page-rfq-checklist",
     "technical-seo-checklist-new-website"
   ],
-  "updatedAt": "2026-10-24"
+  "updatedAt": "2026-11-24",
+  "faqHeading": "Export enquiry questions",
+  "faq": [
+    {
+      "q": "What is an export enquiry?",
+      "a": "An export enquiry is a request from a buyer outside India for information on your product, such as price, specification, minimum order quantity, lead time or delivery terms. It becomes an export opportunity only after you confirm the buyer is genuine and that you can supply what they need on terms you accept."
+    },
+    {
+      "q": "How do I know if an export enquiry is genuine?",
+      "a": "Check that the company name, website, address and email domain match, and that the buyer asks about a specific product or specification. Be careful with free email addresses, requests for samples or documents before any specification is discussed, and any request that you pay a fee to the buyer's side. Verify before you share pricing or spend money."
+    },
+    {
+      "q": "How fast should I reply to an export enquiry?",
+      "a": "Acknowledge it within one working day and say when the full quotation will follow. Buyers in other time zones judge how you will communicate during the order by the speed and clarity of the first reply."
+    },
+    {
+      "q": "What should a reply to an export enquiry include?",
+      "a": "Restate the requirement, then give the price with currency, the Incoterm, quotation validity, minimum order, lead time and payment terms. Ask the questions you still need answered, and link to the product and certification pages on your website."
+    },
+    {
+      "q": "How can a manufacturer get more export enquiries from its website?",
+      "a": "Publish the facts an overseas buyer checks before enquiring: certifications as pages, capacity and lead time as numbers, products organised by specification, real installations, and an enquiry form that accepts country, port, specification and quantity. Those pages are also what search engines and AI answers can find and cite."
+    }
+  ],
+  "sources": [
+    {
+      "title": "export.gov: Responding to enquiries",
+      "url": "https://legacy.export.gov/article?id=Responding-to-Enquiries"
+    },
+    {
+      "title": "Austrade: Respond to sales enquiries",
+      "url": "https://export.business.gov.au/find-buyers-and-sales-partners/respond-to-sales-enquiries"
+    }
+  ]
 }
