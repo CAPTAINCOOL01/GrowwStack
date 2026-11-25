@@ -2,14 +2,14 @@
   "slug": "pay-after-results-seo-india",
   "category": "Agency selection",
   "publishedAt": "2026-10-24",
-  "updatedAt": "2026-11-12",
+  "updatedAt": "2026-11-25",
   "readingTime": "7 min read",
-  "metaTitle": "Pay After Results SEO in India: What Should You Agree?",
-  "metaDescription": "Compare pay-after-ranking SEO, pay-per-lead fees and revenue-share growth. Define results, scope and measurement before choosing an agency in India.",
+  "metaTitle": "Pay for Results SEO in India: What to Agree First",
+  "metaDescription": "Pay for results SEO, pay after work or revenue share? What each model pays for, how a result is defined and what to agree in writing first.",
   "title": "Pay after results SEO in India: what exactly are you paying for?",
   "excerpt": "Ranking fees, qualified-lead fees and revenue share solve different problems. Compare the outcome, scope and measurement before the headline offer.",
   "intro": [
-    "Pay-after-results SEO means that an agreed result affects when or how the supplier is paid. The phrase alone does not define that result. An agency may mean keyword positions, a volume of accepted leads or an agreed share of attributable growth. Ask for the definition before comparing prices.",
+    "Pay for results SEO (also called pay-after-results SEO) means an agreed result decides when or how the supplier is paid. The phrase alone does not define that result. An agency may mean keyword positions, a volume of accepted leads or an agreed share of attributable growth. Ask for the definition before comparing prices.",
     "For an Indian manufacturer or established D2C business, the useful question is whether the work creates a measurable path to commercially relevant enquiries or orders. A deferred invoice can still pay for work that has little connection to your buyers."
   ],
   "sections": [
@@ -99,5 +99,24 @@
     "aeo-geo-services-india",
     "performance-based-marketing-agency-india",
     "marketing-retainer-vs-revenue-share-cost"
+  ],
+  "faqHeading": "Pay for results SEO: common questions",
+  "faq": [
+    {
+      "q": "What is pay for results SEO?",
+      "a": "It is an SEO fee model where some or all of the payment depends on an agreed result instead of hours or a fixed monthly fee. The result might be a keyword position, an accepted enquiry or attributable revenue, so the contract has to say which one, how it is measured and when it is paid."
+    },
+    {
+      "q": "Is pay after work the same as pay for results?",
+      "a": "No. Pay after work means the invoice is due after a deliverable, such as a finished website. Pay for results means the payment depends on a defined outcome. A later invoice does not make a service performance-based."
+    },
+    {
+      "q": "Can an SEO agency guarantee first-page rankings?",
+      "a": "No. Google's own guidance says no one can guarantee a number one ranking on Google, and AI answers cannot be guaranteed either. A fair pay for results agreement ties payment to an outcome both sides can measure, not to a promise of position."
+    },
+    {
+      "q": "What should a pay for results SEO agreement define?",
+      "a": "The target queries or outcome, the baseline before work starts, how results are recorded (for example Search Console, accepted enquiries or order data), what counts as attributable revenue, payment timing, the costs paid separately, who owns the website and content, and how either side can end the agreement."
+    }
   ]
 }
