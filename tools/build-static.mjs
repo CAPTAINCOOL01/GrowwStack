@@ -132,6 +132,8 @@ ${body}
             <a href="/">GrowwStack: SEO, AEO &amp; GEO agency</a>
             <a href="/services">SEO services</a>
             <a href="/services#search-visibility">AEO &amp; GEO</a>
+            <a href="/blog/aeo-geo-services-india">AEO &amp; GEO services</a>
+            <a href="/blog/ecommerce-seo-services-india">E-commerce SEO services</a>
             <a href="/partnership">No-upfront revenue share</a>
             <a href="/work">Our work</a>
             <a href="/about">About</a>

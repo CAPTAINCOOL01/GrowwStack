@@ -4,6 +4,8 @@ import { CONTACT_PHONE, CONTACT_PHONE_DISPLAY } from "../../../lib/config";
 const footerLinks = [
   { href: "/services", label: "SEO services" },
   { href: "/services#search-visibility", label: "AEO & GEO" },
+  { href: "/blog/aeo-geo-services-india", label: "AEO & GEO services" },
+  { href: "/blog/ecommerce-seo-services-india", label: "E-commerce SEO services" },
   { href: "/partnership", label: "No-upfront revenue share" },
   { href: "/work", label: "Our work" },
   { href: "/about", label: "About" },
